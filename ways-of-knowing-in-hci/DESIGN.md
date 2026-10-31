@@ -16,7 +16,8 @@ A linear, keyboard-operable sequence for classroom use:
 4. Focused family explanations and examples.
 5. Cross-family tensions and translations.
 6. Historical overlays as lenses, not a march of progress.
-7. A positioning synthesis for doctoral projects.
+7. Conference communities as recurring—but plural and changing—epistemic homes.
+8. A positioning synthesis for doctoral projects.
 
 Slides use one central claim, short supporting text, and a restrained diagram. Forward/back controls and arrow keys support projection and lecturing.
 
@@ -31,8 +32,10 @@ A freely navigable map with progressive disclosure:
 - a detail panel contains commitments, questions, methods, warrants, risks, relations, and studies;
 - pan, zoom, reset, and overview controls;
 - optional historical overlays;
+- a two-way conference ecology: family → communities → papers and conference → papers → families;
+- a visible construction methodology and known-limit statement;
 - shareable query-string state;
-- bibliography drawer;
+- a categorized bibliography drawer with foundational, conceptual, study, and institutional sources;
 - responsive list alternative when the graph would become cramped.
 
 ## Visual system
@@ -55,6 +58,7 @@ A freely navigable map with progressive disclosure:
 ## Deliberate limits
 
 - The map is interpretive and pedagogical, not a bibliometric classification.
+- Conference associations are tendencies and search lenses, not classifications of every paper in a venue.
 - Featured studies may fit more than one family.
 - The study-positioning tool offers prompts and tensions, not an automated epistemological verdict.
 - “Path between” is limited to meaningful curated relations rather than arbitrary graph traversal.

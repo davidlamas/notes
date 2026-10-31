@@ -4,7 +4,7 @@
 
 This taxonomy is a teaching device for doctoral students, not a claim that HCI can be partitioned into mutually exclusive schools. It organizes research by the commitments that make a knowledge claim warranted: what is assumed to exist, how a researcher can know it, what counts as evidence, and what standards make a claim credible.
 
-The source textbook grounds the map's account of HCI as an interdisciplinary field that combines empirical and artifact contributions, works across micro- and macro-HCI, uses qualitative and quantitative evidence, faces recurring trade-offs, and gains confidence through complementary studies and triangulation. Because the textbook is primarily organized by method, the epistemological families below are synthesized with foundational HCI scholarship.
+The foundational textbook is Lazar, J., Feng, J. H., and Hochheiser, H. (2017), *Research Methods in Human-Computer Interaction* (2nd ed., Morgan Kaufmann; print ISBN 978-0-12-805390-4; e-book ISBN 978-0-12-809343-6). It grounds the map's account of HCI as an interdisciplinary field that combines empirical and artifact contributions, works across micro- and macro-HCI, uses qualitative and quantitative evidence, faces recurring trade-offs, and gains confidence through complementary studies and triangulation. Because the textbook is primarily organized by method, the epistemological families below are synthesized with additional HCI scholarship.
 
 ## The six families
 
@@ -105,5 +105,11 @@ Historical schemes appear as optional lenses, not as the map's hierarchy.
 
 ## Representative study selection rule
 
-Examples are selected because the paper makes its warrant visible, not merely because it uses a recognizable method. The collection balances CHI, CSCW, DIS, UbiComp, IUI, and related SIGCHI venues, favors DOI or ACM links, and includes both canonical methodological statements and studies that enact a tradition. Each example is accompanied by a short explanation of why it belongs near a family while acknowledging overlaps.
+Examples are selected because the paper makes its warrant visible, not merely because it uses a recognizable method. The revised collection spans twelve conference communities plus TOCHI, favors DOI or official proceedings links, and includes both canonical methodological statements and studies that enact a tradition. Each example names its purpose, evidence, contribution, epistemic interpretation, venue relevance, and a connection to another family where source inspection supports those claims.
+
+## Conference ecologies
+
+Conference communities are represented as qualified tendencies and discovery contexts. SIGCHI-sponsored and co-sponsored conferences are distinguished from SIGCHI in-cooperation events and adjacent international communities. NordiCHI is labelled SIGCHI in cooperation; INTERACT is labelled the flagship international HCI conference of IFIP TC13. Neither venue identity nor method determines a paper's epistemology.
+
+The maintainable selection record is in `COVERAGE_MATRIX.md`; the pre-revision diagnosis is in `RESEARCH_GAP_AUDIT.md`.
 

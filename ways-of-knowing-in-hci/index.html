@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f4ee">
   <link rel="icon" href="data:,">
   <title>Ways of Knowing in HCI</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -29,7 +29,7 @@
       <div class="deck-controls" aria-label="Presentation controls">
         <button class="round-button" id="slide-prev" type="button" aria-label="Previous slide">←</button>
         <div class="deck-progress">
-          <span id="slide-count">1 / 10</span>
+          <span id="slide-count">1 / 11</span>
           <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
         </div>
         <button class="round-button" id="slide-next" type="button" aria-label="Next slide">→</button>
@@ -97,6 +97,27 @@
         <div class="method-comparison" id="method-comparison" role="tabpanel"></div>
       </section>
 
+      <section class="ecology-section" id="conference-ecologies" aria-labelledby="ecology-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Conference ecologies</p>
+            <h2 id="ecology-title">Where ways of knowing find intellectual homes.</h2>
+          </div>
+          <p>A conference is not an epistemology. These are qualified tendencies: communities remain internally plural, overlap with neighbours, and change over time.</p>
+        </div>
+        <div class="ecology-mode" role="group" aria-label="Conference ecology direction">
+          <button type="button" class="method-tab" data-ecology-mode="family" aria-pressed="true">Start with a way of knowing</button>
+          <button type="button" class="method-tab" data-ecology-mode="conference" aria-pressed="false">Start with a conference</button>
+        </div>
+        <div class="ecology-workspace">
+          <div>
+            <div class="ecology-pickers" id="ecology-pickers"></div>
+            <p class="ecology-note">Illustrative, not exhaustive. Venue identity never substitutes for reading a paper’s purpose, evidence, contribution, and warrant.</p>
+          </div>
+          <article class="ecology-detail" id="ecology-detail" aria-live="polite"></article>
+        </div>
+      </section>
+
       <section class="overlay-section" aria-labelledby="overlay-title">
         <div class="section-heading">
           <div>
@@ -108,6 +129,23 @@
         <div class="overlay-grid" id="overlay-grid"></div>
         <article class="overlay-detail" id="overlay-detail" hidden></article>
       </section>
+
+      <section class="methodology-section" id="methodology" aria-labelledby="methodology-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Methodology</p>
+            <h2 id="methodology-title">How this map was constructed.</h2>
+          </div>
+          <p>The map is a teaching synthesis, not a bibliometric classification or a claim that HCI divides into sealed schools.</p>
+        </div>
+        <div class="methodology-grid">
+          <article><span>01</span><h3>Begin with warrants</h3><p>Families were distinguished by what they try to know, what counts as evidence, the contribution they make, and the standards that make a claim credible.</p></article>
+          <article><span>02</span><h3>Ground methods carefully</h3><p>Lazar, Feng, and Hochheiser (2017) anchors research contributions, evidence, measurement, trade-offs, participants, and ethics. It is foundational but not a complete epistemology.</p></article>
+          <article><span>03</span><h3>Read beyond method labels</h3><p>Conceptual and historical sources supply research-through-design, interpretive, feminist, participatory, postcolonial, and relational commitments not derived from the textbook.</p></article>
+          <article><span>04</span><h3>Validate examples individually</h3><p>Papers were selected through official proceedings and DOI records. Conference groupings guided discovery; they did not determine placement.</p></article>
+        </div>
+        <div class="methodology-limit"><strong>Known limits.</strong> The collection still underrepresents work in languages other than English, Global South and Indigenous scholarship, decolonial inquiry, accessibility venues beyond this selection, formal methods, replication, and industry-only research.</div>
+      </section>
     </section>
   </main>
 
@@ -116,7 +154,8 @@
       <div><p class="eyebrow">Reading trail</p><h2 id="sources-title">Sources & featured studies</h2></div>
       <button class="icon-button" type="button" data-close="sources-dialog" aria-label="Close sources">×</button>
     </div>
-    <p class="drawer-intro">The map synthesizes the course textbook with foundational HCI scholarship. Examples are selected because their warrants are visible—not because a venue or method fixes their epistemology.</p>
+    <p class="drawer-intro">The map uses the course textbook as a foundational methodological source and other scholarship for epistemology, history, critique, research through design, and newer developments. Examples are selected because their warrants are visible—not because a venue or method fixes their epistemology.</p>
+    <div class="source-tabs" id="source-tabs" role="tablist" aria-label="Source categories"></div>
     <div id="bibliography"></div>
   </dialog>
 
@@ -131,7 +170,7 @@
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="data.js?v=2"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>
