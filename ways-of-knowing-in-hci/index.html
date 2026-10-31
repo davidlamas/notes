@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive scholarly map of epistemic traditions in human-computer interaction.">
+  <meta name="theme-color" content="#f7f4ee">
+  <link rel="icon" href="data:,">
+  <title>Ways of Knowing in HCI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-label="Ways of Knowing in HCI, home">
+      <span class="wordmark-mark" aria-hidden="true">W</span>
+      <span>Ways of Knowing <small>in HCI</small></span>
+    </a>
+    <nav class="mode-switch" aria-label="View mode">
+      <button class="mode-button is-active" type="button" data-mode="presentation" aria-pressed="true">Presentation</button>
+      <button class="mode-button" type="button" data-mode="exploration" aria-pressed="false">Explore map</button>
+    </nav>
+    <button class="text-button" id="sources-open" type="button" aria-haspopup="dialog">Sources</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="presentation" class="mode-view" aria-label="Guided presentation">
+      <div class="deck" id="deck" aria-live="polite"></div>
+      <div class="deck-controls" aria-label="Presentation controls">
+        <button class="round-button" id="slide-prev" type="button" aria-label="Previous slide">←</button>
+        <div class="deck-progress">
+          <span id="slide-count">1 / 10</span>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+        </div>
+        <button class="round-button" id="slide-next" type="button" aria-label="Next slide">→</button>
+      </div>
+    </section>
+
+    <section id="exploration" class="mode-view" hidden aria-label="Explore the knowledge map">
+      <div class="explore-intro">
+        <div>
+          <p class="eyebrow">Exploration mode</p>
+          <h1>Follow commitments, not method labels.</h1>
+          <p>Select a family to inspect what it treats as knowledge, evidence, and a warranted claim. Connections show intellectual relationships—not equivalence.</p>
+        </div>
+        <div class="explore-actions">
+          <button class="secondary-button" id="position-open" type="button">Position your study</button>
+          <button class="secondary-button" id="share-state" type="button">Copy this view</button>
+        </div>
+      </div>
+
+      <div class="toolbar" aria-label="Map controls">
+        <label class="search-box">
+          <span class="visually-hidden">Search concepts and studies</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Search concepts, methods, studies…" autocomplete="off">
+        </label>
+        <div class="zoom-controls" aria-label="Zoom controls">
+          <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+          <button type="button" id="zoom-reset" aria-label="Reset map">Reset</button>
+          <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+        </div>
+      </div>
+
+      <div class="filter-row" id="family-filters" aria-label="Filter by epistemic family"></div>
+
+      <div class="explore-layout">
+        <section class="map-card" aria-labelledby="map-title">
+          <div class="map-heading">
+            <div>
+              <p class="eyebrow">Knowledge map</p>
+              <h2 id="map-title">Six families, many crossings</h2>
+            </div>
+            <span class="map-hint">Drag to pan · scroll to zoom</span>
+          </div>
+          <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="Interactive epistemology map. Use Tab to move among concepts.">
+            <div class="map-canvas" id="map-canvas">
+              <svg id="map-lines" viewBox="0 0 1200 760" aria-hidden="true"></svg>
+              <div id="map-nodes"></div>
+            </div>
+          </div>
+          <div class="map-list" id="map-list" aria-label="Concept list"></div>
+        </section>
+
+        <aside class="detail-panel" id="detail-panel" aria-live="polite" aria-label="Selected concept details"></aside>
+      </div>
+
+      <section class="bridge-section" aria-labelledby="method-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A method is not an epistemology</p>
+            <h2 id="method-title">The same method can do different epistemic work.</h2>
+          </div>
+          <p>Choose a familiar method. Its purpose, evidence, and warrant change with the commitments around it.</p>
+        </div>
+        <div class="method-tabs" id="method-tabs" role="tablist" aria-label="Methods"></div>
+        <div class="method-comparison" id="method-comparison" role="tabpanel"></div>
+      </section>
+
+      <section class="overlay-section" aria-labelledby="overlay-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Contextual overlays</p>
+            <h2 id="overlay-title">Use history as a lens, not a ladder.</h2>
+          </div>
+          <p>These accounts overlap, but they are not interchangeable—and later lenses do not erase earlier ones.</p>
+        </div>
+        <div class="overlay-grid" id="overlay-grid"></div>
+        <article class="overlay-detail" id="overlay-detail" hidden></article>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="drawer" id="sources-dialog" aria-labelledby="sources-title">
+    <div class="drawer-head">
+      <div><p class="eyebrow">Reading trail</p><h2 id="sources-title">Sources & featured studies</h2></div>
+      <button class="icon-button" type="button" data-close="sources-dialog" aria-label="Close sources">×</button>
+    </div>
+    <p class="drawer-intro">The map synthesizes the course textbook with foundational HCI scholarship. Examples are selected because their warrants are visible—not because a venue or method fixes their epistemology.</p>
+    <div id="bibliography"></div>
+  </dialog>
+
+  <dialog class="position-dialog" id="position-dialog" aria-labelledby="position-title">
+    <div class="drawer-head">
+      <div><p class="eyebrow">Doctoral reflection</p><h2 id="position-title">Position your study</h2></div>
+      <button class="icon-button" type="button" data-close="position-dialog" aria-label="Close study positioner">×</button>
+    </div>
+    <p>This is a conversation prompt, not a classifier. Pick the statement closest to your present emphasis.</p>
+    <form id="position-form"></form>
+    <div class="position-result" id="position-result" aria-live="polite"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
