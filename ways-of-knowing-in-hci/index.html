@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f4ee">
   <link rel="icon" href="data:,">
   <title>Ways of Knowing in HCI</title>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -41,7 +41,7 @@
         <div>
           <p class="eyebrow">Exploration mode</p>
           <h1>Follow commitments, not method labels.</h1>
-          <p>Select a family to inspect what it treats as knowledge, evidence, and a warranted claim. Connections show intellectual relationships—not equivalence.</p>
+          <p>Select a family to inspect what it treats as knowledge, evidence, and a warranted claim. Connections show intellectual relationships, not equivalence.</p>
         </div>
         <div class="explore-actions">
           <button class="secondary-button" id="position-open" type="button">Position your study</button>
@@ -118,13 +118,25 @@
         </div>
       </section>
 
+      <section class="lens-section" aria-labelledby="lens-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Conceptual lenses</p>
+            <h2 id="lens-title">Ask a different question of the same study.</h2>
+          </div>
+          <p>These optional lenses change what comes into view. They complement the six families without forming another classification.</p>
+        </div>
+        <div class="lens-grid" id="lens-grid"></div>
+        <article class="lens-detail" id="lens-detail" aria-live="polite"></article>
+      </section>
+
       <section class="overlay-section" aria-labelledby="overlay-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Contextual overlays</p>
             <h2 id="overlay-title">Use history as a lens, not a ladder.</h2>
           </div>
-          <p>These accounts overlap, but they are not interchangeable—and later lenses do not erase earlier ones.</p>
+          <p>These accounts overlap, but they are not interchangeable, and later lenses do not erase earlier ones.</p>
         </div>
         <div class="overlay-grid" id="overlay-grid"></div>
         <article class="overlay-detail" id="overlay-detail" hidden></article>
@@ -140,11 +152,11 @@
         </div>
         <div class="methodology-grid">
           <article><span>01</span><h3>Begin with warrants</h3><p>Families were distinguished by what they try to know, what counts as evidence, the contribution they make, and the standards that make a claim credible.</p></article>
-          <article><span>02</span><h3>Ground methods carefully</h3><p>Lazar, Feng, and Hochheiser (2017) anchors research contributions, evidence, measurement, trade-offs, participants, and ethics. It is foundational but not a complete epistemology.</p></article>
-          <article><span>03</span><h3>Read beyond method labels</h3><p>Conceptual and historical sources supply research-through-design, interpretive, feminist, participatory, postcolonial, and relational commitments not derived from the textbook.</p></article>
+          <article><span>02</span><h3>Ground methods carefully</h3><p>Lazar, Feng, and Hochheiser (2017), Olson and Kellogg (2014), and Adams, Lunt, and Cairns (2008) ground research contributions, methodological plurality, evidence, qualitative inquiry, participants, and ethics. No single source provides the whole taxonomy.</p></article>
+          <article><span>03</span><h3>Read beyond method labels</h3><p>Turner (2016), Chignell et al. (2023), and the historical overlays clarify cognition, human-technology relations, disciplinary histories, research through design, power, participation, and relational commitments.</p></article>
           <article><span>04</span><h3>Validate examples individually</h3><p>Papers were selected through official proceedings and DOI records. Conference groupings guided discovery; they did not determine placement.</p></article>
         </div>
-        <div class="methodology-limit"><strong>Known limits.</strong> The collection still underrepresents work in languages other than English, Global South and Indigenous scholarship, decolonial inquiry, accessibility venues beyond this selection, formal methods, replication, and industry-only research.</div>
+        <div class="methodology-limit"><strong>Known limits.</strong> The collection now includes work from AfriCHI, IHC, and OzCHI, but it still underrepresents scholarship in languages other than English, Indigenous and decolonial inquiry, accessibility venues beyond this selection, formal methods, replication, and industry-only research.</div>
       </section>
     </section>
   </main>
@@ -154,14 +166,14 @@
       <div><p class="eyebrow">Reading trail</p><h2 id="sources-title">Sources & featured studies</h2></div>
       <button class="icon-button" type="button" data-close="sources-dialog" aria-label="Close sources">×</button>
     </div>
-    <p class="drawer-intro">The map uses the course textbook as a foundational methodological source and other scholarship for epistemology, history, critique, research through design, and newer developments. Examples are selected because their warrants are visible—not because a venue or method fixes their epistemology.</p>
+    <p class="drawer-intro">The map uses two foundational books and complementary scholarship for qualitative inquiry, cognition, disciplinary history, critique, research through design, and newer developments. Examples are selected because their warrants are visible, not because a venue or method fixes their epistemology.</p>
     <div class="source-tabs" id="source-tabs" role="tablist" aria-label="Source categories"></div>
     <div id="bibliography"></div>
   </dialog>
 
   <dialog class="position-dialog" id="position-dialog" aria-labelledby="position-title">
     <div class="drawer-head">
-      <div><p class="eyebrow">Doctoral reflection</p><h2 id="position-title">Position your study</h2></div>
+      <div><p class="eyebrow">Inquiry reflection</p><h2 id="position-title">Position your study</h2></div>
       <button class="icon-button" type="button" data-close="position-dialog" aria-label="Close study positioner">×</button>
     </div>
     <p>This is a conversation prompt, not a classifier. Pick the statement closest to your present emphasis.</p>
@@ -170,7 +182,7 @@
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="data.js?v=2"></script>
-  <script src="app.js?v=2"></script>
+  <script src="data.js?v=3"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>

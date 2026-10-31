@@ -2,7 +2,7 @@
 
 ## Core teaching argument
 
-The site begins with a claim: a method does not determine a way of knowing. It then introduces six families, shows the kinds of warrants each family accepts, connects them, and returns students to the practical task of positioning a doctoral study.
+The site begins with a claim: a method does not determine a way of knowing. It then introduces six families, shows the kinds of warrants each family accepts, connects them, and returns readers to the practical task of positioning an inquiry.
 
 ## Two modes
 
@@ -16,8 +16,8 @@ A linear, keyboard-operable sequence for classroom use:
 4. Focused family explanations and examples.
 5. Cross-family tensions and translations.
 6. Historical overlays as lenses, not a march of progress.
-7. Conference communities as recurring—but plural and changing—epistemic homes.
-8. A positioning synthesis for doctoral projects.
+7. Conference communities as recurring, plural, and changing epistemic homes.
+8. A positioning synthesis for research projects.
 
 Slides use one central claim, short supporting text, and a restrained diagram. Forward/back controls and arrow keys support projection and lecturing.
 

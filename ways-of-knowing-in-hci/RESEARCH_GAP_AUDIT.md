@@ -1,6 +1,6 @@
 # Research gap audit
 
-Audit completed before the October 2026 revision. The unit of analysis is the knowledge claim and its warrant—not the method name or publication venue.
+Audit completed before the October 2026 revision. The unit of analysis is the knowledge claim and its warrant, not the method name or publication venue.
 
 ## Collection-level diagnosis
 
@@ -8,7 +8,7 @@ Audit completed before the October 2026 revision. The unit of analysis is the kn
 - Seven of thirteen featured studies were from CHI. The collection strongly represented design-oriented conceptual work, but weakly represented instrumentation, formal/engineering evaluation, clinical application, child-centred research outside CHI, and non-SIGCHI international HCI.
 - Qualitative methods were already shown doing interpretive, critical, participatory, and relational work. Quantitative and technical work had fewer contrasts, making “empirical–analytic” appear narrower than it is.
 - The original examples were concentrated between 1999 and 2020 and in North American/European ACM communities.
-- Several examples named a tradition convincingly but gave students too little detail about purpose, evidence, contribution, and venue ecology.
+- Several examples named a tradition convincingly but gave readers too little detail about purpose, evidence, contribution, and venue ecology.
 
 ## Family-by-family audit
 

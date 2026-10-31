@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This taxonomy is a teaching device for doctoral students, not a claim that HCI can be partitioned into mutually exclusive schools. It organizes research by the commitments that make a knowledge claim warranted: what is assumed to exist, how a researcher can know it, what counts as evidence, and what standards make a claim credible.
+This taxonomy is a teaching and research device, not a claim that HCI can be partitioned into mutually exclusive schools. It organizes research by the commitments that make a knowledge claim warranted: what is assumed to exist, how a researcher can know it, what counts as evidence, and what standards make a claim credible.
 
-The foundational textbook is Lazar, J., Feng, J. H., and Hochheiser, H. (2017), *Research Methods in Human-Computer Interaction* (2nd ed., Morgan Kaufmann; print ISBN 978-0-12-805390-4; e-book ISBN 978-0-12-809343-6). It grounds the map's account of HCI as an interdisciplinary field that combines empirical and artifact contributions, works across micro- and macro-HCI, uses qualitative and quantitative evidence, faces recurring trade-offs, and gains confidence through complementary studies and triangulation. Because the textbook is primarily organized by method, the epistemological families below are synthesized with additional HCI scholarship.
+Two books provide the methodological foundation. Lazar, J., Feng, J. H., and Hochheiser, H. (2017), *Research Methods in Human-Computer Interaction* (2nd ed., Morgan Kaufmann; print ISBN 978-0-12-805390-4; e-book ISBN 978-0-12-809343-6), grounds the map's account of research contributions, qualitative and quantitative evidence, measurement, trade-offs, participants, and ethics. Olson, J. S., and Kellogg, W. A. (Eds.). (2014), *Ways of Knowing in HCI* (Springer; print ISBN 978-1-4939-0377-1; e-book ISBN 978-1-4939-0378-8), sharpens the question of what different methods allow HCI researchers to know and what forms of accountability they require. Neither book is reproduced as a table of contents. The families below synthesize them with additional scholarship.
 
 ## The six families
 
