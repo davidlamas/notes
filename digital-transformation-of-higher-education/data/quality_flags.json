@@ -25,7 +25,7 @@
       ],
       "category": "method",
       "severity": "high",
-      "text": "Consensus read abstracts (about 20 in Pro, about 100 in Deep), not full texts; evidence labels were assigned from abstracts.",
+      "text": "An AI literature-search tool read abstracts (about 20 in a smaller run and about 100 in a larger run), not full texts; evidence labels were assigned from abstracts.",
       "implication_for_page": "Show a methods note near any evidence label."
     },
     {
@@ -40,8 +40,8 @@
       ],
       "category": "method",
       "severity": "high",
-      "text": "Pro and Deep runs with the same prompt cite largely different papers (198 distinct papers across the three Deep runs; only 9, 9 and 14 overlap with the Pro runs). Pro results sample a different slice of the literature.",
-      "implication_for_page": "Prefer Deep-run content; label Pro-only content as scoping."
+      "text": "Smaller and larger runs with the same prompt cite largely different papers (198 distinct papers across the three larger runs; only 9, 9 and 14 overlap with the smaller runs). Smaller-run results sample a different slice of the literature.",
+      "implication_for_page": "Prefer larger-run content; label smaller-run-only content as scoping."
     },
     {
       "id": "Q03",
@@ -50,7 +50,7 @@
       ],
       "category": "method",
       "severity": "medium",
-      "text": "Evidence-strength scores in claims are Consensus's own judgments, not validated measures.",
+      "text": "Evidence-strength scores in claims are an AI literature-search tool's own judgments, not validated measures.",
       "implication_for_page": "Label them as such."
     },
     {
@@ -113,7 +113,7 @@
       ],
       "category": "quality",
       "severity": "medium",
-      "text": "Cited sources include preprints, book reviews, editorials, conference proceedings, working papers and low-visibility venues. Consensus flags some of them.",
+      "text": "Cited sources include preprints, book reviews, editorials, conference proceedings, working papers and low-visibility venues. an AI literature-search tool flags some of them.",
       "implication_for_page": "Use papers.json venue_flag; avoid load-bearing claims on flagged items."
     },
     {
@@ -136,7 +136,7 @@
       ],
       "category": "interpretation",
       "severity": "medium",
-      "text": "Quadrant placement and winners and losers are interpretive mappings by Consensus, not classifications used by the original authors; several typologies could not be placed.",
+      "text": "Quadrant placement and winners and losers are interpretive mappings by an AI literature-search tool, not classifications used by the original authors; several typologies could not be placed.",
       "implication_for_page": "Label as interpretive."
     },
     {
@@ -170,7 +170,7 @@
       ],
       "category": "design",
       "severity": "medium",
-      "text": "The micro prompt named doctoral candidates and apprenticeship of junior researchers; that wording was Claude's, so doctoral material reflects prompt design. Doctoral training is out of scope.",
+      "text": "The micro prompt named doctoral candidates and apprenticeship of junior researchers; that wording was an AI model's, so doctoral material reflects prompt design. Doctoral training is out of scope.",
       "implication_for_page": "Treat doctoral material as degree-structure evidence only."
     },
     {
@@ -200,7 +200,7 @@
       ],
       "category": "quality",
       "severity": "medium",
-      "text": "Consensus flags an SSRN preprint on Orientalism, editorials, book reviews, incompletely identified records, a Nature record dated 2019 that describes a Soviet-era relocation (chronology to verify), and a European-Iran comparison with developmental framing. Thin areas: Alexandria and Egyptian institutions, sabha and parishad, Tamil Sangam, Baghdad and Gondishapur continuity, several national academies.",
+      "text": "an AI literature-search tool flags an SSRN preprint on Orientalism, editorials, book reviews, incompletely identified records, a Nature record dated 2019 that describes a Soviet-era relocation (chronology to verify), and a European-Iran comparison with developmental framing. Thin areas: Alexandria and Egyptian institutions, sabha and parishad, Tamil Sangam, Baghdad and Gondishapur continuity, several national academies.",
       "implication_for_page": "Show thin-evidence markers on A-rows."
     },
     {
@@ -250,7 +250,7 @@
       ],
       "category": "coverage",
       "severity": "medium",
-      "text": "Latin America, Sub-Saharan Africa and the Soviet sphere are sparse or limited to conference proceedings; one sentence on Soviet shares was cut off in the reading; the Deep re-run was not run (credits).",
+      "text": "Latin America, Sub-Saharan Africa and the Soviet sphere are sparse or limited to conference proceedings; one sentence on Soviet shares was cut off in the reading; the larger run re-run was not run (credits).",
       "implication_for_page": "Flag D-rows."
     },
     {
@@ -260,7 +260,7 @@
       ],
       "category": "coding",
       "severity": "high",
-      "text": "Milestone coding (levels, change type, continuity/disruption, valence, regions) is Claude's inference from source text; levels are stated in the source only for Y-rows; 80 of 174 rows have an unclear continuity/disruption reading; researcher review is pending.",
+      "text": "Milestone coding (levels, change type, continuity/disruption, valence, regions) is an AI model's inference from source text; levels are stated in the source only for Y-rows; 80 of 174 rows have an unclear continuity/disruption reading; researcher review is pending.",
       "implication_for_page": "Expose coding_basis and confidence; do not present coding as findings."
     },
     {
@@ -270,7 +270,7 @@
       ],
       "category": "coding",
       "severity": "medium",
-      "text": "Some date spans were inferred by Claude from named periods (for example dynasties, Hellenistic period; date_basis inferred_from_named_period) or come from general knowledge without a source (claude_general_knowledge_unsourced).",
+      "text": "Some date spans were inferred by an AI model from named periods (for example dynasties, Hellenistic period; date_basis inferred_from_named_period) or come from general knowledge without a source (claude_general_knowledge_unsourced).",
       "implication_for_page": "Render uncertain dates as ranges or hatched bars."
     },
     {
@@ -302,7 +302,7 @@
       ],
       "category": "legal",
       "severity": "high",
-      "text": "Consensus outputs carry a notice that results are for personal, non-commercial use and that redistribution requires copyright holders' consent. The restricted archive must not be published; the data/ files avoid verbatim long text, abstracts and snippets.",
+      "text": "Outputs from an AI literature-search tool carry a notice that results are for personal, non-commercial use and that redistribution requires copyright holders' consent. The restricted archive must not be published; the data/ files avoid verbatim long text, abstracts and extracted passages.",
       "implication_for_page": "Do not publish archive_restricted."
     },
     {

@@ -4,7 +4,7 @@
       "id": "H1",
       "statement": "Technology adoption cycles have shortened (decades for print; months for generative AI).",
       "status": "indicative_only",
-      "evidence_pointing_toward": "Run 8d: learning platforms took decades to institutionalise, lockdown-forced remote teaching took days, ChatGPT reportedly saw rapid global uptake within months; the figure remains unverified.",
+      "evidence_pointing_toward": "Run 8d: learning platforms took decades to institutionalise, lockdown-forced remote teaching took days, a widely used generative AI system reportedly saw rapid global uptake within months; the figure remains unverified.",
       "limits": "Adoption of tools is not institutional adoption; the three cases measure different things; most evidence is cross-sectional.",
       "milestone_ids": [
         "Y01",
@@ -62,8 +62,8 @@
       "id": "H4",
       "statement": "Major technological shifts add new organisational forms next to existing ones instead of replacing them.",
       "status": "provisional_support",
-      "evidence_pointing_toward": "Run 5b and 7a: academies, journals, research universities and corporate laboratories arose alongside existing institutions; dual-mode and open universities extended campus universities; replacement predictions for radio, television and MOOCs did not materialise.",
-      "limits": "Provider-level discontinuities exist (for-profit correspondence colleges); survivorship bias in histories; Run 7a is Pro-depth.",
+      "evidence_pointing_toward": "Run 5b and 7a: academies, journals, research universities and corporate laboratories arose alongside existing institutions; combined-format and open universities extended campus universities; replacement predictions for radio, television and MOOCs did not materialise.",
+      "limits": "Provider-level discontinuities exist (for-profit correspondence colleges); survivorship bias in histories; Run 7a is smaller run-depth.",
       "milestone_ids": [
         "D03",
         "D10",
@@ -77,7 +77,7 @@
         "S01",
         "S03"
       ],
-      "next_test": "Deep re-run of distance HE when credits allow."
+      "next_test": "larger run re-run of distance HE when credits allow."
     },
     {
       "id": "H5",
@@ -102,5 +102,5 @@
       "next_test": "Code the ACTOR dimension and division of labour per milestone."
     }
   ],
-  "note": "Hypotheses are working questions. Statuses are Claude's provisional reading of the saved outputs."
+  "note": "Hypotheses are working questions. Statuses are an AI model's provisional reading of the saved outputs."
 }

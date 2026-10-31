@@ -3170,7 +3170,7 @@
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro; abstract-level)",
+      "source_ref": "Run 6b (smaller run; abstract-level)",
       "note": "Link to I11 | Output: nineteenth-century German tradition unified teaching with research (Humboldtian dual mandate); no founding date given",
       "status": "proposed_partly_sourced",
       "verification_status": "unverified",
@@ -3223,11 +3223,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED (as labelled by Consensus)",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED (as labelled by an AI literature-search tool)",
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro; abstract-level)",
+      "source_ref": "Run 6b (smaller run; abstract-level)",
       "note": "Link to I14 | Morrill Act 1862 legislated mechanical and agricultural instruction for working populations",
       "status": "proposed_sourced_unverified",
       "verification_status": "unverified",
@@ -3338,7 +3338,7 @@
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro; abstract-level)",
+      "source_ref": "Run 6b (smaller run; abstract-level)",
       "note": "Link to I16; Run 6b | 1918 Cordoba reform instituted extension (extension universitaria) as socio-political project to democratise public knowledge",
       "status": "proposed_sourced_unverified",
       "verification_status": "unverified",
@@ -3395,7 +3395,7 @@
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro; abstract-level)",
+      "source_ref": "Run 6b (smaller run; abstract-level)",
       "note": "Run 6b | Output names the Bayh-Dole Act and triple-helix linkages but gives no year; year still to be sourced",
       "status": "proposed_partly_sourced",
       "verification_status": "unverified",
@@ -3529,8 +3529,8 @@
     {
       "id": "P11",
       "track": "technology",
-      "title": "Public release of ChatGPT and subsequent institutional policy responses",
-      "description": "Public release of ChatGPT and subsequent institutional policy responses",
+      "title": "Public release of a widely used generative AI system and subsequent institutional policy responses",
+      "description": "Public release of a widely used generative AI system and subsequent institutional policy responses",
       "date_label": "Nov 2022",
       "year_start": 2022,
       "year_end": 2022,
@@ -3566,7 +3566,7 @@
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro; abstract-level)",
+      "source_ref": "Run 6a (smaller run; abstract-level)",
       "note": "Run 6a covers generative AI integration 2022-2026 as a period; evidence mostly expectations, not mature evaluations; exact release date unsourced",
       "status": "proposed_partly_sourced",
       "verification_status": "unverified",
@@ -3623,7 +3623,7 @@
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro; abstract-level)",
+      "source_ref": "Run 6a (smaller run; abstract-level)",
       "note": "Run 6a: remote emergency delivery surged 2020-2022; holistic didactics lagged; lockdown transitions took days",
       "status": "proposed_partly_sourced",
       "verification_status": "unverified",
@@ -3677,12 +3677,12 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED (empirical/archival), per Consensus",
+      "evidence_label_raw": "OBSERVED (empirical/archival), per an AI literature-search tool",
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro)",
-      "note": "Learning platforms required decades for complete institutionalisation (Run 6a) | Superseded by Y rows (Run 8d, Deep)",
+      "source_ref": "Run 6a (smaller run)",
+      "note": "Learning platforms required decades for complete institutionalisation (Run 6a) | Superseded by Y rows (Run 8d, larger run)",
       "status": "archived_candidate",
       "verification_status": "unverified",
       "coding_basis": {
@@ -3734,12 +3734,12 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED (quantitative/meta-analysis), per Consensus",
+      "evidence_label_raw": "OBSERVED (quantitative/meta-analysis), per an AI literature-search tool",
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro)",
-      "note": "Modest grade improvements; authoring and publishing bottlenecks among faculty | Superseded by Y rows (Run 8d, Deep)",
+      "source_ref": "Run 6a (smaller run)",
+      "note": "Modest grade improvements; authoring and publishing bottlenecks among faculty | Superseded by Y rows (Run 8d, larger run)",
       "status": "archived_candidate",
       "verification_status": "unverified",
       "coding_basis": {
@@ -3793,12 +3793,12 @@
         "expected"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "EXPECTED and OBSERVED, per Consensus",
+      "evidence_label_raw": "EXPECTED and OBSERVED, per an AI literature-search tool",
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro)",
-      "note": "See T31 | Superseded by Y rows (Run 8d, Deep)",
+      "source_ref": "Run 6a (smaller run)",
+      "note": "See T31 | Superseded by Y rows (Run 8d, larger run)",
       "status": "archived_candidate",
       "verification_status": "unverified",
       "coding_basis": {
@@ -3853,12 +3853,12 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED (policy documents), per Consensus",
+      "evidence_label_raw": "OBSERVED (policy documents), per an AI literature-search tool",
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro)",
-      "note": "Superseded by Y rows (Run 8d, Deep)",
+      "source_ref": "Run 6a (smaller run)",
+      "note": "Superseded by Y rows (Run 8d, larger run)",
       "status": "archived_candidate",
       "verification_status": "unverified",
       "coding_basis": {
@@ -3912,12 +3912,12 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED (broad quantitative), per Consensus",
+      "evidence_label_raw": "OBSERVED (broad quantitative), per an AI literature-search tool",
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro)",
-      "note": "Transitions enforced within days (contrast with decades for LMS) | Superseded by Y rows (Run 8d, Deep)",
+      "source_ref": "Run 6a (smaller run)",
+      "note": "Transitions enforced within days (contrast with decades for LMS) | Superseded by Y rows (Run 8d, larger run)",
       "status": "archived_candidate",
       "verification_status": "unverified",
       "coding_basis": {
@@ -3972,12 +3972,12 @@
         "projected"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "EXPECTED/PROJECTED, per Consensus",
+      "evidence_label_raw": "EXPECTED/PROJECTED, per an AI literature-search tool",
       "source_runs": [
         "run-6a"
       ],
-      "source_ref": "Run 6a (Pro)",
-      "note": "Interventions rely largely on stakeholder expectations rather than mature evaluations | Superseded by Y rows (Run 8d, Deep)",
+      "source_ref": "Run 6a (smaller run)",
+      "note": "Interventions rely largely on stakeholder expectations rather than mature evaluations | Superseded by Y rows (Run 8d, larger run)",
       "status": "archived_candidate",
       "verification_status": "unverified",
       "coding_basis": {
@@ -4035,7 +4035,7 @@
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro)",
+      "source_ref": "Run 6b (smaller run)",
       "note": "Early faculty as unpaid religious public servants (North America, interpretation)",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4088,11 +4088,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro)",
+      "source_ref": "Run 6b (smaller run)",
       "note": "Empirical evaluations (e.g. early Indonesian and African initiatives) sparse",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4144,11 +4144,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro)",
+      "source_ref": "Run 6b (smaller run)",
       "note": "Period not specified in output",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4202,11 +4202,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro)",
+      "source_ref": "Run 6b (smaller run)",
       "note": "Neglect of non-market social agendas",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4263,7 +4263,7 @@
       "source_runs": [
         "run-6b"
       ],
-      "source_ref": "Run 6b (Pro)",
+      "source_ref": "Run 6b (smaller run)",
       "note": "Risks of nebulous civic metrics and evaluation fatigue",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4317,11 +4317,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Standardised mail delivery enabled the first institutionalised distance frameworks",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4372,11 +4372,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Over 300,000 US enrolments (table, 1840-1970s span)",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4428,12 +4428,12 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
-      "note": "Dual-mode form: external students and campus students in one university",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
+      "note": "combined-format form: external students and campus students in one university",
       "status": "archived_candidate",
       "verification_status": "unverified",
       "coding_basis": {
@@ -4485,11 +4485,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Output text truncated in my reading of one sentence on shares; check source",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4541,11 +4541,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Interpretation: radio as an equity technology where post and infrastructure were weak",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4597,11 +4597,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Postcolonial context; ties to state and donors",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4652,11 +4652,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Limited-effect case",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4709,11 +4709,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Date not stated in output",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4765,11 +4765,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Latin American extension via radio",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4823,11 +4823,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Links to T26, I19",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4878,11 +4878,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Date not stated in output",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4933,11 +4933,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Two uses of the same technology in neighbouring institutions",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -4988,11 +4988,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5043,11 +5043,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Table labels this evidence as historical interpretation",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5100,11 +5100,11 @@
         "interpretation"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "HISTORICAL INTERPRETATION (table), per Consensus",
+      "evidence_label_raw": "HISTORICAL INTERPRETATION (table), per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Bandwidth divides; Global North hubs favoured",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5156,11 +5156,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED/DOCUMENTED, per Consensus",
+      "evidence_label_raw": "OBSERVED/DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Provider-level discontinuity within a continuous institutional system",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5211,11 +5211,11 @@
         "interpretation"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "HISTORICAL INTERPRETATION, per Consensus",
+      "evidence_label_raw": "HISTORICAL INTERPRETATION, per an AI literature-search tool",
       "source_runs": [
         "run-7a"
       ],
-      "source_ref": "Run 7a (Pro; abstract-level)",
+      "source_ref": "Run 7a (smaller run; abstract-level)",
       "note": "Negative case; key evidence for continuity",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5268,7 +5268,7 @@
         "interpretation"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "HISTORICAL INTERPRETATION (chronology), per Consensus",
+      "evidence_label_raw": "HISTORICAL INTERPRETATION (chronology), per an AI literature-search tool",
       "source_runs": [
         "run-7b"
       ],
@@ -5491,7 +5491,7 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED, per Consensus",
+      "evidence_label_raw": "OBSERVED, per an AI literature-search tool",
       "source_runs": [
         "run-7b"
       ],
@@ -5547,7 +5547,7 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED, per Consensus",
+      "evidence_label_raw": "DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7b"
       ],
@@ -5604,7 +5604,7 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED, per Consensus",
+      "evidence_label_raw": "DOCUMENTED, per an AI literature-search tool",
       "source_runs": [
         "run-7b"
       ],
@@ -5659,7 +5659,7 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED, per Consensus",
+      "evidence_label_raw": "OBSERVED, per an AI literature-search tool",
       "source_runs": [
         "run-7b"
       ],
@@ -5714,7 +5714,7 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED, per Consensus",
+      "evidence_label_raw": "OBSERVED, per an AI literature-search tool",
       "source_runs": [
         "run-7b"
       ],
@@ -5770,7 +5770,7 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "OBSERVED, per Consensus",
+      "evidence_label_raw": "OBSERVED, per an AI literature-search tool",
       "source_runs": [
         "run-7b"
       ],
@@ -5826,11 +5826,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "Greek coverage centres on Plato; Alexandria details thin",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5882,11 +5882,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5937,11 +5937,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -5992,11 +5992,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6047,11 +6047,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6103,11 +6103,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "Run 8b: society-based circulation, not science's beginning",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6158,11 +6158,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "Links to I05",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6214,11 +6214,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "Radio used by an academy for public outreach; links to Distance HE radio rows",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6269,11 +6269,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6325,11 +6325,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6382,11 +6382,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "Academy-centred research model; bibliographic chronology to verify",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6442,11 +6442,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "Academies remain primary knowledge producers in many systems (Run 6d)",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6498,11 +6498,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6554,11 +6554,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6610,11 +6610,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8a"
       ],
-      "source_ref": "Run 8a (Deep)",
+      "source_ref": "Run 8a (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6669,7 +6669,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Distinct editorial and correspondence arrangements",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6724,7 +6724,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Early biomedical specialisation",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6779,7 +6779,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Journals preceded modern peer-review meanings by centuries",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6836,7 +6836,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Medical education intersects public knowledge",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6891,7 +6891,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Changing scholarly ownership and authority",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -6947,7 +6947,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Embodied disciplinary community formation; under-researched",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7004,7 +7004,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Earlier genealogy of institutional comparison",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7059,7 +7059,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7114,7 +7114,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Institutional support for rapid informal circulation",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7169,7 +7169,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Distinct histories of measurement and certification",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7225,7 +7225,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Networked dissemination and persistent linking",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7280,7 +7280,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Infrastructure for independent journals",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7340,7 +7340,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Expansion of institutional and individual metrics",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7395,7 +7395,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "National publishing internationalisation",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7453,7 +7453,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7510,7 +7510,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7566,7 +7566,7 @@
       "source_runs": [
         "run-8b"
       ],
-      "source_ref": "Run 8b (Deep)",
+      "source_ref": "Run 8b (larger run)",
       "note": "Early evidence; governance unresolved",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7618,11 +7618,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "Reconstruction relies on travel accounts and archaeology",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7673,11 +7673,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7730,11 +7730,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7788,11 +7788,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "Colonial archives support research while reproducing silences",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7845,11 +7845,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "Cf. T18 (1966)",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7900,11 +7900,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -7955,11 +7955,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "Grid history includes arXiv preprints",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8014,11 +8014,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8071,11 +8071,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "Equity framing of open access",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8126,11 +8126,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8182,11 +8182,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "Regulation-driven repository",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8239,11 +8239,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8296,11 +8296,11 @@
         "unspecified"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "dated moment per Consensus; label not given per item",
+      "evidence_label_raw": "dated moment per an AI literature-search tool; label not given per item",
       "source_runs": [
         "run-8c"
       ],
-      "source_ref": "Run 8c (Deep)",
+      "source_ref": "Run 8c (larger run)",
       "note": "Openness does not automatically redistribute resources or authority",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8352,11 +8352,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "VLE adoption widespread; innovations mostly faded before habitualisation",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8409,11 +8409,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "First systematic opening of curriculum content",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8465,11 +8465,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Open access formalised as a scholarly norm; repositories became institutional infrastructure",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8523,11 +8523,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "First global ranking; bibliometric indicators reshaped institutional strategy; rankings reoriented priorities in Asia, Middle East, Latin America, often at cost of local relevance",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8578,11 +8578,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Precursor to national MOOC infrastructure; later SWAYAM backbone",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8635,11 +8635,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Platform-first strategy cited as cause; limited-effect or failure case",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8691,11 +8691,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso/Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso/Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Second major citation database; intensified bibliometric competition",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8746,11 +8746,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Democratised citation access; also enabled gaming and metric inflation",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8802,11 +8802,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Citizen science at scale (14 m+ participants over two decades); participation skewed toward men with science backgrounds",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8858,11 +8858,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso/Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso/Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Deposit rates rose, culture change lagged",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8914,11 +8914,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Predicted to disrupt degree-granting; low completion; pivot to corporate training",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -8970,11 +8970,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Challenged journal impact factor in hiring/promotion; implementation inconsistent",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9025,11 +9025,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Responsible-metrics principles; adoption uneven",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9081,11 +9081,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Interoperability standard; implementation contested and uneven",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9137,11 +9137,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso/Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso/Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "large reported enrolment; credit-transfer rules expanded; completion remained low",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9192,11 +9192,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Immediate OA for funder outputs; APC equity concerns; strong European uptake",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9247,11 +9247,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Federated research infrastructure; competing narratives slowed uptake",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9304,11 +9304,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Structural transnational cooperation; legal status and joint degrees incomplete",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9361,11 +9361,11 @@
         "expected"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "EXPECTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "EXPECTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Digitalisation proposed as a Bologna priority; implementation asymmetric",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9416,11 +9416,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Oceania/Europe led, Africa/Asia lagged on infrastructure; divides exposed and deepened",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9474,11 +9474,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Most deployments stayed in pilot phase; 14 critical adoption factors",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9529,11 +9529,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Formal integration of MOOCs into degrees; enrolment surged, certification low",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9586,11 +9586,11 @@
         "expected"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "EXPECTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "EXPECTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Framework for stackable credentials; institutional recognition lagging",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9611,8 +9611,8 @@
     {
       "id": "Y24",
       "track": "technology",
-      "title": "ChatGPT released",
-      "description": "ChatGPT released: 100 m users in 3 months",
+      "title": "a widely used generative AI system released",
+      "description": "a widely used generative AI system released: 100 m users in 3 months",
       "date_label": "November 2022",
       "year_start": 2022,
       "year_end": 2022,
@@ -9642,11 +9642,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Fastest technology adoption in HE history, per output",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9699,11 +9699,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Meso",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Meso",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Fragmented; instructor-level discretion favoured",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9754,11 +9754,11 @@
         "observed"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "DOCUMENTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "DOCUMENTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Benefits uneven: disciplines with more women and Black scientists benefit less",
       "status": "archived_candidate",
       "verification_status": "unverified",
@@ -9811,11 +9811,11 @@
         "projected"
       ],
       "evidence_strength_hint": "unrated",
-      "evidence_label_raw": "PROJECTED (as labelled by Consensus); level Macro",
+      "evidence_label_raw": "PROJECTED (as labelled by an AI literature-search tool); level Macro",
       "source_runs": [
         "run-8d"
       ],
-      "source_ref": "Run 8d (Deep)",
+      "source_ref": "Run 8d (larger run)",
       "note": "Analytics-based governance reconfigures academic autonomy; democratisation narrative ambivalent",
       "status": "archived_candidate",
       "verification_status": "unverified",

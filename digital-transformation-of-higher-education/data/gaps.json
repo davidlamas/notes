@@ -131,5 +131,5 @@
       "level": "meso"
     }
   ],
-  "note": "Gaps are as stated by the Consensus outputs (and by Claude's reading of them); they are gaps in what the saved outputs establish, not necessarily gaps in the literature."
+  "note": "Gaps are as stated by the an AI literature-search tool outputs (and by an AI model's reading of them); they are gaps in what the saved outputs establish, not necessarily gaps in the literature."
 }

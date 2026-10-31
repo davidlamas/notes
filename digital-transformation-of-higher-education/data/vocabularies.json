@@ -13,7 +13,7 @@
     {
       "id": "distance_he",
       "label": "Distance higher education",
-      "description": "Correspondence, broadcast, telecommunication and early network-based higher education; dual-mode and open universities"
+      "description": "Correspondence, broadcast, telecommunication and early network-based higher education; combined-format and open universities"
     },
     {
       "id": "ecosystem_general",
@@ -224,7 +224,7 @@
     {
       "id": "approximate",
       "label": "Approximate",
-      "description": "Source uses c., early, mid, period words, or span inferred by Claude"
+      "description": "Source uses c., early, mid, period words, or a span inferred by an AI model"
     },
     {
       "id": "unstated",
@@ -241,17 +241,17 @@
     {
       "id": "source_period_words",
       "label": "Source period words",
-      "description": "Period words in the source converted to years by Claude (e.g. 8th century)"
+      "description": "Period words in the source converted to years by an AI model (e.g. 8th century)"
     },
     {
       "id": "inferred_from_named_period",
       "label": "Inferred from named period",
-      "description": "Span inferred by Claude from a named period (e.g. Southern Song, Hellenistic); verify"
+      "description": "Span inferred by an AI model from a named period (e.g. Southern Song, Hellenistic); verify"
     },
     {
       "id": "claude_general_knowledge_unsourced",
-      "label": "Claude general knowledge (unsourced)",
-      "description": "Date supplied by Claude without a source in the runs; must be sourced or dropped"
+      "label": "AI model general knowledge (unsourced)",
+      "description": "Date supplied by an AI model without a source in the runs; must be sourced or dropped"
     },
     {
       "id": "none",
@@ -263,7 +263,7 @@
     {
       "id": "observed",
       "label": "Observed / documented",
-      "description": "Archival, empirical, quantitative or bibliometric findings (Consensus labels OBSERVED or DOCUMENTED)"
+      "description": "Archival, empirical, quantitative or bibliometric findings (literature-search labels OBSERVED or DOCUMENTED)"
     },
     {
       "id": "interpretation",
@@ -394,12 +394,12 @@
     {
       "id": "archived_candidate",
       "label": "Archived candidate",
-      "description": "Taken from a saved Consensus output"
+      "description": "Taken from a saved AI literature-search output"
     },
     {
       "id": "proposed_unsourced",
       "label": "Proposed, unsourced",
-      "description": "Added by Claude from general knowledge; needs a source"
+      "description": "Added by an AI model from general knowledge; needs a source"
     },
     {
       "id": "proposed_partly_sourced",
@@ -476,23 +476,23 @@
   "run_mode": [
     {
       "id": "pro",
-      "label": "Consensus Pro",
-      "description": "About 20 abstracts read, 5 agent steps"
+      "label": "smaller run (about 20 papers)",
+      "description": "About 20 papers read"
     },
     {
       "id": "deep",
-      "label": "Consensus Deep",
-      "description": "About 100 abstracts read, about 40-70 agent steps"
+      "label": "larger run (about 100 papers)",
+      "description": "About 100 papers read"
     },
     {
       "id": "n/a",
-      "label": "Not Consensus",
+      "label": "Document review",
       "description": ""
     },
     {
       "id": "unknown",
       "label": "Unknown",
-      "description": "Researcher-run in the web app; mode not recorded"
+      "description": "Researcher-run in the web app; paper count not recorded"
     }
   ],
   "hypothesis_status": [

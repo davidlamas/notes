@@ -1,11 +1,11 @@
 {
-  "note": "Draft copy for the page, written by Claude: paraphrased, hedged, and linked to claim, milestone, run and flag IDs. Edit freely; keep the caveats.",
+  "note": "Draft copy for the page, written by an AI model: paraphrased, hedged, and linked to claim, milestone, run and flag IDs. Edit freely; keep the caveats.",
   "blocks": [
     {
       "id": "intro",
       "section": "overview",
       "title": "What this inquiry is",
-      "text_md": "An exploratory inquiry into how digital and automated technologies relate to the form, functions and mandate of higher education institutions (HEIs). It combines literature syntheses produced with an AI research tool (Consensus), a web pass over European and global policy documents, and a historical look-back at earlier knowledge technologies. It is a work in progress: the findings are provisional and nothing has yet been verified against the underlying papers.",
+      "text_md": "An exploratory inquiry into how digital and automated technologies relate to the form, functions and mandate of higher education institutions (HEIs). It combines literature syntheses produced with an AI literature-search tool, a web pass over European and global policy documents, and a historical look-back at earlier knowledge technologies. It is a work in progress: the findings are provisional and nothing has yet been verified against the underlying papers.",
       "refs": {
         "run_ids": [
           "run-4a",
@@ -62,7 +62,7 @@
       "id": "how_to_read_evidence",
       "section": "method",
       "title": "How to read the evidence labels",
-      "text_md": "Items are labelled observed or documented (empirical, archival, quantitative), interpretation (historical or scholarly explanation), debated or speculative, expected (stakeholder expectation), or projected (scenario or conceptual). Labels were assigned from abstracts by an AI tool and by Claude; strength scores are the tool's own judgement. Treat them as guides to how much weight a statement can carry, not as validated measures.",
+      "text_md": "Items are labelled observed or documented (empirical, archival, quantitative), interpretation (historical or scholarly explanation), debated or speculative, expected (stakeholder expectation), or projected (scenario or conceptual). Labels were assigned from abstracts by an AI tool and by an AI model; strength scores are the tool's own judgement. Treat them as guides to how much weight a statement can carry, not as validated measures.",
       "refs": {
         "flag_ids": [
           "Q01",
@@ -124,7 +124,7 @@
       "id": "finding_distance",
       "section": "finding",
       "title": "Distance higher education as a long precedent",
-      "text_md": "Distance higher education is not new: instruction by post began in the nineteenth century, dual-mode universities appeared in the early twentieth, and radio, television and later networks followed. In the evidence reviewed, these media extended campus universities and produced open universities, but did not replace conventional universities. This is the precedent against which claims about online and AI-based disruption should be read. The evidence is of scoping depth and thin for Latin America, Sub-Saharan Africa and the Soviet sphere.",
+      "text_md": "Distance higher education is not new: instruction by post began in the nineteenth century, combined-format universities appeared in the early twentieth, and radio, television and later networks followed. In the evidence reviewed, these media extended campus universities and produced open universities, but did not replace conventional universities. This is the precedent against which claims about online and AI-based disruption should be read. The evidence is of scoping depth and thin for Latin America, Sub-Saharan Africa and the Soviet sphere.",
       "refs": {
         "claim_ids": [
           "S03"
@@ -180,7 +180,7 @@
       "id": "finding_lags",
       "section": "finding",
       "title": "Speed of adoption and of institutional response",
-      "text_md": "Examples vary widely: learning platforms took decades to institutionalise, lockdown-forced remote teaching took days, and ChatGPT reportedly saw rapid global uptake within months; the figure remains unverified while many highly ranked universities still lacked policies by mid-2023. These examples measure different things and do not establish a trend. No harmonised long-run series of adoption and institutional response exists.",
+      "text_md": "Examples vary widely: learning platforms took decades to institutionalise, lockdown-forced remote teaching took days, and a widely used generative AI system reportedly saw rapid global uptake within months; the figure remains unverified while many highly ranked universities still lacked policies by mid-2023. These examples measure different things and do not establish a trend. No harmonised long-run series of adoption and institutional response exists.",
       "refs": {
         "claim_ids": [
           "S04",
@@ -346,7 +346,7 @@
       "id": "provenance",
       "section": "method",
       "title": "How the material was built",
-      "text_md": "Prompts were written for an AI research tool (Consensus) in Pro mode (about 20 abstracts per run) and Deep mode (about 100 abstracts); each output was saved verbatim with its prompt, thread identifiers and agent trace. A web pass covered policy documents. Claude (an AI model) extracted the structured data and coded the milestones; the researcher has reviewed the framework and long-list but not yet the coding.",
+      "text_md": "Prompts were written for an AI literature-search tool in smaller runs (about 20 papers per run) and larger runs (about 100 papers per run); each output was saved verbatim with its prompt, internal identifiers and internal processing records. A web pass covered policy documents. An AI model extracted the structured data and coded the milestones; the researcher has reviewed the framework and long-list but not yet the coding.",
       "refs": {
         "run_ids": [
           "run-3a",

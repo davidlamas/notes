@@ -11,7 +11,7 @@ The main narrative stays concise. Claim caveats, milestone provenance, paper lin
 
 ## Public content model
 
-Only the conservative publishable subset is used: paraphrased milestones; synthesis claims; hypotheses; vocabularies and framework; quality flags; gaps; lag examples; sanitized run metadata; glossary entries; and bibliographic facts. The restricted archive, private Consensus links, prompts, abstracts, snippets, and agent traces are excluded.
+Only the conservative publishable subset is used: paraphrased milestones; synthesis claims; hypotheses; vocabularies and framework; quality flags; gaps; lag examples; sanitized run metadata; glossary entries; and bibliographic facts. The restricted archive, private an AI literature-search tool links, prompts, abstracts, extracted passages, and internal processing records are excluded.
 
 ## Encodings
 
@@ -21,7 +21,7 @@ Only the conservative publishable subset is used: paraphrased milestones; synthe
 - **Continuity/disruption:** continuity, disruption, layering, mixed, and unclear remain separate categories. Text labels accompany colour.
 - **Evidence status:** observed/documented, interpretation, debated/speculative, expected, projected, and unspecified are shown as labels rather than a moral colour scale.
 - **Valence:** beneficial or harmful readings are always paired with “for whom?” text. No red/green coding is used.
-- **Coverage:** region, time, review status, and Pro/Deep counts describe the evidence base; they never rank places or imply stages of development.
+- **Coverage:** region, time, review status, and smaller/larger run counts describe the evidence base; they never rank places or imply stages of development.
 - **Cross-highlighting:** selecting a claim or hypothesis filters/highlights linked milestones and exposes the supporting source trail.
 
 ## Accessibility and responsive behaviour

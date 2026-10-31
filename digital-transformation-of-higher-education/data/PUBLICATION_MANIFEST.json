@@ -20,11 +20,11 @@
   ],
   "excluded": [
     "archive_restricted",
-    "private Consensus URLs",
+    "private an AI literature-search tool URLs",
     "prompts",
     "abstracts",
-    "snippets",
-    "agent traces",
-    "verbatim Consensus tables"
+    "extracted passages",
+    "internal processing records",
+    "verbatim an AI literature-search tool tables"
   ]
 }

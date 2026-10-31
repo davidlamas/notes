@@ -90,7 +90,7 @@
       {
         "id": 4,
         "label": "Type of change (practice, form, function, mandate)",
-        "status": "Coded for all milestones (inferred by Claude; review pending)"
+        "status": "Coded for all milestones (inferred by an AI model; review pending)"
       }
     ]
   },

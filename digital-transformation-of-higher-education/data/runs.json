@@ -1,5 +1,5 @@
 {
-  "note": "Public run metadata. Private thread links, interaction identifiers, prompts, archives and agent traces are intentionally excluded.",
+  "note": "Public run metadata. Private internal links, interaction identifiers, prompts, archives and internal processing records are intentionally excluded.",
   "runs": [
     {
       "id": "run-1",
@@ -52,7 +52,7 @@
     {
       "id": "run-4a",
       "mode": "deep",
-      "purpose": "Deep re-run, unchanged prompt",
+      "purpose": "larger re-run, unchanged prompt",
       "relation": {
         "repeats": "run-3b"
       },
@@ -62,7 +62,7 @@
     {
       "id": "run-4b",
       "mode": "deep",
-      "purpose": "Deep re-run, unchanged prompt",
+      "purpose": "larger re-run, unchanged prompt",
       "relation": {
         "repeats": "run-3c"
       },
@@ -72,7 +72,7 @@
     {
       "id": "run-4c",
       "mode": "deep",
-      "purpose": "Deep re-run, unchanged prompt",
+      "purpose": "larger re-run, unchanged prompt",
       "relation": {
         "repeats": "run-3d"
       },
@@ -138,7 +138,7 @@
     {
       "id": "run-7a",
       "mode": "pro",
-      "purpose": "Deep re-run not run (credits)",
+      "purpose": "larger re-run not run (credits)",
       "relation": null,
       "included_abstracts": 20,
       "quality_flags": []
@@ -178,7 +178,7 @@
     {
       "id": "run-8d",
       "mode": "deep",
-      "purpose": "Deep re-run, unchanged prompt",
+      "purpose": "larger re-run, unchanged prompt",
       "relation": {
         "repeats": "run-6a"
       },

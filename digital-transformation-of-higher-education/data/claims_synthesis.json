@@ -1,5 +1,5 @@
 {
-  "note": "Cross-run synthesis claims written by Claude from the saved outputs; paraphrased, hedged and linked to supporting objects. Not findings of a verified study. Confidence is Claude's reading of the evidence quality, not a statistical measure.",
+  "note": "Cross-run synthesis claims written by an AI model from the saved outputs; paraphrased, hedged and linked to supporting objects. Not findings of a verified study. Confidence is an AI model's reading of the evidence quality, not a statistical measure.",
   "claims": [
     {
       "id": "S01",
@@ -27,7 +27,7 @@
       "supporting_consensus_claim_ids": [
         "C8d-04"
       ],
-      "caveats": "Abstract-level evidence; Pro-depth for distance HE; survivorship in histories.",
+      "caveats": "Abstract-level evidence; smaller run-depth for distance HE; survivorship in histories.",
       "levels": [
         "meso",
         "macro"
@@ -91,7 +91,7 @@
     },
     {
       "id": "S03",
-      "statement": "Distance higher education is a long-running precedent: postal, radio, television and early network media extended campus universities, produced dual-mode and open universities, and failed to replace conventional universities.",
+      "statement": "Distance higher education is a long-running precedent: postal, radio, television and early network media extended campus universities, produced combined-format and open universities, and failed to replace conventional universities.",
       "confidence": "medium",
       "supporting_runs": [
         "run-7a",
@@ -107,7 +107,7 @@
         "D17"
       ],
       "supporting_consensus_claim_ids": [],
-      "caveats": "Pro-depth only; Deep re-run not run; Latin America, Sub-Saharan Africa and the Soviet sphere thinly documented.",
+      "caveats": "smaller run-depth only; larger run re-run not run; Latin America, Sub-Saharan Africa and the Soviet sphere thinly documented.",
       "levels": [
         "micro",
         "meso",
@@ -223,7 +223,7 @@
         "J13"
       ],
       "supporting_consensus_claim_ids": [],
-      "caveats": "Interpretive synthesis by Consensus; few longitudinal studies.",
+      "caveats": "Interpretive synthesis by an AI literature-search tool; few longitudinal studies.",
       "levels": [
         "meso",
         "macro"
