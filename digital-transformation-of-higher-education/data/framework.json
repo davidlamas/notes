@@ -1,0 +1,101 @@
+{
+  "title": "Digital transformation OF higher education: continuity or disruption, utopia or dystopia",
+  "scope": {
+    "of_vs_in": "The inquiry concerns the digital transformation OF higher education (what HE is: its form, functions, boundaries, legitimacy and mandate), not digitalization IN higher education (tools used inside existing structures and their effectiveness for learning outcomes).",
+    "doctoral_training": "Doctoral training is a separate line of inquiry and is out of scope here; the doctoral level enters only as one level of the degree structure when the evidence addresses it.",
+    "no_stage_models": "No linear development-stage framing. Variation across regions is treated as historical and contextual diversity; sources that use stage or catch-up models are reported together with the critiques of those models.",
+    "analogy_not_forecast": "Historical and scenario material is an analogy base and a map of arguments, not a forecast. No 5/10/15/20-year projections are made in this package."
+  },
+  "guiding_questions": [
+    "What is the status of research on the digital transformation of higher education?",
+    "What might HE look like in 5, 10, 15 and 20 years? (not answered in this package; see scope)",
+    "Will we still reason in terms of BSc, MSc and doctoral studies, HEIs as the places where R&D&I happens, and HEIs as agents of change?",
+    "With so much automated reasoning, what will universities look like and what will their role be?"
+  ],
+  "axes": [
+    {
+      "id": "cd",
+      "label": "Continuity versus disruption",
+      "question": "Does the underlying logic of the role, practice, institution or mandate persist, or is it displaced?",
+      "poles": [
+        "continuity",
+        "disruption"
+      ],
+      "note": "Milestones also use layered (addition and recombination with persistence) and mixed. Continuity and disruption are independent of utopian or dystopian valence."
+    },
+    {
+      "id": "valence",
+      "label": "Utopian versus dystopian",
+      "question": "Is the outcome beneficial or harmful, and for whom?",
+      "poles": [
+        "utopian_leaning",
+        "dystopian_leaning"
+      ],
+      "note": "Always read together with the \"for whom\". The same development is read as utopian by some authors and dystopian by others."
+    }
+  ],
+  "levels": [
+    {
+      "id": "micro",
+      "label": "Micro"
+    },
+    {
+      "id": "meso",
+      "label": "Meso"
+    },
+    {
+      "id": "macro",
+      "label": "Macro"
+    }
+  ],
+  "cross_level_tension": "A cross-level tension is a development that is positive at one level and negative at another (for example productivity gains for individual researchers coinciding with narrowing of collective research focus).",
+  "functions": [
+    {
+      "id": "education"
+    },
+    {
+      "id": "research"
+    },
+    {
+      "id": "outreach"
+    }
+  ],
+  "tracks": [
+    "technology",
+    "institution",
+    "distance_he",
+    "ecosystem_general",
+    "ecosystem_academies",
+    "ecosystem_scholarly_communication",
+    "ecosystem_infrastructures"
+  ],
+  "rate_of_change": {
+    "principle": "Layered, not a single curve. No composite index.",
+    "layers": [
+      {
+        "id": 1,
+        "label": "Technology adoption speed",
+        "status": "Not built; no harmonised long-run series exists (run-6c)"
+      },
+      {
+        "id": 2,
+        "label": "Institutional response lag",
+        "status": "Not built; lag_note exists for 13 milestones, as stated in sources"
+      },
+      {
+        "id": 3,
+        "label": "Scale series",
+        "status": "Candidate series listed in series.json; data not obtained"
+      },
+      {
+        "id": 4,
+        "label": "Type of change (practice, form, function, mandate)",
+        "status": "Coded for all milestones (inferred by Claude; review pending)"
+      }
+    ]
+  },
+  "ecosystem": {
+    "working_label": "knowledge ecosystem",
+    "note": "The researcher has no settled name. Run 7b returned innovation-ecosystem vocabulary; the vocabulary the researcher meant (knowledge infrastructure, scholarly communication system, science system) was not returned. Choose a label for the page before publishing."
+  }
+}

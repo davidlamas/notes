@@ -1,0 +1,88 @@
+{
+  "note": "Statements about time lags or adoption speed, as stated in the sources. Not comparable with each other (they measure different things).",
+  "lags": [
+    {
+      "id": "LG01",
+      "statement": "Learning platforms required decades for complete institutionalisation.",
+      "milestone_ids": [
+        "Y01",
+        "T32"
+      ],
+      "source_run": "run-6a"
+    },
+    {
+      "id": "LG02",
+      "statement": "Lockdown-driven transitions to remote teaching were enforced within days; a large reported share of surveyed students shifted online; the figure remains unverified.",
+      "milestone_ids": [
+        "Y20",
+        "T36"
+      ],
+      "source_run": "run-8d"
+    },
+    {
+      "id": "LG03",
+      "statement": "ChatGPT reached reported rapid global uptake within months; the figure remains unverified; universities began issuing policies within weeks, but many highly ranked universities still lacked policies by mid-2023.",
+      "milestone_ids": [
+        "Y24",
+        "Y25"
+      ],
+      "source_run": "run-8d"
+    },
+    {
+      "id": "LG04",
+      "statement": "Movable-type adoption in Europe, 1450-1500, was conditioned by existing technical skill clusters.",
+      "milestone_ids": [
+        "T11"
+      ],
+      "source_run": "run-5b"
+    },
+    {
+      "id": "LG05",
+      "statement": "German physics gained firm university footing only by the 1840s.",
+      "milestone_ids": [
+        "I11"
+      ],
+      "source_run": "run-5b"
+    },
+    {
+      "id": "LG06",
+      "statement": "Ottoman Darulfunun: stop-start development from 1845 proposals to the 1900 reform.",
+      "milestone_ids": [
+        "I12"
+      ],
+      "source_run": "run-5b"
+    },
+    {
+      "id": "LG07",
+      "statement": "Postal systems: multidecade delay between technology availability and institutional uptake; illiterate poor excluded.",
+      "milestone_ids": [
+        "D02"
+      ],
+      "source_run": "run-7a"
+    },
+    {
+      "id": "LG08",
+      "statement": "Heavy 1920s-1930s investment in educational radio did not secure sustained success (a negative case).",
+      "milestone_ids": [
+        "T25"
+      ],
+      "source_run": "run-5b"
+    },
+    {
+      "id": "LG09",
+      "statement": "Paper diffused over multiple centuries from China and Central Asia through the Islamic world to Europe.",
+      "milestone_ids": [
+        "T06"
+      ],
+      "source_run": "run-5a"
+    },
+    {
+      "id": "LG10",
+      "statement": "Open-access mandates raised deposit rates, but culture change lagged.",
+      "milestone_ids": [
+        "Y10"
+      ],
+      "source_run": "run-8d"
+    }
+  ]
+}

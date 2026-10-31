@@ -1,0 +1,135 @@
+{
+  "gaps": [
+    {
+      "id": "G01",
+      "gap": "Longitudinal outcome evidence for any major milestone (nearly all studies are cross-sectional or descriptive)",
+      "source_runs": [
+        "run-8d",
+        "run-4c",
+        "run-2"
+      ],
+      "level": "macro"
+    },
+    {
+      "id": "G02",
+      "gap": "Macro-level change in mandates and boundaries",
+      "source_runs": [
+        "run-8d",
+        "run-4b"
+      ],
+      "level": "macro"
+    },
+    {
+      "id": "G03",
+      "gap": "Digital change in outreach and the third mission, and its evaluation",
+      "source_runs": [
+        "run-8d",
+        "run-6b"
+      ],
+      "level": "meso"
+    },
+    {
+      "id": "G04",
+      "gap": "Africa, Southeast Asia, Latin America outside the best-known infrastructures, Middle East and South Asia: institution-level evidence on ecosystem and distance HE",
+      "source_runs": [
+        "run-7a",
+        "run-8a",
+        "run-8b",
+        "run-8c",
+        "run-8d",
+        "run-6d"
+      ],
+      "level": "meso"
+    },
+    {
+      "id": "G05",
+      "gap": "Harmonised long-run series of technology adoption and institutional response",
+      "source_runs": [
+        "run-6c"
+      ],
+      "level": "macro"
+    },
+    {
+      "id": "G06",
+      "gap": "Prevalence of education, research and outreach facets by region (how common each configuration is)",
+      "source_runs": [
+        "run-6d"
+      ],
+      "level": "meso"
+    },
+    {
+      "id": "G07",
+      "gap": "Non-academic staff and distributional effects of institutional change",
+      "source_runs": [
+        "run-4c"
+      ],
+      "level": "micro"
+    },
+    {
+      "id": "G08",
+      "gap": "Evidence linking foresight exercises to decisions",
+      "source_runs": [
+        "run-4c"
+      ],
+      "level": "macro"
+    },
+    {
+      "id": "G09",
+      "gap": "Long-run funding settlements and post-work public mandates",
+      "source_runs": [
+        "run-4b"
+      ],
+      "level": "macro"
+    },
+    {
+      "id": "G10",
+      "gap": "Structural effects of generative AI on universities (as opposed to expectations and short-term studies)",
+      "source_runs": [
+        "run-8d",
+        "run-2"
+      ],
+      "level": "macro"
+    },
+    {
+      "id": "G11",
+      "gap": "Effects of photocopying, microfilm, railways and government laboratories on universities",
+      "source_runs": [
+        "run-5b"
+      ],
+      "level": "meso"
+    },
+    {
+      "id": "G12",
+      "gap": "Alexandria, Egyptian institutions, sabha and parishad, Tamil Sangam, Baghdad and Gondishapur continuity; several national academies",
+      "source_runs": [
+        "run-8a"
+      ],
+      "level": "meso"
+    },
+    {
+      "id": "G13",
+      "gap": "National library origins, museum-university relationships, early data archives",
+      "source_runs": [
+        "run-8c"
+      ],
+      "level": "meso"
+    },
+    {
+      "id": "G14",
+      "gap": "Platform founding dates for Latindex, SciELO, Redalyc, AJOL; ORCID history; consortium bargaining outcomes",
+      "source_runs": [
+        "run-8b"
+      ],
+      "level": "meso"
+    },
+    {
+      "id": "G15",
+      "gap": "Cost-effectiveness and retention data for early broadcasting",
+      "source_runs": [
+        "run-7a"
+      ],
+      "level": "meso"
+    }
+  ],
+  "note": "Gaps are as stated by the Consensus outputs (and by Claude's reading of them); they are gaps in what the saved outputs establish, not necessarily gaps in the literature."
+}

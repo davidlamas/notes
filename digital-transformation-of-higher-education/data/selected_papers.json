@@ -1,0 +1,455 @@
+{
+  "note": "Small bibliography subset used in claim source trails. Bibliographic facts only.",
+  "papers": [
+    {
+      "pid": "1d0ab764a1f35c51aabc5ba948d242d0",
+      "title": "Making markets through digital platforms: Pearson, edu-business, and the (e)valuation of higher education",
+      "authors": [
+        "Ben Williamson"
+      ],
+      "year": 2020,
+      "journal": "Critical Studies in Education",
+      "doi": "10.1080/17508487.2020.1737556",
+      "url": "https://doi.org/10.1080/17508487.2020.1737556",
+      "cited_in_runs": [
+        "run-3b",
+        "run-4a",
+        "run-4b",
+        "run-4c",
+        "run-7b"
+      ],
+      "n_runs": 5,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "082485215b91586490d99b507e11a1cc",
+      "title": "Artificial intelligence and illusions of understanding in scientific research",
+      "authors": [
+        "Lisa Messeri",
+        "M. J. Crockett"
+      ],
+      "year": 2024,
+      "journal": "Nature",
+      "doi": "10.1038/s41586-024-07146-0",
+      "url": "https://doi.org/10.1038/s41586-024-07146-0",
+      "cited_in_runs": [
+        "run-2",
+        "run-3a",
+        "run-4b",
+        "run-4c"
+      ],
+      "n_runs": 4,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "ecb9fe102bd352b09bcd3c955b21a63a",
+      "title": "Quantifying the use and potential benefits of artificial intelligence in scientific research",
+      "authors": [
+        "Jian Gao",
+        "Da-Shun Wang"
+      ],
+      "year": 2024,
+      "journal": "Nature Human Behaviour",
+      "doi": "10.1038/s41562-024-02020-5",
+      "url": "https://doi.org/10.1038/s41562-024-02020-5",
+      "cited_in_runs": [
+        "run-1",
+        "run-2",
+        "run-4c",
+        "run-8d"
+      ],
+      "n_runs": 4,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "20869cf37a5c5af0be838a9d1f494c8e",
+      "title": "The De-democratization of AI: Deep Learning and the Compute Divide in Artificial Intelligence Research",
+      "authors": [
+        "N. Ahmed",
+        "Muntasir Wahed"
+      ],
+      "year": 2020,
+      "journal": "ArXiv",
+      "doi": "10.48550/arxiv.2010.15581",
+      "url": "https://doi.org/10.48550/arxiv.2010.15581",
+      "cited_in_runs": [
+        "run-2",
+        "run-4a",
+        "run-4b"
+      ],
+      "n_runs": 3,
+      "venue_flag": "preprint",
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "e607d4ce89a0599ab782a62bcda1ed72",
+      "title": "The Third Mission of the university: A systematic literature review on potentials and constraints",
+      "authors": [
+        "Lorenzo Compagnucci",
+        "F. Spigarelli"
+      ],
+      "year": 2020,
+      "journal": "Technological Forecasting and Social Change",
+      "doi": "10.1016/j.techfore.2020.120284",
+      "url": "https://doi.org/10.1016/j.techfore.2020.120284",
+      "cited_in_runs": [
+        "run-2",
+        "run-6b",
+        "run-8d"
+      ],
+      "n_runs": 3,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "8934365b64dc58f39aa2278a17fd0c54",
+      "title": "The role of learned societies in national scholarly publishing",
+      "authors": [
+        "E. Late",
+        "Laura Korkeamäki",
+        "Janne Pölönen",
+        "Sami Syrjämäki"
+      ],
+      "year": 2020,
+      "journal": "Learned Publishing",
+      "doi": "10.1002/leap.1270",
+      "url": "https://doi.org/10.1002/leap.1270",
+      "cited_in_runs": [
+        "run-7b",
+        "run-8a",
+        "run-8b"
+      ],
+      "n_runs": 3,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "14ba437bc8b45286a9d90873b7a299a1",
+      "title": "A Worldwide Journey through Distance Education—From the Post Office to Virtual, Augmented and Mixed Realities, and Education during the COVID-19 Pandemic",
+      "authors": [
+        "A. Pręgowska",
+        "K. Masztalerz",
+        "M. Garlińska",
+        "M. Osial"
+      ],
+      "year": 2021,
+      "journal": "Education Sciences",
+      "doi": "10.3390/educsci11030118",
+      "url": "https://doi.org/10.3390/educsci11030118",
+      "cited_in_runs": [
+        "run-5b",
+        "run-7a"
+      ],
+      "n_runs": 2,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "17f696e5131d5f7cb9d439dce348638f",
+      "title": "The Privatization of AI Research(-ers): Causes and Potential Consequences - From university-industry interaction to public research brain-drain?",
+      "authors": [
+        "Roman Jurowetzki",
+        "D. Hain",
+        "Juan Mateos-Garcia",
+        "Konstantinos Stathoulopoulos"
+      ],
+      "year": 2021,
+      "journal": "ArXiv",
+      "doi": "10.48550/arxiv.2102.01648",
+      "url": "https://doi.org/10.48550/arxiv.2102.01648",
+      "cited_in_runs": [
+        "run-2",
+        "run-4b"
+      ],
+      "n_runs": 2,
+      "venue_flag": "preprint",
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "74e3abdf5ca7594780443df7bbefe098",
+      "title": "The rise of education rentiers: digital platforms, digital data and rents",
+      "authors": [
+        "Janja Komljenovic"
+      ],
+      "year": 2021,
+      "journal": "Learning, Media and Technology",
+      "doi": "10.1080/17439884.2021.1891422",
+      "url": "https://doi.org/10.1080/17439884.2021.1891422",
+      "cited_in_runs": [
+        "run-4a",
+        "run-4b"
+      ],
+      "n_runs": 2,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "e486a248290258d080582764da6d9e85",
+      "title": "A history of higher and professional correspondence education in the UK",
+      "authors": [
+        "Stephen A. Hunt"
+      ],
+      "year": 2020,
+      "journal": "History of Education",
+      "doi": "10.1080/0046760x.2020.1739756",
+      "url": "https://doi.org/10.1080/0046760x.2020.1739756",
+      "cited_in_runs": [
+        "run-7a"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "4df2b35b029458749e030cea83048957",
+      "title": "A systematic critical review of generative AI's impact on authorship, pedagogy, and integrity (2023–2025)",
+      "authors": [
+        "Zouhaier Slimi"
+      ],
+      "year": 2026,
+      "journal": "Frontiers in Education",
+      "doi": "10.3389/feduc.2026.1769680",
+      "url": "https://doi.org/10.3389/feduc.2026.1769680",
+      "cited_in_runs": [
+        "run-8d"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "b2cbc943fddf5b4ab02f1e4d179a31f2",
+      "title": "Assessing University-Society Engagements: Towards a Methodological Framework",
+      "authors": [
+        "T. Bekele",
+        "Denis Thaddeus Ofoyuru",
+        "E. T. Woldegiorgis"
+      ],
+      "year": 2023,
+      "journal": "Innovative Higher Education",
+      "doi": "10.1007/s10755-023-09678-1",
+      "url": "https://doi.org/10.1007/s10755-023-09678-1",
+      "cited_in_runs": [
+        "run-8d"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "c2c61da8da7a5819aeafe65759e2cb9e",
+      "title": "Do Mandates Work? Investigating the Impact of the REF 2021 Open Access Policy at the University of Leeds",
+      "authors": [
+        "A. Kay"
+      ],
+      "year": 2025,
+      "journal": "Edinburgh Open Research",
+      "doi": "10.2218/eor.2025.10948",
+      "url": "https://doi.org/10.2218/eor.2025.10948",
+      "cited_in_runs": [
+        "run-8d"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "4a84490445fd5a70b2c8980f7a572e78",
+      "title": "Generative artificial intelligence and academia: Implication for research, teaching and service",
+      "authors": [
+        "Amon Barros",
+        "Ajnesh Prasad",
+        "Martyna Śliwa"
+      ],
+      "year": 2023,
+      "journal": "Management Learning",
+      "doi": "10.1177/13505076231201445",
+      "url": "https://doi.org/10.1177/13505076231201445",
+      "cited_in_runs": [
+        "run-4a"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "d0c6b5d1c1bc5f11873f51fb2747df4d",
+      "title": "Information Technology and Economic Change: The Impact of The Printing Press",
+      "authors": [
+        "Jeremiah E. Dittmar"
+      ],
+      "year": 2011,
+      "journal": "Quarterly Journal of Economics",
+      "doi": "10.1093/qje/qjr035",
+      "url": "https://doi.org/10.1093/qje/qjr035",
+      "cited_in_runs": [
+        "run-5b"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "08ae0d7359665f9b847b91aa9b133c95",
+      "title": "Is there a Latin American model of diamond publishing? Exploring the journal university portals",
+      "authors": [
+        "Fernanda Beigel",
+        "Manuel Bruccoleri"
+      ],
+      "year": 2026,
+      "journal": "Insights the UKSG journal",
+      "doi": "10.1629/uksg.771",
+      "url": "https://doi.org/10.1629/uksg.771",
+      "cited_in_runs": [
+        "run-8b"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "f079f9c8f8725e6c9058f4cf9ef6fc97",
+      "title": "Learned Societies, Knowledge Production, and Public Engagement in Colonial and Postcolonial Ghana, 1930–90",
+      "authors": [
+        "G. Bob-Milliar"
+      ],
+      "year": 2024,
+      "journal": "The Journal of African History",
+      "doi": "10.1017/s0021853724000458",
+      "url": "https://doi.org/10.1017/s0021853724000458",
+      "cited_in_runs": [
+        "run-8a"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "f140511a6ee55c6c83afe372d31ed313",
+      "title": "Measuring compliance with a Spanish Government open access mandate",
+      "authors": [
+        "Á. Borrego"
+      ],
+      "year": 2016,
+      "journal": "Journal of the Association for Information Science and Technology",
+      "doi": "10.1002/asi.23422",
+      "url": "https://doi.org/10.1002/asi.23422",
+      "cited_in_runs": [
+        "run-8c"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "0323ed5dda735b45a01dbf1e4081c0a4",
+      "title": "OLIVA: The Scientific output in journals edited in Latin America. Disciplinary Diversity, Institutional Collaboration, and Multilingualism in SciELO and Redalyc (1995-2018) *",
+      "authors": [
+        "Fernanda Beigel",
+        "A. Packer",
+        "Osvaldo Gallardo",
+        "Maximiliano Salatino"
+      ],
+      "year": 2023,
+      "journal": "Dados",
+      "doi": "10.1590/dados.2024.67.1.307x",
+      "url": "https://doi.org/10.1590/dados.2024.67.1.307x",
+      "cited_in_runs": [
+        "run-8b"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "baa19cea01a556e9892d1ef0c1ddbdeb",
+      "title": "Open access repositories in India",
+      "authors": [
+        "Prerna Singh"
+      ],
+      "year": 2016,
+      "journal": "IFLA Journal",
+      "doi": "10.1177/0340035215610131",
+      "url": "https://doi.org/10.1177/0340035215610131",
+      "cited_in_runs": [
+        "run-8c"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "7302d6e527515c8abdf5743a06deee0b",
+      "title": "Platformization of Scholarly Communication: Academic Social Networking Sites as New Infrastructures and Organizations",
+      "authors": [
+        "Stella Köchling"
+      ],
+      "year": 2025,
+      "journal": "Emerging Media",
+      "doi": "10.1177/27523543251346565",
+      "url": "https://doi.org/10.1177/27523543251346565",
+      "cited_in_runs": [
+        "run-8c"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "080609c9905c53e3a462696c3d7f853a",
+      "title": "Progress and new directions for teaching and learning in MOOCs",
+      "authors": [
+        "Ruiqi Deng",
+        "P. Benckendorff",
+        "D. Gannaway"
+      ],
+      "year": 2019,
+      "journal": "Comput. Educ.",
+      "doi": "10.1016/j.compedu.2018.10.019",
+      "url": "https://doi.org/10.1016/j.compedu.2018.10.019",
+      "cited_in_runs": [
+        "run-8d"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "b0fc2d0dca9a5555828b86dffcaec2b6",
+      "title": "Television, Learning and Distance Education",
+      "authors": [
+        "A. Bates"
+      ],
+      "year": 1988,
+      "journal": null,
+      "doi": "10.1080/0260741880140305",
+      "url": "https://doi.org/10.1080/0260741880140305",
+      "cited_in_runs": [
+        "run-7a"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    },
+    {
+      "pid": "4d8389f270ff5647bba792fa8a6e7004",
+      "title": "University rankings in the context of research evaluation: A state-of-the-art review",
+      "authors": [
+        "D. Kochetkov"
+      ],
+      "year": 2024,
+      "journal": "Quantitative Science Studies",
+      "doi": "10.1162/qss_a_00317",
+      "url": "https://doi.org/10.1162/qss_a_00317",
+      "cited_in_runs": [
+        "run-8d"
+      ],
+      "n_runs": 1,
+      "venue_flag": null,
+      "parse_quality": "exact"
+    }
+  ]
+}

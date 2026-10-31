@@ -1,0 +1,197 @@
+{
+  "note": "Public run metadata. Private thread links, interaction identifiers, prompts, archives and agent traces are intentionally excluded.",
+  "runs": [
+    {
+      "id": "run-1",
+      "mode": "unknown",
+      "purpose": "Status of research on digital transformation of HE (mostly digitalization IN HE)",
+      "relation": null,
+      "included_abstracts": null,
+      "quality_flags": []
+    },
+    {
+      "id": "run-2",
+      "mode": "unknown",
+      "purpose": "Foresight and scenario literature on universities and AI",
+      "relation": null,
+      "included_abstracts": null,
+      "quality_flags": []
+    },
+    {
+      "id": "run-3a",
+      "mode": "pro",
+      "purpose": "OF-HE lens, micro level",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-3b",
+      "mode": "pro",
+      "purpose": "OF-HE lens, meso level",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-3c",
+      "mode": "pro",
+      "purpose": "OF-HE lens, macro level",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-3d",
+      "mode": "pro",
+      "purpose": "Scenarios, four-quadrant map, cross-level tensions",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-4a",
+      "mode": "deep",
+      "purpose": "Deep re-run, unchanged prompt",
+      "relation": {
+        "repeats": "run-3b"
+      },
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-4b",
+      "mode": "deep",
+      "purpose": "Deep re-run, unchanged prompt",
+      "relation": {
+        "repeats": "run-3c"
+      },
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-4c",
+      "mode": "deep",
+      "purpose": "Deep re-run, unchanged prompt",
+      "relation": {
+        "repeats": "run-3d"
+      },
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-4d",
+      "mode": "n/a",
+      "purpose": "EU Council/Commission, EHEA, EUA, OECD, UNESCO; summaries only",
+      "relation": null,
+      "included_abstracts": null,
+      "quality_flags": []
+    },
+    {
+      "id": "run-5a",
+      "mode": "deep",
+      "purpose": "Technology and knowledge institutions, origins to c.1450, global",
+      "relation": null,
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-5b",
+      "mode": "deep",
+      "purpose": "Technology and knowledge institutions, c.1450-2000, global",
+      "relation": null,
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-6a",
+      "mode": "pro",
+      "purpose": "Superseded in depth by run-8d",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-6b",
+      "mode": "pro",
+      "purpose": "Framings and terms through time",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-6c",
+      "mode": "pro",
+      "purpose": "Candidate series for scale and lag layers",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-6d",
+      "mode": "pro",
+      "purpose": "Configurations by region and context; critique of stage models",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-7a",
+      "mode": "pro",
+      "purpose": "Deep re-run not run (credits)",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-7b",
+      "mode": "pro",
+      "purpose": "Did not capture academies, journals, repositories history",
+      "relation": null,
+      "included_abstracts": 20,
+      "quality_flags": []
+    },
+    {
+      "id": "run-8a",
+      "mode": "deep",
+      "purpose": "Global history of academies and societies and relation to HEIs",
+      "relation": null,
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-8b",
+      "mode": "deep",
+      "purpose": "Scholarly communication system history",
+      "relation": null,
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-8c",
+      "mode": "deep",
+      "purpose": "Knowledge infrastructure history",
+      "relation": null,
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-8d",
+      "mode": "deep",
+      "purpose": "Deep re-run, unchanged prompt",
+      "relation": {
+        "repeats": "run-6a"
+      },
+      "included_abstracts": 100,
+      "quality_flags": []
+    },
+    {
+      "id": "run-8e-not-run",
+      "mode": "deep",
+      "purpose": "Refused: monthly credits exhausted; reset 1 Nov or additional usage",
+      "relation": null,
+      "included_abstracts": null,
+      "quality_flags": []
+    }
+  ]
+}

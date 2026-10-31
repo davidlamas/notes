@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive scholarly inquiry into continuity, disruption, institutional layering and evidence in the digital transformation of higher education.">
+  <meta name="theme-color" content="#f7f4ee">
+  <link rel="icon" href="data:,">
+  <title>Digital Transformation of Higher Education</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Research maps home"><span class="wordmark-mark" aria-hidden="true">D</span><span>Digital Transformation <small>of Higher Education</small></span></a>
+    <nav class="mode-switch" aria-label="View mode"><button class="mode-button is-active" type="button" data-mode="presentation" aria-pressed="true">Presentation</button><button class="mode-button" type="button" data-mode="exploration" aria-pressed="false">Explore inquiry</button></nav>
+    <button class="text-button" id="methods-open" type="button" aria-haspopup="dialog">Evidence &amp; methods</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="presentation" class="mode-view" aria-label="Guided presentation">
+      <div class="deck" id="deck" aria-live="polite" aria-atomic="true"></div>
+      <div class="deck-controls" aria-label="Presentation controls"><button class="round-button" id="slide-prev" type="button" aria-label="Previous slide">←</button><div class="deck-progress"><span id="slide-count">1 / 12</span><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div></div><button class="round-button" id="slide-next" type="button" aria-label="Next slide">→</button></div>
+    </section>
+
+    <section id="exploration" class="mode-view" hidden aria-label="Explore the inquiry">
+      <div class="explore-intro"><div><p class="eyebrow">Exploratory inquiry · v0.9.0 · 31 October 2026</p><h1>What changes when higher education becomes digital?</h1><p class="lede">Trace what persisted, what shifted, and who gained or lost across institutions, technologies and the wider knowledge ecosystem.</p></div><div class="explore-actions"><button class="secondary-button" id="stronger-preset" type="button" aria-pressed="false">Show stronger items</button><button class="secondary-button" id="share-state" type="button">Copy this view</button></div></div>
+      <aside class="evidence-banner" aria-label="Important evidence status"><strong>Working map, not settled evidence.</strong><span>Literature syntheses were produced with Consensus; extraction, coding, synthesis and draft copy were AI-assisted. Most evidence comes from abstracts and has not been verified against the underlying papers.</span></aside>
+      <section class="snapshot" aria-labelledby="snapshot-title"><div><p class="eyebrow">Inquiry at a glance</p><h2 id="snapshot-title">Broad in time, uneven in evidence</h2></div><div class="stat-grid" id="stat-grid"></div></section>
+      <nav class="section-nav" aria-label="Explore sections"><a href="#timeline-section">Timeline</a><a href="#framework-section">Framework</a><a href="#claims-section">Claims</a><a href="#quality-section">Evidence quality</a><a href="#bibliography-section">Bibliography</a></nav>
+
+      <section id="timeline-section" class="page-section" aria-labelledby="timeline-title">
+        <div class="section-heading"><div><p class="eyebrow">Historical evidence</p><h2 id="timeline-title">A layered timeline</h2></div><p>Piecewise periods keep ancient history visible without squeezing recent change. Approximate, inferred and undated items remain explicit.</p></div>
+        <div class="filter-panel" aria-label="Timeline filters">
+          <label class="search-box"><span>Search</span><input id="timeline-search" type="search" placeholder="Milestone, description, place…" autocomplete="off"></label>
+          <label>Track<select id="filter-track"><option value="all">All tracks</option></select></label><label>Function<select id="filter-function"><option value="all">All functions</option></select></label><label>Level<select id="filter-level"><option value="all">All levels</option></select></label><label>Region<select id="filter-region"><option value="all">All regions</option></select></label><label>Reading<select id="filter-reading"><option value="all">All readings</option></select></label><label>Change<select id="filter-change"><option value="all">All change types</option></select></label><label>Evidence<select id="filter-evidence"><option value="all">All evidence</option></select></label>
+          <label>Review<select id="filter-review"><option value="all">All review states</option><option value="reviewed">No review flag</option><option value="needs-review">Needs review</option></select></label><label class="check-label"><input id="show-noncanonical" type="checkbox"> Show superseded items</label><button class="secondary-button" id="reset-filters" type="button">Reset</button>
+        </div>
+        <div class="timeline-meta"><span id="result-count" aria-live="polite"></span><span class="date-legend"><i class="date-dot stated"></i> stated <i class="date-dot approximate"></i> approximate/inferred <i class="date-dot unsourced"></i> unsourced</span></div>
+        <div class="timeline-layout"><div class="timeline-card"><div class="timeline-head" aria-hidden="true"><span>Track</span><span>Before 1500</span><span>1500–1899</span><span>1900–1999</span><span>2000–2026</span><span>Undated</span></div><div id="timeline" class="timeline" aria-label="Milestones by track and period"></div></div><aside id="detail-panel" class="detail-panel" aria-live="polite" aria-label="Selected milestone detail"></aside></div>
+      </section>
+
+      <section id="framework-section" class="page-section" aria-labelledby="framework-title">
+        <div class="section-heading"><div><p class="eyebrow">Analytical framework</p><h2 id="framework-title">Two axes, three levels, three functions</h2></div><p>Counts describe the coded evidence base, not the world. “Unclear” is retained when the source does not support a judgement.</p></div>
+        <div class="framework-primer" id="framework-primer"></div>
+        <div class="matrix-grid"><article class="matrix-card"><div class="card-head"><h3>Levels × continuity/disruption</h3><span>select a cell to filter the timeline</span></div><div id="level-reading-matrix" class="matrix"></div></article><article class="matrix-card"><div class="card-head"><h3>Functions × levels</h3><span>select a cell to filter the timeline</span></div><div id="function-level-matrix" class="matrix"></div></article></div>
+        <div class="tension-strip" id="tension-strip"></div>
+      </section>
+
+      <section id="claims-section" class="page-section" aria-labelledby="claims-title">
+        <div class="section-heading"><div><p class="eyebrow">Provisional synthesis</p><h2 id="claims-title">Claims with their limits attached</h2></div><p>Selecting a claim highlights its linked milestones. Open the source trail for confidence, caveats, runs, hypotheses and references.</p></div>
+        <div class="claim-grid" id="claim-grid"></div>
+        <div class="section-heading compact-heading"><div><p class="eyebrow">Research agenda</p><h2>Five hypotheses, written to be tested</h2></div><p>These are not conclusions. Each names the evidence pointing toward it, the inferential limit and a next test.</p></div>
+        <div class="hypothesis-list" id="hypothesis-list"></div>
+        <div class="lag-panel"><div><p class="eyebrow">Rate of change</p><h3>Examples, not a trend line</h3><p>The available cases measure different things. They are shown as annotated lags rather than collapsed into a composite index.</p></div><div id="lag-list" class="lag-list"></div></div>
+      </section>
+
+      <section id="quality-section" class="page-section" aria-labelledby="quality-title">
+        <div class="section-heading"><div><p class="eyebrow">Evidence quality &amp; coverage</p><h2 id="quality-title">What this map can—and cannot—carry</h2></div><p>Coverage charts describe the source base. They do not rank regions, institutions or societies.</p></div>
+        <div class="quality-layout"><article class="quality-card"><div class="card-head"><h3>High-severity flags</h3><span>all visible</span></div><div id="quality-flags"></div></article><article class="quality-card"><div class="card-head"><h3>Regional coverage</h3><span>canonical milestones</span></div><div id="region-coverage" class="bar-list"></div></article><article class="quality-card"><div class="card-head"><h3>Run depth</h3><span>different search slices</span></div><div id="run-coverage"></div></article><article class="quality-card"><div class="card-head"><h3>Review &amp; verification</h3><span>coding status</span></div><div id="review-coverage"></div></article></div>
+        <details class="gap-drawer"><summary>Open evidence gaps <span id="gap-count"></span></summary><div id="gap-grid" class="gap-grid"></div></details>
+      </section>
+
+      <section id="bibliography-section" class="page-section" aria-labelledby="bibliography-title">
+        <div class="section-heading"><div><p class="eyebrow">Bibliography &amp; source trail</p><h2 id="bibliography-title">What the runs cited</h2></div><p>Bibliographic facts only—no abstracts or snippets. Inclusion is not endorsement or an individual quality assessment.</p></div>
+        <div class="bibliography-controls"><button class="secondary-button" id="load-bibliography" type="button">Load 847 bibliographic entries</button><label class="search-box" hidden id="bib-search-label"><span>Search bibliography</span><input id="bib-search" type="search" placeholder="Title, author, journal…"></label><label hidden id="bib-run-label">Run<select id="bib-run"><option value="all">All runs</option></select></label><label hidden id="bib-flag-label">Type<select id="bib-flag"><option value="all">All types</option><option value="unflagged">Unflagged</option><option value="flagged">Flagged venue/type</option></select></label></div>
+        <div id="bibliography-status" class="bibliography-status" aria-live="polite">The large bibliography is loaded only when requested.</div><div id="bibliography" class="bibliography"></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="drawer" id="methods-dialog" aria-labelledby="methods-title"><div class="drawer-head"><div><p class="eyebrow">Evidence and method</p><h2 id="methods-title">How to read this inquiry</h2></div><button class="icon-button" type="button" data-close="methods-dialog" aria-label="Close">×</button></div><div class="drawer-content" id="methods-content"><article><h3>Of higher education, not only in it</h3><p>The inquiry concerns changes to institutional form, functions, boundaries, legitimacy and mandate—not only whether tools improve learning inside existing structures.</p></article><article><h3>Evidence, interpretation and speculation stay apart</h3><p>Observed or documented material, interpretation, debated claims, expectations and projections are labelled separately. Historical cases are analogies, not forecasts.</p></article><article><h3>Pro and Deep are not interchangeable</h3><p>Pro runs read about 20 abstracts; Deep runs read about 100. Repeated prompts returned substantially different paper sets, so Pro-only material is treated as scoping.</p></article><article><h3>AI-assisted and unverified</h3><p>Literature syntheses were produced with Consensus. Extraction, coding, synthesis and draft copy were AI-assisted. Most evidence comes from abstracts, and the findings have not yet been verified against the underlying papers.</p></article><article><h3>Publication boundary</h3><p>The public site uses paraphrased curated data and bibliographic facts. Verbatim tool outputs, prompts, abstracts, snippets, private links and agent traces are not published.</p></article><article><h3>Out of scope</h3><p>No forecasts, country or region rankings, stage models, composite rate-of-change index, unsupported causal claims, or doctoral-training analysis.</p></article><details><summary>Working glossary</summary><div id="glossary" class="glossary"></div></details></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">This interactive map requires JavaScript to load the curated evidence package.</p></noscript>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

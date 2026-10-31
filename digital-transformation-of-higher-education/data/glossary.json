@@ -1,0 +1,85 @@
+{
+  "note": "Working definitions written for this inquiry.",
+  "terms": [
+    {
+      "term": "Digital transformation OF higher education",
+      "definition": "Change in what higher education is (its functions, form, boundaries, legitimacy and mandate) associated with digital and automated technologies; distinct from digitalization IN higher education, which concerns tools used inside existing structures."
+    },
+    {
+      "term": "Continuity",
+      "definition": "The underlying logic of a role, practice, institution or mandate persists."
+    },
+    {
+      "term": "Disruption",
+      "definition": "The underlying logic or actor is displaced or replaced."
+    },
+    {
+      "term": "Layering",
+      "definition": "New forms or media are added and authority is rearranged while existing forms persist."
+    },
+    {
+      "term": "Unbundling and rebundling",
+      "definition": "Separating functions (for example teaching, assessment, credentialing) that were provided together, and later recombining them in new arrangements."
+    },
+    {
+      "term": "Micro, meso, macro",
+      "definition": "Individual roles and practices; the institution as organisation; societal mandate and the knowledge system."
+    },
+    {
+      "term": "Cross-level tension",
+      "definition": "A development that is positive at one level and negative at another."
+    },
+    {
+      "term": "Outreach / third mission",
+      "definition": "Service, extension, engagement, knowledge transfer and societal impact; the term varies by period and tradition."
+    },
+    {
+      "term": "Distance higher education",
+      "definition": "Higher education delivered at a distance through post, broadcast, telecommunications or networks; includes dual-mode universities and open universities."
+    },
+    {
+      "term": "Dual-mode university",
+      "definition": "A campus university that also teaches external or distance students."
+    },
+    {
+      "term": "Open university",
+      "definition": "A distance-teaching institution with open admission; the UK Open University (1969) is the best-known example."
+    },
+    {
+      "term": "Knowledge ecosystem (working label)",
+      "definition": "The surrounding set of academies and societies, journals, publishers, conferences, indexes, libraries, repositories, funders and platforms within which HEIs operate. Working label only."
+    },
+    {
+      "term": "Assetisation",
+      "definition": "Turning institutional data, content or infrastructure into assets from which platforms extract rent; used in critical platform studies."
+    },
+    {
+      "term": "Platformisation",
+      "definition": "Growing dependence of institutional functions on commercial platforms and vendors."
+    },
+    {
+      "term": "Triple/quadruple helix",
+      "definition": "Frameworks describing coordination among universities, industry, state (and civil society)."
+    },
+    {
+      "term": "FAIR",
+      "definition": "Findable, Accessible, Interoperable, Reusable (research data principles, 2016)."
+    },
+    {
+      "term": "DORA, Leiden Manifesto, CoARA",
+      "definition": "Declarations and coalitions on responsible research assessment (2013, 2015, 2022)."
+    },
+    {
+      "term": "Stage model",
+      "definition": "A model that places societies or institutions on a single developmental ladder; not used here, and reported only with its critiques."
+    },
+    {
+      "term": "Observed, interpretation, debated, expected, projected",
+      "definition": "Evidence labels used across the package; see vocabularies.json."
+    },
+    {
+      "term": "Analogy, not forecast",
+      "definition": "Historical patterns are used to frame questions, not to predict outcomes."
+    }
+  ]
+}

@@ -1,0 +1,542 @@
+{
+  "tracks": [
+    {
+      "id": "technology",
+      "label": "Technology",
+      "description": "Knowledge technologies and media (writing, codex, paper, print, post, telegraph, photography, computing, networks, platforms, AI)"
+    },
+    {
+      "id": "institution",
+      "label": "Institution",
+      "description": "HEIs and other higher-learning institutions: foundings, reforms, new organisational forms, changes in governance, credentials, funding, mandate"
+    },
+    {
+      "id": "distance_he",
+      "label": "Distance higher education",
+      "description": "Correspondence, broadcast, telecommunication and early network-based higher education; dual-mode and open universities"
+    },
+    {
+      "id": "ecosystem_general",
+      "label": "Ecosystem (general)",
+      "description": "Actors and framings of the knowledge ecosystem around HEIs, plus cross-cutting recent items (rankings, citation databases, declarations, platforms)"
+    },
+    {
+      "id": "ecosystem_academies",
+      "label": "Ecosystem: academies and learned societies",
+      "description": "Academies of sciences, learned societies and equivalents"
+    },
+    {
+      "id": "ecosystem_scholarly_communication",
+      "label": "Ecosystem: scholarly communication",
+      "description": "Journals, peer review, conferences, publishing, indexing, metrics, rankings, assessment reform"
+    },
+    {
+      "id": "ecosystem_infrastructures",
+      "label": "Ecosystem: infrastructures",
+      "description": "Libraries, archives, repositories, data and research infrastructures, persistent identifiers"
+    }
+  ],
+  "functions": [
+    {
+      "id": "education",
+      "label": "Education",
+      "description": "Teaching, learning, assessment, credentialing, access"
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "description": "Knowledge production, dissemination, evaluation"
+    },
+    {
+      "id": "outreach",
+      "label": "Outreach",
+      "description": "Service, extension, engagement, knowledge transfer, third mission, societal impact; named differently in each period"
+    }
+  ],
+  "aspects": [
+    {
+      "id": "governance",
+      "label": "Governance",
+      "description": "Organisation and policy"
+    },
+    {
+      "id": "preservation",
+      "label": "Preservation",
+      "description": "Keeping and recovering knowledge"
+    },
+    {
+      "id": "administration",
+      "label": "Administration",
+      "description": "Record-keeping and administration in or around HEIs"
+    },
+    {
+      "id": "organisation",
+      "label": "Organisation",
+      "description": "Institutional organisation"
+    },
+    {
+      "id": "operations",
+      "label": "Operations",
+      "description": "Institutional operations"
+    }
+  ],
+  "levels": [
+    {
+      "id": "micro",
+      "label": "Micro",
+      "description": "Everyday roles, practices, skills, identities, agency of individual agents (academics, researchers, students, staff)"
+    },
+    {
+      "id": "meso",
+      "label": "Meso",
+      "description": "The institution as organisation: degrees, research organisation, governance, business model, boundaries"
+    },
+    {
+      "id": "macro",
+      "label": "Macro",
+      "description": "Societal mandate, legitimacy, public purpose, the knowledge system"
+    }
+  ],
+  "change_type": [
+    {
+      "id": "practice",
+      "label": "Practice",
+      "description": "Everyday practice changed"
+    },
+    {
+      "id": "form",
+      "label": "Form",
+      "description": "Organisational or institutional form changed or was created"
+    },
+    {
+      "id": "function",
+      "label": "Function",
+      "description": "What the institution or actor does changed"
+    },
+    {
+      "id": "mandate",
+      "label": "Mandate",
+      "description": "Societal role or legitimacy changed"
+    },
+    {
+      "id": "mixed",
+      "label": "Mixed",
+      "description": "More than one of the above"
+    },
+    {
+      "id": "unclear",
+      "label": "Unclear",
+      "description": "Source does not allow a call"
+    }
+  ],
+  "cd_reading": [
+    {
+      "id": "continuity",
+      "label": "Continuity",
+      "description": "The underlying logic persisted, per the source"
+    },
+    {
+      "id": "disruption",
+      "label": "Disruption",
+      "description": "The underlying logic or actor was displaced or replaced, per the source"
+    },
+    {
+      "id": "layered",
+      "label": "Layered",
+      "description": "New forms or media were added and authority rearranged while existing forms persisted (addition or recombination)"
+    },
+    {
+      "id": "mixed",
+      "label": "Mixed",
+      "description": "Source describes both continuity and disruption in the same item"
+    },
+    {
+      "id": "unclear",
+      "label": "Unclear",
+      "description": "Source does not allow a call (most ancient and origin events)"
+    }
+  ],
+  "valence": [
+    {
+      "id": "not_coded",
+      "label": "Not coded",
+      "description": "Source does not state winners and losers"
+    },
+    {
+      "id": "utopian_leaning",
+      "label": "Utopian-leaning",
+      "description": "Source states mainly beneficial outcomes for the named group"
+    },
+    {
+      "id": "dystopian_leaning",
+      "label": "Dystopian-leaning",
+      "description": "Source states mainly harmful outcomes for the named group"
+    },
+    {
+      "id": "mixed",
+      "label": "Mixed",
+      "description": "Source states both; see valence_for_whom"
+    }
+  ],
+  "date_precision": [
+    {
+      "id": "day",
+      "label": "Day",
+      "description": ""
+    },
+    {
+      "id": "month",
+      "label": "Month",
+      "description": ""
+    },
+    {
+      "id": "year",
+      "label": "Year",
+      "description": ""
+    },
+    {
+      "id": "range",
+      "label": "Range of years",
+      "description": ""
+    },
+    {
+      "id": "century",
+      "label": "Century",
+      "description": ""
+    },
+    {
+      "id": "approximate_year",
+      "label": "Approximate year",
+      "description": ""
+    },
+    {
+      "id": "unspecified",
+      "label": "Unspecified",
+      "description": "Placed in the undated lane"
+    }
+  ],
+  "date_certainty": [
+    {
+      "id": "stated",
+      "label": "Stated",
+      "description": "A year or range is stated in the source"
+    },
+    {
+      "id": "approximate",
+      "label": "Approximate",
+      "description": "Source uses c., early, mid, period words, or span inferred by Claude"
+    },
+    {
+      "id": "unstated",
+      "label": "Unstated",
+      "description": "No date available"
+    }
+  ],
+  "date_basis": [
+    {
+      "id": "source_year",
+      "label": "Source year",
+      "description": "Year given in a source output"
+    },
+    {
+      "id": "source_period_words",
+      "label": "Source period words",
+      "description": "Period words in the source converted to years by Claude (e.g. 8th century)"
+    },
+    {
+      "id": "inferred_from_named_period",
+      "label": "Inferred from named period",
+      "description": "Span inferred by Claude from a named period (e.g. Southern Song, Hellenistic); verify"
+    },
+    {
+      "id": "claude_general_knowledge_unsourced",
+      "label": "Claude general knowledge (unsourced)",
+      "description": "Date supplied by Claude without a source in the runs; must be sourced or dropped"
+    },
+    {
+      "id": "none",
+      "label": "None",
+      "description": "No date"
+    }
+  ],
+  "evidence_labels": [
+    {
+      "id": "observed",
+      "label": "Observed / documented",
+      "description": "Archival, empirical, quantitative or bibliometric findings (Consensus labels OBSERVED or DOCUMENTED)"
+    },
+    {
+      "id": "interpretation",
+      "label": "Interpretation",
+      "description": "Scholarly or historical explanation (HISTORICAL INTERPRETATION)"
+    },
+    {
+      "id": "debated",
+      "label": "Debated / speculative",
+      "description": "Contested, uncertain or inadequately corroborated"
+    },
+    {
+      "id": "expected",
+      "label": "Expected",
+      "description": "Stakeholder expectation or survey, not an observed outcome"
+    },
+    {
+      "id": "projected",
+      "label": "Projected",
+      "description": "Conceptual or scenario-based projection"
+    },
+    {
+      "id": "unspecified",
+      "label": "Unspecified",
+      "description": "No label in the source row"
+    }
+  ],
+  "evidence_strength_hint": [
+    {
+      "id": "strong",
+      "label": "Strong",
+      "description": ""
+    },
+    {
+      "id": "moderate_to_strong",
+      "label": "Moderate to strong",
+      "description": ""
+    },
+    {
+      "id": "moderate",
+      "label": "Moderate",
+      "description": ""
+    },
+    {
+      "id": "weak_to_moderate",
+      "label": "Weak to moderate",
+      "description": ""
+    },
+    {
+      "id": "weak",
+      "label": "Weak or thin",
+      "description": ""
+    },
+    {
+      "id": "unrated",
+      "label": "Unrated",
+      "description": "Most rows: strength was not captured in the long-list"
+    }
+  ],
+  "regions": [
+    {
+      "id": "europe",
+      "label": "Europe",
+      "description": ""
+    },
+    {
+      "id": "middle_east_north_africa",
+      "label": "Middle East and North Africa",
+      "description": ""
+    },
+    {
+      "id": "sub_saharan_africa",
+      "label": "Sub-Saharan Africa",
+      "description": ""
+    },
+    {
+      "id": "south_asia",
+      "label": "South Asia",
+      "description": ""
+    },
+    {
+      "id": "east_asia",
+      "label": "East Asia",
+      "description": ""
+    },
+    {
+      "id": "southeast_asia",
+      "label": "Southeast Asia",
+      "description": ""
+    },
+    {
+      "id": "central_asia",
+      "label": "Central Asia",
+      "description": ""
+    },
+    {
+      "id": "oceania",
+      "label": "Oceania",
+      "description": ""
+    },
+    {
+      "id": "north_america",
+      "label": "North America",
+      "description": ""
+    },
+    {
+      "id": "latin_america_caribbean",
+      "label": "Latin America and the Caribbean",
+      "description": "Includes Mesoamerican items"
+    },
+    {
+      "id": "russia_soviet",
+      "label": "Russia and the Soviet sphere",
+      "description": ""
+    },
+    {
+      "id": "global_international",
+      "label": "Global or international",
+      "description": ""
+    },
+    {
+      "id": "unspecified",
+      "label": "Unspecified",
+      "description": ""
+    }
+  ],
+  "status": [
+    {
+      "id": "archived_candidate",
+      "label": "Archived candidate",
+      "description": "Taken from a saved Consensus output"
+    },
+    {
+      "id": "proposed_unsourced",
+      "label": "Proposed, unsourced",
+      "description": "Added by Claude from general knowledge; needs a source"
+    },
+    {
+      "id": "proposed_partly_sourced",
+      "label": "Proposed, partly sourced",
+      "description": "Part (period, tradition or act) sourced in a run; date or detail unsourced"
+    },
+    {
+      "id": "proposed_sourced_unverified",
+      "label": "Proposed, sourced, unverified",
+      "description": "Sourced in a run, not checked against the paper"
+    },
+    {
+      "id": "proposed_low_verification",
+      "label": "Proposed, low verification",
+      "description": "From the web policy pass, summaries only"
+    }
+  ],
+  "verification_status": [
+    {
+      "id": "unverified",
+      "label": "Unverified",
+      "description": "Not checked against the underlying papers or documents"
+    },
+    {
+      "id": "verified",
+      "label": "Verified",
+      "description": "Checked against primary sources (none yet)"
+    }
+  ],
+  "coding_confidence": [
+    {
+      "id": "high",
+      "label": "High",
+      "description": ""
+    },
+    {
+      "id": "medium",
+      "label": "Medium",
+      "description": ""
+    },
+    {
+      "id": "low",
+      "label": "Low",
+      "description": ""
+    }
+  ],
+  "quadrant": [
+    {
+      "id": "continuity_utopian",
+      "label": "Continuity, utopian-leaning",
+      "description": ""
+    },
+    {
+      "id": "continuity_dystopian",
+      "label": "Continuity, dystopian-leaning",
+      "description": ""
+    },
+    {
+      "id": "disruption_utopian",
+      "label": "Disruption, utopian-leaning",
+      "description": ""
+    },
+    {
+      "id": "disruption_dystopian",
+      "label": "Disruption, dystopian-leaning",
+      "description": ""
+    },
+    {
+      "id": "mixed_boundary",
+      "label": "Mixed or boundary cases",
+      "description": ""
+    }
+  ],
+  "run_mode": [
+    {
+      "id": "pro",
+      "label": "Consensus Pro",
+      "description": "About 20 abstracts read, 5 agent steps"
+    },
+    {
+      "id": "deep",
+      "label": "Consensus Deep",
+      "description": "About 100 abstracts read, about 40-70 agent steps"
+    },
+    {
+      "id": "n/a",
+      "label": "Not Consensus",
+      "description": ""
+    },
+    {
+      "id": "unknown",
+      "label": "Unknown",
+      "description": "Researcher-run in the web app; mode not recorded"
+    }
+  ],
+  "hypothesis_status": [
+    {
+      "id": "untested",
+      "label": "Untested",
+      "description": ""
+    },
+    {
+      "id": "indicative_only",
+      "label": "Indicative only",
+      "description": "Isolated data points, no systematic test"
+    },
+    {
+      "id": "provisional_support",
+      "label": "Provisional support",
+      "description": "Convergent but abstract-level evidence"
+    },
+    {
+      "id": "mixed_indicative",
+      "label": "Mixed, indicative",
+      "description": "Pointing in different directions"
+    },
+    {
+      "id": "contradicted",
+      "label": "Contradicted",
+      "description": ""
+    }
+  ],
+  "flag_severity": [
+    {
+      "id": "high",
+      "label": "High",
+      "description": "Affects whether a claim can be shown"
+    },
+    {
+      "id": "medium",
+      "label": "Medium",
+      "description": "Show with a caveat"
+    },
+    {
+      "id": "low",
+      "label": "Low",
+      "description": "Note in methods"
+    }
+  ]
+}

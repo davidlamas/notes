@@ -1,0 +1,520 @@
+{
+  "note": "Cross-run synthesis claims written by Claude from the saved outputs; paraphrased, hedged and linked to supporting objects. Not findings of a verified study. Confidence is Claude's reading of the evidence quality, not a statistical measure.",
+  "claims": [
+    {
+      "id": "S01",
+      "statement": "Across the runs, universities and their formal structures have not been replaced; new media and infrastructures have been layered onto them, usually extending campus universities and leaving credentials and academic hierarchies in place.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-4a",
+        "run-4b",
+        "run-4c",
+        "run-5b",
+        "run-7a",
+        "run-8a",
+        "run-8b",
+        "run-8c",
+        "run-8d"
+      ],
+      "supporting_milestone_ids": [
+        "Y11",
+        "D17",
+        "D10",
+        "D03",
+        "Y01",
+        "Y21"
+      ],
+      "supporting_consensus_claim_ids": [
+        "C8d-04"
+      ],
+      "caveats": "Abstract-level evidence; Pro-depth for distance HE; survivorship in histories.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "continuity_layered",
+      "hypothesis_ids": [
+        "H3",
+        "H4"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Layering has been more common than replacement",
+      "paper_ids": [
+        "080609c9905c53e3a462696c3d7f853a",
+        "14ba437bc8b45286a9d90873b7a299a1",
+        "e486a248290258d080582764da6d9e85"
+      ]
+    },
+    {
+      "id": "S02",
+      "statement": "The observed disruptions concern control: platformisation and vendor dependence, rankings and bibliometric gatekeeping, commercial publishing and indexing, and compute access, not the formal structure of degrees or campuses.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-4a",
+        "run-4b",
+        "run-8b",
+        "run-8c",
+        "run-8d"
+      ],
+      "supporting_milestone_ids": [
+        "J13",
+        "Y07",
+        "Y08",
+        "E06",
+        "E07",
+        "E04",
+        "Y16"
+      ],
+      "supporting_consensus_claim_ids": [
+        "C8d-02",
+        "C2-02"
+      ],
+      "caveats": "Much of the evidence is critical or conceptual; observed cases are few and concentrated in the Global North.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "disruption_of_control",
+      "hypothesis_ids": [
+        "H3",
+        "H5"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "The clearest disruptions concern control",
+      "paper_ids": [
+        "1d0ab764a1f35c51aabc5ba948d242d0",
+        "74e3abdf5ca7594780443df7bbefe098",
+        "4d8389f270ff5647bba792fa8a6e7004"
+      ]
+    },
+    {
+      "id": "S03",
+      "statement": "Distance higher education is a long-running precedent: postal, radio, television and early network media extended campus universities, produced dual-mode and open universities, and failed to replace conventional universities.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-7a",
+        "run-5b"
+      ],
+      "supporting_milestone_ids": [
+        "D01",
+        "D03",
+        "D04",
+        "D05",
+        "D10",
+        "D16",
+        "D17"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Pro-depth only; Deep re-run not run; Latin America, Sub-Saharan Africa and the Soviet sphere thinly documented.",
+      "levels": [
+        "micro",
+        "meso",
+        "macro"
+      ],
+      "pattern": "continuity_layered",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Distance higher education is a long precedent",
+      "paper_ids": [
+        "14ba437bc8b45286a9d90873b7a299a1",
+        "e486a248290258d080582764da6d9e85",
+        "b0fc2d0dca9a5555828b86dffcaec2b6"
+      ]
+    },
+    {
+      "id": "S04",
+      "statement": "Examples of adoption and response speed differ widely (decades for learning platforms, days for lockdown-forced remote teaching, weeks for first generative-AI policies), but they measure different things and do not yet establish a trend.",
+      "confidence": "low",
+      "supporting_runs": [
+        "run-6a",
+        "run-8d",
+        "run-5b"
+      ],
+      "supporting_milestone_ids": [
+        "Y01",
+        "Y20",
+        "Y24",
+        "Y25",
+        "T11",
+        "I11",
+        "I12"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "No harmonised long-run adoption or response series exists.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "lag_examples",
+      "hypothesis_ids": [
+        "H1",
+        "H2"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Adoption speed and institutional response are different",
+      "paper_ids": [
+        "14ba437bc8b45286a9d90873b7a299a1"
+      ]
+    },
+    {
+      "id": "S05",
+      "statement": "The ecosystem around HEIs is plural: research, certification, training and outreach are distributed across universities, academies and societies, publishers, libraries, repositories and platforms, and these layers coexist.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-8a",
+        "run-8b",
+        "run-8c",
+        "run-6d"
+      ],
+      "supporting_milestone_ids": [
+        "A04",
+        "A05",
+        "A09",
+        "A11",
+        "J01",
+        "J03",
+        "J09",
+        "J11",
+        "R01",
+        "J10",
+        "R12"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Britain-concentrated archival depth; thin for Africa, South Asia and the Middle East; some chronologies need verification.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "plurality",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Higher education sits in a plural knowledge ecosystem",
+      "paper_ids": [
+        "8934365b64dc58f39aa2278a17fd0c54",
+        "f079f9c8f8725e6c9058f4cf9ef6fc97",
+        "7302d6e527515c8abdf5743a06deee0b"
+      ]
+    },
+    {
+      "id": "S06",
+      "statement": "Across the ecosystem runs, the decisive variable is who governs funding, editorial decisions, discovery, assessment and infrastructure, not whether communication is digital or open.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-8b",
+        "run-8c",
+        "run-4b",
+        "run-4a"
+      ],
+      "supporting_milestone_ids": [
+        "J15",
+        "R13",
+        "R09",
+        "R12",
+        "Y17",
+        "J13"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Interpretive synthesis by Consensus; few longitudinal studies.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "governance",
+      "hypothesis_ids": [
+        "H3",
+        "H5"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Governance matters more than whether a medium is digital",
+      "paper_ids": [
+        "1d0ab764a1f35c51aabc5ba948d242d0",
+        "74e3abdf5ca7594780443df7bbefe098",
+        "7302d6e527515c8abdf5743a06deee0b"
+      ]
+    },
+    {
+      "id": "S07",
+      "statement": "Corporate concentration of frontier AI research is observable; it does not extend to all science.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-2",
+        "run-4a",
+        "run-4b"
+      ],
+      "supporting_milestone_ids": [],
+      "supporting_consensus_claim_ids": [
+        "C2-02"
+      ],
+      "caveats": "Evidence from bibliometric and institutional studies; some sources are preprints.",
+      "levels": [
+        "macro"
+      ],
+      "pattern": "disruption_of_control",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Frontier AI research shows corporate concentration",
+      "paper_ids": [
+        "20869cf37a5c5af0be838a9d1f494c8e",
+        "17f696e5131d5f7cb9d439dce348638f"
+      ]
+    },
+    {
+      "id": "S08",
+      "statement": "Gains at the level of individuals or institutions often coincide with losses at collective or societal level (for example individual research advantage with narrowing of collective research focus).",
+      "confidence": "low",
+      "supporting_runs": [
+        "run-3a",
+        "run-4c",
+        "run-2"
+      ],
+      "supporting_milestone_ids": [],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Several tensions rest on evidence from outside higher education or on records requiring verification; see cross_level_tensions.json.",
+      "levels": [
+        "micro",
+        "meso",
+        "macro"
+      ],
+      "pattern": "cross_level_tension",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Benefits and harms can split across levels",
+      "paper_ids": [
+        "082485215b91586490d99b507e11a1cc",
+        "ecb9fe102bd352b09bcd3c955b21a63a"
+      ]
+    },
+    {
+      "id": "S09",
+      "statement": "At the European policy level the formal architecture is being extended, not dissolved: the three cycles are reaffirmed (Tirana 2024) and a joint European degree label and micro-credential standards are being added.",
+      "confidence": "low",
+      "supporting_runs": [
+        "run-4d",
+        "run-8d"
+      ],
+      "supporting_milestone_ids": [
+        "Y18",
+        "Y19",
+        "Y23",
+        "P10"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Policy pass used summaries; primary documents not read in full; one Council page blocked.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "continuity_layered",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "European policy is extending the existing architecture",
+      "paper_ids": []
+    },
+    {
+      "id": "S10",
+      "statement": "Evidence on structural effects of generative AI on universities is weak: most of it consists of expectations, conceptual work and short-term studies; policy responses are fragmented.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-8d",
+        "run-2",
+        "run-1"
+      ],
+      "supporting_milestone_ids": [
+        "Y24",
+        "Y25",
+        "Y26",
+        "J17"
+      ],
+      "supporting_consensus_claim_ids": [
+        "C8d-05",
+        "C1-03"
+      ],
+      "caveats": "Very recent literature; many unreplicated studies.",
+      "levels": [
+        "micro",
+        "meso",
+        "macro"
+      ],
+      "pattern": "evidence_gap",
+      "hypothesis_ids": [
+        "H2"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Structural evidence about generative AI remains weak",
+      "paper_ids": [
+        "4df2b35b029458749e030cea83048957",
+        "4a84490445fd5a70b2c8980f7a572e78"
+      ]
+    },
+    {
+      "id": "S11",
+      "statement": "The evidence base is concentrated in the Global North and in English; different configurations (university-led non-commercial publishing in Latin America, regulation-driven repositories in India, academy-centred research systems in the post-Soviet sphere) show that the same technologies sit within different institutional arrangements.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-6d",
+        "run-8a",
+        "run-8b",
+        "run-8c",
+        "run-8d"
+      ],
+      "supporting_milestone_ids": [
+        "D08",
+        "D06",
+        "R11",
+        "R09",
+        "A08",
+        "A10",
+        "E10",
+        "A11"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Descriptive; prevalence of facets by region not quantified.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "context_diversity",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Institutional configurations differ by context",
+      "paper_ids": [
+        "08ae0d7359665f9b847b91aa9b133c95",
+        "0323ed5dda735b45a01dbf1e4081c0a4",
+        "baa19cea01a556e9892d1ef0c1ddbdeb"
+      ]
+    },
+    {
+      "id": "S12",
+      "statement": "Outreach (service, extension, third mission) is the least digitally transformed and the least evidenced of the three functions.",
+      "confidence": "low",
+      "supporting_runs": [
+        "run-8d",
+        "run-6b"
+      ],
+      "supporting_milestone_ids": [
+        "Y09",
+        "A08",
+        "D09",
+        "I26",
+        "D08"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Based on two runs; Latin American extension and post-colonial initiatives sparsely evaluated.",
+      "levels": [
+        "meso",
+        "macro"
+      ],
+      "pattern": "evidence_gap",
+      "hypothesis_ids": [],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Outreach is both under-transformed and under-studied",
+      "paper_ids": [
+        "e607d4ce89a0599ab782a62bcda1ed72",
+        "b2cbc943fddf5b4ab02f1e4d179a31f2"
+      ]
+    },
+    {
+      "id": "S13",
+      "statement": "The strongest quantified effects of a knowledge technology in the saved record (printing) concern cities, markets and religion; the record contains no clean causal estimate of a knowledge technology on university form.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-5b"
+      ],
+      "supporting_milestone_ids": [
+        "T11",
+        "T12"
+      ],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Instrumented studies concern cities and religion; mechanism debated (Eisenstein versus Johns).",
+      "levels": [
+        "macro"
+      ],
+      "pattern": "evidence_gap",
+      "hypothesis_ids": [],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Technology enables possibilities; it does not determine form",
+      "paper_ids": [
+        "d0c6b5d1c1bc5f11873f51fb2747df4d"
+      ]
+    },
+    {
+      "id": "S14",
+      "statement": "No harmonised long-run series exists for technology adoption and institutional response; lag measures must be derived from coded milestones, while scale series (enrolment, publications) are available as candidates.",
+      "confidence": "medium",
+      "supporting_runs": [
+        "run-6c"
+      ],
+      "supporting_milestone_ids": [],
+      "supporting_consensus_claim_ids": [],
+      "caveats": "Candidate series not yet obtained or verified.",
+      "levels": [
+        "macro"
+      ],
+      "pattern": "evidence_gap",
+      "hypothesis_ids": [
+        "H1",
+        "H2"
+      ],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "No harmonised long-run rate-of-change series exists",
+      "paper_ids": []
+    },
+    {
+      "id": "S15",
+      "statement": "Open-access mandates raised deposit rates without clearly changing researcher culture; compliance and culture change are different outcomes.",
+      "confidence": "low",
+      "supporting_runs": [
+        "run-8d",
+        "run-8c"
+      ],
+      "supporting_milestone_ids": [
+        "Y10",
+        "R08",
+        "Y16"
+      ],
+      "supporting_consensus_claim_ids": [
+        "C8d-03"
+      ],
+      "caveats": "Case studies and compliance data; cross-sectional.",
+      "levels": [
+        "micro",
+        "meso"
+      ],
+      "pattern": "continuity_layered",
+      "hypothesis_ids": [],
+      "source_type": "cross_run_synthesis_by_claude",
+      "stability": "provisional",
+      "title": "Compliance is not the same as cultural change",
+      "paper_ids": [
+        "c2c61da8da7a5819aeafe65759e2cb9e",
+        "f140511a6ee55c6c83afe372d31ed313"
+      ]
+    }
+  ]
+}

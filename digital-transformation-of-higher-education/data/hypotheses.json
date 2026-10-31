@@ -1,0 +1,106 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "statement": "Technology adoption cycles have shortened (decades for print; months for generative AI).",
+      "status": "indicative_only",
+      "evidence_pointing_toward": "Run 8d: learning platforms took decades to institutionalise, lockdown-forced remote teaching took days, ChatGPT reportedly saw rapid global uptake within months; the figure remains unverified.",
+      "limits": "Adoption of tools is not institutional adoption; the three cases measure different things; most evidence is cross-sectional.",
+      "milestone_ids": [
+        "Y01",
+        "Y20",
+        "Y24",
+        "T11"
+      ],
+      "synthesis_claim_ids": [
+        "S04"
+      ],
+      "next_test": "Build adoption-speed layer from coded milestones with explicit definitions."
+    },
+    {
+      "id": "H2",
+      "statement": "Institutional response lags have not shortened in proportion, so the gap between technology and institutional change has widened.",
+      "status": "mixed_indicative",
+      "evidence_pointing_toward": "Run 8d: universities began issuing generative-AI policies within weeks (faster than for earlier technologies) but many highly ranked universities still lacked policies by mid-2023 and responses were fragmented; historical lags to institutional change were decades (Runs 5b).",
+      "limits": "First-response speed and durable restructuring are different quantities; no longitudinal outcome evidence for any milestone.",
+      "milestone_ids": [
+        "Y24",
+        "Y25",
+        "I11",
+        "I12",
+        "D02"
+      ],
+      "synthesis_claim_ids": [
+        "S04"
+      ],
+      "next_test": "Separate first-response lag from restructuring lag when coding."
+    },
+    {
+      "id": "H3",
+      "statement": "Formal institutional forms persist while control and governance shift.",
+      "status": "provisional_support",
+      "evidence_pointing_toward": "Convergent across Runs 4a, 4b, 4c, 5b, 7a, 8a-8d: degrees, campuses and credentials persist; custody, labour, funding and authority move to platforms, publishers, metrics providers and infrastructures.",
+      "limits": "Abstract-level evidence; much of the evidence for control shifts is critical or conceptual; no longitudinal macro-level evidence.",
+      "milestone_ids": [
+        "Y11",
+        "D17",
+        "Y04",
+        "J13",
+        "Y07",
+        "E06",
+        "E07",
+        "Y27"
+      ],
+      "synthesis_claim_ids": [
+        "S01",
+        "S02",
+        "S06"
+      ],
+      "next_test": "Spot-verify the load-bearing sources; look for counter-cases."
+    },
+    {
+      "id": "H4",
+      "statement": "Major technological shifts add new organisational forms next to existing ones instead of replacing them.",
+      "status": "provisional_support",
+      "evidence_pointing_toward": "Run 5b and 7a: academies, journals, research universities and corporate laboratories arose alongside existing institutions; dual-mode and open universities extended campus universities; replacement predictions for radio, television and MOOCs did not materialise.",
+      "limits": "Provider-level discontinuities exist (for-profit correspondence colleges); survivorship bias in histories; Run 7a is Pro-depth.",
+      "milestone_ids": [
+        "D03",
+        "D10",
+        "D16",
+        "D17",
+        "T25",
+        "Y11",
+        "A11"
+      ],
+      "synthesis_claim_ids": [
+        "S01",
+        "S03"
+      ],
+      "next_test": "Deep re-run of distance HE when credits allow."
+    },
+    {
+      "id": "H5",
+      "statement": "Functions of HEIs have repeatedly been unbundled and rebundled with ecosystem actors (academies, societies, publishers, libraries, platforms); what is distinctive in the digital and AI period, if anything, is to be established, not assumed.",
+      "status": "provisional_support",
+      "evidence_pointing_toward": "Runs 8a-8c describe layering and recombination among universities, academies and societies, publishers, libraries and infrastructures; the strongest pattern is institutional plurality under unequal conditions.",
+      "limits": "Distinctiveness of the present period is untested; coverage concentrated in Britain and the Global North.",
+      "milestone_ids": [
+        "A11",
+        "A14",
+        "J03",
+        "J13",
+        "R08",
+        "R12",
+        "E06"
+      ],
+      "synthesis_claim_ids": [
+        "S02",
+        "S05",
+        "S06"
+      ],
+      "next_test": "Code the ACTOR dimension and division of labour per milestone."
+    }
+  ],
+  "note": "Hypotheses are working questions. Statuses are Claude's provisional reading of the saved outputs."
+}

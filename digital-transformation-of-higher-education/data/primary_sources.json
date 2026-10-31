@@ -1,0 +1,49 @@
+{
+  "note": "Primary and institutional pages spot-checked for the public site on 31 October 2026.",
+  "sources": [
+    {
+      "id": "primary-tirana-2024",
+      "title": "Tirana Communiqué 2024",
+      "organisation": "European Higher Education Area",
+      "year": 2024,
+      "url": "https://ehea.info/Immagini/Tirana-Communique.pdf",
+      "claim_ids": [
+        "S09"
+      ],
+      "note": "Reaffirms the three-cycle system and addresses micro-credentials, digitalisation and AI."
+    },
+    {
+      "id": "primary-microcredentials-2022",
+      "title": "Council Recommendation on a European approach to micro-credentials",
+      "organisation": "Council of the European Union",
+      "year": 2022,
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022H0627(02)",
+      "claim_ids": [
+        "S09"
+      ],
+      "note": "Frames micro-credentials as complementary to existing qualifications and degrees."
+    },
+    {
+      "id": "primary-european-degree-2025",
+      "title": "Council takes steps towards a joint European degree label",
+      "organisation": "Council of the European Union",
+      "year": 2025,
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2025/05/12/council-takes-steps-towards-a-new-joint-european-degree-label/",
+      "claim_ids": [
+        "S09"
+      ],
+      "note": "Describes the label and a three-phase roadmap to a possible degree by 2029."
+    },
+    {
+      "id": "primary-open-university-1969",
+      "title": "Legal, regulatory and charitable status",
+      "organisation": "The Open University",
+      "year": 1969,
+      "url": "https://about.open.ac.uk/governance-ou/legal-regulatory-and-charitable-status",
+      "claim_ids": [
+        "S03"
+      ],
+      "note": "Confirms the Royal Charter granted on 23 April 1969."
+    }
+  ]
+}

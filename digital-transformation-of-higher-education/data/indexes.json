@@ -1,0 +1,278 @@
+{
+  "note": "Computed from canonical milestones only (canonical=true). Rebuild with tools/build_indexes.py.",
+  "counts": {
+    "milestones_total": 174,
+    "canonical": 152,
+    "dated": 123,
+    "undated": 29,
+    "display_default": 149
+  },
+  "year_extent": {
+    "min": -2335,
+    "max": 2026
+  },
+  "by_track": {
+    "technology": 39,
+    "institution": 38,
+    "distance_he": 17,
+    "ecosystem_scholarly_communication": 17,
+    "ecosystem_academies": 15,
+    "ecosystem_general": 14,
+    "ecosystem_infrastructures": 12
+  },
+  "by_function": {
+    "research": 91,
+    "education": 82,
+    "outreach": 49
+  },
+  "by_level": {
+    "meso": 120,
+    "macro": 59,
+    "micro": 19
+  },
+  "by_region": {
+    "europe": 58,
+    "global_international": 43,
+    "north_america": 24,
+    "east_asia": 17,
+    "middle_east_north_africa": 16,
+    "south_asia": 13,
+    "latin_america_caribbean": 8,
+    "sub_saharan_africa": 8,
+    "russia_soviet": 4,
+    "southeast_asia": 3,
+    "central_asia": 2,
+    "oceania": 2
+  },
+  "by_cd_reading": {
+    "unclear": 74,
+    "layered": 48,
+    "mixed": 14,
+    "continuity": 8,
+    "disruption": 8
+  },
+  "by_change_type": {
+    "form": 71,
+    "practice": 47,
+    "mandate": 18,
+    "function": 16
+  },
+  "by_valence": {
+    "not_coded": 129,
+    "mixed": 17,
+    "dystopian_leaning": 5,
+    "utopian_leaning": 1
+  },
+  "by_confidence": {
+    "medium": 111,
+    "low": 31,
+    "high": 10
+  },
+  "by_status": {
+    "archived_candidate": 144,
+    "proposed_unsourced": 3,
+    "proposed_partly_sourced": 2,
+    "proposed_sourced_unverified": 2,
+    "proposed_low_verification": 1
+  },
+  "by_start_bin_50y": {
+    "400": 2,
+    "500": 1,
+    "700": 4,
+    "900": 2,
+    "950": 1,
+    "1050": 1,
+    "1100": 3,
+    "1400": 1,
+    "1450": 1,
+    "1500": 1,
+    "1600": 3,
+    "1650": 4,
+    "1700": 2,
+    "1750": 2,
+    "1800": 8,
+    "1850": 10,
+    "1900": 11,
+    "1950": 19,
+    "2000": 44,
+    "-2350": 1,
+    "-400": 1,
+    "-350": 1
+  },
+  "crosstab_track_by_cd": {
+    "technology": {
+      "unclear": 15,
+      "disruption": 1,
+      "layered": 16,
+      "mixed": 3,
+      "continuity": 4
+    },
+    "institution": {
+      "unclear": 25,
+      "layered": 7,
+      "mixed": 4,
+      "continuity": 1,
+      "disruption": 1
+    },
+    "distance_he": {
+      "unclear": 3,
+      "layered": 11,
+      "continuity": 2,
+      "mixed": 1
+    },
+    "ecosystem_general": {
+      "continuity": 1,
+      "layered": 7,
+      "mixed": 3,
+      "disruption": 3
+    },
+    "ecosystem_academies": {
+      "unclear": 8,
+      "disruption": 2,
+      "layered": 4,
+      "mixed": 1
+    },
+    "ecosystem_scholarly_communication": {
+      "unclear": 12,
+      "layered": 3,
+      "disruption": 1,
+      "mixed": 1
+    },
+    "ecosystem_infrastructures": {
+      "unclear": 11,
+      "mixed": 1
+    }
+  },
+  "crosstab_function_by_level": {
+    "education": {
+      "meso": 64,
+      "micro": 10,
+      "macro": 29
+    },
+    "outreach": {
+      "meso": 41,
+      "micro": 3,
+      "macro": 24
+    },
+    "research": {
+      "micro": 15,
+      "meso": 74,
+      "macro": 34
+    }
+  },
+  "crosstab_level_by_cd": {
+    "meso": {
+      "unclear": 63,
+      "layered": 36,
+      "mixed": 10,
+      "continuity": 5,
+      "disruption": 6
+    },
+    "micro": {
+      "disruption": 1,
+      "unclear": 8,
+      "layered": 10
+    },
+    "macro": {
+      "unclear": 26,
+      "layered": 17,
+      "mixed": 9,
+      "continuity": 3,
+      "disruption": 4
+    }
+  },
+  "crosstab_region_by_cd": {
+    "middle_east_north_africa": {
+      "unclear": 12,
+      "disruption": 1,
+      "layered": 3
+    },
+    "europe": {
+      "disruption": 3,
+      "unclear": 26,
+      "layered": 18,
+      "mixed": 6,
+      "continuity": 5
+    },
+    "latin_america_caribbean": {
+      "unclear": 4,
+      "mixed": 1,
+      "layered": 3
+    },
+    "south_asia": {
+      "layered": 5,
+      "unclear": 7,
+      "mixed": 1
+    },
+    "east_asia": {
+      "unclear": 11,
+      "layered": 3,
+      "mixed": 1,
+      "disruption": 2
+    },
+    "central_asia": {
+      "unclear": 1,
+      "mixed": 1
+    },
+    "southeast_asia": {
+      "unclear": 3
+    },
+    "sub_saharan_africa": {
+      "unclear": 6,
+      "continuity": 1,
+      "mixed": 1
+    },
+    "north_america": {
+      "layered": 8,
+      "mixed": 3,
+      "unclear": 8,
+      "continuity": 4,
+      "disruption": 1
+    },
+    "global_international": {
+      "layered": 16,
+      "unclear": 14,
+      "mixed": 8,
+      "continuity": 2,
+      "disruption": 3
+    },
+    "oceania": {
+      "unclear": 1,
+      "layered": 1
+    },
+    "russia_soviet": {
+      "layered": 2,
+      "mixed": 1,
+      "disruption": 1
+    }
+  },
+  "crosstab_change_type_by_cd": {
+    "form": {
+      "unclear": 39,
+      "layered": 21,
+      "continuity": 3,
+      "mixed": 7,
+      "disruption": 1
+    },
+    "practice": {
+      "disruption": 1,
+      "unclear": 20,
+      "layered": 20,
+      "mixed": 2,
+      "continuity": 4
+    },
+    "function": {
+      "unclear": 7,
+      "layered": 4,
+      "disruption": 4,
+      "mixed": 1
+    },
+    "mandate": {
+      "unclear": 8,
+      "mixed": 4,
+      "continuity": 1,
+      "layered": 3,
+      "disruption": 2
+    }
+  }
+}

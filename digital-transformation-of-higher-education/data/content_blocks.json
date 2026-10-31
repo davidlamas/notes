@@ -1,0 +1,378 @@
+{
+  "note": "Draft copy for the page, written by Claude: paraphrased, hedged, and linked to claim, milestone, run and flag IDs. Edit freely; keep the caveats.",
+  "blocks": [
+    {
+      "id": "intro",
+      "section": "overview",
+      "title": "What this inquiry is",
+      "text_md": "An exploratory inquiry into how digital and automated technologies relate to the form, functions and mandate of higher education institutions (HEIs). It combines literature syntheses produced with an AI research tool (Consensus), a web pass over European and global policy documents, and a historical look-back at earlier knowledge technologies. It is a work in progress: the findings are provisional and nothing has yet been verified against the underlying papers.",
+      "refs": {
+        "run_ids": [
+          "run-4a",
+          "run-4b",
+          "run-4c",
+          "run-5a",
+          "run-5b",
+          "run-8a",
+          "run-8b",
+          "run-8c",
+          "run-8d"
+        ],
+        "flag_ids": [
+          "Q01",
+          "Q22"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "scope_of_vs_in",
+      "section": "overview",
+      "title": "Of higher education, not only in it",
+      "text_md": "The inquiry asks what higher education becomes, not only how tools work inside courses. \"Digital transformation OF higher education\" concerns functions, organisational form, boundaries, legitimacy and mandate. \"Digitalization IN higher education\" concerns tools used inside existing structures and their effects on learning. Doctoral training is a separate line of inquiry and is not covered here.",
+      "refs": {
+        "flag_ids": [
+          "Q12",
+          "Q28"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "framework_axes",
+      "section": "framework",
+      "title": "Two axes: continuity or disruption, utopian or dystopian",
+      "text_md": "Every item is read on two independent axes. Continuity versus disruption asks whether the underlying logic of a practice, institution or mandate persists or is displaced; many cases are layered, meaning new forms are added and authority is rearranged while existing forms persist. Utopian versus dystopian asks whether the outcome is beneficial or harmful, and always for whom. The two axes are independent: survival can come with lost agency, and disruption can serve democratisation or capture.",
+      "refs": {},
+      "status": "draft"
+    },
+    {
+      "id": "levels",
+      "section": "framework",
+      "title": "Three levels: micro, meso, macro",
+      "text_md": "Micro covers everyday roles, practices and agency of individuals; meso covers the institution as an organisation (degrees, research organisation, governance, business model); macro covers societal mandate, legitimacy and the knowledge system. A development can be positive at one level and negative at another; these cross-level tensions are a main object of analysis.",
+      "refs": {
+        "claim_ids": [
+          "S08"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "how_to_read_evidence",
+      "section": "method",
+      "title": "How to read the evidence labels",
+      "text_md": "Items are labelled observed or documented (empirical, archival, quantitative), interpretation (historical or scholarly explanation), debated or speculative, expected (stakeholder expectation), or projected (scenario or conceptual). Labels were assigned from abstracts by an AI tool and by Claude; strength scores are the tool's own judgement. Treat them as guides to how much weight a statement can carry, not as validated measures.",
+      "refs": {
+        "flag_ids": [
+          "Q01",
+          "Q03",
+          "Q22",
+          "Q30"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_layering",
+      "section": "finding",
+      "title": "Layering more than replacement",
+      "text_md": "Across the literature syntheses, universities and their formal structures have mostly not been replaced. New media and infrastructures have been layered onto them, usually extending campus universities while credentials and academic hierarchies stayed in place. MOOCs supplemented degree-granting universities and pivoted toward employer-facing credentials; learning platforms became universal without changing most pedagogy. This reading is provisional and rests on abstract-level evidence.",
+      "refs": {
+        "claim_ids": [
+          "S01"
+        ],
+        "milestone_ids": [
+          "Y11",
+          "Y01",
+          "D17",
+          "D10"
+        ],
+        "hypothesis_ids": [
+          "H3",
+          "H4"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_control",
+      "section": "finding",
+      "title": "What has shifted is control",
+      "text_md": "The disruptions that the syntheses document concern who controls infrastructures, credentials, evaluation and publishing: platform and vendor dependence, global rankings and bibliometric gatekeeping, commercial publishing and indexing, and compute. Much of this evidence is critical or conceptual, and concentrated in the Global North.",
+      "refs": {
+        "claim_ids": [
+          "S02",
+          "S06",
+          "S07"
+        ],
+        "milestone_ids": [
+          "J13",
+          "Y07",
+          "Y08",
+          "E06",
+          "E07"
+        ],
+        "hypothesis_ids": [
+          "H3",
+          "H5"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_distance",
+      "section": "finding",
+      "title": "Distance higher education as a long precedent",
+      "text_md": "Distance higher education is not new: instruction by post began in the nineteenth century, dual-mode universities appeared in the early twentieth, and radio, television and later networks followed. In the evidence reviewed, these media extended campus universities and produced open universities, but did not replace conventional universities. This is the precedent against which claims about online and AI-based disruption should be read. The evidence is of scoping depth and thin for Latin America, Sub-Saharan Africa and the Soviet sphere.",
+      "refs": {
+        "claim_ids": [
+          "S03"
+        ],
+        "milestone_ids": [
+          "D01",
+          "D03",
+          "D04",
+          "D05",
+          "D10",
+          "D17"
+        ],
+        "flag_ids": [
+          "Q21"
+        ],
+        "hypothesis_ids": [
+          "H4"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_ecosystem",
+      "section": "finding",
+      "title": "Universities within an ecosystem",
+      "text_md": "HEIs operate among academies and learned societies, journals and conferences, publishers and indexing services, libraries, repositories and data infrastructures, funders and platforms. Histories of these actors show layering and plurality, not a single progression: research, certification and outreach are shared among them in different ways in different places, and the decisive question is who governs funding, discovery, assessment and infrastructure. There is no settled name for this ecosystem; \"knowledge ecosystem\" is a working label.",
+      "refs": {
+        "claim_ids": [
+          "S05",
+          "S06"
+        ],
+        "milestone_ids": [
+          "A04",
+          "A09",
+          "A11",
+          "J01",
+          "J11",
+          "R12"
+        ],
+        "flag_ids": [
+          "Q15",
+          "Q16",
+          "Q17",
+          "Q18"
+        ],
+        "hypothesis_ids": [
+          "H5"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_lags",
+      "section": "finding",
+      "title": "Speed of adoption and of institutional response",
+      "text_md": "Examples vary widely: learning platforms took decades to institutionalise, lockdown-forced remote teaching took days, and ChatGPT reportedly saw rapid global uptake within months; the figure remains unverified while many highly ranked universities still lacked policies by mid-2023. These examples measure different things and do not establish a trend. No harmonised long-run series of adoption and institutional response exists.",
+      "refs": {
+        "claim_ids": [
+          "S04",
+          "S14"
+        ],
+        "milestone_ids": [
+          "Y01",
+          "Y20",
+          "Y24",
+          "Y25"
+        ],
+        "hypothesis_ids": [
+          "H1",
+          "H2"
+        ],
+        "flag_ids": [
+          "Q19"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_outreach",
+      "section": "finding",
+      "title": "Outreach is the least digitally transformed and least studied",
+      "text_md": "Service, extension and third-mission activity has been named differently in each period (clerical and bureaucratic service, land-grant extension, Latin American extension, technology transfer, civic engagement and co-creation). In the recent literature it is the least digitally transformed and least evidenced of the three functions.",
+      "refs": {
+        "claim_ids": [
+          "S12"
+        ],
+        "milestone_ids": [
+          "Y09",
+          "A08",
+          "D09",
+          "I26"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_policy_europe",
+      "section": "finding",
+      "title": "European policy extends the existing architecture",
+      "text_md": "At the European policy level, ministers reaffirmed the three-cycle structure, recognition and quality assurance in 2024 while adding digital and AI priorities and flexible pathways; the Council adopted a joint European degree label with a roadmap towards a 2029 decision on a possible European degree; and a European approach to micro-credentials was agreed in 2022. This policy evidence is low-verification: it comes from summaries, not from the primary documents.",
+      "refs": {
+        "claim_ids": [
+          "S09"
+        ],
+        "milestone_ids": [
+          "Y18",
+          "Y19",
+          "Y23",
+          "P10"
+        ],
+        "flag_ids": [
+          "Q20"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_genai",
+      "section": "finding",
+      "title": "Generative AI: fast adoption, weak evidence on structure",
+      "text_md": "Generative AI is distinctive in the speed of its adoption, but evidence about structural effects on universities is weak: it consists mostly of expectations, conceptual work and short-term studies, and institutional responses are fragmented.",
+      "refs": {
+        "claim_ids": [
+          "S10"
+        ],
+        "milestone_ids": [
+          "Y24",
+          "Y25",
+          "Y26",
+          "J17"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "finding_context",
+      "section": "finding",
+      "title": "Diversity of institutional configurations",
+      "text_md": "Higher education systems differ in how education, research and outreach are combined: research sits inside universities in some systems and in separate academies and institutes in others, publishing is university-led in some regions and commercial in others, and repositories and extension take different forms. These differences are historical and contextual; the inquiry does not place societies on a developmental ladder, and reports critiques of such stage models. How common each configuration is has not been quantified.",
+      "refs": {
+        "claim_ids": [
+          "S11"
+        ],
+        "milestone_ids": [
+          "D08",
+          "R11",
+          "R09",
+          "A08",
+          "A11",
+          "E10"
+        ],
+        "flag_ids": [
+          "Q07",
+          "Q25"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "scenarios",
+      "section": "scenarios",
+      "title": "Scenarios as a map of arguments",
+      "text_md": "The literature offers scenarios for universities that can be placed, interpretively, on the two axes: for example enhancement and smart-campus futures (continuity, utopian-leaning), surveillance and lock-in futures (continuity, dystopian-leaning), open or justice-driven futures (disruption, utopian-leaning), and extreme unbundling or platform-dominated futures (disruption, dystopian-leaning). Placements and winners and losers are interpretive, many scenarios are deliberately non-predictive, and a few studies carry much of the map.",
+      "refs": {
+        "flag_ids": [
+          "Q09",
+          "Q10",
+          "Q11"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "tensions",
+      "section": "scenarios",
+      "title": "Cross-level tensions",
+      "text_md": "A recurring pattern is gains at one level coinciding with losses at another: individual research advantage alongside narrowing of collective research focus, wider access alongside academic workload and weakened care, personalised services alongside surveillance, open science alongside platform capture of public knowledge. Several tensions rest on evidence from outside higher education or on records that need verification.",
+      "refs": {
+        "claim_ids": [
+          "S08"
+        ],
+        "flag_ids": [
+          "Q08"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "limits",
+      "section": "method",
+      "title": "What this page cannot say",
+      "text_md": "It cannot say what higher education will look like in 5, 10, 15 or 20 years; it cannot establish that any technology caused a change in university form; it cannot rank regions; and it cannot treat the AI-assisted coding of milestones as findings. All data are unverified against the underlying papers.",
+      "refs": {
+        "flag_ids": [
+          "Q11",
+          "Q22",
+          "Q30"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "analogy_not_forecast",
+      "section": "method",
+      "title": "Analogy, not forecast",
+      "text_md": "Historical cases (print, post, broadcast, networks) are used to frame questions about AI and universities. They are analogies. The historical record shows that technologies changed what was possible more consistently than they determined institutional outcomes, and that legal, political and economic structures mediated outcomes; it does not predict what will happen.",
+      "refs": {
+        "claim_ids": [
+          "S13"
+        ],
+        "run_ids": [
+          "run-5a",
+          "run-5b"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "provenance",
+      "section": "method",
+      "title": "How the material was built",
+      "text_md": "Prompts were written for an AI research tool (Consensus) in Pro mode (about 20 abstracts per run) and Deep mode (about 100 abstracts); each output was saved verbatim with its prompt, thread identifiers and agent trace. A web pass covered policy documents. Claude (an AI model) extracted the structured data and coded the milestones; the researcher has reviewed the framework and long-list but not yet the coding.",
+      "refs": {
+        "run_ids": [
+          "run-3a",
+          "run-4a",
+          "run-4d",
+          "run-8a"
+        ],
+        "flag_ids": [
+          "Q02",
+          "Q22"
+        ]
+      },
+      "status": "draft"
+    },
+    {
+      "id": "data_notice",
+      "section": "method",
+      "title": "Data notice",
+      "text_md": "The restricted archive of verbatim tool outputs is not for publication: the tool states that its results are for personal, non-commercial use and that redistribution requires copyright holders' consent. The data files in this package use short, paraphrased descriptions and link to papers by DOI or URL; they contain no abstracts or quotations from papers.",
+      "refs": {
+        "flag_ids": [
+          "Q26",
+          "Q29"
+        ]
+      },
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "flags": [
+    {
+      "id": "Q01",
+      "scope": [
+        "run-3a",
+        "run-3b",
+        "run-3c",
+        "run-3d",
+        "run-4a",
+        "run-4b",
+        "run-4c",
+        "run-5a",
+        "run-5b",
+        "run-6a",
+        "run-6b",
+        "run-6c",
+        "run-6d",
+        "run-7a",
+        "run-7b",
+        "run-8a",
+        "run-8b",
+        "run-8c",
+        "run-8d"
+      ],
+      "category": "method",
+      "severity": "high",
+      "text": "Consensus read abstracts (about 20 in Pro, about 100 in Deep), not full texts; evidence labels were assigned from abstracts.",
+      "implication_for_page": "Show a methods note near any evidence label."
+    },
+    {
+      "id": "Q02",
+      "scope": [
+        "run-3b",
+        "run-3c",
+        "run-3d",
+        "run-4a",
+        "run-4b",
+        "run-4c"
+      ],
+      "category": "method",
+      "severity": "high",
+      "text": "Pro and Deep runs with the same prompt cite largely different papers (198 distinct papers across the three Deep runs; only 9, 9 and 14 overlap with the Pro runs). Pro results sample a different slice of the literature.",
+      "implication_for_page": "Prefer Deep-run content; label Pro-only content as scoping."
+    },
+    {
+      "id": "Q03",
+      "scope": [
+        "package"
+      ],
+      "category": "method",
+      "severity": "medium",
+      "text": "Evidence-strength scores in claims are Consensus's own judgments, not validated measures.",
+      "implication_for_page": "Label them as such."
+    },
+    {
+      "id": "Q04",
+      "scope": [
+        "package"
+      ],
+      "category": "method",
+      "severity": "low",
+      "text": "The \"retrieved\" counts differ by a factor of about 35 between similar runs and are not a coverage measure.",
+      "implication_for_page": "Do not display as coverage."
+    },
+    {
+      "id": "Q05",
+      "scope": [
+        "run-6a",
+        "run-6c",
+        "run-6d",
+        "run-7b",
+        "run-8d"
+      ],
+      "category": "artefact",
+      "severity": "low",
+      "text": "Research-gap matrices came out with empty cells in the saved documents.",
+      "implication_for_page": "Use the gaps in gaps.json instead."
+    },
+    {
+      "id": "Q06",
+      "scope": [
+        "run-6a",
+        "run-6b",
+        "run-7a",
+        "run-7b",
+        "run-8b",
+        "run-8c"
+      ],
+      "category": "artefact",
+      "severity": "medium",
+      "text": "Timeline figures in several outputs plot publication dates and counts of the supporting papers, not historical milestones.",
+      "implication_for_page": "Never use them as chronologies."
+    },
+    {
+      "id": "Q07",
+      "scope": [
+        "package"
+      ],
+      "category": "bias",
+      "severity": "high",
+      "text": "Evidence is concentrated in the Global North, in English, and in Europe and North America; Britain dominates historical archives. Several outputs say so explicitly.",
+      "implication_for_page": "Show a geographic coverage caveat on regional views."
+    },
+    {
+      "id": "Q08",
+      "scope": [
+        "run-4a",
+        "run-4b",
+        "run-4c",
+        "run-8a",
+        "run-8c"
+      ],
+      "category": "quality",
+      "severity": "medium",
+      "text": "Cited sources include preprints, book reviews, editorials, conference proceedings, working papers and low-visibility venues. Consensus flags some of them.",
+      "implication_for_page": "Use papers.json venue_flag; avoid load-bearing claims on flagged items."
+    },
+    {
+      "id": "Q09",
+      "scope": [
+        "run-3d",
+        "run-4a",
+        "run-4c"
+      ],
+      "category": "concentration",
+      "severity": "medium",
+      "text": "A few papers carry much of the weight (one workshop study cited 23 times in run-4c; Bayne and Ross 26 times and Komljenovic et al. 25 times in run-3d). The scenario map rests on few studies.",
+      "implication_for_page": "Show source counts next to scenarios."
+    },
+    {
+      "id": "Q10",
+      "scope": [
+        "run-4c",
+        "run-3d"
+      ],
+      "category": "interpretation",
+      "severity": "medium",
+      "text": "Quadrant placement and winners and losers are interpretive mappings by Consensus, not classifications used by the original authors; several typologies could not be placed.",
+      "implication_for_page": "Label as interpretive."
+    },
+    {
+      "id": "Q11",
+      "scope": [
+        "run-3d",
+        "run-4c",
+        "run-2"
+      ],
+      "category": "method",
+      "severity": "high",
+      "text": "Horizon tables classify by the interval a study or scenario covers, not by distance from today; publication year is not a target date; some scenario sets are undated and non-predictive. The saved horizons are not a basis for 5/10/15/20-year statements.",
+      "implication_for_page": "Do not present as forecasts."
+    },
+    {
+      "id": "Q12",
+      "scope": [
+        "run-1"
+      ],
+      "category": "design",
+      "severity": "medium",
+      "text": "The first prompt prioritised systematic reviews and meta-analyses, which favoured course-level interventions (digitalization IN HE).",
+      "implication_for_page": "Treat run-1 as context only."
+    },
+    {
+      "id": "Q13",
+      "scope": [
+        "run-3a",
+        "run-4a",
+        "run-4c"
+      ],
+      "category": "design",
+      "severity": "medium",
+      "text": "The micro prompt named doctoral candidates and apprenticeship of junior researchers; that wording was Claude's, so doctoral material reflects prompt design. Doctoral training is out of scope.",
+      "implication_for_page": "Treat doctoral material as degree-structure evidence only."
+    },
+    {
+      "id": "Q14",
+      "scope": [
+        "run-6b"
+      ],
+      "category": "artefact",
+      "severity": "low",
+      "text": "The output contains a stray sentence unrelated to the topic (about CRISPR).",
+      "implication_for_page": "Ignore."
+    },
+    {
+      "id": "Q15",
+      "scope": [
+        "run-7b"
+      ],
+      "category": "coverage",
+      "severity": "high",
+      "text": "Run 7b did not capture the researcher's ecosystem; it returned innovation-ecosystem vocabulary and recent eras only. Use runs 8a-8c.",
+      "implication_for_page": "Do not use E01-E10 as the ecosystem story."
+    },
+    {
+      "id": "Q16",
+      "scope": [
+        "run-8a"
+      ],
+      "category": "quality",
+      "severity": "medium",
+      "text": "Consensus flags an SSRN preprint on Orientalism, editorials, book reviews, incompletely identified records, a Nature record dated 2019 that describes a Soviet-era relocation (chronology to verify), and a European-Iran comparison with developmental framing. Thin areas: Alexandria and Egyptian institutions, sabha and parishad, Tamil Sangam, Baghdad and Gondishapur continuity, several national academies.",
+      "implication_for_page": "Show thin-evidence markers on A-rows."
+    },
+    {
+      "id": "Q17",
+      "scope": [
+        "run-8b"
+      ],
+      "category": "coverage",
+      "severity": "medium",
+      "text": "Archival depth is concentrated in Britain; nineteenth-century international meetings are under-researched; African journal metadata are incomplete; platform founding dates for Latindex, SciELO, Redalyc and AJOL are not established; one Royal Society manuscript is under review.",
+      "implication_for_page": "Flag regional gaps."
+    },
+    {
+      "id": "Q18",
+      "scope": [
+        "run-8c"
+      ],
+      "category": "coverage",
+      "severity": "medium",
+      "text": "A data-sharing meta-synthesis drew most studies from North America, with Europe a distant second; national-library origins, museum-university relationships and early data-archive founding dates are insufficiently documented.",
+      "implication_for_page": "Flag."
+    },
+    {
+      "id": "Q19",
+      "scope": [
+        "run-8d"
+      ],
+      "category": "quality",
+      "severity": "high",
+      "text": "No milestone has longitudinal outcome evidence; individual adoption and participation figures come from abstracts and need verification; most 2013-2015 empirical MOOC research came from North America and Europe.",
+      "implication_for_page": "Verify before display of numbers."
+    },
+    {
+      "id": "Q20",
+      "scope": [
+        "run-4d"
+      ],
+      "category": "verification",
+      "severity": "high",
+      "text": "The policy pass used web searches and summaries; primary documents were not read in full; one Council page was blocked; search result text is not archived verbatim.",
+      "implication_for_page": "Show as low verification."
+    },
+    {
+      "id": "Q21",
+      "scope": [
+        "run-7a"
+      ],
+      "category": "coverage",
+      "severity": "medium",
+      "text": "Latin America, Sub-Saharan Africa and the Soviet sphere are sparse or limited to conference proceedings; one sentence on Soviet shares was cut off in the reading; the Deep re-run was not run (credits).",
+      "implication_for_page": "Flag D-rows."
+    },
+    {
+      "id": "Q22",
+      "scope": [
+        "package"
+      ],
+      "category": "coding",
+      "severity": "high",
+      "text": "Milestone coding (levels, change type, continuity/disruption, valence, regions) is Claude's inference from source text; levels are stated in the source only for Y-rows; 80 of 174 rows have an unclear continuity/disruption reading; researcher review is pending.",
+      "implication_for_page": "Expose coding_basis and confidence; do not present coding as findings."
+    },
+    {
+      "id": "Q23",
+      "scope": [
+        "package"
+      ],
+      "category": "coding",
+      "severity": "medium",
+      "text": "Some date spans were inferred by Claude from named periods (for example dynasties, Hellenistic period; date_basis inferred_from_named_period) or come from general knowledge without a source (claude_general_knowledge_unsourced).",
+      "implication_for_page": "Render uncertain dates as ranges or hatched bars."
+    },
+    {
+      "id": "Q24",
+      "scope": [
+        "package"
+      ],
+      "category": "coding",
+      "severity": "low",
+      "text": "Duplicate and superseded rows are kept for provenance and flagged canonical=false.",
+      "implication_for_page": "Hide non-canonical rows by default."
+    },
+    {
+      "id": "Q25",
+      "scope": [
+        "run-8a",
+        "run-8b",
+        "run-6d"
+      ],
+      "category": "framing",
+      "severity": "medium",
+      "text": "Some sources use civilisational, diffusionist or developmental-stage language. It is not adopted here; context is described, not ranked.",
+      "implication_for_page": "Avoid stage vocabulary in the page."
+    },
+    {
+      "id": "Q26",
+      "scope": [
+        "package"
+      ],
+      "category": "legal",
+      "severity": "high",
+      "text": "Consensus outputs carry a notice that results are for personal, non-commercial use and that redistribution requires copyright holders' consent. The restricted archive must not be published; the data/ files avoid verbatim long text, abstracts and snippets.",
+      "implication_for_page": "Do not publish archive_restricted."
+    },
+    {
+      "id": "Q27",
+      "scope": [
+        "package"
+      ],
+      "category": "coding",
+      "severity": "low",
+      "text": "Valence is coded only where the source states winners or losers (26 rows); 148 of 174 are not coded.",
+      "implication_for_page": "Do not infer valence for uncoded rows."
+    },
+    {
+      "id": "Q28",
+      "scope": [
+        "package"
+      ],
+      "category": "scope",
+      "severity": "low",
+      "text": "Doctoral training is a separate line of inquiry; doctoral material in the outputs is incidental.",
+      "implication_for_page": "Do not build a doctoral view."
+    },
+    {
+      "id": "Q29",
+      "scope": [
+        "package"
+      ],
+      "category": "method",
+      "severity": "medium",
+      "text": "papers.json lists cited papers; entries from runs 1 and 2 were parsed approximately from reference lists. Being cited in a run does not mean endorsement, and no quality assessment of individual papers was made.",
+      "implication_for_page": "Describe the index as a bibliography of what the runs cited."
+    },
+    {
+      "id": "Q30",
+      "scope": [
+        "package"
+      ],
+      "category": "method",
+      "severity": "high",
+      "text": "Most evidence is cross-sectional or descriptive; the record contains no causal estimate of technology on university form.",
+      "implication_for_page": "Avoid causal language."
+    }
+  ]
+}

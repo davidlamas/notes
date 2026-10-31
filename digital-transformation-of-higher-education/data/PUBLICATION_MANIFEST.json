@@ -1,0 +1,30 @@
+{
+  "generated": "2026-10-31",
+  "source_package": "inquiry_web_package v0.9.0",
+  "files": [
+    "milestones.json",
+    "claims_synthesis.json",
+    "hypotheses.json",
+    "quality_flags.json",
+    "gaps.json",
+    "lags.json",
+    "runs.json",
+    "papers.json",
+    "selected_papers.json",
+    "primary_sources.json",
+    "content_blocks.json",
+    "framework.json",
+    "vocabularies.json",
+    "indexes.json",
+    "glossary.json"
+  ],
+  "excluded": [
+    "archive_restricted",
+    "private Consensus URLs",
+    "prompts",
+    "abstracts",
+    "snippets",
+    "agent traces",
+    "verbatim Consensus tables"
+  ]
+}
