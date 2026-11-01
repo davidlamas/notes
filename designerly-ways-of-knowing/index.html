@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f4ee">
   <link rel="icon" href="data:,">
   <title>Designerly Ways of Knowing</title>
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Designerly Ways of Knowing","description":"An interactive inquiry into generative design research as a designerly mode of inquiry.","author":{"@type":"Person","name":"David Lamas"},"inLanguage":"en"}
   </script>
@@ -23,7 +23,7 @@
       <button class="mode-button is-active" type="button" data-mode="presentation" aria-pressed="true">Presentation</button>
       <button class="mode-button" type="button" data-mode="exploration" aria-pressed="false">Explore</button>
     </nav>
-    <button class="text-button" id="sources-open" type="button" aria-haspopup="dialog">Sources and limits</button>
+    <button class="text-button" id="sources-open" type="button" aria-haspopup="dialog">Reading and sources</button>
   </header>
 
   <main id="main" tabindex="-1">
@@ -44,10 +44,17 @@
         <div>
           <p class="eyebrow">Exploration mode</p>
           <h1>Follow what makes knowledge expressible.</h1>
-          <p>Start with a question. Move between forms of knowledge, expression, process, designed conditions, and interpretation. Each view stays partial by design.</p>
+          <p>Explore design as inquiry through its intellectual foundations, forms of reasoning, ways of expressing knowledge, material tools, staged processes, interpretive work, and designed conditions. Each view stays partial by design.</p>
         </div>
         <button class="secondary-button" id="share-state" type="button">Copy this view</button>
       </div>
+
+      <div class="corpus-strip" id="corpus-strip" aria-label="Contents of the inquiry"></div>
+
+      <section class="term-clarifier" aria-label="Terminology used in this inquiry">
+        <article><p class="eyebrow">Generative research</p><h2>Research that creates conditions for something not yet fully formed to emerge.</h2><p>The phrase can describe inquiries that generate ideas, accounts, hypotheses, or futures. Its meaning depends on the field and should not be assumed from the adjective alone.</p></article>
+        <article><p class="eyebrow">Generative design research</p><h2>A participatory design-research tradition centred on expression through making.</h2><p>Here it refers more specifically to research that combines sensitising, saying, doing, making, collective creativity, and future-oriented exploration so that tacit or latent knowing can take provisional form.</p></article>
+      </section>
 
       <nav class="topic-tabs" id="topic-tabs" role="tablist" aria-label="Exploration topics"></nav>
       <div class="explore-layout">
@@ -78,19 +85,29 @@
 
       <section class="case-section" id="case" aria-labelledby="case-title">
         <div class="section-heading">
-          <div><p class="eyebrow">Applied case</p><h2 id="case-title">Democracy Labs as designed conditions</h2></div>
-          <p>The case shows how sequence, artefacts, roles, facilitation, and institutional context shape collective inquiry. It does not establish universal effectiveness.</p>
+          <div><p class="eyebrow">Worked methodological illustration</p><h2 id="case-title">D4.1 shows how generative design research is approached.</h2></div>
+          <p>Democracy is the application domain. The wider methodological value lies in seeing how framing, sensitising, tools, sequence, roles, facilitation, recording, analysis, and adaptation are designed together. The case is inspectable, but it is not a universal recipe.</p>
         </div>
         <div class="case-grid">
           <div class="case-process" id="case-process" aria-label="Democracy Labs process"></div>
           <article class="case-detail" id="case-detail" aria-live="polite"></article>
         </div>
+        <div class="case-evidence" id="case-evidence"></div>
+      </section>
+
+      <section class="reading-section" id="reading" aria-labelledby="reading-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Claims and evidence</p><h2 id="reading-title">Read the inquiry through its sources.</h2></div>
+          <p>Foundational texts, methodological work, critical perspectives, empirical studies, and applied cases play different roles. Filter the library to inspect what each source contributes and what it cannot establish.</p>
+        </div>
+        <div class="reading-filters" id="reading-filters" role="group" aria-label="Filter reading library"></div>
+        <div class="reading-grid" id="reading-grid"></div>
       </section>
 
       <section class="teaching-section" aria-labelledby="teaching-title">
         <details>
-          <summary><span><span class="eyebrow">Optional teaching view</span><strong id="teaching-title">From framing to fieldwork</strong></span><span aria-hidden="true">+</span></summary>
-          <p>The nine assignments translate the inquiry into a cumulative trajectory. They are course material, not a universal account of how generative research must proceed.</p>
+          <summary><span><span class="eyebrow">Operational trajectory</span><strong id="teaching-title">How an inquiry becomes fieldwork</strong></span><span aria-hidden="true">+</span></summary>
+          <p>This nine-move trajectory was reconstructed from the course work as an example of how ideas become a situated protocol. It is included as methodological evidence, not as a student-facing course schedule or a universal recipe.</p>
           <ol id="teaching-path"></ol>
         </details>
       </section>
@@ -102,13 +119,16 @@
       <div><p class="eyebrow">Reading trail</p><h2 id="sources-title">Sources, construction, and limits</h2></div>
       <button class="icon-button" type="button" data-close="sources-dialog" aria-label="Close sources and limits">×</button>
     </div>
-    <p class="drawer-intro">Conceptual sources, methodological sources, applied studies, and course material play different roles. The map is an authored teaching synthesis, not a claim that these sources form one settled theory.</p>
+    <p class="drawer-intro">Conceptual sources, methodological sources, critical perspectives, empirical studies, applied cases, and public resources play different roles. This inquiry is an authored synthesis, not a claim that they form one settled theory.</p>
     <div class="source-tabs" id="source-tabs" role="tablist" aria-label="Source categories"></div>
     <div id="source-content"></div>
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="data.js?v=1"></script>
-  <script src="app.js?v=1"></script>
+  <script src="data/core.js?v=2"></script>
+  <script src="data/inquiry.js?v=2"></script>
+  <script src="data/democracy-labs.js?v=2"></script>
+  <script src="data/sources.js?v=2"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>

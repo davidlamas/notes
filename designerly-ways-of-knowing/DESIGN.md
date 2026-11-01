@@ -9,9 +9,9 @@ Generative design research creates designed conditions in which people can exter
 1. Design is a mode of inquiry.
 2. Problems and possible responses develop together.
 3. Situations talk back through action and material consequences.
-4. People know more than they can readily say.
-5. Saying, doing, and making offer different routes to expression.
-6. Individual expression can become collective inquiry without implying consensus.
+4. Deduction, induction, and abduction do different work in inquiry.
+5. People know more than they can readily say.
+6. Saying, doing, and making offer different routes to expression.
 7. Sensitising, sensemaking, provotyping, and futuring stage one possible process.
 8. Artefacts do not become findings without interpretation.
 9. Democracy Labs show how conditions shape what becomes knowable.
@@ -19,14 +19,17 @@ Generative design research creates designed conditions in which people can exter
 
 ## Exploration structure
 
-- **Map:** framing, action, material engagement, expression, collective interpretation, and provisional claims.
-- **Knowledge:** explicit, observable, tacit, and latent knowledge, with a caution against treating depth as direct access to truth.
+- **Landscape:** twelve design-research orientations compared through concerns, contributions, and cautions.
+- **Reasoning:** deduction, induction, and abduction as complementary but different logics.
+- **Knowing:** explicit, observable, tacit, and latent knowledge, with a caution against treating depth as direct access to truth.
 - **Expression:** say, do, and make across memories, present experience, and possible futures.
-- **Process:** sensitising, sensemaking, provotyping, and futuring as a situated sequence rather than a formula.
+- **Tools:** sixteen inspectable examples distinguished by purpose, time, social arrangement, materials, outputs, and risks.
+- **Process:** six movements from preparation and sensitising through interpretation and return.
+- **Analysis:** six interpretive moves from situated phenomena to provisional claims.
 - **Conditions:** prompts, materials, facilitation, time, recruitment, consent, group dynamics, institutional setting, and analysis.
-- **Case:** Democracy Labs as designed epistemic infrastructure, including minority criticism and limits.
-- **Teaching:** the assignment sequence as an optional path from framing to fieldwork.
-- **Sources and limits:** conceptual, methodological, applied, and course sources kept distinct.
+- **D4.1 case:** Democracy Labs as a worked example of approaching generative design research, including later empirical findings and limits.
+- **Operational trajectory:** the assignment sequence reconstructed as methodological evidence, not as a student-facing course page.
+- **Reading and evidence:** twelve substantial sources plus public methodological resources, with claims, methods, contributions, and tensions kept distinct.
 
 ## Visual decisions
 
@@ -57,9 +60,9 @@ Generative design research creates designed conditions in which people can exter
 ### Deliberately omit
 
 - Repeated full-process slides duplicated across two decks.
-- Dense planning and analysis tables that do not serve the central argument.
-- A general history of creativity research.
-- An encyclopaedic catalogue of tools and methods.
+- Dense planning tables that cannot be made legible or connected to the central argument.
+- A general history of creativity that is not connected to inquiry or evidence.
+- Exhaustive reproduction of the books or decks.
 - Workshop photographs and identifiable participant material.
 - Consent forms, contact details, private links, and local source documents.
 
@@ -76,4 +79,4 @@ Generative design research creates designed conditions in which people can exter
 
 ## Public material boundary
 
-Only purpose-made HTML, CSS, JavaScript, compact paraphrases, and verified public references will be published. No source PDF, PPTX, DOCX, participant image, participant quotation with identifying detail, personal information, or private research link will be copied into the repository.
+Only purpose-made HTML, CSS, structured JavaScript data, compact paraphrases, and verified public references will be published. No source PDF, PPTX, DOCX, participant image, participant quotation with identifying detail, personal information, or private research link will be copied into the repository. The public data is separated into `data/core.js`, `data/inquiry.js`, `data/democracy-labs.js`, and `data/sources.js` so the content can be inspected independently of the rendering logic.
