@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#f7f4ee">
   <link rel="icon" href="data:,">
   <title>Designerly Ways of Knowing</title>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Designerly Ways of Knowing","description":"An interactive inquiry into generative design research as a designerly mode of inquiry.","author":{"@type":"Person","name":"David Lamas"},"inLanguage":"en"}
   </script>
@@ -22,6 +22,7 @@
     <nav class="mode-switch" aria-label="View mode">
       <button class="mode-button is-active" type="button" data-mode="presentation" aria-pressed="true">Presentation</button>
       <button class="mode-button" type="button" data-mode="exploration" aria-pressed="false">Explore</button>
+      <button class="mode-button" type="button" data-mode="case" aria-pressed="false">Democracy Labs</button>
     </nav>
     <button class="text-button" id="sources-open" type="button" aria-haspopup="dialog">Reading and sources</button>
   </header>
@@ -32,7 +33,7 @@
       <div class="deck-controls" aria-label="Presentation controls">
         <button class="round-button" id="slide-prev" type="button" aria-label="Previous step">←</button>
         <div class="deck-progress">
-          <span id="slide-count">1 / 10</span>
+          <span id="slide-count">1 / 20</span>
           <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
         </div>
         <button class="round-button" id="slide-next" type="button" aria-label="Next step">→</button>
@@ -42,9 +43,9 @@
     <section id="exploration" class="mode-view" hidden aria-label="Explore designerly knowing">
       <div class="explore-intro">
         <div>
-          <p class="eyebrow">Exploration mode</p>
-          <h1>Follow what makes knowledge expressible.</h1>
-          <p>Explore design as inquiry through its intellectual foundations, forms of reasoning, ways of expressing knowledge, material tools, staged processes, interpretive work, and designed conditions. Each view stays partial by design.</p>
+          <p class="eyebrow">Concept map and atlas</p>
+          <h1>Explore how designerly inquiry holds together.</h1>
+          <p>Begin with the concept map. Follow relations among inquiry, reasoning, knowing, participation, materiality, and interpretation. Then use the atlas and reading library to examine each area in depth.</p>
         </div>
         <button class="secondary-button" id="share-state" type="button">Copy this view</button>
       </div>
@@ -56,6 +57,18 @@
         <article><p class="eyebrow">Generative design research</p><h2>A participatory design-research tradition centred on expression through making.</h2><p>Here it refers more specifically to research that combines sensitising, saying, doing, making, collective creativity, and future-oriented exploration so that tacit or latent knowing can take provisional form.</p></article>
       </section>
 
+      <section class="concept-map-section" aria-labelledby="concept-map-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Interactive concept map</p><h2 id="concept-map-title">One inquiry, six connected territories.</h2></div>
+          <p>Select a territory, then a concept. Each concept links to its key references and to concrete instances in the Democracy Labs case.</p>
+        </div>
+        <div class="concept-map-layout">
+          <div class="concept-map" id="concept-map" aria-label="Concept map of designerly inquiry"></div>
+          <article class="concept-detail" id="concept-detail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <div class="atlas-heading"><p class="eyebrow">Concept atlas</p><h2>Compare definitions, tools, processes, and tensions.</h2></div>
       <nav class="topic-tabs" id="topic-tabs" role="tablist" aria-label="Exploration topics"></nav>
       <div class="explore-layout">
         <section class="explore-stage" id="explore-stage" aria-live="polite"></section>
@@ -83,18 +96,6 @@
         <p class="bridge-note" id="bridge-note" role="status">Select a stage to inspect the interpretive work it requires.</p>
       </section>
 
-      <section class="case-section" id="case" aria-labelledby="case-title">
-        <div class="section-heading">
-          <div><p class="eyebrow">Worked methodological illustration</p><h2 id="case-title">D4.1 shows how generative design research is approached.</h2></div>
-          <p>Democracy is the application domain. The wider methodological value lies in seeing how framing, sensitising, tools, sequence, roles, facilitation, recording, analysis, and adaptation are designed together. The case is inspectable, but it is not a universal recipe.</p>
-        </div>
-        <div class="case-grid">
-          <div class="case-process" id="case-process" aria-label="Democracy Labs process"></div>
-          <article class="case-detail" id="case-detail" aria-live="polite"></article>
-        </div>
-        <div class="case-evidence" id="case-evidence"></div>
-      </section>
-
       <section class="reading-section" id="reading" aria-labelledby="reading-title">
         <div class="section-heading">
           <div><p class="eyebrow">Claims and evidence</p><h2 id="reading-title">Read the inquiry through its sources.</h2></div>
@@ -104,10 +105,33 @@
         <div class="reading-grid" id="reading-grid"></div>
       </section>
 
+    </section>
+
+    <section id="case-study" class="mode-view" hidden aria-label="Democracy Labs case study">
+      <div class="case-hero">
+        <div><p class="eyebrow">Worked case study</p><h1>Democracy Labs</h1><p>A multilevel, multistakeholder exploration of how generative design research was framed, staged, materialised, facilitated, recorded, interpreted, and translated across six European country contexts.</p></div>
+        <div class="case-hero-note"><strong>Why this case matters</strong><p>D4.1 makes the intended research design inspectable. Later publications make participant experience, cross-country analysis, tensions, and limits available for comparison.</p></div>
+      </div>
+
+      <section class="case-atlas-section" aria-labelledby="case-atlas-title">
+        <div class="section-heading"><div><p class="eyebrow">Case atlas</p><h2 id="case-atlas-title">Move across levels and stakeholders.</h2></div><p>Filter the case by scale or stakeholder. Select a component to inspect its purpose, evidence, risks, and connected concepts.</p></div>
+        <div class="case-filter-block"><div><strong>Level</strong><div id="case-levels" class="case-filters"></div></div><div><strong>Stakeholder</strong><div id="case-stakeholders" class="case-filters"></div></div></div>
+        <div class="case-atlas-layout"><div class="case-atlas" id="case-atlas"></div><article class="case-component-detail" id="case-component-detail" aria-live="polite"></article></div>
+      </section>
+
+      <section class="case-section" id="case" aria-labelledby="case-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Published process</p><h2 id="case-title">Four linked movements through experience and possibility.</h2></div>
+          <p>The D4.1 sequence provides a worked example of generative design research. It shows how an activity system is assembled, not a universal recipe for every inquiry.</p>
+        </div>
+        <div class="case-grid"><div class="case-process" id="case-process" aria-label="Democracy Labs process"></div><article class="case-detail" id="case-detail" aria-live="polite"></article></div>
+        <div class="case-evidence" id="case-evidence"></div>
+      </section>
+
       <section class="teaching-section" aria-labelledby="teaching-title">
         <details>
-          <summary><span><span class="eyebrow">Operational trajectory</span><strong id="teaching-title">How an inquiry becomes fieldwork</strong></span><span aria-hidden="true">+</span></summary>
-          <p>This nine-move trajectory was reconstructed from the course work as an example of how ideas become a situated protocol. It is included as methodological evidence, not as a student-facing course schedule or a universal recipe.</p>
+          <summary><span><span class="eyebrow">From concept to fieldwork</span><strong id="teaching-title">A nine-move operational trajectory</strong></span><span aria-hidden="true">+</span></summary>
+          <p>The course work has been reconstructed here as methodological evidence showing how a general framework becomes a situated protocol. Dates, submissions, and student instructions are deliberately excluded.</p>
           <ol id="teaching-path"></ol>
         </details>
       </section>
@@ -125,10 +149,10 @@
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="data/core.js?v=2"></script>
-  <script src="data/inquiry.js?v=2"></script>
-  <script src="data/democracy-labs.js?v=2"></script>
-  <script src="data/sources.js?v=2"></script>
-  <script src="app.js?v=2"></script>
+  <script src="data/core.js?v=3"></script>
+  <script src="data/inquiry.js?v=3"></script>
+  <script src="data/democracy-labs.js?v=3"></script>
+  <script src="data/sources.js?v=3"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>

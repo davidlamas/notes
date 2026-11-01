@@ -4,20 +4,19 @@
 
 Generative design research creates designed conditions in which people can externalise, negotiate, and transform forms of knowledge that conventional inquiry may struggle to reach. It is not a collection of creative workshop exercises. Framing, materials, facilitation, recruitment, time, consent, analysis, and interpretation all shape what becomes expressible and what claims can be supported.
 
-## Minimum presentation sequence
+## Presentation sequence
 
-1. Design is a mode of inquiry.
-2. Problems and possible responses develop together.
-3. Situations talk back through action and material consequences.
-4. Deduction, induction, and abduction do different work in inquiry.
-5. People know more than they can readily say.
-6. Saying, doing, and making offer different routes to expression.
-7. Sensitising, sensemaking, provotyping, and futuring stage one possible process.
-8. Artefacts do not become findings without interpretation.
-9. Democracy Labs show how conditions shape what becomes knowable.
-10. The knowledge produced is situated, provisional, and open to revision.
+The 20-step presentation moves from design as a third culture and mode of inquiry through framing, reflection, reasoning, knowledge depth, expression, toolkits, collective creativity, participation, staging, interpretation, and critical limits. Democracy Labs appears as a worked case rather than being mixed into the conceptual exposition. Six original course diagrams are reproduced in the sequence when their visual argument is stronger than a webpage reconstruction.
 
-## Exploration structure
+## Three-part architecture
+
+### Presentation
+
+- A 20-step guided argument for visitors encountering designerly inquiry for the first time.
+- Original course diagrams alternate with purpose-made interactive diagrams.
+- Arrow keys and direct URLs support presentation and sharing.
+
+### Explore
 
 - **Landscape:** twelve design-research orientations compared through concerns, contributions, and cautions.
 - **Reasoning:** deduction, induction, and abduction as complementary but different logics.
@@ -27,25 +26,33 @@ Generative design research creates designed conditions in which people can exter
 - **Process:** six movements from preparation and sensitising through interpretation and return.
 - **Analysis:** six interpretive moves from situated phenomena to provisional claims.
 - **Conditions:** prompts, materials, facilitation, time, recruitment, consent, group dynamics, institutional setting, and analysis.
-- **D4.1 case:** Democracy Labs as a worked example of approaching generative design research, including later empirical findings and limits.
-- **Operational trajectory:** the assignment sequence reconstructed as methodological evidence, not as a student-facing course page.
 - **Reading and evidence:** twelve substantial sources plus public methodological resources, with claims, methods, contributions, and tensions kept distinct.
+- **Concept map:** twenty concepts organised into six connected territories, each linked to key references and to concrete Democracy Labs instances.
+
+### Democracy Labs
+
+- **Case atlas:** fifteen components inspectable across encounter, lab, country, programme, and political-horizon levels.
+- **Stakeholders:** citizens, facilitators, country teams, researchers, and institutions can be used as filters.
+- **D4.1 process:** the four linked movements provide a worked example of approaching generative design research.
+- **Evidence and limits:** activity-system conditions, an evidence ledger, later findings, and six proposals keep claims traceable.
+- **Operational trajectory:** the course-work sequence is reconstructed as methodological evidence, not as a student-facing course page.
+- **Two-way navigation:** every case component links back to relevant concepts, and concepts link directly to their case instances.
 
 ## Visual decisions
 
-### Preserve or closely adapt
+### Reproduce from the original course diagrams
 
-- The calm pastel palette and overlapping fields used across the course decks.
-- The design-research landscape as a simplified orientation map.
-- The layered path of expression from memories through the present to possible futures.
-- The research-to-design bridge from material and interpretation to design possibilities.
-- The staged generative process as a compact sequence.
+- The design-research landscape.
+- Knowledge depth and methodological reach.
+- Five generative toolkit families.
+- The path from memories through the present to possible futures.
+- The sensitising and workshop path of expression.
+- The research-to-design interpretation bridge.
 
-### Reconstruct interactively
+### Interpret interactively
 
 - Explicit, observable, tacit, and latent knowledge as a selectable depth navigator.
 - Say, do, and make as a comparison controlled by selection.
-- The path of expression as a temporal selector.
 - Sensitising, sensemaking, provotyping, and futuring as a process navigator.
 - Designed conditions as selectable influences on expression and interpretation.
 - Analysis as movement from traces to patterns, insights, imaginaries, and possibilities.
