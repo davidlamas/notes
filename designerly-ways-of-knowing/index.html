@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive scholarly inquiry into generative design research as a way of framing, making, reflecting, and knowing with people.">
+  <meta name="theme-color" content="#f7f4ee">
+  <link rel="icon" href="data:,">
+  <title>Designerly Ways of Knowing</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Designerly Ways of Knowing","description":"An interactive inquiry into generative design research as a designerly mode of inquiry.","author":{"@type":"Person","name":"David Lamas"},"inLanguage":"en"}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Research maps home">
+      <span class="wordmark-mark" aria-hidden="true">D</span>
+      <span>Designerly Ways <small>of Knowing</small></span>
+    </a>
+    <nav class="mode-switch" aria-label="View mode">
+      <button class="mode-button is-active" type="button" data-mode="presentation" aria-pressed="true">Presentation</button>
+      <button class="mode-button" type="button" data-mode="exploration" aria-pressed="false">Explore</button>
+    </nav>
+    <button class="text-button" id="sources-open" type="button" aria-haspopup="dialog">Sources and limits</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="presentation" class="mode-view" aria-label="Guided presentation">
+      <div class="deck" id="deck" aria-live="polite"></div>
+      <div class="deck-controls" aria-label="Presentation controls">
+        <button class="round-button" id="slide-prev" type="button" aria-label="Previous step">←</button>
+        <div class="deck-progress">
+          <span id="slide-count">1 / 10</span>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+        </div>
+        <button class="round-button" id="slide-next" type="button" aria-label="Next step">→</button>
+      </div>
+    </section>
+
+    <section id="exploration" class="mode-view" hidden aria-label="Explore designerly knowing">
+      <div class="explore-intro">
+        <div>
+          <p class="eyebrow">Exploration mode</p>
+          <h1>Follow what makes knowledge expressible.</h1>
+          <p>Start with a question. Move between forms of knowledge, expression, process, designed conditions, and interpretation. Each view stays partial by design.</p>
+        </div>
+        <button class="secondary-button" id="share-state" type="button">Copy this view</button>
+      </div>
+
+      <nav class="topic-tabs" id="topic-tabs" role="tablist" aria-label="Exploration topics"></nav>
+      <div class="explore-layout">
+        <section class="explore-stage" id="explore-stage" aria-live="polite"></section>
+        <aside class="question-panel" aria-labelledby="question-title">
+          <p class="eyebrow">Inquiry prompts</p>
+          <h2 id="question-title">What needs attention?</h2>
+          <div id="question-list"></div>
+        </aside>
+      </div>
+
+      <section class="bridge-section" aria-labelledby="bridge-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">From material to meaning</p><h2 id="bridge-title">Interpretation is part of the research design.</h2></div>
+          <p>Artefacts, stories, maps, and quotations do not explain themselves. Researchers compare, group, contest, and translate them into provisional patterns and possibilities.</p>
+        </div>
+        <div class="bridge-flow" aria-label="Interpretive movement from traces to possibilities">
+          <button type="button" data-bridge="traces"><strong>Traces</strong><span>artefacts, stories, maps</span></button>
+          <span aria-hidden="true">→</span>
+          <button type="button" data-bridge="patterns"><strong>Patterns</strong><span>similarities, tensions, absences</span></button>
+          <span aria-hidden="true">→</span>
+          <button type="button" data-bridge="insights"><strong>Insights</strong><span>situated interpretations</span></button>
+          <span aria-hidden="true">→</span>
+          <button type="button" data-bridge="possibilities"><strong>Possibilities</strong><span>imaginaries and design moves</span></button>
+        </div>
+        <p class="bridge-note" id="bridge-note" role="status">Select a stage to inspect the interpretive work it requires.</p>
+      </section>
+
+      <section class="case-section" id="case" aria-labelledby="case-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">Applied case</p><h2 id="case-title">Democracy Labs as designed conditions</h2></div>
+          <p>The case shows how sequence, artefacts, roles, facilitation, and institutional context shape collective inquiry. It does not establish universal effectiveness.</p>
+        </div>
+        <div class="case-grid">
+          <div class="case-process" id="case-process" aria-label="Democracy Labs process"></div>
+          <article class="case-detail" id="case-detail" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="teaching-section" aria-labelledby="teaching-title">
+        <details>
+          <summary><span><span class="eyebrow">Optional teaching view</span><strong id="teaching-title">From framing to fieldwork</strong></span><span aria-hidden="true">+</span></summary>
+          <p>The nine assignments translate the inquiry into a cumulative trajectory. They are course material, not a universal account of how generative research must proceed.</p>
+          <ol id="teaching-path"></ol>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="drawer" id="sources-dialog" aria-labelledby="sources-title">
+    <div class="drawer-head">
+      <div><p class="eyebrow">Reading trail</p><h2 id="sources-title">Sources, construction, and limits</h2></div>
+      <button class="icon-button" type="button" data-close="sources-dialog" aria-label="Close sources and limits">×</button>
+    </div>
+    <p class="drawer-intro">Conceptual sources, methodological sources, applied studies, and course material play different roles. The map is an authored teaching synthesis, not a claim that these sources form one settled theory.</p>
+    <div class="source-tabs" id="source-tabs" role="tablist" aria-label="Source categories"></div>
+    <div id="source-content"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
