@@ -17,7 +17,7 @@ nav.mode-switch{display:flex;justify-self:center;padding:4px;background:#ebe9e1;
 nav button{border:0;background:transparent;border-radius:999px;padding:7px 15px;font-size:.87rem;white-space:nowrap}
 nav button.on{background:var(--panel);box-shadow:0 1px 7px rgba(0,0,0,.08);font-weight:740}
 .hright{display:flex;gap:12px;align-items:center}
-.badge{font-size:.7rem;padding:3px 10px;border-radius:999px;background:var(--ochre);color:#5d4d0c;border:1px solid #d8c987;letter-spacing:.02em}
+.badge:empty{display:none}.badge{font-size:.7rem;padding:3px 10px;border-radius:999px;background:var(--ochre);color:#5d4d0c;border:1px solid #d8c987;letter-spacing:.02em}
 .search{position:relative}.search input{padding:8px 14px;border:1px solid var(--line);border-radius:999px;width:230px;background:var(--panel)}
 .results{position:absolute;right:0;top:44px;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);width:390px;z-index:40;display:none;overflow:hidden}
 .results button{display:block;width:100%;text-align:left;border:0;background:none;padding:8px 14px}.results button:hover{background:var(--paper)}
@@ -254,7 +254,7 @@ res.addEventListener("click",e=>{const b=e.target.closest("[data-pick]");if(b){S
 (function init(){
  const m=Object.fromEntries(location.hash.slice(1).split("&").filter(Boolean).map(x=>x.split("=")));
  if(m.lens&&LV[m.lens]&&LENSES.some(l=>l[0]===m.lens))S.lens=m.lens;if(m.sel&&N[m.sel])S.sel=m.sel;
- document.getElementById("badge").textContent=PUB?"Public working view · draft, not a commitment":"Partner build · confidential";
+ document.getElementById("badge").textContent=PUB?"Public working view · draft, not a commitment":"";
  document.getElementById("foot").textContent="Sources: sealed 2026 proposal (SEP-211281191), 2026 Evaluation Summary Report, 2027 pre-blueprint decision log. Items marked Revise/New are proposals until partners confirm. Generated "+D.generated+".";
  render();
 })();
