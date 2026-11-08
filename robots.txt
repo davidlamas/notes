@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://davidlamas.github.io/notes/sitemap.xml

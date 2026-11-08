@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="David Lamas academic inquiries">
+  <rect width="64" height="64" rx="32" fill="#202624"/>
+  <circle cx="17" cy="17" r="5" fill="#d7e9e5"/>
+  <circle cx="47" cy="17" r="5" fill="#f4dfc9"/>
+  <circle cx="47" cy="47" r="5" fill="#e6dff0"/>
+  <text x="32" y="43" text-anchor="middle" fill="#f7f4ee" font-family="Georgia,serif" font-size="34">D</text>
+</svg>
