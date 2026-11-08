@@ -1,296 +1,368 @@
-(() => {
-  const data = window.DESIGNERLY_DATA;
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  const topics = [
-    {id:'landscape', label:'Landscape', title:'Design research is a landscape, not a ladder.', intro:'Compare orientations by what they attend to, how they involve people, and what each can overlook.', type:'landscape'},
-    {id:'reasoning', label:'Reasoning', title:'Designerly inquiry combines several logics.', intro:'Deduction, induction, and abduction do different work. Design becomes distinctive when frames and possible responses are developed together.', type:'reasoning'},
-    {id:'knowledge', label:'Knowing', title:'Knowledge differs in how readily it can be expressed.', intro:'Inspect what each layer can support, how it might become available, and what remains uncertain.', type:'knowledge'},
-    {id:'expression', label:'Expression', title:'Say, do, and make are complementary paths.', intro:'Cross a form of expression with a temporal orientation. The combination changes what can become discussable.', type:'expression'},
-    {id:'tools', label:'Tools', title:'Choose tools for the knowing they can support.', intro:'Sixteen examples show that format, social arrangement, time orientation, and interpretive risk belong inside method selection.', type:'tools'},
-    {id:'process', label:'Process', title:'A generative inquiry is staged and revisable.', intro:'The six movements connect framing, expression, provocation, imagination, interpretation, and return.', type:'process'},
-    {id:'analysis', label:'Analysis', title:'Material becomes knowledge through interpretive work.', intro:'Follow the bridge from situated phenomena to provisional claims and back into inquiry.', type:'analysis'},
-    {id:'conditions', label:'Conditions', title:'Research design shapes expression and interpretation.', intro:'Inspect the conditions that influence whose knowledge appears, in what form, and with what authority.', type:'conditions'}
-  ];
-
-  const state = {mode:'presentation', slide:0, topic:'landscape', item:null, time:'present', filter:'All', source:'foundations', reading:'All', conceptGroup:'inquiry', concept:'designerly-knowing', caseLevel:'all', caseStakeholder:'all', caseItem:'sensitising'};
-
-  function parseState() {
-    const params = new URLSearchParams(location.search);
-    if (['presentation','exploration','case'].includes(params.get('mode'))) state.mode = params.get('mode');
-    const slide = Number(params.get('step'));
-    if (Number.isInteger(slide) && slide >= 1 && slide <= data.slides.length) state.slide = slide - 1;
-    if (topics.some(topic => topic.id === params.get('topic'))) state.topic = params.get('topic');
-    state.item = params.get('item');
-    if (['memories','present','dreams'].includes(params.get('time'))) state.time = params.get('time');
-    if (params.get('filter')) state.filter = params.get('filter');
-    if (data.conceptGroups.some(group => group.id === params.get('group'))) state.conceptGroup = params.get('group');
-    if (data.concepts.some(concept => concept.id === params.get('concept'))) state.concept = params.get('concept');
-    if (['all', ...data.caseLevels.map(level => level.id)].includes(params.get('level'))) state.caseLevel = params.get('level');
-    if (['all', ...data.caseStakeholders.map(item => item.id)].includes(params.get('stakeholder'))) state.caseStakeholder = params.get('stakeholder');
-    if (data.caseComponents.some(item => item.id === params.get('instance'))) state.caseItem = params.get('instance');
+(async () => {
+  'use strict';
+  const $ = (s, root = document) => root.querySelector(s);
+  const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let D;
+  try {
+    const response = await fetch('data/content.json');
+    if (!response.ok) throw new Error('Content unavailable');
+    D = await response.json();
+  } catch {
+    $('#state-notice').hidden = false;
+    $('#state-notice').innerHTML = 'The interactive edition could not load. <a href="reading.html">Read the complete inquiry, evidence and sources in the reading edition.</a>';
+    $('#sources-open').hidden = true;
+    return;
   }
-
-  function writeState(replace = true) {
-    const params = new URLSearchParams();
-    params.set('mode', state.mode);
-    if (state.mode === 'presentation') params.set('step', state.slide + 1);
-    else if (state.mode === 'exploration') {
-      params.set('topic', state.topic);
-      if (state.item) params.set('item', state.item);
-      if (state.topic === 'expression') params.set('time', state.time);
-      if (state.topic === 'tools' && state.filter !== 'All') params.set('filter', state.filter);
-      params.set('group', state.conceptGroup);
-      params.set('concept', state.concept);
-    } else {
-      params.set('level', state.caseLevel);
-      params.set('stakeholder', state.caseStakeholder);
-      params.set('instance', state.caseItem);
+  const registry = names => Object.fromEntries(Object.entries(names).map(([key, name]) => [key, new Map(D[name].map(record => [record.id, record]))]));
+  const M = registry({sources:'sources', claims:'claims', concepts:'concepts', relations:'conceptRelations', steps:'presentation', instances:'instances', activities:'activities', statements:'statements', journeys:'journeys', gaps:'gaps', levels:'levels', stakeholders:'stakeholders', artefacts:'artefactTypes', functions:'epistemicFunctions', statuses:'evidenceStatuses', questions:'questionPaths', methods:'methodFamilies', tensions:'tensions', figures:'figureViews', scopes:'scopes', caseRelations:'caseRelations'});
+  const facetConfig = [['level','levelRefs',D.levels,'Level'],['stakeholder','stakeholderRefs',D.stakeholders,'Stakeholder'],['phase','phaseRefs',D.activities,'Activity'],['artefact','artefactRefs',D.artefactTypes,'Artefact'],['function','functionRefs',D.epistemicFunctions,'Epistemic function'],['status','evidenceStatuses',D.evidenceStatuses,'Evidence status']];
+  const unique = items => [...new Set(items)];
+  const modeNames = {presentation:'Presentation', explore:'Explore', labs:'Democracy Labs'};
+  let params, mode, notices = [], routeKey = '', sourceInvoker, sourceReturn;
+  let positions = {};
+  try { positions = JSON.parse(sessionStorage.getItem('dwk-positions') || '{}'); } catch {}
+  const currentStep = () => M.steps.get(params.get('step')) || D.presentation[0];
+  const selectedFacets = () => Object.fromEntries(facetConfig.map(([key]) => [key,(params.get(key) || '').split(',').filter(Boolean)]));
+  const matches = (record, facets) => facetConfig.every(([key,field]) => !facets[key].length || facets[key].some(id => (record[field] || []).includes(id)));
+  const stopStatements = stop => [...(stop?.statementRefs || []), ...(stop?.parallelStatementRefs || [])].map(id => M.statements.get(id));
+  const activeStop = () => M.journeys.get(params.get('journey'))?.stops?.find(s => s.id === params.get('at'));
+  const compareRecords = () => (params.get('compare') || '').split(',').map(id => M.instances.get(id) || M.statements.get(id)).filter(Boolean);
+  function caseClaims() {
+    if (params.get('view') === 'journey') return unique(stopStatements(activeStop()).flatMap(s => s.claimRefs));
+    if (params.get('view') === 'compare') return unique(compareRecords().flatMap(r => r.claimRefs));
+    if (params.get('view') === 'system') return M.activities.get(params.get('activity'))?.claimRefs || [];
+    if (params.get('view') === 'overview') return unique(D.case.orientation.flatMap(x => x.claimRefs));
+    return M.instances.get(params.get('instance'))?.claimRefs || [];
+  }
+  function normalise() {
+    params = new URLSearchParams(location.search); notices = [];
+    const discard = (key, message) => { params.delete(key); notices.push(message || `An unrecognised ${key} selection was removed. The valid part of this link is retained.`); };
+    if (params.has('v') && params.get('v') !== '1') {
+      params = new URLSearchParams('v=1&mode=presentation&step=S01&display=reading'); notices.push(D.uiCopy.unknownVersion);
     }
-    history[replace ? 'replaceState' : 'pushState']({}, '', `${location.pathname}?${params}`);
-  }
-
-  function visual(type) {
-    const visuals = {
-      landscape: `<div class="diagram landscape" role="img" aria-label="A design research landscape connecting research-led, designerly, and participatory orientations"><div class="field">Research<br>led</div><div class="field">Designerly<br>inquiry</div><div class="field">Participation<br>led</div></div>`,
-      'third-culture': `<div class="diagram culture-diagram" role="img" aria-label="Three cultures of inquiry: sciences, humanities, and design"><span>Sciences<small>natural world</small></span><span>Humanities<small>human experience</small></span><strong>Design<small>human-made world</small></strong></div>`,
-      coevolution: `<div class="diagram coevolution" role="img" aria-label="Problem framing and possible responses shaping one another"><div class="bubble">Problem frame</div><div class="exchange" aria-hidden="true">↔</div><div class="bubble">Possible response</div></div>`,
-      reflection: `<div class="diagram reflection-diagram" role="img" aria-label="A reflective loop through action, consequence, attention, and reframing"><span>Act</span><span>Notice</span><span>Judge</span><span>Reframe</span><div class="reflection-loop"></div></div>`,
-      reasoning: `<div class="diagram reasoning-diagram" role="img" aria-label="Deduction, induction, and abduction contributing different forms of reasoning"><span>Deduce<small>consequences</small></span><span>Induce<small>patterns</small></span><strong>Abduce<small>possibilities</small></strong></div>`,
-      depth: `<div class="diagram depth-stack" role="img" aria-label="Layers of explicit, observable, tacit, and latent knowledge"><div class="layer">Explicit</div><div class="layer">Observable</div><div class="layer">Tacit</div><div class="layer">Latent</div></div>`,
-      saydomake: `<div class="diagram venn" role="img" aria-label="Overlapping forms of expression: say, do, and make"><span>Say</span><span>Do</span><span>Make</span></div>`,
-      process: `<div class="diagram process-line" role="img" aria-label="A path through sensitising, sensemaking, provotyping, and futuring"><div class="phase">Sensitising<small>revisit experience</small></div><div class="phase">Sensemaking<small>externalise and compare</small></div><div class="phase">Provotyping<small>expose assumptions</small></div><div class="phase">Futuring<small>develop possibilities</small></div></div>`,
-      bridge: `<div class="diagram bridge-mini" role="img" aria-label="Interpretive bridge from traces to patterns, insights, and possibilities"><span>Traces</span><span>Patterns</span><span>Insights</span><span>Possibilities</span></div>`,
-      conditions: `<div class="diagram conditions-orbit" role="img" aria-label="Designed inquiry surrounded by prompts, materials, time, people, ethics, and context"><strong>Designed<br>inquiry</strong><span>Prompts</span><span>Materials</span><span>Time</span><span>People</span><span>Ethics</span><span>Context</span></div>`,
-      creativity: `<div class="diagram creativity-diagram" role="img" aria-label="Collective creativity shaped by materials, spaces, bodies, emotions, minds, and time"><strong>Collective<br>creativity</strong><span>Materials</span><span>Spaces</span><span>Bodies</span><span>Emotions</span><span>Expertise</span><span>Time</span></div>`,
-      roles: `<div class="diagram roles-diagram" role="img" aria-label="Changing roles from researcher and user to facilitator and expert of experience"><div><small>From</small><strong>Researcher</strong><span>extracts information</span></div><b>↔</b><div><small>Toward</small><strong>Facilitator</strong><span>supports expression</span></div><div><small>From</small><strong>User</strong><span>source of information</span></div><b>↔</b><div><small>Toward</small><strong>Expert of experience</strong><span>shapes meaning</span></div></div>`,
-      'case-system': `<div class="diagram case-system-diagram" role="img" aria-label="Democracy Labs research system from sensitising through interpretation"><span>Sensitising</span><span>Sensemaking</span><span>Provotyping</span><span>Futuring</span><strong>Interpretation</strong></div>`,
-      levels: `<div class="diagram levels-diagram" role="img" aria-label="Five levels from encounter to political horizon"><span>Encounter</span><span>Lab</span><span>Country</span><span>Programme</span><span>Political horizon</span></div>`,
-      limits: `<div class="diagram limits-diagram" role="img" aria-label="Participation surrounded by recruitment, language, confidence, time, access, power, and institutions"><strong>Participation</strong><span>Recruitment</span><span>Language</span><span>Confidence</span><span>Time</span><span>Access</span><span>Power</span><span>Institutions</span></div>`,
-      open: `<div class="diagram" role="img" aria-label="An open loop representing situated, plausible, and revisable knowledge"><div class="open-loop"><strong>Situated, plausible, revisable</strong></div></div>`
-    };
-    return visuals[type] || '';
-  }
-
-  function renderSlide() {
-    const slide = data.slides[state.slide];
-    const slideVisual = slide.image ? `<figure class="source-figure"><img src="${esc(slide.image)}" alt="${esc(slide.caption)}"><figcaption>${esc(slide.caption)}</figcaption></figure>` : visual(slide.visual);
-    $('#deck').innerHTML = `<article class="slide"><div class="slide-copy"><p class="eyebrow">${esc(slide.eyebrow)}</p><h1>${esc(slide.title)}</h1><p>${esc(slide.copy)}</p><p class="slide-note">${esc(slide.note)}</p></div><div class="slide-visual">${slideVisual}</div></article>`;
-    $('#slide-count').textContent = `${state.slide + 1} / ${data.slides.length}`;
-    $('#progress-bar').style.width = `${((state.slide + 1) / data.slides.length) * 100}%`;
-    $('#slide-prev').disabled = state.slide === 0;
-    $('#slide-next').disabled = state.slide === data.slides.length - 1;
-    writeState();
-  }
-
-  function setMode(mode, push = false) {
-    state.mode = mode;
-    $$('.mode-button').forEach(button => {
-      const active = button.dataset.mode === mode;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-    $('#presentation').hidden = mode !== 'presentation';
-    $('#exploration').hidden = mode !== 'exploration';
-    $('#case-study').hidden = mode !== 'case';
-    if (mode === 'exploration') renderExplore();
-    else if (mode === 'case') renderCaseStudy();
-    else renderSlide();
-    if (push) window.scrollTo({top:0, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
-    writeState(!push);
-  }
-
-  function detail(item, fields = []) {
-    return `<article class="item-detail"><p class="eyebrow">Selected view</p><h3>${esc(item.title || item.label)}</h3><p>${esc(item.text || item.contribution || item.aim || '')}</p>${fields.filter(field => item[field.key]).map(field => `<div class="detail-row"><strong>${esc(field.label)}</strong><span>${esc(item[field.key])}</span></div>`).join('')}</article>`;
-  }
-
-  function selectedFrom(items) {
-    const selected = items.find(item => item.id === state.item) || items[0];
-    state.item = selected.id;
-    return selected;
-  }
-
-  function buttons(items, className = 'item-controls') {
-    const selected = selectedFrom(items);
-    return `<div class="${className}">${items.map(item => `<button type="button" data-item="${esc(item.id)}" aria-pressed="${item.id === selected.id}">${esc(item.label)}</button>`).join('')}</div>`;
-  }
-
-  function renderLandscape() {
-    const selected = selectedFrom(data.landscape);
-    return `<div class="landscape-axis" aria-hidden="true"><span>Research-led</span><span>Participatory</span><span>Design-led</span></div>${buttons(data.landscape,'landscape-grid')}${detail(selected,[{key:'orientation',label:'Orientation'},{key:'concern',label:'Primary concern'},{key:'caution',label:'Question to keep open'}])}`;
-  }
-
-  function renderReasoning() {
-    const selected = selectedFrom(data.reasoning);
-    return `${buttons(data.reasoning,'reasoning-grid')}<article class="item-detail formula-detail"><p class="formula">${esc(selected.formula)}</p><h3>${esc(selected.title)}</h3><p>${esc(selected.text)}</p><div class="detail-row"><strong>Ask</strong><span>${esc(selected.question)}</span></div><div class="detail-row"><strong>Limit</strong><span>${esc(selected.limit)}</span></div></article>`;
-  }
-
-  function renderKnowledge() {
-    const selected = selectedFrom(data.knowledge);
-    return `${buttons(data.knowledge,'depth-view')}<article class="item-detail"><p class="eyebrow">${esc(selected.depth)} · ${esc(selected.expression)}</p><h3>${esc(selected.title)}</h3><p>${esc(selected.text)}</p><div class="detail-row"><strong>Useful move</strong><span>${esc(selected.use)}</span></div><div class="detail-row"><strong>Inquiry question</strong><span>${esc(selected.question)}</span></div><div class="detail-row"><strong>Interpretive caution</strong><span>${esc(selected.caution)}</span></div></article>`;
-  }
-
-  function renderExpression() {
-    const selected = selectedFrom(data.expression.forms);
-    const time = data.expression.times.find(item => item.id === state.time) || data.expression.times[1];
-    return `<div class="expression-workspace"><div class="expression-forms">${data.expression.forms.map(item => `<button type="button" data-item="${item.id}" aria-pressed="${item.id === selected.id}">${item.label}</button>`).join('')}</div><div class="time-forms">${data.expression.times.map(item => `<button type="button" data-time="${item.id}" aria-pressed="${item.id === time.id}">${item.label}</button>`).join('')}</div></div><article class="item-detail"><p class="eyebrow">${esc(selected.label)} across ${esc(time.label.toLowerCase())}</p><h3>${esc(selected.title)}</h3><p>${esc(selected.text)} ${esc(time.text)}</p><div class="detail-row"><strong>Produces</strong><span>${esc(selected.produces)}</span></div><div class="detail-row"><strong>Blind spot</strong><span>${esc(selected.blindspot)}</span></div></article>`;
-  }
-
-  function renderTools() {
-    const filters = ['All','Say','Do','Make','Group','Future'];
-    const matches = data.tools.filter(tool => state.filter === 'All' || (state.filter === 'Group' ? tool.social.includes('Group') : state.filter === 'Future' ? tool.time.includes('future') || tool.time.includes('Future') : tool.family.includes(state.filter)));
-    if (!matches.some(item => item.id === state.item)) state.item = matches[0]?.id || data.tools[0].id;
-    const selected = matches.find(item => item.id === state.item) || matches[0];
-    return `<div class="tool-filters" role="group" aria-label="Filter tools">${filters.map(filter => `<button type="button" data-filter="${filter}" aria-pressed="${state.filter === filter}">${filter}</button>`).join('')}</div><div class="tool-browser"><div class="tool-list">${matches.map(tool => `<button type="button" data-item="${tool.id}" aria-pressed="${tool.id === selected.id}"><span>${esc(tool.family)}</span><strong>${esc(tool.label)}</strong><small>${esc(tool.time)} · ${esc(tool.social)}</small></button>`).join('')}</div><article class="item-detail tool-detail"><p class="eyebrow">${esc(selected.family)} · ${esc(selected.time)}</p><h3>${esc(selected.label)}</h3><p>${esc(selected.purpose)}</p><div class="detail-row"><strong>Arrangement</strong><span>${esc(selected.social)}</span></div><div class="detail-row"><strong>Materials</strong><span>${esc(selected.material)}</span></div><div class="detail-row"><strong>Produces</strong><span>${esc(selected.output)}</span></div><div class="detail-row"><strong>Caution</strong><span>${esc(selected.caution)}</span></div></article></div>`;
-  }
-
-  function renderProcess() {
-    const selected = selectedFrom(data.process);
-    return `${buttons(data.process,'process-browser')}<article class="item-detail"><p class="eyebrow">Movement ${esc(selected.number)}</p><h3>${esc(selected.label)}</h3><p>${esc(selected.aim)}</p><div class="move-grid">${selected.moves.map(move => `<span>${esc(move)}</span>`).join('')}</div><div class="detail-row"><strong>Produces</strong><span>${esc(selected.produces)}</span></div><div class="detail-row"><strong>Watch</strong><span>${esc(selected.watch)}</span></div></article>`;
-  }
-
-  function renderAnalysis() {
-    const selected = selectedFrom(data.analysisMoves);
-    return `${buttons(data.analysisMoves,'analysis-flow')}<article class="item-detail"><p class="eyebrow">${esc(selected.input)} → ${esc(selected.output)}</p><h3>${esc(selected.label)}</h3><p>${esc(selected.work)}</p><div class="detail-row"><strong>Interpretive risk</strong><span>${esc(selected.risk)}</span></div></article>`;
-  }
-
-  function renderConditions() {
-    const selected = selectedFrom(data.conditions);
-    return `${buttons(data.conditions,'condition-grid')}<article class="item-detail"><p class="eyebrow">Designed condition</p><h3>${esc(selected.title)}</h3><p class="lead-question">${esc(selected.question)}</p><p>${esc(selected.text)}</p><div class="detail-row"><strong>Inspect</strong><span>${esc(selected.inspect)}</span></div></article>`;
-  }
-
-  function renderTopicBody(topic) {
-    return ({landscape:renderLandscape,reasoning:renderReasoning,knowledge:renderKnowledge,expression:renderExpression,tools:renderTools,process:renderProcess,analysis:renderAnalysis,conditions:renderConditions}[topic.type] || (() => ''))();
-  }
-
-  function bindStageControls() {
-    $$('[data-item]', $('#explore-stage')).forEach(button => button.addEventListener('click', () => {state.item = button.dataset.item; renderExploreStage(); writeState(false);}));
-    $$('[data-time]', $('#explore-stage')).forEach(button => button.addEventListener('click', () => {state.time = button.dataset.time; renderExploreStage(); writeState(false);}));
-    $$('[data-filter]', $('#explore-stage')).forEach(button => button.addEventListener('click', () => {state.filter = button.dataset.filter; state.item = null; renderExploreStage(); writeState(false);}));
-  }
-
-  function renderExploreStage() {
-    const topic = topics.find(item => item.id === state.topic) || topics[0];
-    $('#explore-stage').innerHTML = `<div class="explore-head"><p class="eyebrow">${esc(topic.label)}</p><h2>${esc(topic.title)}</h2><p>${esc(topic.intro)}</p></div><div class="interactive-area">${renderTopicBody(topic)}</div>`;
-    bindStageControls();
-  }
-
-  function renderTopicTabs() {
-    $('#topic-tabs').innerHTML = topics.map(topic => `<button class="topic-tab" type="button" role="tab" aria-selected="${topic.id === state.topic}" data-topic="${topic.id}">${esc(topic.label)}</button>`).join('');
-    $$('.topic-tab').forEach(button => button.addEventListener('click', () => {state.topic = button.dataset.topic; state.item = null; state.filter = 'All'; renderTopicTabs(); renderExploreStage(); writeState(false);}));
-  }
-
-  function renderQuestions() {
-    $('#question-list').innerHTML = data.questions.map(question => question.mode ? `<button type="button" data-question-mode="${question.mode}">${esc(question.label)}</button>` : `<button type="button" data-route="${question.route}">${esc(question.label)}</button>`).join('');
-    $$('[data-route]', $('#question-list')).forEach(button => button.addEventListener('click', () => {state.topic = button.dataset.route; state.item = null; renderTopicTabs(); renderExploreStage(); writeState(false); $('#topic-tabs').scrollIntoView({block:'nearest'});}));
-    $$('[data-question-mode]', $('#question-list')).forEach(button => button.addEventListener('click', () => setMode(button.dataset.questionMode, true)));
-  }
-
-  function renderCorpus() {
-    const labels = {lenses:'exploration lenses',concepts:'mapped concepts',tools:'tools and formats',conditions:'designed conditions',sources:'substantive sources',diagrams:'original diagrams'};
-    $('#corpus-strip').innerHTML = Object.entries(data.corpus).map(([key,value]) => `<div><strong>${value}</strong><span>${labels[key]}</span></div>`).join('');
-  }
-
-  function renderConceptMap() {
-    const activeGroup = data.conceptGroups.find(group => group.id === state.conceptGroup) || data.conceptGroups[0];
-    const groupConcepts = data.concepts.filter(concept => concept.group === activeGroup.id);
-    if (!groupConcepts.some(concept => concept.id === state.concept)) state.concept = groupConcepts[0].id;
-    const selected = data.concepts.find(concept => concept.id === state.concept) || groupConcepts[0];
-    $('#concept-map').innerHTML = `<div class="concept-centre"><strong>Designerly<br>inquiry</strong></div><div class="concept-groups">${data.conceptGroups.map(group => `<button class="concept-group concept-${group.colour}" type="button" data-concept-group="${group.id}" aria-pressed="${group.id === activeGroup.id}"><strong>${esc(group.label)}</strong><span>${esc(group.question)}</span></button>`).join('')}</div><div class="concept-nodes">${groupConcepts.map(concept => `<button type="button" data-concept="${concept.id}" aria-pressed="${concept.id === selected.id}">${esc(concept.label)}</button>`).join('')}</div>`;
-    const sources = selected.sourceIds.map(id => data.articleInsights.find(source => source.id === id)).filter(Boolean);
-    const instances = selected.caseRefs.map(id => data.caseComponents.find(item => item.id === id)).filter(Boolean);
-    $('#concept-detail').innerHTML = `<p class="eyebrow">${esc(activeGroup.label)} · selected concept</p><h3>${esc(selected.label)}</h3><p>${esc(selected.definition)}</p><div class="concept-tension"><strong>Tension</strong><span>${esc(selected.tension)}</span></div><div class="concept-links"><div><strong>Key references</strong>${sources.map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.author)} (${esc(source.year)})</a>`).join('')}</div><div><strong>In Democracy Labs</strong>${instances.map(instance => `<button type="button" data-case-link="${instance.id}">${esc(instance.label)}</button>`).join('')}</div></div>`;
-    $$('[data-concept-group]').forEach(button => button.addEventListener('click', () => {state.conceptGroup = button.dataset.conceptGroup; state.concept = data.concepts.find(concept => concept.group === state.conceptGroup).id; renderConceptMap(); writeState(false);}));
-    $$('[data-concept]').forEach(button => button.addEventListener('click', () => {state.concept = button.dataset.concept; renderConceptMap(); writeState(false);}));
-    $$('[data-case-link]').forEach(button => button.addEventListener('click', () => {state.caseItem = button.dataset.caseLink; state.mode = 'case'; setMode('case', true);}));
-  }
-
-  function renderCase(selectedId = 'sensitising') {
-    const caseData = data.democracyLabs;
-    const selected = caseData.stages.find(item => item.id === selectedId) || caseData.stages[0];
-    $('#case-process').innerHTML = caseData.stages.map(item => `<button type="button" data-case="${item.id}" aria-pressed="${item.id === selected.id}"><span>${item.number}</span><strong>${esc(item.label)}</strong></button>`).join('');
-    $('#case-detail').innerHTML = `<p class="eyebrow">Democracy Labs activity system</p><h3>${esc(selected.label)}</h3><p class="lead-question">${esc(selected.intent)}</p><div class="case-columns"><div><strong>Activities</strong><ul>${selected.activities.map(item => `<li>${esc(item)}</li>`).join('')}</ul></div><div><strong>Artefacts</strong><ul>${selected.artefacts.map(item => `<li>${esc(item)}</li>`).join('')}</ul></div></div><div class="detail-row"><strong>What becomes knowable</strong><span>${esc(selected.knowing)}</span></div><div class="detail-row"><strong>Published evidence</strong><span>${esc(selected.evidence)}</span></div><div class="case-cautions"><strong>Interpretive limit.</strong> ${esc(selected.limit)}</div>`;
-    $$('[data-case]').forEach(button => button.addEventListener('click', () => renderCase(button.dataset.case)));
-    $('#case-evidence').innerHTML = `<div class="case-condition-tabs">${caseData.conditions.map(item => `<details><summary>${esc(item.label)}</summary><p><strong>Designed:</strong> ${esc(item.designed)}</p><p><strong>Revealed:</strong> ${esc(item.revealed)}</p><p><strong>Implication:</strong> ${esc(item.implication)}</p></details>`).join('')}</div><div class="evidence-ledger"><h3>Evidence ledger</h3>${caseData.evidence.map(item => `<article><p class="eyebrow">${esc(item.kind)}</p><h4>${esc(item.claim)}</h4><p><strong>Basis:</strong> ${esc(item.basis)}</p><p><strong>Supports:</strong> ${esc(item.supports)}</p><p><strong>Does not support:</strong> ${esc(item.doesNotSupport)}</p></article>`).join('')}</div><div class="proposal-grid"><h3>Six proposals carried forward</h3>${caseData.proposals.map(item => `<article><h4>${esc(item.name)}</h4><p>${esc(item.focus)}</p><small>${esc(item.question)}</small></article>`).join('')}</div>`;
-  }
-
-  function renderCaseAtlas() {
-    let matches = data.caseComponents.filter(item => (state.caseLevel === 'all' || item.level === state.caseLevel) && (state.caseStakeholder === 'all' || item.stakeholders.includes(state.caseStakeholder)));
-    if (!matches.length) {state.caseStakeholder = 'all'; matches = data.caseComponents.filter(item => state.caseLevel === 'all' || item.level === state.caseLevel);}
-    $('#case-levels').innerHTML = `<button type="button" data-case-level="all" aria-pressed="${state.caseLevel === 'all'}">All levels</button>${data.caseLevels.map(level => `<button type="button" data-case-level="${level.id}" aria-pressed="${state.caseLevel === level.id}">${esc(level.label)}</button>`).join('')}`;
-    $('#case-stakeholders').innerHTML = `<button type="button" data-case-stakeholder="all" aria-pressed="${state.caseStakeholder === 'all'}">All stakeholders</button>${data.caseStakeholders.map(item => `<button type="button" data-case-stakeholder="${item.id}" aria-pressed="${state.caseStakeholder === item.id}">${esc(item.label)}</button>`).join('')}`;
-    if (!matches.some(item => item.id === state.caseItem)) state.caseItem = matches[0]?.id || data.caseComponents[0].id;
-    const selected = data.caseComponents.find(item => item.id === state.caseItem) || matches[0];
-    $('#case-atlas').innerHTML = matches.map(item => {const level = data.caseLevels.find(levelItem => levelItem.id === item.level); return `<button type="button" data-case-item="${item.id}" aria-pressed="${item.id === selected.id}"><span>${esc(level.label)}</span><strong>${esc(item.label)}</strong><small>${item.stakeholders.map(id => data.caseStakeholders.find(person => person.id === id)?.label).filter(Boolean).join(' · ')}</small></button>`;}).join('');
-    const level = data.caseLevels.find(item => item.id === selected.level);
-    const concepts = selected.conceptIds.map(id => data.concepts.find(concept => concept.id === id)).filter(Boolean);
-    $('#case-component-detail').innerHTML = `<p class="eyebrow">${esc(level.label)} · selected instance</p><h3>${esc(selected.label)}</h3><p>${esc(selected.purpose)}</p><div class="detail-row"><strong>Evidence produced</strong><span>${esc(selected.evidence)}</span></div><div class="detail-row"><strong>Risk or limit</strong><span>${esc(selected.risk)}</span></div><div class="instance-concepts"><strong>Connected concepts</strong>${concepts.map(concept => `<button type="button" data-concept-link="${concept.id}">${esc(concept.label)}</button>`).join('')}</div>`;
-    $$('[data-case-level]').forEach(button => button.addEventListener('click', () => {state.caseLevel = button.dataset.caseLevel; renderCaseAtlas(); writeState(false);}));
-    $$('[data-case-stakeholder]').forEach(button => button.addEventListener('click', () => {state.caseStakeholder = button.dataset.caseStakeholder; renderCaseAtlas(); writeState(false);}));
-    $$('[data-case-item]').forEach(button => button.addEventListener('click', () => {state.caseItem = button.dataset.caseItem; renderCaseAtlas(); writeState(false);}));
-    $$('[data-concept-link]', $('#case-component-detail')).forEach(button => button.addEventListener('click', () => {const concept = data.concepts.find(item => item.id === button.dataset.conceptLink); state.concept = concept.id; state.conceptGroup = concept.group; state.mode = 'exploration'; setMode('exploration', true); requestAnimationFrame(() => $('#concept-map-title').scrollIntoView());}));
-  }
-
-  function renderCaseStudy() {
-    renderCaseAtlas();
-    renderCase();
-    renderTrajectory();
-  }
-
-  function renderReading(filter = state.reading) {
-    state.reading = filter;
-    const groups = ['All', ...new Set(data.articleInsights.map(item => item.group))];
-    $('#reading-filters').innerHTML = groups.map(group => `<button type="button" data-reading="${esc(group)}" aria-pressed="${group === filter}">${esc(group)}</button>`).join('');
-    const sources = filter === 'All' ? data.articleInsights : data.articleInsights.filter(item => item.group === filter);
-    $('#reading-grid').innerHTML = sources.map(item => `<article class="reading-card"><p class="eyebrow">${esc(item.kind)} · ${esc(item.year)}</p><h3>${esc(item.title)}</h3><p class="byline">${esc(item.author)}</p><p><strong>Question.</strong> ${esc(item.question)}</p><details><summary>Method, contribution, and tension</summary><p><strong>Approach.</strong> ${esc(item.method)}</p><p><strong>Contribution.</strong> ${esc(item.contribution)}</p><p><strong>Tension.</strong> ${esc(item.tension)}</p></details><a href="${esc(item.url)}" target="_blank" rel="noopener">Open publication record ↗</a></article>`).join('');
-    $$('[data-reading]').forEach(button => button.addEventListener('click', () => renderReading(button.dataset.reading)));
-  }
-
-  function renderTrajectory() {
-    $('#teaching-path').innerHTML = data.inquiryTrajectory.map(item => `<li><span>${item.step}</span><div><strong>${esc(item.label)}</strong><p>${esc(item.question)}</p><small>${esc(item.publicValue)}</small></div></li>`).join('');
-  }
-
-  function renderExplore() {
-    renderCorpus(); renderConceptMap(); renderTopicTabs(); renderExploreStage(); renderQuestions(); renderReading();
-  }
-
-  function sourceCard(item) {
-    return `<article class="source-item"><p class="eyebrow">${esc(item.kind)} · ${esc(item.year)}</p><h3>${esc(item.author)}. ${esc(item.title)}.</h3><p>${esc(item.contribution)}</p><p class="source-limit"><strong>Keep open:</strong> ${esc(item.tension)}</p><a href="${esc(item.url)}" target="_blank" rel="noopener">Publication record ↗</a></article>`;
-  }
-
-  function renderSources() {
-    $('#source-tabs').innerHTML = data.sourceGroups.map(group => `<button class="source-tab" type="button" role="tab" data-source="${group.id}" aria-selected="${group.id === state.source}">${esc(group.label)}</button>`).join('');
-    const group = data.sourceGroups.find(item => item.id === state.source) || data.sourceGroups[0];
-    if (group.custom) {
-      $('#source-content').innerHTML = `<div class="source-list"><p>${esc(group.intro)}</p>${data.furtherMaterials.map(item => `<article class="source-item"><p class="eyebrow">${esc(item.type)}</p><h3>${esc(item.title)}</h3><p>${esc(item.description)}</p><a href="${esc(item.url)}" target="_blank" rel="noopener">Open resource ↗</a></article>`).join('')}<div class="limits-panel"><h3>Construction and publication limits</h3><p>Six selected course diagrams are reproduced from the original source slides because their visual argument is integral to the inquiry. Additional diagrams are purpose-made interactive interpretations for this webpage.</p><p>Participant photographs, workshop artefacts with uncertain publication consent, consent documents, personal information, private links, and local source files were excluded.</p><ol>${data.limits.map(limit => `<li>${esc(limit)}</li>`).join('')}</ol></div></div>`;
-    } else {
-      const items = group.sourceIds.map(id => data.articleInsights.find(item => item.id === id)).filter(Boolean);
-      $('#source-content').innerHTML = `<div class="source-list"><p>${esc(group.intro)}</p>${items.map(sourceCard).join('')}</div>`;
+    const allowed = new Set(D.navigation.url.canonicalParameterOrder);
+    for (const key of unique([...params.keys()])) {
+      if (!allowed.has(key)) { discard(key, 'An unrecognised part of this link was removed.'); continue; }
+      const values = params.getAll(key);
+      if (values.length > 1) {
+        params.set(key, D.navigation.url.arrayParameters.includes(key) ? values.join(',') : values[0]);
+        notices.push(`Repeated ${key} values were combined or reduced to one selection.`);
+      }
     }
-    $$('.source-tab').forEach(button => button.addEventListener('click', () => {state.source = button.dataset.source; renderSources();}));
+    if (params.has('dlv') && params.get('dlv') !== '1') {
+      D.navigation.url.labs.forEach(key => params.delete(key));
+      params.set('dlv','1'); params.set('view','overview');
+      notices.push('This case link uses an unsupported version. The case orientation is open; valid Presentation and Explore selections are retained.');
+    }
+    for (const [key, values] of Object.entries(D.navigation.url.enums)) if (params.has(key) && !values.includes(params.get(key))) discard(key);
+    const ids = {step:'steps',question:'questions',efunction:'functions',method:'methods',movement:'activities',tension:'tensions',concept:'concepts',relation:'relations',instance:'instances',activity:'activities',journey:'journeys',source:'sources',fromConcept:'concepts'};
+    for (const [key,map] of Object.entries(ids)) if (params.has(key) && !M[map].has(params.get(key))) discard(key);
+    for (const [key,,records] of facetConfig) {
+      const raw = (params.get(key) || '').split(',').filter(Boolean);
+      const clean = unique(raw.filter(id => records.some(r => r.id === id))).sort();
+      if (raw.some(id => !clean.includes(id))) notices.push(`Unrecognised ${key} filters were removed.`);
+      if (clean.length) params.set(key, clean.join(',')); else params.delete(key);
+    }
+    if (params.has('compare')) {
+      const pair = params.get('compare').split(',');
+      const validPair = pair.length === 2 && pair[0] !== pair[1] && (pair.every(id => M.instances.has(id)) || pair.every(id => /^I10-s[2-5]$/.test(id)));
+      if (!validPair) discard('compare','Choose two different instances, or two institutional response statements, to compare.');
+    }
+    params.set('v','1');
+    if (!params.has('mode')) params.set('mode','presentation');
+    mode = params.get('mode');
+    if (!params.has('step') && (mode === 'presentation' || params.has('pclaim'))) params.set('step','S01');
+    if (mode === 'presentation' && !params.has('display')) params.set('display','reading');
+    if (mode === 'explore' && !params.has('entry')) params.set('entry',params.has('concept') ? 'concept' : 'question');
+    if (mode === 'labs') {
+      params.set('dlv','1');
+      if (!params.has('view')) params.set('view',params.has('compare') ? 'compare' : params.has('journey') ? 'journey' : params.has('activity') ? 'system' : params.has('instance') ? 'instances' : 'overview');
+    }
+    const relation = M.relations.get(params.get('relation'));
+    if (relation && ![relation.from,relation.to].includes(params.get('concept'))) {
+      params.set('concept',relation.from);
+      notices.push('The relation is shown from its originating concept.');
+    }
+    const journey = M.journeys.get(params.get('journey'));
+    if (params.get('view') === 'journey' && journey?.stops?.length) {
+      let stop = journey.stops.find(s => s.id === params.get('at'));
+      if (params.has('at') && !stop) notices.push('That stop does not belong to this journey. The first matching documented stop is open.');
+      stop ||= journey.stops.find(s => s.instanceId === params.get('instance')) || journey.stops[0];
+      if (params.has('instance') && params.get('instance') !== stop.instanceId) notices.push('The selected journey stop determines its case instance. The conflicting instance selection was replaced.');
+      params.set('at',stop.id); params.set('instance',stop.instanceId);
+    } else if (params.has('at') && !journey?.stops?.some(s => s.id === params.get('at'))) discard('at');
+    const concept = M.concepts.get(params.get('concept'));
+    const claimContexts = {pclaim:currentStep().claimRefs, eclaim:unique([...(concept?.claimRefs || []),...(relation?.claimRefs || [])]), claim:caseClaims()};
+    for (const [key,refs] of Object.entries(claimContexts)) if (params.has(key) && !refs.includes(params.get(key))) discard(key,'A claim unrelated to the selected record was removed. The record remains open.');
+    if (params.has('eclaim')) params.set('conceptDepth','evidence');
+    if (params.has('claim')) params.set('depth','evidence');
   }
-
-  function showToast(message) {
-    const toast = $('#toast'); toast.textContent = message; toast.classList.add('is-visible');
-    clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove('is-visible'), 2200);
+  function url(patch = {}) {
+    const p = new URLSearchParams(params);
+    for (const [key,value] of Object.entries(patch)) value === null || value === undefined || value === '' ? p.delete(key) : p.set(key,String(value));
+    const ordered = new URLSearchParams();
+    for (const key of D.navigation.url.canonicalParameterOrder) if (p.has(key)) ordered.set(key,p.get(key));
+    return `${location.pathname}?${ordered.toString()}`;
   }
-
-  parseState();
-  $$('.mode-button').forEach(button => button.addEventListener('click', () => setMode(button.dataset.mode, true)));
-  $('#slide-prev').addEventListener('click', () => {if (state.slide > 0) {state.slide -= 1; renderSlide();}});
-  $('#slide-next').addEventListener('click', () => {if (state.slide < data.slides.length - 1) {state.slide += 1; renderSlide();}});
-  document.addEventListener('keydown', event => {
-    if (state.mode !== 'presentation' || $('dialog[open]') || /INPUT|SELECT|TEXTAREA/.test(document.activeElement?.tagName)) return;
-    if (event.key === 'ArrowRight' || event.key === 'PageDown') $('#slide-next').click();
-    if (event.key === 'ArrowLeft' || event.key === 'PageUp') $('#slide-prev').click();
+  const link = (label, patch, cls = '', attrs = '') => `<a href="${esc(url(patch))}"${cls ? ` class="${cls}"` : ''}${attrs ? ` ${attrs}` : ''}>${esc(label)}</a>`;
+  const cross = (destination, patch = {}) => ({mode:destination,...(destination !== mode ? {returnTo:mode, source:null} : {}),...patch});
+  const conceptLink = id => link(M.concepts.get(id)?.label || id,cross('explore',{entry:'concept',concept:id,relation:null,conceptDepth:'summary',eclaim:null,graphView:'relations'}));
+  const caseLink = (id, fromConcept) => link(M.instances.get(id)?.title || id,cross('labs',{dlv:1,view:'instances',instance:id,depth:'summary',claim:null,...(mode === 'explore' ? {fromConcept:fromConcept || params.get('concept')} : {})}));
+  const journeyPatch = (id, stop) => { const j=M.journeys.get(id); const s=stop || j.stops?.[0]; return cross('labs',{dlv:1,view:'journey',journey:id,at:s?.id,instance:s?.instanceId,claim:null,depth:'summary'}); };
+  const activityLink = id => link(M.activities.get(id)?.label || id,cross('labs',{dlv:1,view:'system',activity:id,depth:'summary',claim:null}));
+  const statusBadges = refs => `<ul class="status-list" aria-label="Evidence status">${(refs || []).map(id => `<li class="status">${esc(M.statuses.get(id)?.label || id)}</li>`).join('')}</ul>`;
+  const copyButton = '<button type="button" data-copy>Copy link</button>';
+  const claimKey = () => mode === 'presentation' ? 'pclaim' : mode === 'explore' ? 'eclaim' : 'claim';
+  const claimLink = id => link(`${id}: ${M.claims.get(id).text}`,{[claimKey()]:id,...(mode === 'explore' ? {conceptDepth:'evidence'} : mode === 'labs' ? {depth:'evidence'} : {})},'', 'data-focus-evidence');
+  function returnLink() {
+    const dest=params.get('returnTo'); if (!dest || dest === mode) return '';
+    let label=modeNames[dest];
+    if (dest === 'presentation') label=currentStep().title;
+    if (dest === 'explore') label=M.concepts.get(params.get('fromConcept') || params.get('concept'))?.label || M.questions.get(params.get('question'))?.question || label;
+    if (dest === 'labs') label=(params.get('view') === 'journey' ? M.journeys.get(params.get('journey'))?.title : params.get('view') === 'system' ? M.activities.get(params.get('activity'))?.label : M.instances.get(params.get('instance'))?.title) || label;
+    return link(`Return to ${label}`,{mode:dest,returnTo:null,fromConcept:null},'return-link','data-return');
+  }
+  function sourceLinks(evidence) {
+    return `<ul class="citations">${(evidence || []).map(e => { const s=M.sources.get(e.sourceId); return `<li>${link(s.citation,{source:s.id},'', 'data-source')}<span class="locator">${esc(e.locator)}</span></li>`; }).join('')}</ul>`;
+  }
+  function evidenceBlock(refs, open = false, suffix = '') {
+    refs=unique(refs); if (!refs.length) return '';
+    const selected=params.get(claimKey()), claim=M.claims.get(refs.includes(selected) ? selected : refs[0]);
+    return `<details class="evidence-block"${open || refs.includes(selected) ? ' open' : ''}><summary>Grounds and limits · ${refs.length} linked ${refs.length === 1 ? 'claim' : 'claims'}</summary><section><h3 tabindex="-1" id="evidence-heading${suffix}">${esc(claim.id)} · Evidence for this reading</h3><p>${esc(claim.text)}</p><dl class="evidence-facts"><dt>Kind of evidence</dt><dd>${esc(claim.evidenceKind || (claim.evidenceStatuses || []).map(id => M.statuses.get(id).label).join('; ') || 'Bounded case evidence')}</dd><dt>Qualification</dt><dd>${esc(claim.qualification)}</dd>${claim.tension ? `<dt>Counterpoint</dt><dd>${esc(claim.tension)}</dd>` : ''}<dt>Confidence and scope</dt><dd>${esc(claim.confidence)}</dd></dl>${sourceLinks(claim.evidence)}${refs.length > 1 ? `<details><summary>All claims attached to this record</summary><ul class="claim-list">${refs.map(id => `<li>${claimLink(id)}</li>`).join('')}</ul></details>` : ''}</section></details>`;
+  }
+  function depthNav(kind = 'labs') {
+    const key=kind === 'explore' ? 'conceptDepth' : 'depth', values=kind === 'explore' ? ['summary','relations','evidence'] : D.navigation.depths;
+    return `<nav class="depth-nav" aria-label="Reading depth">${values.map(d => link(d[0].toUpperCase()+d.slice(1),{[key]:d,[kind === 'explore' ? 'eclaim' : 'claim']:null},'', (params.get(key) || 'summary') === d ? 'aria-current="page"' : '')).join('')}</nav>`;
+  }
+  function modeHeading(eyebrow, title, description, actions = '') {
+    return `<header class="mode-heading"><div><p class="eyebrow">${esc(eyebrow)}</p>${title ? `<h2>${esc(title)}</h2>` : ''}${description ? `<p>${esc(description)}</p>` : ''}</div><div class="mode-actions">${actions}</div></header>`;
+  }
+  function renderFigure(step) {
+    return step.figureViewRefs.map(id => {
+      const f=M.figures.get(id), flow=['FV01','FV05','FV17C','FV21'].includes(id), paired=['FV03','FV04','FV06','FV13','FV18'].includes(id);
+      const row = (cells,i) => `<div class="figure-row"${id === 'FV13' ? ` data-invitation-row="${i}"` : ''}><h4>${flow ? `<span class="figure-number" aria-hidden="true">${i+1}</span>` : ''}${esc(cells[0])}</h4><dl>${cells.slice(1).map((cell,j) => `<div><dt>${esc(f.columns[j+1])}</dt><dd>${esc(cell)}</dd></div>`).join('')}</dl></div>`;
+      return `<figure class="figure figure-${flow ? 'flow' : paired ? 'paired' : 'matrix'}" aria-labelledby="figure-${id}"><div class="figure-heading"><span class="eyebrow">${f.kind === 'illustration' ? 'Illustrative example' : f.kind === 'case-reconstruction' ? 'Case reconstruction' : 'Relations to examine'}</span><h3 id="figure-${id}">${esc(f.label)}</h3></div>${id === 'FV13' ? '<div class="chips invitation-controls" aria-label="Foreground an illustrative invitation"><button type="button" data-invitation="0" aria-pressed="false">Invitation A</button><button type="button" data-invitation="1" aria-pressed="false">Invitation B</button></div>' : ''}<div class="figure-rows">${f.rows.map(row).join('')}</div><figcaption>${esc(f.caption)}</figcaption></figure>`;
+    }).join('');
+  }
+  function presentation() {
+    const step=currentStep(), i=D.presentation.indexOf(step), prev=D.presentation[i-1], next=D.presentation[i+1], display=params.get('display') || 'reading';
+    const stepPatch=s => ({mode:'presentation',step:s.id,pclaim:null});
+    const nav=`<nav class="step-nav" aria-label="Step navigation">${prev ? link('← Previous',stepPatch(prev),'nav-button',`aria-label="Previous step: ${esc(prev.title)}"`) : '<span></span>'}<span>${step.number} / ${D.presentation.length}</span>${next ? link('Next →',stepPatch(next),'nav-button',`aria-label="Next step: ${esc(next.title)}"`) : link('Explore →',cross('explore',{entry:'question',question:null}),'nav-button')}</nav>`;
+    return `<section class="mode-shell">${modeHeading(`Presentation · ${step.number} of ${D.presentation.length}`,'','',`${returnLink()}<button type="button" data-projection>${display === 'projection' ? 'Exit projection' : 'Projection view'}</button>${copyButton}`)}<div class="presentation-grid"><details class="step-index"${innerWidth >= 1200 ? ' open' : ''}><summary>Argument outline · ${step.number} of 29</summary><nav aria-label="Presentation steps"><ol>${D.presentation.map(s => `<li>${link(`${String(s.number).padStart(2,'0')}  ${s.title}`,stepPatch(s),'',s.id === step.id ? 'aria-current="step"' : '')}</li>`).join('')}</ol></nav><p class="keyboard-help">While reading a step, use the left and right arrow keys to move through the argument.</p></details><article class="step-reader" id="${step.id}"><div class="step-composition"><div><p class="eyebrow">${esc(D.site.title)} · ${String(step.number).padStart(2,'0')}</p><h2 id="view-heading" tabindex="-1">${esc(step.title)}</h2><p class="step-copy">${esc(step.copy)}</p><aside class="qualification"><strong>Keep in view</strong><p>${esc(step.visibleQualification)}</p></aside></div><div class="step-figures">${renderFigure(step)}</div></div>${nav}<div class="step-support">${evidenceBlock(step.claimRefs)}<div class="related-reading"><h3>Explore the concepts</h3><div class="chips">${step.conceptRefs.map(conceptLink).join('')}</div>${step.caseRefs.length ? `<h3>Inspect the case</h3><ul>${step.caseRefs.map(id => `<li>${caseLink(id)}</li>`).join('')}</ul>` : ''}</div></div><p class="transition"><b>Next in the argument:</b> ${esc(step.transition)}</p>${step.id === 'S29' ? `<div class="case-questions">${link('How did this become evidence?',cross('explore',{entry:'question',question:'Q03',graphView:'relations'}))}${link('Who controlled the next transformation?',journeyPatch('J08'))}</div>` : ''}</article></div></section>`;
+  }
+  const exploreEntries=[['question','Questions'],['concept','Concepts'],['function','Epistemic functions'],['method','Method families'],['movement','Process movements'],['tension','Critical tensions']];
+  function browseIndex(items, selected, patch, name) {
+    return `<nav class="browse-index" aria-label="${name}"><ul>${items.map(([id,label]) => `<li>${link(label,{...patch,[name === 'Browse Explore' ? 'entry' : 'view']:id},'',id === selected ? 'aria-current="page"' : '')}</li>`).join('')}</ul></nav>`;
+  }
+  const listIndex=(records, label, description, patch) => `<div class="question-list">${records.map(r => `<a href="${esc(url(patch(r)))}"><span class="index-number">${esc(r.id)}</span><span><h3>${esc(label(r))}</h3><p>${esc(description(r))}</p></span><span aria-hidden="true">↗</span></a>`).join('')}</div>`;
+  function conceptRelation(r) {
+    return `<li id="${r.id}"><p class="relation-line">${conceptLink(r.from)} ${link(r.label,{relation:r.id,conceptDepth:'relations',eclaim:null},'relation-verb','data-focus-relation')} ${conceptLink(r.to)}</p><p>${esc(r.explanation)}</p><small>${esc(r.status)}</small></li>`;
+  }
+  function conceptRecord(c) {
+    const depth=params.get('conceptDepth') || 'summary', rels=D.conceptRelations.filter(r => [r.from,r.to].includes(c.id)), selected=M.relations.get(params.get('relation'));
+    const graph=params.get('graphView') === 'graph';
+    const relationView=`<ul class="relation-list${graph ? ' local-graph' : ''}">${rels.slice(0,graph ? 6 : rels.length).map(conceptRelation).join('')}</ul>${graph && rels.length > 6 ? `<details><summary>${rels.length-6} more relations</summary><ul class="relation-list">${rels.slice(6).map(conceptRelation).join('')}</ul></details>` : ''}`;
+    return `<article class="record"><p class="eyebrow">Concept · ${c.id}</p><h2 id="view-heading" tabindex="-1">${esc(c.label)}</h2><p class="definition">${esc(c.definition)}</p><aside class="qualification"><strong>What remains in tension</strong><p>${esc(c.tension)}</p></aside>${depthNav('explore')}${selected ? `<section class="selected-relation"><h3 id="relation-heading" tabindex="-1">${esc(M.concepts.get(selected.from).label)} ${esc(selected.label)} ${esc(M.concepts.get(selected.to).label)}</h3><p>${esc(selected.explanation)}</p><p>${esc(selected.status)}</p>${evidenceBlock(selected.claimRefs,false,'-relation')}</section>` : ''}<h3>Relations to inspect</h3>${depth !== 'summary' ? `<div class="chips">${link('Read all relations',{graphView:'relations'},'chip',!graph ? 'aria-current="page"' : '')}${link('Local connection view',{graphView:'graph'},'chip',graph ? 'aria-current="page"' : '')}</div>${relationView}` : `<ul class="relation-list">${rels.slice(0,3).map(conceptRelation).join('')}</ul>${link(`Inspect all ${rels.length} relations`,{conceptDepth:'relations'},'more-link')}`}<h3>Examine this in Democracy Labs</h3><ul class="bridges">${c.caseLinks.map(b => `<li><span class="eyebrow">${esc(b.kind.replaceAll('-',' '))}</span>${caseLink(b.instanceId,c.id)}<p>${esc(b.bridge)}</p></li>`).join('')}</ul>${evidenceBlock(c.claimRefs,depth === 'evidence')}</article>`;
+  }
+  function exploreEntry(entry) {
+    if (entry === 'concept') {
+      const c=M.concepts.get(params.get('concept'));
+      return c ? conceptRecord(c) : `<h2 id="view-heading" tabindex="-1">Concept index</h2>${listIndex(D.concepts,c => c.label,c => c.definition,c => ({entry:'concept',concept:c.id,relation:null,conceptDepth:'summary',eclaim:null}))}`;
+    }
+    if (entry === 'question') {
+      const q=M.questions.get(params.get('question'));
+      if (!q) return `<h2 id="view-heading" tabindex="-1">What do you want to understand?</h2><p class="definition">Begin with a question. Follow its concepts, then inspect what the case can establish.</p>${listIndex(D.questionPaths,q => q.question,q => q.intro,q => ({entry:'question',question:q.id}))}`;
+      return `<article class="record"><p class="eyebrow">Question · ${q.id}</p><h2 id="view-heading" tabindex="-1">${esc(q.question)}</h2><p class="definition">${esc(q.intro)}</p><h3>Concepts on this route</h3><div class="chips">${q.conceptRefs.map(conceptLink).join('')}</div><h3>Case connections</h3><ul class="result-list">${q.instanceRefs.map(id => `<li>${caseLink(id)}<p>${esc(M.instances.get(id).primaryLimit)}</p></li>`).join('')}</ul><h3>Follow the argument</h3><ul>${q.stepRefs.map(id => `<li>${link(M.steps.get(id).title,cross('presentation',{step:id,pclaim:null}))}</li>`).join('')}</ul></article>`;
+    }
+    const config={function:[D.epistemicFunctions,'efunction','Epistemic functions',r => r.status],method:[D.methodFamilies,'method','Method families',r => r.purpose],movement:[D.activities,'movement','Process movements',r => r.purpose],tension:[D.tensions,'tension','Critical tensions',r => `${r.positionA} ${r.positionB}`]};
+    const [records,key,title,description]=config[entry], r=records.find(x => x.id === params.get(key));
+    if (!r) return `<h2 id="view-heading" tabindex="-1">${title}</h2>${entry === 'movement' ? '<p>These activities may overlap or recur. Their order is a reading aid, not a universal process.</p>' : ''}${listIndex(records,r => r.label,description,r => ({entry,[key]:r.id}))}`;
+    const instances=r.instanceRefs || (entry === 'movement' ? D.instances.filter(x => x.phaseRefs.includes(r.id)).map(x => x.id) : D.instances.filter(x => x.functionRefs.includes(r.id)).map(x => x.id));
+    return `<article class="record"><p class="eyebrow">${title}</p><h2 id="view-heading" tabindex="-1">${esc(r.label)}</h2><p class="definition">${esc(description(r))}</p>${r.consequence ? `<p>${esc(r.consequence)}</p>` : ''}${r.caseNote ? `<aside class="qualification"><strong>Case boundary</strong><p>${esc(r.caseNote)}</p></aside>` : ''}<h3>Related concepts</h3><div class="chips">${r.conceptRefs.map(conceptLink).join('')}</div><h3>Case connections</h3><ul>${instances.map(id => `<li>${caseLink(id)}</li>`).join('')}</ul>${entry === 'movement' ? `<p>${activityLink(r.id)}</p>` : ''}${r.claimRefs ? evidenceBlock(r.claimRefs) : ''}</article>`;
+  }
+  function explore() {
+    const entry=params.get('entry') || 'question';
+    return `<section class="mode-shell">${modeHeading('Explore','Questions, concepts and relations',D.site.modeDescriptions.explore,`${returnLink()}${copyButton}`)}<div class="explore-grid">${browseIndex(exploreEntries,entry,{mode:'explore'},'Browse Explore')}<section>${exploreEntry(entry)}</section></div></section>`;
+  }
+  function levels() {
+    return `<div class="levels">${D.levels.map((l,i) => `<article class="level"><span>0${i+1}</span><div><h3>${esc(l.label)}</h3><p><b>${esc(l.question)}</b></p></div><div><p>${esc(l.material)}</p><p class="muted">${esc(l.limit)}</p></div></article>`).join('')}</div>`;
+  }
+  function orientation(compact = false) {
+    if (compact) return `<details class="compact-context"><summary>About this case: Democracy Labs explored possible participation arrangements.</summary><p>${esc(D.case.deepLinkOrientation)}</p>${D.case.orientation.map(x => `<p>${esc(x.text)}</p>`).join('')}${link('Read the full case orientation',{view:'overview',claim:null})}</details>`;
+    return `<article class="orientation"><p class="eyebrow">Worked case</p><h2 id="view-heading" tabindex="-1">What were Democracy Labs?</h2>${D.case.orientation.map(x => `<p>${esc(x.text)}</p>`).join('')}<aside class="qualification"><strong>Reading boundary</strong><p>${esc(D.case.orientationLimit)}</p></aside>${levels()}<h3>Begin with a concrete question</h3><div class="case-questions">${D.case.entryQuestions.map(q => link(q.label,journeyPatch(q.journeyId))).join('')}</div>${evidenceBlock(unique(D.case.orientation.flatMap(x => x.claimRefs)))}</article>`;
+  }
+  const counts = facets => `${D.instances.filter(r => matches(r,facets)).length} case instances and ${D.activities.filter(r => matches(r,facets)).length} research conditions match the applied filters.`;
+  function filterPanel(facets) {
+    const active=facetConfig.flatMap(([key,,records]) => facets[key].map(id => link(`Remove ${records.find(r => r.id === id).label}`,{[key]:facets[key].filter(v => v !== id).join(',')},'filter-chip','data-filter-change')));
+    return `<details class="filter-panel"><summary>Narrow the case record${active.length ? ` · ${active.length} applied` : ''}</summary><form id="filter-form"><p>Choose alternatives within a group. Selections across groups must all match. Counts refer to curated records, not people or independent studies.</p><div class="filter-groups">${facetConfig.map(([key,,records,label]) => `<fieldset><legend>${label}</legend>${records.map(r => `<label class="check"><input type="checkbox" name="${key}" value="${r.id}"${facets[key].includes(r.id) ? ' checked' : ''}><span>${esc(r.label)}</span></label>`).join('')}</fieldset>`).join('')}</div><div class="filter-actions"><button type="submit" id="apply-filters">Apply filters</button><button type="reset">Cancel changes</button><button type="button" data-clear-filters>Clear all filters</button></div></form></details>${active.length ? `<div class="applied-filters">${active.join('')}<button type="button" data-clear-filters>Clear all filters</button></div>` : ''}<p class="results-summary" id="results-summary">${counts(facets)}</p>`;
+  }
+  function scopes(refs, full = false) {
+    return `<div class="scopes">${unique(refs || []).map(id => { const s=M.scopes.get(id); return `<section><h3>${esc(s.unit)}</h3><p>${esc(s.geography)} · ${esc(s.period)}</p><p class="scope-limit"><b>Scope:</b> ${esc(s.limit)}</p>${full && s.counts?.length ? `<ul>${s.counts.map(c => `<li><b>${c.value} ${esc(c.unit)}</b>. ${esc(c.denominator)} ${claimLink(c.claimRef)}</li>`).join('')}</ul>` : ''}</section>`; }).join('')}</div>`;
+  }
+  function stakeholderRole(s) {
+    return `<details class="stakeholder-role"><summary>${esc(s.label)}</summary><dl class="evidence-facts"><dt>Contributes</dt><dd>${esc(s.contribution)}</dd><dt>Controls or decides</dt><dd>${esc(s.authority)}</dd><dt>Receives</dt><dd>${esc(s.receives)}</dd><dt>Asymmetry or absence</dt><dd>${esc(s.asymmetry)}</dd></dl>${sourceLinks(unique(s.claimRefs.flatMap(id => M.claims.get(id).evidence).map(e => JSON.stringify(e))).map(e => JSON.parse(e)))}</details>`;
+  }
+  function roles(inst) {
+    return `<section class="roles"><h3>Who contributes, controls or receives?</h3><dl>${inst.stakeholderRoles.map(r => `<div><dt>${esc(M.stakeholders.get(r.stakeholderId).label)} <span>${esc(r.relation)}</span></dt><dd>${esc(r.account)}</dd></div>`).join('')}</dl><p class="muted">${esc(inst.roleLimit)}</p><details><summary>Inspect these stakeholder roles across the programme</summary>${unique(inst.stakeholderRefs).map(id => stakeholderRole(M.stakeholders.get(id))).join('')}</details></section>`;
+  }
+  function statementHtml(s, evidence = false) {
+    return `<article class="fact" id="${s.id}"><h4>${esc(s.title)}</h4><p>${esc(s.text)}</p>${statusBadges(s.evidenceStatuses)}${s.limits.length ? `<p class="muted"><b>Limit:</b> ${esc(s.limits.join(' '))}</p>` : ''}${evidence ? `<p class="muted">${esc(s.attribution)}</p>${sourceLinks(s.evidence)}` : ''}</article>`;
+  }
+  function gapHtml(id) {
+    const g=M.gaps.get(id); return `<aside class="gap" data-gap="${id}"><strong>Where the evidence stops · ${id}</strong><h4>${esc(g.question)}</h4><p><b>Available:</b> ${esc(g.availableEvidence)}</p><p><b>Missing:</b> ${esc(g.missingEvidence)}</p><p>${esc(g.claimConsequence)}</p><p><b>Warranted reading:</b> ${esc(g.narrowerStatement)}</p></aside>`;
+  }
+  function caseRelations(ids) {
+    if (!ids.length) return '';
+    const endpoint=id => { const s=M.statements.get(id); return link(s.title,{view:'instances',instance:s.instanceId,depth:'transformation',claim:null}); };
+    return `<section class="documented-relations"><h3>What connects these fragments?</h3><ul class="relation-list">${unique(ids).map(id => { const r=M.caseRelations.get(id); return `<li><p class="eyebrow">${esc(r.unitContinuity.replaceAll('-',' '))} · ${r.id}</p><h4>${esc(r.publicLabel)}</h4><p class="relation-endpoints"><b>From:</b> ${r.fromRefs.map(endpoint).join('; ')}<br><b>${r.type === 'thematic_comparison' ? 'Compared with' : 'To'}:</b> ${r.toRefs.map(endpoint).join('; ')}</p><p>${esc(r.explanation)}</p>${statusBadges(r.evidenceStatuses)}<details><summary>Source and limit for this relation</summary><p>${esc(r.limits.join(' '))}</p>${sourceLinks(r.evidence)}</details></li>`; }).join('')}</ul></section>`;
+  }
+  function caseConcepts(inst) {
+    return `<h3>Concepts that help read this case</h3><ul class="bridges">${inst.conceptLinks.map(b => `<li><span class="eyebrow">${esc(b.kind.replaceAll('-',' '))}</span>${conceptLink(b.conceptId)}<p>${esc(b.bridge)}</p></li>`).join('')}</ul>`;
+  }
+  function instanceRecord(inst, facets) {
+    const depth=params.get('depth') || 'summary';
+    return `<article class="record"><p class="eyebrow">Case instance · ${inst.id}</p><h2 id="view-heading" tabindex="-1">${esc(inst.title)}</h2>${!matches(inst,facets) ? `<p class="outside">${esc(D.uiCopy.outsideFilters)}</p>` : ''}<p class="definition">${esc(inst.summary)}</p><aside class="qualification"><strong>Primary limit</strong><p>${esc(inst.primaryLimit)}</p></aside>${statusBadges(inst.evidenceStatuses)}<p><b>Source unit:</b> ${esc(inst.sourceUnit)}</p>${scopes(inst.scopeRefs,depth === 'evidence')}${depthNav()}${depth !== 'summary' ? `<h3>Statements and transformations</h3><div class="facts">${inst.statementRefs.map(id => statementHtml(M.statements.get(id),depth === 'evidence')).join('')}</div>${caseRelations(inst.relationRefs)}${roles(inst)}${inst.gapRefs.map(gapHtml).join('')}` : ''}${evidenceBlock(inst.claimRefs,depth === 'evidence')}${caseConcepts(inst)}<h3>Follow a journey</h3><ul>${inst.journeyRefs.map(id => { const j=M.journeys.get(id); return `<li>${link(j.title,journeyPatch(id,j.stops.find(s => s.instanceId === inst.id)))}</li>`; }).join('')}</ul><details><summary>Inspect the research conditions around this instance</summary><ul>${inst.phaseRefs.map(id => `<li>${activityLink(id)}</li>`).join('')}</ul></details>${params.has('activity') ? `<p class="context-link"><b>Retained research-condition context:</b> ${activityLink(params.get('activity'))}</p>` : ''}<p>${link('Return to the filtered record list',{instance:null,claim:null},'more-link')}</p></article>`;
+  }
+  function activityRecord(a, facets) {
+    return `<article class="record"><p class="eyebrow">Research condition · ${a.id}</p><h2 id="view-heading" tabindex="-1">${esc(a.label)}</h2>${!matches(a,facets) ? `<p class="outside">${esc(D.uiCopy.outsideFilters)}</p>` : ''}<aside class="qualification"><strong>Limit</strong><p>${esc(a.limit)}</p></aside>${depthNav()}<div class="facts">${[['Purpose',a.purpose],['Invitation',a.invitation],['Traces',a.traces],['What could become knowable',a.possibleKnowledge],['Constraints',a.constraints],['Later transformation',a.laterTransformation]].map(([k,v]) => `<div class="fact"><h3>${k}</h3><p>${esc(v)}</p></div>`).join('')}</div>${statusBadges(a.evidenceStatuses)}${evidenceBlock(a.claimRefs,params.get('depth') === 'evidence')}<h3>Related concepts</h3><div class="chips">${a.conceptRefs.map(conceptLink).join('')}</div>${params.has('instance') ? `<p class="context-link"><b>Retained case context:</b> ${caseLink(params.get('instance'))}</p>` : ''}</article>`;
+  }
+  function resultLists(facets, system = false) {
+    const inst=D.instances.filter(r => matches(r,facets)), acts=D.activities.filter(r => matches(r,facets));
+    return `<h2 id="view-heading" tabindex="-1">${system ? 'Research conditions and authority' : 'Curated case record'}</h2>${!inst.length && !acts.length ? `<p class="gap">${esc(D.uiCopy.empty)}</p>` : ''}${system ? `<p>Activities overlap and recur. These five levels organise the evidence, without implying a fixed sequence.</p>${levels()}<details class="role-index"><summary>Stakeholders: contribution, authority, receipt and absence</summary>${D.stakeholders.map(stakeholderRole).join('')}</details>` : ''}<div class="result-lists">${!system ? `<section><h3>Case instances · ${inst.length}</h3><ul class="result-list">${inst.map(r => `<li>${caseLink(r.id)}<p>${esc(r.primaryLimit)}</p></li>`).join('')}</ul></section>` : ''}<section><h3>Research conditions · ${acts.length}</h3><ul class="result-list">${acts.map(r => `<li>${activityLink(r.id)}<p>${esc(r.limit)}</p></li>`).join('')}</ul></section></div>`;
+  }
+  function journeyView(facets) {
+    const j=M.journeys.get(params.get('journey'));
+    if (!j) return `<h2 id="view-heading" tabindex="-1">Concrete journeys</h2><p>These routes keep participant, artefact, interpretation and proposal journeys separate.</p>${listIndex(D.journeys,j => j.title,j => j.scopeWarning,j => journeyPatch(j.id))}`;
+    if (j.branchRefs?.length) return `<article class="record"><h2 id="view-heading" tabindex="-1">${esc(j.title)}</h2><p>${esc(j.intro)}</p><div class="case-questions">${j.branchRefs.map(id => link(M.journeys.get(id).title,journeyPatch(id))).join('')}</div>${j.gapRefs.map(gapHtml).join('')}</article>`;
+    const stop=activeStop(), index=j.stops.indexOf(stop), inst=M.instances.get(stop.instanceId), statements=stopStatements(stop), depth=params.get('depth') || 'summary';
+    return `<article class="record"><p class="eyebrow">Journey · ${j.id} · ${index+1} of ${j.stops.length}</p><h2>${esc(j.title)}</h2><p>${esc(j.intro)}</p><aside class="qualification"><strong>Order and scope</strong><p>${esc(j.orderMeaning)} ${esc(j.scopeWarning)}</p></aside><nav class="journey-nav" aria-label="Journey stops">${j.stops.map((s,i) => link(`Stop ${i+1}`,{...journeyPatch(j.id,s),depth},'chip',s.id === stop.id ? 'aria-current="step"' : '')).join('')}</nav><h3 id="view-heading" tabindex="-1">Stop ${index+1}: ${esc(inst.title)}</h3>${!matches(inst,facets) ? `<p class="outside">${esc(D.uiCopy.outsideFilters)}</p>` : ''}<p><b>Source unit:</b> ${esc(inst.sourceUnit)}</p><p class="primary-limit"><b>Primary limit:</b> ${esc(inst.primaryLimit)}</p>${depthNav()}${stop.ordering ? `<aside class="gap"><strong>Parallel branches</strong><p>${esc(stop.ordering)}</p></aside>` : ''}<div class="facts">${statements.map(s => statementHtml(s,depth === 'evidence')).join('')}</div>${depth !== 'summary' ? `${caseRelations(j.relationRefs)}${roles(inst)}` : ''}${(stop.gapAfter || []).map(gapHtml).join('')}${evidenceBlock(unique(statements.flatMap(s => s.claimRefs)),depth === 'evidence')}${depth === 'evidence' ? scopes(inst.scopeRefs,true) : ''}<nav class="step-nav" aria-label="Journey navigation">${j.stops[index-1] ? link('← Previous stop',{...journeyPatch(j.id,j.stops[index-1]),depth},'nav-button') : '<span></span>'}<span>${index+1} / ${j.stops.length}</span>${j.stops[index+1] ? link('Next stop →',{...journeyPatch(j.id,j.stops[index+1]),depth},'nav-button') : '<span>End of this journey</span>'}</nav><p>${caseLink(inst.id)}</p><h3>Concepts on this journey</h3><div class="chips">${j.conceptRefs.map(conceptLink).join('')}</div></article>`;
+  }
+  function comparison() {
+    const records=compareRecords();
+    const selector=`<form id="compare-form" class="compare-form"><label>First instance<select name="first">${D.instances.map(r => `<option value="${r.id}"${records[0]?.id === r.id ? ' selected' : ''}>${esc(r.title)}</option>`).join('')}</select></label><label>Second instance<select name="second">${D.instances.map((r,i) => `<option value="${r.id}"${records[1]?.id === r.id || (!records.length && i === 1) ? ' selected' : ''}>${esc(r.title)}</option>`).join('')}</select></label><button type="submit">Compare instances</button></form>`;
+    if (records.length !== 2) return `<h2 id="view-heading" tabindex="-1">Compare bounded records</h2><p>Align source units, scope, contribution, authority and limits. Comparison alone does not assert identity or transmission.</p>${selector}<div class="case-questions">${link('Weekly imagining and a monthly model',{view:'compare',compare:'I03,I10',claim:null,depth:'transformation'})}${link('Barcelona and Tallinn responses',{view:'compare',compare:'I10-s2,I10-s3',claim:null,depth:'evidence'})}</div>`;
+    const card=r => { const inst=M.instances.get(r.id) || M.instances.get(r.instanceId); return `<article><p class="eyebrow">${M.instances.has(r.id) ? 'Instance' : 'Forum response'} · ${r.id}</p><h3>${esc(r.title)}</h3><p><b>Contribution to the inquiry</b></p><p>${esc(r.summary || r.text)}</p><p><b>Source unit:</b> ${esc(inst.sourceUnit)}</p>${statusBadges(r.evidenceStatuses)}${scopes(r.scopeRefs)}<p class="primary-limit"><b>Limit:</b> ${esc(r.primaryLimit || r.limits.join(' '))}</p>${roles(inst)}${evidenceBlock(r.claimRefs,true,`-${r.id}`)}</article>`; };
+    const relationships=D.caseRelations.filter(r => r.fromRefs.some(id => records.some(x => x.id === id || x.statementRefs?.includes(id))) && r.toRefs.some(id => records.some(x => x.id === id || x.statementRefs?.includes(id))));
+    return `<div><p class="eyebrow">Comparison, without an implied causal connection</p><h2 id="view-heading" tabindex="-1">Two records, distinct warrants</h2><div class="comparison">${records.map(card).join('')}</div>${caseRelations(relationships.map(r => r.id))}${records.some(r => r.id === 'I03') && records.some(r => r.id === 'I10') ? gapHtml('X03') : ''}<details><summary>Choose a different comparison</summary>${selector}</details></div>`;
+  }
+  function labs() {
+    const view=params.get('view') || 'overview', facets=selectedFacets();
+    let content;
+    if (view === 'overview') content=orientation();
+    if (view === 'instances') content=M.instances.has(params.get('instance')) ? instanceRecord(M.instances.get(params.get('instance')),facets) : resultLists(facets);
+    if (view === 'system') content=M.activities.has(params.get('activity')) ? activityRecord(M.activities.get(params.get('activity')),facets) : resultLists(facets,true);
+    if (view === 'journey') content=journeyView(facets);
+    if (view === 'compare') content=comparison();
+    const items=[['overview','About this case'],['instances','Instances'],['journey','Journeys'],['system','Research conditions'],['compare','Compare']];
+    return `<section class="mode-shell">${modeHeading('Democracy Labs',view === 'overview' ? 'An inquiry across encounters' : '',view === 'overview' ? D.site.modeDescriptions.labs : '',`${returnLink()}${copyButton}`)}${view !== 'overview' ? orientation(true) : ''}<div class="labs-grid">${browseIndex(items,view,{mode:'labs',dlv:1,claim:null},'Democracy Labs views')}<section>${view !== 'overview' ? filterPanel(facets) : ''}${content}</section></div></section>`;
+  }
+  function sourceRecord(s) {
+    return `<article class="source-detail" id="source-${s.id}"><h3>${esc(s.citation)}</h3><dl class="evidence-facts">${[['Role',s.evidentialRole],['Reading coverage',s.readingCoverage],['Version',s.versionNote],['Locator convention',s.locatorConvention],['Independence',s.independenceNote],['Rights',s.rights]].filter(([,v]) => v).map(([k,v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl><p><a href="${esc(s.url)}" target="_blank" rel="noopener">Open source record <span class="visually-hidden">(opens a new tab)</span> ↗</a></p><p class="muted">${esc(D.uiCopy.sourceUnavailable)}</p></article>`;
+  }
+  function showSources() {
+    const s=M.sources.get(params.get('source'));
+    $('#source-list').innerHTML=s ? `${sourceRecord(s)}<h3>Other sources</h3><ul>${D.sources.filter(x => x.id !== s.id).map(x => `<li>${link(x.citation,{source:x.id},'', 'data-source')}</li>`).join('')}</ul>` : `<p>${esc(D.sourceReadingPolicy)}</p>${D.sources.map(sourceRecord).join('')}`;
+    const dialog=$('#sources-dialog');
+    if (!dialog.open) dialog.showModal();
+    dialog.scrollTop=0;
+    $('[data-close-dialog]').focus();
+  }
+  function viewKey() {
+    const keys=D.navigation.url[mode], p=new URLSearchParams();
+    keys.forEach(k => { if(params.has(k)) p.set(k,params.get(k)); });
+    return `${mode}:${p.toString()}`;
+  }
+  function savePosition() {
+    if (!routeKey || $('#sources-dialog').open) return;
+    const el=document.activeElement;
+    positions[routeKey]={y:scrollY, id:el?.id || '', href:el?.getAttribute('href') || '', text:el?.textContent?.trim() || '', filters:!!$('.filter-panel')?.open};
+    try { sessionStorage.setItem('dwk-positions',JSON.stringify(positions)); } catch {}
+    history.replaceState({...history.state,position:positions[routeKey]},'',location.href);
+  }
+  function focusView(options = {}) {
+    const saved=options.restore ? positions[routeKey] : null;
+    if (saved) {
+      if ($('.filter-panel')) $('.filter-panel').open=saved.filters;
+      const el=(saved.id && document.getElementById(saved.id)) || $$('a').find(a => a.getAttribute('href') === saved.href && a.textContent.trim() === saved.text) || $('#view-heading');
+      el?.focus({preventScroll:true}); window.scrollTo(0,saved.y); return;
+    }
+    if (options.filters) {
+      $('.filter-panel').open=true;
+      $('#apply-filters').focus({preventScroll:true});
+      window.scrollTo(0,options.scroll || 0); announce(counts(selectedFacets())); return;
+    }
+    if (options.initial) return;
+    const el=options.evidence ? $('[id^="evidence-heading"]') : options.relation ? $('#relation-heading') : $('#view-heading');
+    el?.focus({preventScroll:true}); el?.scrollIntoView({block:'start',behavior:'instant'});
+  }
+  function render(options = {}) {
+    normalise();
+    const canonical=url();
+    if (`${location.pathname}${location.search}` !== canonical) history.replaceState(history.state,'',canonical);
+    routeKey=viewKey();
+    document.body.className=`mode-${mode}${mode === 'presentation' && params.get('display') === 'projection' ? ' projection' : ''}`;
+    $('#app').innerHTML=mode === 'presentation' ? presentation() : mode === 'explore' ? explore() : labs();
+    $$('[data-mode]').forEach(a => { a.href=url({mode:a.dataset.mode,source:null}); a.setAttribute('aria-current',a.dataset.mode === mode ? 'page' : 'false'); });
+    document.title=`${$('#view-heading')?.textContent || modeNames[mode]} | Designerly Ways of Knowing`;
+    $('#state-notice').hidden=!notices.length; $('#state-notice').textContent=notices.join(' ');
+    if (params.has('source')) showSources(); else if ($('#sources-dialog').open) $('#sources-dialog').close();
+    requestAnimationFrame(() => { if (!params.has('source')) focusView(options); });
+  }
+  function navigate(href, options = {}) {
+    savePosition();
+    history.pushState({},'',href); render(options);
+  }
+  function announce(message) {
+    const toast=$('#toast'); toast.textContent='';
+    requestAnimationFrame(() => { toast.textContent=message; toast.classList.add('show'); });
+    clearTimeout(announce.timer); announce.timer=setTimeout(() => toast.classList.remove('show'),5000);
+  }
+  function closeSources() {
+    const dialog=$('#sources-dialog'); dialog.close();
+    if (sourceReturn) { history.back(); sourceReturn=null; }
+    else { params.delete('source'); history.replaceState(history.state,'',url()); }
+    requestAnimationFrame(() => sourceInvoker?.isConnected && sourceInvoker.focus());
+  }
+  document.addEventListener('click',async event => {
+    const a=event.target.closest('a');
+    if (a && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0 && !a.target && !a.hasAttribute('download')) {
+      const target=new URL(a.href,location.href);
+      if (target.origin === location.origin && target.pathname === location.pathname && target.search && !target.hash) {
+        event.preventDefault();
+        if (a.hasAttribute('data-source')) { sourceInvoker=a; if (!$('#sources-dialog').open) sourceReturn=location.href; }
+        navigate(target.href,{restore:a.hasAttribute('data-return'), evidence:a.hasAttribute('data-focus-evidence'), relation:a.hasAttribute('data-focus-relation'), filters:a.hasAttribute('data-filter-change'), scroll:scrollY});
+        return;
+      }
+    }
+    const button=event.target.closest('button'); if (!button) return;
+    if (button.hasAttribute('data-copy')) { try { await navigator.clipboard.writeText(location.href); announce('Link copied'); } catch { announce(D.uiCopy.copyFailure); } button.focus(); }
+    if (button.hasAttribute('data-projection')) navigate(url({display:params.get('display') === 'projection' ? 'reading' : 'projection'}));
+    if (button.id === 'sources-open') { sourceInvoker=button; showSources(); }
+    if (button.hasAttribute('data-close-dialog')) closeSources();
+    if (button.hasAttribute('data-clear-filters')) navigate(url(Object.fromEntries(facetConfig.map(([key]) => [key,null]))),{filters:true,scroll:scrollY});
+    if (button.hasAttribute('data-invitation')) { $$('[data-invitation]').forEach(b => b.setAttribute('aria-pressed',String(b === button))); $$('[data-invitation-row]').forEach(row => row.classList.toggle('is-emphasized',row.dataset.invitationRow === button.dataset.invitation)); }
   });
-  $$('[data-bridge]').forEach(button => button.addEventListener('click', () => {$$('[data-bridge]').forEach(item => item.classList.remove('is-active')); button.classList.add('is-active'); $('#bridge-note').textContent = data.bridge[button.dataset.bridge];}));
-  $('#sources-open').addEventListener('click', () => {renderSources(); $('#sources-dialog').showModal();});
-  $$('[data-close]').forEach(button => button.addEventListener('click', () => $(`#${button.dataset.close}`).close()));
-  $('#sources-dialog').addEventListener('click', event => {if (event.target === $('#sources-dialog')) $('#sources-dialog').close();});
-  $('#share-state').addEventListener('click', async () => {try {await navigator.clipboard.writeText(location.href); showToast('View link copied');} catch {showToast('Copy unavailable; use the address bar');}});
-  window.addEventListener('popstate', () => {parseState(); setMode(state.mode);});
-  setMode(state.mode);
-  requestAnimationFrame(() => window.scrollTo(0, 0));
+  document.addEventListener('submit',event => {
+    if (event.target.id === 'filter-form') {
+      event.preventDefault(); const form=new FormData(event.target);
+      navigate(url(Object.fromEntries(facetConfig.map(([key]) => [key,unique(form.getAll(key)).sort().join(',')]))),{filters:true,scroll:scrollY});
+    }
+    if (event.target.id === 'compare-form') {
+      event.preventDefault(); const form=new FormData(event.target);
+      if (form.get('first') === form.get('second')) { announce('Choose two different instances.'); return; }
+      navigate(url({view:'compare',compare:`${form.get('first')},${form.get('second')}`,claim:null,depth:'transformation'}));
+    }
+  });
+  document.addEventListener('keydown',event => {
+    if ($('#sources-dialog').open || mode !== 'presentation' || event.metaKey || event.altKey || event.ctrlKey || /INPUT|TEXTAREA|SELECT|BUTTON|A/.test(event.target.tagName) || event.target.isContentEditable) return;
+    const index=D.presentation.indexOf(currentStep()), step=event.key === 'ArrowRight' ? D.presentation[index+1] : event.key === 'ArrowLeft' ? D.presentation[index-1] : null;
+    if (step) { event.preventDefault(); navigate(url({step:step.id,pclaim:null})); }
+  });
+  $('#sources-dialog').addEventListener('cancel',event => { event.preventDefault(); closeSources(); });
+  window.addEventListener('popstate',() => render({restore:true}));
+  window.addEventListener('pagehide',savePosition);
+  let scrollTimer; window.addEventListener('scroll',() => { clearTimeout(scrollTimer); scrollTimer=setTimeout(savePosition,200); },{passive:true});
+  matchMedia('(min-width:1200px)').addEventListener('change',event => { if ($('.step-index')) $('.step-index').open=event.matches; });
+  render({initial:true,restore:performance.getEntriesByType('navigation')[0]?.type === 'reload'});
 })();

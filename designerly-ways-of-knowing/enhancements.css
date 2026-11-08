@@ -1,0 +1,7 @@
+/* Optional views retain the same readable propositions and evidence. */
+.local-graph{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.5rem;padding:1rem 1.5rem;background:var(--lilac);border:1px solid var(--rule);border-radius:18px}
+.local-graph .relation-line{display:flex;flex-direction:column;align-items:flex-start;gap:.1rem}
+.local-graph .relation-list{margin:0}.local-graph small{font-size:.75rem}
+.figure-row.is-emphasized{outline:3px solid var(--accent);outline-offset:6px;background:var(--surface)}
+.invitation-controls{margin-bottom:1.5rem}
+@media(max-width:680px){.local-graph{grid-template-columns:1fr;padding:.5rem 1rem}}
