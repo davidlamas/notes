@@ -10,7 +10,7 @@ TUT.resources = [
     "group": "Shared talk deck",
     "title": "Shared slide deck for the talks",
     "url": "https://docs.google.com/presentation/d/1icr2c8OgjRTND1p1kuXgeUesFMaQgVp4hXUCmEhk2ak/edit",
-    "note": "One slide per team, Team 1 to Team 8. Your teacher opens it for editing when the time comes. Edit only your own slide.",
+    "note": "One starting slide per team, Team 1 to Team 8. Your teacher opens it for editing when the time comes. Edit only your own slides (start from your Team slide; you may add up to 2 more right after it).",
     "status": "listed"
   },
   {
