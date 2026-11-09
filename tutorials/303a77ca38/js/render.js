@@ -35,20 +35,20 @@
       <p class="eyebrow">${esc(T.meta.ui.routeEyebrow)}</p>
       <h1>${esc(T.meta.ui.routeHeadline)}</h1>
       <p class="lede">${esc(T.meta.ui.routeLede)}</p>
-      <div class="layout"><div>${sprints}</div><aside class="card detail-panel" id="panel" tabindex="0" aria-live="polite" aria-label="Station details"></aside></div>`;
+      <div class="layout"><div>${sprints}</div><aside class="card detail-panel" id="panel" tabindex="0" aria-live="polite" aria-label="Step details"></aside></div>`;
     panel();
   }
 
   function panel() {
     const el = $("panel"); if (!el) return;
-    if (!S.sel) { el.innerHTML = `<p class="eyebrow">Station</p><h2>Pick a station</h2><p class="hint">Its aim, time and resources show here.</p>`; return; }
+    if (!S.sel) { el.innerHTML = `<p class="eyebrow">Step</p><h2>Pick a step</h2><p class="hint">Its aim, time and resources show here.</p>`; return; }
     const s = T.stations[S.sel];
     const res = s.resources.map(id => resById[id]).filter(Boolean).map(r => resourceLine(r)).join("");
     el.innerHTML = `<p class="eyebrow">${esc(App.LANES[s.stream])} · ${s.minutes} min</p><h2>${esc(s.title)}</h2>
       <span class="tag">${esc(s.status)}</span>
       <div class="f"><b>Aim</b>${esc(s.aim)}</div>
       <div class="f"><b>Resources</b>${res ? `<ul>${res}</ul>` : `<span class="hint">None yet.</span>`}</div>
-      ${T.content && T.content[S.sel] ? `<p><button class="secondary-button" type="button" data-open="${S.sel}">Open the full station</button></p>` : ""}`;
+      ${T.content && T.content[S.sel] ? `<p><button class="secondary-button" type="button" data-open="${S.sel}">Open the full step</button></p>` : ""}`;
   }
 
   function resourceLine(r) {
@@ -85,7 +85,7 @@
       <p class="eyebrow">${esc(App.LANES[st.stream])} · ${st.minutes} min</p>
       <h1 tabindex="-1">${esc(st.title)}</h1>
       <p class="lede">${esc(c.intro)}</p>
-      <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Station timer"></div>
+      <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Step timer"></div>
       <div class="layout"><div class="parts">${parts}
         ${c.after ? `<section class="card"><h2>Between now and the next session</h2>${list(c.after)}</section>` : ""}
         <section class="card"><h2>${esc(c.checks.title)}</h2><ul class="checklist">${checks}</ul><p class="sub" role="status" id="check-count"></p></section>

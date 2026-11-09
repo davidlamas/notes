@@ -282,13 +282,13 @@
     const go = h("button", { type: "button", class: "secondary-button", text: "Start timer" });
     const reset = h("button", { type: "button", class: "secondary-button", text: "Reset" });
     const stop = () => { st.run = false; go.textContent = "Start timer"; };
-    const tick = () => { if (!st.run) return; st.left -= 1; paint(); if (st.left <= 0) { st.left = 0; stop(); say.textContent = "Time is up for this station."; out.classList.add("up"); } };
+    const tick = () => { if (!st.run) return; st.left -= 1; paint(); if (st.left <= 0) { st.left = 0; stop(); say.textContent = "Time is up for this step."; out.classList.add("up"); } };
     go.addEventListener("click", () => { if (st.run) { stop(); return; } if (st.left <= 0) return; st.run = true; go.textContent = "Pause"; });
     reset.addEventListener("click", () => { stop(); st.left = total; say.textContent = ""; out.classList.remove("up"); paint(); });
     timers.push(setInterval(tick, 1000));
     if (st.run) go.textContent = "Pause";
     paint();
-    root.appendChild(h("span", { class: "sub", text: "Time for this station: " }));
+    root.appendChild(h("span", { class: "sub", text: "Time for this step: " }));
     root.appendChild(out); root.appendChild(go); root.appendChild(reset); root.appendChild(say);
     root.appendChild(h("span", { class: "sub", text: " The timer is only a guide. It does not announce each minute." }));
   }

@@ -35,7 +35,7 @@ Everything about the project is mined from the Moodle course page (course id 224
 - Checks: `python3 src/check.py`, `NODE_PATH=/opt/npm-tools/node_modules node src/smoke.js`, and `AXE=<axe.min.js> NODE_PATH=... node src/a11y.js`.
 
 ## Status at version 0.5.0
-All nine stations have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
+All nine steps and sessions have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
 
 ## How to publish
 It is a static folder. Pushing to the `notes` repo publishes it with the rest. Do not link it from the notes landing page.
