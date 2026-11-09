@@ -9,7 +9,7 @@ Title: "Evaluation project: Loop11 · AccessMonitor". Header mark: "P". Nothing 
 Everything about the project is mined from the Moodle course page (course id 22490, read on 9 November 2026): the project description, the fifteen steps, the expected results, the options A/B/C, the templates, and the timeline. The English text is a plain summary. Moodle wins if they differ.
 
 ## Decisions from David (9 November 2026)
-- Four working labs (Moodle #3 to #6), each 3 academic hours (135 min), plus two presentation sessions. Moodle's labs #7 and #8 are folded into Lab #6 and independent work. Each lab ends with an "after" list of independent work.
+- Five working labs (sessions #3 to #7) and two presentation sessions (#8 and #9), each 3 academic hours (135 min). Moodle numbers them differently (its compile and fix activities are #7 and #8, presentations #9 and #10), so Moodle needs updating. Do more in the labs and less as independent work. Each lab ends with a short "after" list. The report is written on your own after Lab #7.
 - No dates and no deadline on the page. Report and presentation are handed in the day before the presentation sessions.
 - Talks: 20 minutes plus 10 minutes of discussion, so four groups per session and at most eight groups. Moodle has ten team spaces: check the real number of groups.
 - Formative evaluation. Each group picks its own website, no duplicates, the lecturer approves it. SIGA and SNS24 dropped. No Metro do Porto material on this page. The eligibility rules on the brief view are a draft for the lecturer. Candidate services (CP, others) are not on the page yet.
@@ -32,8 +32,8 @@ Everything about the project is mined from the Moodle course page (course id 224
 - "Sprint" in the code means a stretch of the timeline. Block means one lab. Stream A is the study, B is the accessibility evaluation, AB is the whole group.
 - Checks: `python3 src/check.py`, `NODE_PATH=/opt/npm-tools/node_modules node src/smoke.js`, and `AXE=<axe.min.js> NODE_PATH=... node src/a11y.js`.
 
-## Status at version 0.2.0
-All seven stations have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
+## Status at version 0.3.0
+All eight stations have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
 
 ## How to publish
 It is a static folder. Pushing to the `notes` repo publishes it with the rest. Do not link it from the notes landing page.

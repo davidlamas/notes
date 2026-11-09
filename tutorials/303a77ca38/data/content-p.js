@@ -62,12 +62,11 @@ Object.assign(TUT.content, {
       "User stories."
     ],
     "after": [
-      "Finish the mind-map, personas and stories if anything is missing.",
-      "Walk through the site once with each user story and note where you hesitate. Bring the notes to Lab #4."
+      "Finish the mind-map, personas and stories if anything is missing."
     ],
     "teacher": [
-      "Moodle lists the mind-map under Lab #3 and personas and stories under Lab #4. They are joined here because there are four working labs.",
-      "The lecturer approves each website before this lab. Websites are not repeated."
+      "The lecturer approves each website before this lab. Websites are not repeated.",
+      "Moodle lists the mind-map under Lab #3 and personas and stories under Lab #4. They are joined here."
     ]
   },
   "lab4": {
@@ -75,8 +74,8 @@ Object.assign(TUT.content, {
     "parts": [
       {
         "title": "Do a first expert review",
-        "min": 30,
-        "text": "Walk through each story on the real site. Note what looks confusing, slow, hidden or broken. Use the Nielsen heuristics. The course page gives templates for this: a Figma file, a Miro board and an NN/g workbook. Duplicate one and use it. You are looking for the areas that deserve more attention, not for a full list.",
+        "min": 40,
+        "text": "Walk through each story on the real site. Note what looks confusing, slow, hidden or broken. Use the Nielsen heuristics. The course page gives templates: a Figma file, a Miro board and an NN/g workbook. Duplicate one and use it. You are looking for the areas that deserve more attention, not for a full list.",
         "help": [
           "tpl-figma",
           "tpl-miro",
@@ -86,13 +85,13 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Set the goals and the questions",
-        "min": 30,
+        "min": 40,
         "text": "Look at what the review found. Write two or three usability goals. A goal says who, what they want, in what situation, how you will measure, and what is good enough. Then write the research questions that the test must answer.",
         "widget": "goal"
       },
       {
         "title": "Decide the participants and the size",
-        "min": 20,
+        "min": 25,
         "text": "Who should take part and how many? Think about the audience from your personas. With a small group the numbers are a signal, not a statistic. Say how you will recruit. Ask nothing that identifies a person.",
         "help": [
           "nng-study-guide",
@@ -100,12 +99,10 @@ Object.assign(TUT.content, {
         ]
       },
       {
-        "title": "Prepare tasks, questions and questionnaires",
-        "min": 55,
-        "text": "Write the tasks from the user stories. A task is a goal in a situation, not a list of clicks. Decide how success is judged before the test: by the address a participant reaches or by an answer to a question after the task. Write the questions after each task, the questions at the start about the participants, and a satisfaction questionnaire. Warn participants that questions follow each task.",
-        "widget": "profile",
+        "title": "Draft the tasks",
+        "min": 30,
+        "text": "Write the tasks from the user stories. A task is a goal in a situation, not a list of clicks. Decide how success is judged before the test: by the address a participant reaches or by an answer to a question after the task.",
         "help": [
-          "loop11-questions",
           "loop11-unmoderated"
         ]
       }
@@ -117,7 +114,7 @@ Object.assign(TUT.content, {
         "Two or three usability goals, each with a measure and a good-enough rule.",
         "The research questions written out.",
         "Participants and size decided, with how you will recruit.",
-        "Tasks with success rules, and the questions and questionnaires."
+        "A first draft of the tasks, each with a success rule."
       ]
     },
     "good": {
@@ -135,24 +132,30 @@ Object.assign(TUT.content, {
     ],
     "output": [
       "Review notes, goals and research questions.",
-      "A study plan: participants, tasks, questions."
+      "A first draft of the tasks."
     ],
     "after": [
-      "Finish the tasks and questions.",
-      "Ask the lecturer about anything unclear in your plan.",
-      "Bring the plan to Lab #5 ready to build."
+      "Tidy the task wording if needed."
     ],
     "teacher": [
-      "Moodle lists the review and the goals under Lab #4 and the plan under Lab #5. They are joined here because there are four working labs.",
-      "Moodle says participants get Loop11 licences. Check that every group has one before Lab #5."
+      "Moodle lists the review and the goals under Lab #4 and the plan under Lab #5. Here they are split a little differently."
     ]
   },
-  "lab5a": {
-    "intro": "This is the study side of the lab. You build the test, try it, fix it and launch it. The accessibility side runs at the same time.",
+  "lab5": {
+    "intro": "You finish the plan, build the test in Loop11 and try it on real people. By the end it is ready to launch.",
     "parts": [
       {
+        "title": "Finish the tasks, questions and questionnaires",
+        "min": 30,
+        "text": "Finish the tasks. Write the questions after each task, the questions at the start about the participants, and a satisfaction questionnaire. Warn participants that questions follow each task.",
+        "widget": "profile",
+        "help": [
+          "loop11-questions"
+        ]
+      },
+      {
         "title": "Build the test",
-        "min": 40,
+        "min": 50,
         "text": "Build the test in Loop11: tasks, success rules, questions, opening and thank-you text. Choose what else you collect and why. Try it yourself once.",
         "help": [
           "loop11-docs",
@@ -168,14 +171,67 @@ Object.assign(TUT.content, {
         "title": "Refine the plan",
         "min": 25,
         "text": "Fix what the pilot showed: unclear tasks, a wrong success rule, a missing question, or a broken set-up. Change the plan on paper too, and keep the old version. You will explain the change in the report."
-      },
+      }
+    ],
+    "checks": {
+      "title": "Before you move on",
+      "items": [
+        "Tasks, questions and questionnaires are written.",
+        "The test is built and tried once.",
+        "A pilot was run and its changes are written down.",
+        "The plan on paper matches the test as built."
+      ]
+    },
+    "good": {
+      "title": "Good signs",
+      "items": [
+        "The pilot led to at least one real change.",
+        "A task can be understood without clicks named.",
+        "Start questions describe the participants without naming them."
+      ]
+    },
+    "watch": [
+      "Launching without a pilot.",
+      "Tasks that tell people where to click.",
+      "Asking for names, emails or anything that identifies a person."
+    ],
+    "output": [
+      "A test ready to launch.",
+      "A refined plan, with the changes noted."
+    ],
+    "after": [
+      "Prepare the invitation and the list of people to invite."
+    ],
+    "teacher": [
+      "Moodle lists the plan under Lab #5 and the pilot under Lab #6. Here the pilot is in Lab #5, which leaves Lab #6 for the launch and the accessibility checks.",
+      "Moodle says participants get Loop11 licences. Check that every group has one before this lab."
+    ]
+  },
+  "lab6a": {
+    "intro": "This is the study side of the lab. You launch the study, follow it as sessions come in and start writing down problems. The accessibility side runs at the same time.",
+    "parts": [
       {
         "title": "Recruit and launch",
+        "min": 35,
+        "text": "Send the test to the people you planned to recruit. Keep the message short and honest about how long the test takes, that recording is on, and that questions follow each task. Launch it.",
+        "help": [
+          "loop11-recruit"
+        ]
+      },
+      {
+        "title": "Follow the study",
         "min": 40,
-        "text": "Send the test to the people you planned to recruit. Keep the message short and honest about how long the test takes, that recording is on, and that questions follow each task. Launch and watch the first sessions. Note problems as they appear.",
+        "text": "Watch the first sessions as they come in. Count how many started and how many finished. Fix anything that breaks. Invite more people if numbers are low.",
+        "help": [
+          "loop11-recording"
+        ]
+      },
+      {
+        "title": "Watch recordings and write problems",
+        "min": 60,
+        "text": "Open the recordings of failed or slow sessions first. Pause where the person hesitates, goes back or gives up. Write each problem as who, what, where, with the evidence.",
         "widget": "studylog",
         "help": [
-          "loop11-recruit",
           "loop11-recording"
         ]
       }
@@ -183,41 +239,40 @@ Object.assign(TUT.content, {
     "checks": {
       "title": "Before you move on",
       "items": [
-        "The test is built and tried once.",
-        "A pilot was run and its changes are written down.",
         "The test is launched and participants are invited.",
+        "Interim results were checked at least once.",
+        "Problems from the recordings are in the log with evidence.",
         "You know when the study closes."
       ]
     },
     "good": {
       "title": "Good signs",
       "items": [
-        "The pilot led to at least one real change.",
         "The invitation tells the truth about time and recording.",
-        "Problems were written down as they were seen."
+        "Problems were written down as they were seen.",
+        "The group counted only completed sessions."
       ]
     },
     "watch": [
-      "Launching without a pilot.",
       "Changing the tasks half-way through the run without saying so.",
-      "Counting sessions that were not completed as if they were."
+      "Counting sessions that were not completed as if they were.",
+      "Writing symptoms with no evidence."
     ],
     "output": [
-      "A launched study.",
-      "A first list of problems from the study."
+      "A running study.",
+      "A first log of study problems."
     ],
     "after": [
-      "Keep the test open. Chase participants if numbers are low.",
-      "Open the recordings of failed or slow sessions and write down problems.",
-      "Close the study a day or two before Lab #6."
+      "Keep the test open and invite people if numbers are low.",
+      "Close the study a day or two before Lab #7."
     ],
     "teacher": [
-      "The study keeps running after the lab, as independent work. Moodle says only 'Accompany the study' and 'Monitor interim results'.",
+      "Moodle lists the pilot and the run under Lab #6. The study may run beyond this lab.",
       "Some groups may end with few participants. Ask them to say so in the report."
     ]
   },
-  "lab5b": {
-    "intro": "This is the accessibility side of the lab. You evaluate accessibility while the study is set up. Use more than one kind of check, because none finds everything.",
+  "lab6b": {
+    "intro": "This is the accessibility side of the lab. You evaluate accessibility while the study runs. Use more than one kind of check, because none finds everything.",
     "parts": [
       {
         "title": "Plan the evaluation",
@@ -289,20 +344,19 @@ Object.assign(TUT.content, {
       "A note on what you did not check."
     ],
     "after": [
-      "Finish any checks you did not reach.",
-      "Bring the log to Lab #6."
+      "Finish any checks you did not reach and make the log complete for Lab #7."
     ],
     "teacher": [
       "Which Portuguese rules cover a given website depends on the site. Nobody has confirmed it. The page lists both decrees, Decreto-Lei 83/2018 and 82/2022, and says so.",
       "Accessibility Insights and AccessMonitor are suggestions. Moodle says 'standards checks' and 'other instruments'."
     ]
   },
-  "lab6": {
-    "intro": "You now have three sources of evidence: the first review, the study and the accessibility checks. You merge them, rank the problems and choose the ones to fix.",
+  "lab7": {
+    "intro": "You merge the three sources of evidence: the first review, the study and the accessibility checks. You rank the problems, choose the ones to fix and start the fixes.",
     "parts": [
       {
         "title": "Read the numbers",
-        "min": 30,
+        "min": 25,
         "text": "For each task, enter how many tried and how many succeeded, and the times of those who succeeded. Read the range, not only the rate. Add a short sentence on who took part.",
         "widget": "rate",
         "help": [
@@ -312,26 +366,30 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Satisfaction",
-        "min": 15,
+        "min": 10,
         "text": "If you used a satisfaction questionnaire like the System Usability Scale, work out the score for each participant and then for the group.",
         "widget": "sus"
       },
       {
         "title": "Describe the problems and chances",
-        "min": 30,
+        "min": 25,
         "text": "Merge the problems from the review, the study and the accessibility checks into one list. Write each in plain words with its evidence. A chance for improvement is something that works but could work better.",
         "widget": "studylog"
       },
       {
-        "title": "Rank them",
-        "min": 35,
-        "text": "Give each item a score for how bad it is for the user and how often it happens. Sort them. Ask: does this hurt what the site is meant to do?",
+        "title": "Rank them and choose",
+        "min": 30,
+        "text": "Give each item a score for how bad it is for the user and how often it happens. Sort them. Pick the two or three with the highest severity or the best chance to improve the service. Write down why, and what you leave out.",
         "widget": "rank"
       },
       {
-        "title": "Choose the two or three that matter most",
-        "min": 25,
-        "text": "Pick the two or three items with the highest severity or the best chance to improve the service. Write down why, and what you leave out. Agree who sketches which fix."
+        "title": "Start the fixes",
+        "min": 45,
+        "text": "For each chosen item write what happens, who is hurt, the evidence and the likely cause. Say what is a guess. Then propose a fix and sketch it at low fidelity. Pencil and paper is fine. Say how you would know the fix worked.",
+        "help": [
+          "nng-articles",
+          "ixdf-articles"
+        ]
       }
     ],
     "checks": {
@@ -341,7 +399,7 @@ Object.assign(TUT.content, {
         "The three sources are merged into one list.",
         "Each item has evidence, a severity and an impact.",
         "Two or three items are chosen, with the reason.",
-        "What you leave out is named."
+        "Each chosen item has a first fix and sketch."
       ]
     },
     "good": {
@@ -359,17 +417,16 @@ Object.assign(TUT.content, {
     ],
     "output": [
       "A ranked list of problems and chances.",
-      "The two or three items chosen to fix."
+      "Two or three chosen items, each with a first fix and sketch."
     ],
     "after": [
-      "Study the chosen items in depth: what happens, who is hurt, the evidence, the likely cause. Say what is a guess.",
-      "Propose a fix for each item and sketch it at low fidelity. Say how you would know the fix worked.",
-      "Write the report: goals, questions, method, results, analysis and discussion, a critical reflection on the limits of the study, and conclusions that include the illustrated fixes.",
+      "Finish the fixes and sketches.",
+      "Write the report: goals, questions, method, results, analysis and discussion, a critical reflection on the limits of the study, and conclusions with the illustrated fixes.",
       "Plan the talk: 20 minutes, then 10 minutes of discussion.",
-      "Hand in the report and the presentation the day before the presentation session."
+      "Hand in the report and the presentation the day before the presentation sessions."
     ],
     "teacher": [
-      "Moodle lists compile and rank under Lab #7 and fixes, report and talk under Lab #8. Here they are Lab #6 and independent work, because there are four working labs.",
+      "Moodle lists compile and rank under Lab #7 and fixes, report and talk under Lab #8. Here the fixes start in Lab #7 and the report is independent work.",
       "The report must include proposed and illustrated measures. Plagiarism means failing the course at once."
     ]
   },

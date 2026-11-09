@@ -24,7 +24,7 @@ TUT.scenario = {
     },
     {
       "label": "Your time",
-      "text": "four labs of three academic hours, plus independent work between them. Then a 20 minute talk and 10 minutes of discussion."
+      "text": "five labs of three academic hours, with a little independent work between them. Then a 20 minute talk and 10 minutes of discussion."
     }
   ],
   "sections": [
@@ -72,13 +72,13 @@ TUT.scenario = {
       "items": [
         {
           "tag": "Labs",
-          "title": "Four labs",
-          "text": "Labs #3 to #6, three academic hours each. Moodle's labs #7 and #8 are folded into Lab #6 and independent work."
+          "title": "Five labs and two presentation sessions",
+          "text": "Sessions #3 to #7 are labs and #8 and #9 are presentations. Each lasts three academic hours. Moodle numbers them differently: its compile, fix and report activities are spread over Lab #7 and independent work."
         },
         {
           "tag": "Between labs",
           "title": "Independent work",
-          "text": "Each lab ends with a short list of what to do before the next one. The study runs between Lab #5 and Lab #6."
+          "text": "Each lab ends with a short list of what to do before the next one. The study may run on between Lab #6 and Lab #7. The report is written on your own after Lab #7."
         },
         {
           "tag": "Hand-in",
