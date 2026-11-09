@@ -55,10 +55,10 @@ Rules the checker enforces: block minutes equal station minutes; sprint minutes 
 
 ## Status
 
-Foundation only. Every station is `outline`: title, time, stream and aim. Next steps, in order:
+Sprint 1 stations are `draft` (full content). Sprint 2 stations are still `outline`. Next steps, in order:
 
 1. Sources: done (v0.1.1). Plugin chosen: Accessibility Insights for Web (free, guided WCAG 2.2 AA Assessment, FastPass). axe DevTools free tier is automated only. Resource ids `a11y-insights-*` replace the old `a11y-plugin-docs`. Loop11 help pages and AccessMonitor docs were only partly reachable; see open points.
-2. Sprint 1 station content and interactions.
+2. Sprint 1 station content and interactions: done (v0.2.0).
 3. Sprint 2 station content and interactions.
 4. Accessibility check of this page itself (use the same tools the students use), link check, handover notes.
 
@@ -76,3 +76,13 @@ Foundation only. Every station is `outline`: title, time, stream and aim. Next s
 ## Material boundary
 
 The page is not linked from anywhere and marked `noindex`, but the host is public and the repository is public. Do not add personal data, student names, Loop11 exports, recordings, licence codes or any call-centre data. The scenario figures are invented and must stay labelled as invented.
+
+## Station pages and tools (added in v0.2.0)
+
+- A station with content opens as a full page: `?view=station&sel=<id>`. The mode switch keeps "Route" active. Stations without content show only the side panel.
+- `data/content-s1.js` holds Sprint 1 content, keyed by station id: `intro`, `parts[{title,min,text,widget?}]`, `checks`, `good`, `watch`, `output`, `teacher`. Step minutes must add up to the station minutes. Sprint 2 content goes in a new `data/content-s2.js` (same shape, add it to index.html and to the check script). A station gets status `draft` in `sprints.js` once it has content.
+- `data/widgets.js` holds the text and options of the tools: `goal` (usability goal builder), `taskcheck` (good or weak task), `success` (how to judge success), `issuelog` (log with copy). Code is in `js/widgets.js`. Add a tool: add data, add a function to `BUILD`, name it in a step.
+- Everything the students type or tick lives in `App.mem` (memory only). A reload clears it. The issue log and the goal builder say so and offer Copy. This is deliberate: no storage, no personal data.
+- A timer per station is a guide, with no minute-by-minute announcements.
+- Loop11 and plugin menu names were not seen live, only from public pages. The text tells students to follow the live screen and the documentation. A teacher should click through Loop11 once before the lab.
+- Facts used in the text that must be re-checked before the lab: station names Trindade, Aeroporto, Senhor de Matosinhos, Estádio do Dragão and the line names, and the answers to the PDF question (timetables change).

@@ -38,49 +38,49 @@ TUT.sprints = [
 TUT.stations = {
   "s1-brief": {
     "title": "Read the brief and choose your split",
-    "stream": "AB", "minutes": 10, "status": "outline",
+    "stream": "AB", "minutes": 10, "status": "draft",
     "aim": "Understand the scenario, the two mandatory tasks and the peer-test rotation. Agree how your team splits in two.",
     "resources": ["metro-planner", "metro-schedules"]
   },
   "s1-goals": {
     "title": "Write goals, tasks and success rules",
-    "stream": "A", "minutes": 25, "status": "outline",
+    "stream": "A", "minutes": 25, "status": "draft",
     "aim": "Turn the call-centre worry into usability goals with a criterion, and into tasks written as user goals. Decide how success is judged before any data exists.",
     "resources": ["iso-9241-11", "ixdf-articles", "nng-articles"]
   },
   "s1-scan": {
     "title": "First look with AccessMonitor",
-    "stream": "B", "minutes": 25, "status": "outline",
+    "stream": "B", "minutes": 25, "status": "draft",
     "aim": "Run the automatic check on the planner page and the schedules page. Note what it finds and what it cannot see.",
     "resources": ["accessmonitor", "wcag22", "metro-planner", "metro-schedules"]
   },
   "s1-build": {
     "title": "Build the test in Loop11",
-    "stream": "A", "minutes": 40, "status": "outline",
+    "stream": "A", "minutes": 40, "status": "draft",
     "aim": "Set up tasks, success checks, questions and the SUS, with screen recording. Solve the PDF task, where success cannot be judged by a web address.",
     "resources": ["loop11-docs"]
   },
   "s1-plugin": {
     "title": "Go deeper with the Chrome plugin",
-    "stream": "B", "minutes": 40, "status": "outline",
+    "stream": "B", "minutes": 40, "status": "draft",
     "aim": "Use the plugin on the planner and on the PDF-linked pages. Add manual checks: keyboard, zoom, and a look at the PDFs.",
     "resources": ["a11y-insights-overview", "a11y-insights-assessment", "wcag22", "metro-schedules"]
   },
   "s1-check": {
     "title": "Checkpoint: swap findings, check before launch",
-    "stream": "AB", "minutes": 10, "status": "outline",
+    "stream": "AB", "minutes": 10, "status": "draft",
     "aim": "Sub-team B tells sub-team A about accessibility barriers that could break the test. Both check the test before it goes out.",
     "resources": []
   },
   "s1-run": {
     "title": "Take another team's test, watch yours arrive",
-    "stream": "AB", "minutes": 40, "status": "outline",
+    "stream": "AB", "minutes": 40, "status": "draft",
     "aim": "Act as participants for the next team. Watch your own results come in and note what goes wrong.",
     "resources": ["loop11-docs"]
   },
   "s1-buffer": {
     "title": "Catch up and tidy",
-    "stream": "AB", "minutes": 10, "status": "outline",
+    "stream": "AB", "minutes": 10, "status": "draft",
     "aim": "Time for whatever ran late.",
     "resources": []
   },

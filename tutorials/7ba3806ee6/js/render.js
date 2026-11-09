@@ -28,7 +28,7 @@
 
   function stationButton(id) {
     const s = T.stations[id], on = S.sel === id;
-    return `<button class="station lane-${s.stream}" type="button" data-sel="${id}" aria-pressed="${on}"><span class="lane-name">${esc(App.LANES[s.stream])}</span><span class="t">${esc(s.title)}</span><span class="m">${s.minutes} min</span></button>`;
+    return `<button class="station lane-${s.stream}" type="button" data-sel="${id}" aria-pressed="${on}"><span class="lane-name">${esc(App.LANES[s.stream])}</span><span class="t">${esc(s.title)}</span><span class="m">${s.minutes} min · ${s.status === "draft" ? "ready" : "outline"}</span></button>`;
   }
 
   function route() {
@@ -42,7 +42,7 @@
     $("view-route").innerHTML = `
       <p class="eyebrow">The route</p>
       <h1>Two sprints. Two sub-teams working side by side.</h1>
-      <p class="lede">Pick any station to see its aim and the outside resources that go with it. Content for each station arrives step by step. Stations marked "outline" show the aim only.</p>
+      <p class="lede">Pick any station to see its aim and the outside resources that go with it. Stations marked "ready" open as a full page with steps, checks and tools. Stations marked "outline" show the aim only.</p>
       <div class="layout"><div>${sprints}</div><aside class="card detail-panel" id="panel" aria-live="polite" aria-label="Station details"></aside></div>`;
     panel();
   }
@@ -55,7 +55,8 @@
     el.innerHTML = `<p class="eyebrow">${esc(App.LANES[s.stream])} · ${s.minutes} min</p><h2>${esc(s.title)}</h2>
       <span class="tag">${esc(s.status)}</span>
       <div class="f"><b>Aim</b>${esc(s.aim)}</div>
-      <div class="f"><b>Resources</b>${res ? `<ul>${res}</ul>` : `<span class="hint">None yet.</span>`}</div>`;
+      <div class="f"><b>Resources</b>${res ? `<ul>${res}</ul>` : `<span class="hint">None yet.</span>`}</div>
+      ${T.content && T.content[S.sel] ? `<p><button class="secondary-button" type="button" data-open="${S.sel}">Open the full station</button></p>` : ""}`;
   }
 
   function resourceLine(r) {
@@ -71,6 +72,43 @@
       ${groups.map(g => `<section class="rgroup card" aria-label="${esc(g.name)}"><h2>${esc(g.name)}</h2>${g.items.map(r => `<div class="ritem"><div><h3>${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}<span class="sr-only"> (opens in a new tab)</span></a>` : esc(r.title)}</h3><p>${esc(r.note)}</p></div><span class="tag">${r.status === "listed" ? "link ready" : r.status === "to-verify" ? "to verify" : "link to come"}</span></div>`).join("")}</section>`).join("")}`;
   }
 
-  App.views = { brief, route, resources };
+
+  const ORDER = []; T.sprints.forEach(sp => sp.blocks.forEach(b => b.stations.forEach(id => ORDER.push(id))));
+  const list = (items, cls) => `<ul${cls ? ` class="${cls}"` : ""}>${items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>`;
+
+  function station() {
+    const id = S.sel, st = T.stations[id], c = T.content[id], el = $("view-station");
+    const sp = T.sprints.find(x => x.blocks.some(b => b.stations.includes(id)));
+    const res = st.resources.map(r => resById[r]).filter(Boolean).map(resourceLine).join("");
+    const checks = c.checks.items.map((t, i) => { const k = id + ":c:" + i;
+      return `<li><label><input type="checkbox" data-done="${k}"${App.mem.done[k] ? " checked" : ""}> <span>${esc(t)}</span></label></li>`; }).join("");
+    const parts = c.parts.map((p, i) => `<section class="part card" aria-labelledby="${id}-p${i}">
+        <p class="eyebrow">Step ${i + 1} · ${p.min} min</p><h3 id="${id}-p${i}">${esc(p.title)}</h3><p>${esc(p.text)}</p>
+        ${p.widget ? `<div class="widget" data-widget="${p.widget}" data-wkey="${id}:${i}"></div>` : ""}</section>`).join("");
+    const pos = ORDER.indexOf(id), prev = ORDER[pos - 1], next = ORDER[pos + 1];
+    const nav = sid => sid ? `<button class="secondary-button" type="button" data-nav="${sid}">${esc(T.stations[sid].title)}</button>` : "";
+    el.innerHTML = `
+      <p class="crumbs"><button class="link-button" type="button" data-view="route">Route</button> / Sprint ${sp.number}: ${esc(sp.title)}</p>
+      <p class="eyebrow">${esc(App.LANES[st.stream])} · ${st.minutes} min</p>
+      <h1 tabindex="-1">${esc(st.title)}</h1>
+      <p class="lede">${esc(c.intro)}</p>
+      <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Station timer"></div>
+      <div class="layout"><div class="parts">${parts}
+        <section class="card"><h3>${esc(c.checks.title)}</h3><ul class="checklist">${checks}</ul><p class="sub" role="status" id="check-count"></p></section>
+      </div>
+      <aside class="card side" aria-label="At a glance">
+        <div class="f"><b>Aim</b>${esc(st.aim)}</div>
+        <div class="f"><b>You leave with</b>${list(c.output)}</div>
+        <div class="f"><b>${esc(c.good.title)}</b>${list(c.good.items)}</div>
+        <div class="f"><b>Watch out</b>${list(c.watch)}</div>
+        <div class="f"><b>Resources</b>${res ? `<ul>${res}</ul>` : `<span class="hint">None for this station.</span>`}</div>
+        <div class="f"><b>For teachers</b>${list(c.teacher)}</div>
+      </aside></div>
+      <div class="pager">${nav(prev)}${nav(next)}</div>`;
+    App.checkCount(id);
+    App.mountWidgets(el);
+  }
+
+  App.views = { brief, route, station, resources };
   App.panel = panel;
 })();

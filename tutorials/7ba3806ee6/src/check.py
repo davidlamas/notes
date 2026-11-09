@@ -72,6 +72,33 @@ if present and present["minutes"] != 45:
 if meta["teams"] * 5 > 45:
     errors.append("talks do not fit in 45 minutes")
 
+# widgets and station content
+widgets = load("widgets.js", "TUT.widgets") or {}
+ctext = (root / "data" / "content-s1.js").read_text(encoding="utf-8")
+cm = re.search(r"Object\.assign\(TUT\.content,\s*(\{.*\})\s*\);", ctext, re.S)
+content = json.loads(cm.group(1)) if cm else {}
+if not cm:
+    errors.append("content-s1.js: cannot parse content")
+for sid, st in stations.items():
+    if st["status"] == "draft" and sid not in content:
+        errors.append(f"{sid}: status draft but no content")
+    if sid in content and st["status"] != "draft":
+        errors.append(f"{sid}: has content but status is {st['status']}")
+for sid, c in content.items():
+    st = stations.get(sid)
+    if not st:
+        errors.append(f"content for unknown station {sid}")
+        continue
+    mins = sum(p["min"] for p in c["parts"])
+    if mins != st["minutes"]:
+        errors.append(f"{sid}: steps add to {mins} min, station is {st['minutes']}")
+    for k in ("intro", "parts", "checks", "good", "watch", "output", "teacher"):
+        if not c.get(k):
+            errors.append(f"{sid}: missing {k}")
+    for p in c["parts"]:
+        if p.get("widget") and p["widget"] not in widgets:
+            errors.append(f"{sid}: unknown widget {p['widget']}")
+
 # links
 for r in resources:
     if r["status"] == "listed" and not (r["url"] or "").startswith("https://"):
@@ -97,4 +124,4 @@ if errors:
     for e in errors:
         print(" -", e)
     sys.exit(1)
-print(f"OK: {len(sprints)} sprints, {len(stations)} stations, {len(resources)} resources, {total} minutes")
+print(f"OK: {len(content)} stations with content, {len(sprints)} sprints, {len(stations)} stations, {len(resources)} resources, {total} minutes")
