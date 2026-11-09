@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Two sprints of formative evaluation of the Metro do Porto website with Loop11, AccessMonitor and a Chrome accessibility plugin.">
+  <meta name="theme-color" content="#f7f4ee">
+  <link rel="icon" href="data:,">
+  <title>Metro do Porto: formative evaluation sprints</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#main" aria-label="Metro do Porto evaluation sprints"><span class="wordmark-mark" aria-hidden="true">M</span><span>Evaluation sprints <small id="short-title">Loop11 · AccessMonitor · Metro do Porto</small></span></a>
+    <nav class="mode-switch" aria-label="Choose a view">
+      <button class="mode-button is-active" type="button" data-view="brief" aria-pressed="true">Brief</button>
+      <button class="mode-button" type="button" data-view="route" aria-pressed="false">Route</button>
+      <button class="mode-button" type="button" data-view="resources" aria-pressed="false">Resources</button>
+    </nav>
+    <button class="text-button" id="about-open" type="button" aria-haspopup="dialog">About this page</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <noscript><p class="note">This page needs JavaScript to show its content.</p></noscript>
+    <section id="view-brief" class="mode-view" aria-label="The brief"></section>
+    <section id="view-route" class="mode-view" hidden aria-label="The route: two sprints"></section>
+    <section id="view-resources" class="mode-view" hidden aria-label="Outside resources"></section>
+  </main>
+
+  <dialog id="about-dialog" aria-labelledby="about-title">
+    <div class="dialog-body">
+      <p class="eyebrow">About this page</p>
+      <h2 id="about-title">What this is, and what it is not</h2>
+      <ul>
+        <li>A working script and a place to explore, for a lab on formative evaluation. It is not a replacement for the theory covered in class.</li>
+        <li>The scenario is invented. The Metro do Porto website is real and public.</li>
+        <li>Notes for teachers and answers are visible to students. That is on purpose.</li>
+        <li>The page is not linked from anywhere and is marked <code>noindex</code>, but the host is public. It holds no personal data, no accounts and no Loop11 data.</li>
+        <li>Your choices are not saved. A link keeps the view you are on.</li>
+      </ul>
+      <p class="sub" id="about-version"></p>
+      <button class="secondary-button" type="button" id="about-close">Close</button>
+    </div>
+  </dialog>
+
+  <script src="data/meta.js"></script>
+  <script src="data/scenario.js"></script>
+  <script src="data/sprints.js"></script>
+  <script src="data/resources.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
