@@ -45,3 +45,6 @@ It is a static folder. Pushing to the `notes` repo publishes it with the rest. D
 - Options A (SIGA) and B (SNS24) were hidden from students, not deleted. To restore, set them to "Mostrar na página da disciplina".
 - Option C was renamed from "Website a avaliar (opção C)" to "Exemplo de website a avaliar: transportes públicos do Porto (STCP)".
 - Not changed: the lab list and numbering (which are correct), the week headings with dates, and the assignment dates (opens 17 Nov 2026, due 4 Jan 2027 23:59). The due date may need to move to the day before the presentation sessions.
+
+## Moodle lab lists updated (9 Nov 2026)
+Only the bullet lists under Labs #3 to #8 and #9 and #10 were edited, in modules 154415, 154432 and 154439. Headings, week titles and the Projeto dates (due 4 Jan 2027 23:59) were not changed. Lab #3: confirm the website, mind-map, personas. Lab #4: user stories, preliminary review, goals and questions, participants and sample. Lab #5: plan, materials, instruments, configure, try them. Lab #7: adds "analyse the causes". Lab #8: report written in class, presentation prepared. Labs #9 and #10: 20 + 10 minutes, four groups each. Originals were saved in /tmp/moodle-orig (not in the repo).
