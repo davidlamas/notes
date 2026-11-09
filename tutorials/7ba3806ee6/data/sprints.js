@@ -124,7 +124,8 @@ TUT.stations = {
     "aim": "Understand the scenario, the two mandatory tasks and the peer-test rotation. Agree how your team splits in two.",
     "resources": [
       "metro-planner",
-      "metro-schedules"
+      "metro-schedules",
+      "metro-en"
     ]
   },
   "s1-goals": {
@@ -136,7 +137,10 @@ TUT.stations = {
     "resources": [
       "iso-9241-11",
       "ixdf-articles",
-      "nng-articles"
+      "nng-articles",
+      "nng-study-guide",
+      "nng-success-rate",
+      "nng-5-users"
     ]
   },
   "s1-scan": {
@@ -149,7 +153,8 @@ TUT.stations = {
       "accessmonitor",
       "wcag22",
       "metro-planner",
-      "metro-schedules"
+      "metro-schedules",
+      "accessmonitor-ext"
     ]
   },
   "s1-build": {
@@ -159,7 +164,9 @@ TUT.stations = {
     "status": "draft",
     "aim": "Set up tasks, success checks, questions and the SUS, with screen recording. Solve the PDF task, where success cannot be judged by a web address.",
     "resources": [
-      "loop11-docs"
+      "loop11-docs",
+      "loop11-unmoderated",
+      "loop11-questions"
     ]
   },
   "s1-plugin": {
@@ -172,7 +179,11 @@ TUT.stations = {
       "a11y-insights-overview",
       "a11y-insights-assessment",
       "wcag22",
-      "metro-schedules"
+      "metro-schedules",
+      "a11y-insights-fastpass",
+      "a11y-insights-quickassess",
+      "a11y-insights-faq",
+      "webaim-contrast"
     ]
   },
   "s1-check": {
@@ -181,7 +192,11 @@ TUT.stations = {
     "minutes": 10,
     "status": "draft",
     "aim": "Sub-team B tells sub-team A about accessibility barriers that could break the test. Both check the test before it goes out.",
-    "resources": []
+    "resources": [
+      "loop11-recruit",
+      "loop11-unmoderated",
+      "loop11-docs"
+    ]
   },
   "s1-run": {
     "title": "Take another team's test, watch yours arrive",
@@ -190,7 +205,8 @@ TUT.stations = {
     "status": "draft",
     "aim": "Act as participants for the next team. Watch your own results come in and note what goes wrong.",
     "resources": [
-      "loop11-docs"
+      "loop11-docs",
+      "loop11-recruit"
     ]
   },
   "s1-buffer": {
@@ -209,7 +225,11 @@ TUT.stations = {
     "aim": "Look at success, time, paths, recordings and SUS. Read a small sample with care.",
     "resources": [
       "loop11-docs",
-      "ixdf-articles"
+      "ixdf-articles",
+      "loop11-recording",
+      "nng-usability-metrics",
+      "nng-success-rate",
+      "nng-5-users"
     ]
   },
   "s2-audit": {
@@ -224,7 +244,9 @@ TUT.stations = {
       "a11y-insights-assessment",
       "wcag22",
       "law-dl83",
-      "law-dl82"
+      "law-dl82",
+      "wcag-quickref",
+      "webaim-contrast"
     ]
   },
   "s2-rank": {
@@ -234,7 +256,9 @@ TUT.stations = {
     "status": "draft",
     "aim": "Put both sets of problems in one list. Rank them. Pick two or three and sketch a fix for each.",
     "resources": [
-      "nng-articles"
+      "nng-articles",
+      "nng-heuristics",
+      "nng-usability-metrics"
     ]
   },
   "s2-talk": {

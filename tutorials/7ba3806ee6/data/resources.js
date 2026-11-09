@@ -204,5 +204,37 @@ TUT.resources = [
     "url": "https://en.metrodoporto.pt/",
     "note": "For a task aimed at visitors.",
     "status": "listed"
+  },
+  {
+    "id": "nng-5-users",
+    "group": "Articles",
+    "title": "NN/g: Why you only need to test with 5 users",
+    "url": "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/",
+    "note": "Why small tests find most problems, and when you need more. Read it before you trust a small sample.",
+    "status": "listed"
+  },
+  {
+    "id": "nng-heuristics",
+    "group": "Articles",
+    "title": "NN/g: 10 usability heuristics for user interface design",
+    "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+    "note": "A short list of rules of thumb. Use it to name what a problem breaks.",
+    "status": "listed"
+  },
+  {
+    "id": "webaim-contrast",
+    "group": "Tools",
+    "title": "WebAIM: Contrast checker",
+    "url": "https://webaim.org/resources/contrastchecker/",
+    "note": "Check the contrast between text and background by hand, when a tool flags it.",
+    "status": "listed"
+  },
+  {
+    "id": "wcag-quickref",
+    "group": "Standards and law",
+    "title": "How to Meet WCAG 2.2 (quick reference)",
+    "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+    "note": "A filterable list of every WCAG criterion with techniques. Handy to find which criterion a problem breaks.",
+    "status": "to-verify"
   }
 ];
