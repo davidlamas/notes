@@ -13,10 +13,8 @@ Object.assign(TUT.content, {
       {
         "title": "Choose the website",
         "min": 30,
-        "text": "The options are A (SIGA, booking appointments at public bodies), B (the SNS24 line website) and C (public transport in Porto). You may suggest another website. Open each one for a few minutes. Ask: can real people do real things here? Can we test the main tasks remotely without logging in or giving personal data? Is there enough to say about both usability and accessibility?",
+        "text": "Pick a real website that people use. Your teacher approves it, and no two groups use the same one. Open your candidates for a few minutes. Ask: can real people do real things here? Can we test the main tasks remotely without logging in or giving personal data? Is there enough to say about both usability and accessibility?",
         "help": [
-          "svc-siga",
-          "svc-sns24",
           "svc-stcp"
         ]
       },
@@ -66,7 +64,7 @@ Object.assign(TUT.content, {
     "teacher": [
       "The Moodle page says the project opens on 17 November 2026. Check the report date, see the brief view.",
       "Lab #3 is listed on Moodle under the week of 16 to 20 November, after the two Loop11 labs. Confirm the real date of the lab.",
-      "The two Loop11 labs on the Metro do Porto website are the practice for this project."
+      "The two Loop11 labs are the practice for this project."
     ]
   },
   "lab4": {
@@ -99,7 +97,7 @@ Object.assign(TUT.content, {
       {
         "title": "Set the goals and the questions",
         "min": 35,
-        "text": "Look at what the review found. Write two or three usability goals. A goal says who, what they want, in what situation, how you will measure, and what is good enough. Then write the research questions that the test must answer. Questions inspired by the Metro do Porto test are welcome.",
+        "text": "Look at what the review found. Write two or three usability goals. A goal says who, what they want, in what situation, how you will measure, and what is good enough. Then write the research questions that the test must answer.",
         "widget": "goal"
       }
     ],

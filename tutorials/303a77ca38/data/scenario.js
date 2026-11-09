@@ -6,7 +6,7 @@ TUT.scenario = {
   "paragraphs": [
     "This is the project of the lab part of the Human-Computer Interaction course. In groups of up to five you evaluate a real digital service. You study how well people can use it, and you check how accessible it is.",
     "You finish with a report and a talk. Both must include proposals, with sketches, to fix the problems you found.",
-    "The first two labs of the course, with Loop11 and the Metro do Porto website, are practice for this project. Your questions can be inspired by that test."
+    "The first two labs of the course, with Loop11, are practice for this project. Your questions can be inspired by that test."
   ],
   "fictionNote": "Everything on this page comes from the course page on Moodle, written in Portuguese there. The English wording is a plain summary. If the two differ, Moodle wins. The lab lengths and the minutes inside each lab are suggestions, not rules.",
   "brief": [
@@ -16,7 +16,7 @@ TUT.scenario = {
     },
     {
       "label": "You evaluate",
-      "text": "one website: option A (SIGA), B (SNS24 line) or C (public transport in Porto, address on Moodle: STCP), or another one you suggest and your teacher agrees."
+      "text": "one website that you choose. Each group has its own website, and your teacher approves it."
     },
     {
       "label": "You hand in",
@@ -103,20 +103,16 @@ TUT.scenario = {
       ]
     },
     {
-      "title": "Two things to settle with your teacher",
+      "title": "One thing to settle with your teacher",
       "kind": "cards",
-      "intro": "The Moodle page leaves these open. Ask before you plan around them.",
+      "intro": "The Moodle page leaves this open. Ask before you plan around it.",
       "items": [
         {
           "tag": "Check",
           "title": "The report date and the last labs",
           "text": "Moodle shows the project report due on Monday 4 January 2027 at 23:59. The labs where you compile the report (Lab #8) and present (Labs #9 and #10) are listed for the week of 4 to 8 January. Ask which is right."
-        },
-        {
-          "tag": "Check",
-          "title": "Option C and Metro do Porto",
-          "text": "This page is named after Metro do Porto, the website of the two practice labs. On Moodle, option C is the Porto public transport service, with a web address of STCP. You may suggest another website, so ask if you want to use the metro site."
         }
+
       ]
     }
   ],

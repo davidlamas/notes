@@ -173,30 +173,6 @@ TUT.resources = [
     "status": "listed"
   },
   {
-    "id": "metro-planner",
-    "group": "The Metro do Porto website (practice labs)",
-    "title": "Percursos: the trip planner",
-    "url": "https://www.metrodoporto.pt/pages/285",
-    "note": "From, to, departure or arrival, date and time.",
-    "status": "listed"
-  },
-  {
-    "id": "metro-schedules",
-    "group": "The Metro do Porto website (practice labs)",
-    "title": "Mapas e horários: schedules, frequencies, maps",
-    "url": "https://www.metrodoporto.pt/pages/337",
-    "note": "The timetables here are PDF files.",
-    "status": "listed"
-  },
-  {
-    "id": "metro-en",
-    "group": "The Metro do Porto website (practice labs)",
-    "title": "English version of the site",
-    "url": "https://en.metrodoporto.pt/",
-    "note": "For a task aimed at visitors.",
-    "status": "listed"
-  },
-  {
     "id": "moodle-course",
     "group": "The course",
     "title": "Course page on Moodle (sign-in needed)",
@@ -205,27 +181,11 @@ TUT.resources = [
     "status": "listed"
   },
   {
-    "id": "svc-siga",
-    "group": "Websites you can choose",
-    "title": "Option A: SIGA, booking appointments at public bodies",
-    "url": "https://siga.marcacaodeatendimento.pt/",
-    "note": "Address as given on Moodle. Check that the main tasks can be tested without logging in or giving personal data.",
-    "status": "listed"
-  },
-  {
-    "id": "svc-sns24",
-    "group": "Websites you can choose",
-    "title": "Option B: SNS24 line website",
-    "url": "https://www.sns24.gov.pt/",
-    "note": "Address as given on Moodle. The site is about health, so take extra care with test tasks and with what participants have to type.",
-    "status": "listed"
-  },
-  {
     "id": "svc-stcp",
     "group": "Websites you can choose",
-    "title": "Option C: Porto public transport (STCP pages)",
+    "title": "Example: Porto public transport (STCP pages)",
     "url": "https://www.stcp.pt/pt/viajar/",
-    "note": "Address as given on Moodle for the public transport option, from the point of view of someone who wants to use the service.",
+    "note": "Address as given on Moodle. An example of a website that may qualify. Your teacher approves every choice.",
     "status": "listed"
   },
   {

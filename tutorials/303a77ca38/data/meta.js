@@ -3,9 +3,9 @@ window.TUT = window.TUT || {};
 TUT.meta = {
   "version": "0.1.0",
   "date": "9 November 2026",
-  "title": "Evaluation project: Loop11 · AccessMonitor · Metro do Porto",
-  "short": "Loop11 · AccessMonitor · Metro do Porto",
-  "mark": "P",
+  "title": "Evaluation project: Loop11 · AccessMonitor",
+  "short": "Loop11 · AccessMonitor",
+  "mark": "S",
   "name": "Evaluation project",
   "totalMinutes": 1080,
   "academicHourMinutes": 45,

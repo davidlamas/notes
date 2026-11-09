@@ -113,8 +113,6 @@ TUT.stations = {
     "aim": "Form the group, choose the website to evaluate, and describe it with a mind-map: what is it about, which services does it offer, who is it for.",
     "resources": [
       "moodle-course",
-      "svc-siga",
-      "svc-sns24",
       "svc-stcp"
     ]
   },

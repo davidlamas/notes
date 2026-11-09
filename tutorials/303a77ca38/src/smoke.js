@@ -18,7 +18,7 @@ const { chromium } = require("playwright");
   ok((await page.locator("#view-brief h1").innerText()).length > 10, "brief heading missing");
   ok((await page.locator("#view-brief .card").count()) >= 10, "brief cards missing");
   ok((await page.title()).includes("Evaluation project"), "page title wrong");
-  ok((await page.locator(".wordmark-mark").innerText()) === "P", "mark should be P");
+  ok((await page.locator(".wordmark-mark").innerText()) === "S", "mark should be S");
 
   await page.click('[data-view="route"]');
   ok((await page.locator(".station").count()) === 9, "expected 9 stations");
@@ -45,7 +45,7 @@ const { chromium } = require("playwright");
   await page.goto(url + "?view=route");
   ok((await page.locator(".station").filter({ hasText: "ready" }).count()) === 9, "all stations should show ready");
   await page.click('[data-view="resources"]');
-  ok((await page.locator(".ritem").count()) === 33, "expected 33 resources");
+  ok((await page.locator(".ritem").count()) === 28, "expected 28 resources");
   ok((await page.locator('#view-resources a[target="_blank"][rel*="noopener"]').count()) >= 8, "links should open safely in a new tab");
 
   // deep link
