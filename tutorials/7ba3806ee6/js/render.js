@@ -84,6 +84,7 @@
       return `<li><label><input type="checkbox" data-done="${k}"${App.mem.done[k] ? " checked" : ""}> <span>${esc(t)}</span></label></li>`; }).join("");
     const parts = c.parts.map((p, i) => `<section class="part card" aria-labelledby="${id}-p${i}">
         <p class="eyebrow">Step ${i + 1} · ${p.min} min</p><h2 id="${id}-p${i}">${esc(p.title)}</h2><p>${esc(p.text)}</p>
+        ${p.help ? `<p class="help"><b>Help for this step:</b> ${p.help.map(x => resById[x]).filter(Boolean).map(x => x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)}<span class="sr-only"> (opens in a new tab)</span></a>` : esc(x.title)).join(" · ")}</p>` : ""}
         ${p.widget ? `<div class="widget" data-widget="${p.widget}" data-wkey="${id}:${i}"></div>` : ""}</section>`).join("");
     const pos = ORDER.indexOf(id), prev = ORDER[pos - 1], next = ORDER[pos + 1];
     const nav = sid => sid ? `<button class="secondary-button" type="button" data-nav="${sid}">${esc(T.stations[sid].title)}</button>` : "";

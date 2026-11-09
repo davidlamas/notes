@@ -262,6 +262,17 @@
     root.appendChild(row); paint();
   }
 
+  function profile(root) {
+    const d = W.profile, status = h("span", { class: "sub", role: "status" });
+    root.appendChild(h("h3", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
+    const ol = h("ol");
+    d.questions.forEach(q => ol.appendChild(h("li", {}, [h("span", { text: q.q + " " }), h("span", { class: "sub", text: "Options: " + q.options.join(" / ") })])));
+    root.appendChild(ol);
+    const cp = h("button", { type: "button", class: "secondary-button", text: "Copy the questions" });
+    cp.addEventListener("click", () => copy(d.questions.map((q, i) => `${i + 1}. ${q.q}\n   ${q.options.join(" / ")}`).join("\n"), status));
+    root.appendChild(cp); root.appendChild(status); root.appendChild(h("p", { class: "sub", text: d.note }));
+  }
+
   function timer(root) {
     const total = parseInt(root.dataset.timer, 10) * 60, key = "timer:" + App.state.sel, st = state(key);
     st.left = st.left == null ? total : st.left;
@@ -282,7 +293,7 @@
     root.appendChild(h("span", { class: "sub", text: " The timer is only a guide. It does not announce each minute." }));
   }
 
-  const BUILD = { goal, taskcheck, success, issuelog, studylog, rate, sus, lost, rank, talkplan, talkclock };
+  const BUILD = { profile, goal, taskcheck, success, issuelog, studylog, rate, sus, lost, rank, talkplan, talkclock };
   App.mountWidgets = function (scope) {
     scope.querySelectorAll("[data-widget]").forEach(el => { const f = BUILD[el.dataset.widget]; if (f) f(el, el.dataset.wkey); });
     scope.querySelectorAll("[data-timer]").forEach(timer);

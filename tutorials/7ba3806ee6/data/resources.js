@@ -10,7 +10,7 @@ TUT.resources = [
     "group": "Standards and law",
     "title": "ISO 9241-11:2018, Usability: definitions and concepts",
     "url": "https://www.iso.org/standard/63500.html",
-    "note": "Official page of the standard. It is paywalled, so this page paraphrases it. The core idea: usability is effectiveness, efficiency and satisfaction for specified users, goals and context of use.",
+    "note": "Official page of the standard. The full text is paywalled, so this page paraphrases it. The ISO page has a free \"Read sample\" button. Ask your teacher about access to the full text through the course.",
     "status": "listed"
   },
   {
@@ -26,7 +26,7 @@ TUT.resources = [
     "group": "Standards and law",
     "title": "Decreto-Lei n.º 83/2018: accessibility of public-sector websites and apps",
     "url": "https://dre.pt/dre/detalhe/decreto-lei/83-2018-116734769",
-    "note": "Public-sector bodies. Whether Metro do Porto falls under this or under the next item is still to be confirmed; the page does not claim either. Address not opened in the final link check. Open it before the lab.",
+    "note": "Public-sector bodies. Nobody here knows which of the two laws covers Metro do Porto, so both are listed. Do not claim either.",
     "status": "to-verify"
   },
   {
@@ -34,7 +34,7 @@ TUT.resources = [
     "group": "Standards and law",
     "title": "Decreto-Lei n.º 82/2022: accessibility of products and services",
     "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/82-2022-204379872",
-    "note": "Transposes the European Accessibility Act. Address not opened in the final link check. Open it before the lab.",
+    "note": "Transposes the European Accessibility Act. See the note on the other law. Address not opened in the final link check. Open it before the lab.",
     "status": "to-verify"
   },
   {
@@ -102,11 +102,35 @@ TUT.resources = [
     "status": "listed"
   },
   {
+    "id": "loop11-questions",
+    "group": "Tools",
+    "title": "Loop11: Question types, including the ready-made SUS (video and transcript)",
+    "url": "https://www.loop11.com/?p=22566",
+    "note": "Multiple choice, rating scale, SUS, ranking, NPS and open questions.",
+    "status": "listed"
+  },
+  {
+    "id": "loop11-recording",
+    "group": "Tools",
+    "title": "Loop11: Recording and replay",
+    "url": "https://www.loop11.com/?p=21192",
+    "note": "Screen, video and audio recording, time-stamped notes, filters by task success.",
+    "status": "listed"
+  },
+  {
     "id": "accessmonitor",
     "group": "Tools",
     "title": "AccessMonitor (AMA, the Portuguese public accessibility checker)",
     "url": "https://accessmonitor.acessibilidade.gov.pt/",
-    "note": "Automatic check of a page against WCAG-based rules, scored 1 to 10. It checks a URL, so it covers one page at a time. A Chrome extension from AMA also exists; not verified for this lab.",
+    "note": "Automatic check of a page against WCAG-based rules, scored 1 to 10. It checks one page address at a time.",
+    "status": "listed"
+  },
+  {
+    "id": "accessmonitor-ext",
+    "group": "Tools",
+    "title": "AccessMonitor Extension (Chrome Web Store)",
+    "url": "https://chromewebstore.google.com/detail/accessmonitor-extension/knjdoonhhnjfmigigfgoehhihodndaii",
+    "note": "Chrome and Edge version of AccessMonitor, from the Portuguese agency behind it. Found in the store listing and the agency's slides, not tried for this lab. Other free options if it fails: Accessibility Insights FastPass, WAVE from WebAIM, axe DevTools.",
     "status": "listed"
   },
   {
@@ -131,6 +155,22 @@ TUT.resources = [
     "title": "Accessibility Insights for Web: Assessment",
     "url": "https://accessibilityinsights.io/docs/web/getstarted/assessment/",
     "note": "The guided manual and automated assessment.",
+    "status": "listed"
+  },
+  {
+    "id": "a11y-insights-quickassess",
+    "group": "Tools",
+    "title": "Accessibility Insights for Web: Quick Assess",
+    "url": "https://accessibilityinsights.io/docs/web/getstarted/quickassess/",
+    "note": "A shorter guided check than the full Assessment.",
+    "status": "listed"
+  },
+  {
+    "id": "a11y-insights-faq",
+    "group": "Tools",
+    "title": "Accessibility Insights for Web: FAQ",
+    "url": "https://accessibilityinsights.io/docs/web/reference/faq/",
+    "note": "What FastPass finds, what it cannot, and where results are stored.",
     "status": "listed"
   },
   {

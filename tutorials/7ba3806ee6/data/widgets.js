@@ -30,12 +30,12 @@ TUT.widgets = {
     "title": "Decide how success is judged (the PDF task)",
     "lead": "Loop11 can judge success by a web address or by an answer to a question. Which rule fits the PDF task? Try each one.",
     "options": [
-      { "label": "Success is opening the PDF (its web address).", "verdict": "Weak", "why": "Opening the file is not finding the time. You would count people who opened it and read the wrong line. Also, a PDF may not load as a normal page address in the test." },
+      { "label": "Success is opening the PDF (its web address).", "verdict": "Weak", "why": "Opening the file is not finding the time. You would count people who opened it and read the wrong line. Also, the address of a PDF can change when Metro do Porto updates its timetables." },
       { "label": "Success is a correct answer to a question after the task.", "verdict": "Strong", "why": "It checks the thing that matters. Ask for the next departure after a given time, as a choice between four times with one correct. You must know the right answer on the test day, so check the PDF yourself. Timetables change." },
       { "label": "Success is the participant saying \"done\".", "verdict": "Weak", "why": "People believe they are right when they are not. You would measure confidence, not success." },
       { "label": "Success is judged by watching every recording.", "verdict": "Slow, but useful as a second check", "why": "It works for five participants. It is slow and depends on who watches. Use it to check the answer question, not instead of it." }
     ],
-    "tail": "For the planner task, try it in your own browser. If the address changes after a search, you may use it as a success address. If it does not change, use an answer question again."
+    "tail": "For the planner task, run a search in your own browser and read the address. If it holds your stations and time, the address is different for every person, and it will change when the site changes. A part-of-the-address match may help, if Loop11 offers one. Check in your account. If not, use an answer question here too."
   },
   "issuelog": {
     "title": "Issue log",
@@ -111,5 +111,18 @@ TUT.widgets = {
     "lead": "Five minutes for each talk. The clock says when one minute is left and when time is up.",
     "talks": 8,
     "seconds": 300
+  },
+  "profile": {
+    "title": "Participant profile questions",
+    "lead": "Put these at the start of the test, so you can describe who took part. Copy them into Loop11 as multiple-choice or rating questions.",
+    "note": "Ask for no names and nothing that identifies a person. Keep every answer optional if the tool allows it. You report the profile of the group in words, not person by person.",
+    "questions": [
+      { "q": "How well do you know Porto and the area around it?", "options": ["Never been", "Visited a few times", "Visit often", "Live or work in the area"] },
+      { "q": "How often do you use the Metro do Porto?", "options": ["Never", "A few times in my life", "Some months", "Every week", "Almost every day"] },
+      { "q": "How familiar are you with the Metro do Porto website?", "options": ["Never used it", "Used it once or twice", "Used it several times", "Use it regularly"] },
+      { "q": "How comfortable are you with technology in general?", "options": ["1 Not at all", "2", "3", "4", "5 Very comfortable"] },
+      { "q": "Which device and browser are you using now?", "options": ["Laptop or desktop, Chrome", "Laptop or desktop, another browser", "Phone or tablet"] },
+      { "q": "Optional: do you use any settings or tools to read or move around websites (for example zoom, keyboard only, high contrast, screen reader)?", "options": ["No", "Yes, one or more", "Prefer not to say"] }
+    ]
   }
 };

@@ -100,3 +100,5 @@ button:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:700px){.susgrid{grid-template-columns:1fr}}
 
 .lane-A .sub,.lane-B .sub,.lane-AB .sub{color:#3d4743}
+
+.help{margin:8px 0;font-size:.88rem;color:var(--muted)}.help b{color:var(--ink)}

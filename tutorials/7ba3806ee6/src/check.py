@@ -98,6 +98,9 @@ for sid, c in content.items():
         if not c.get(k):
             errors.append(f"{sid}: missing {k}")
     for p in c["parts"]:
+        for hid in p.get("help", []):
+            if hid not in res_ids:
+                errors.append(f"{sid}: unknown help resource {hid}")
         if p.get("widget") and p["widget"] not in widgets:
             errors.append(f"{sid}: unknown widget {p['widget']}")
 
