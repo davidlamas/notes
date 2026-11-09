@@ -117,7 +117,9 @@ TUT.stations = {
       "svc-nos",
       "svc-booking",
       "svc-airbnb",
-      "loop11-docs"
+      "loop11-docs",
+      "nng-personas",
+      "moodle-course"
     ]
   },
   "step2": {
@@ -132,7 +134,9 @@ TUT.stations = {
       "tpl-figma",
       "tpl-miro",
       "tpl-nng",
-      "iso-9241-11"
+      "iso-9241-11",
+      "nng-heuristics",
+      "nng-5-users"
     ]
   },
   "step3": {
@@ -159,7 +163,8 @@ TUT.stations = {
       "loop11-docs",
       "loop11-recruit",
       "loop11-recording",
-      "nng-study-guide"
+      "nng-study-guide",
+      "nng-5-users"
     ]
   },
   "step4b": {
@@ -177,7 +182,13 @@ TUT.stations = {
       "a11y-insights-fastpass",
       "ptlaw-acess",
       "law-dl83",
-      "law-dl82"
+      "law-dl82",
+      "nng-heuristics",
+      "webaim-contrast",
+      "wcag-quickref",
+      "a11y-insights-assessment",
+      "a11y-insights-quickassess",
+      "a11y-insights-faq"
     ]
   },
   "step5": {
@@ -190,7 +201,8 @@ TUT.stations = {
       "nng-usability-metrics",
       "nng-success-rate",
       "iso-9241-11",
-      "wcag22"
+      "wcag22",
+      "nng-heuristics"
     ]
   },
   "step6": {
@@ -202,7 +214,8 @@ TUT.stations = {
     "resources": [
       "nng-articles",
       "ixdf-articles",
-      "deck-talks"
+      "deck-talks",
+      "moodle-course"
     ]
   },
   "pres1": {

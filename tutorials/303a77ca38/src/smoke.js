@@ -45,7 +45,7 @@ const { chromium } = require("playwright");
   await page.goto(url + "?view=route");
   ok((await page.locator(".station").filter({ hasText: "ready" }).count()) === 9, "all stations should show ready");
   await page.click('[data-view="resources"]');
-  ok((await page.locator(".ritem").count()) === 44, "expected 44 resources");
+  ok((await page.locator(".ritem").count()) === 49, "expected 49 resources");
   ok((await page.locator('#view-resources a[target="_blank"][rel*="noopener"]').count()) >= 8, "links should open safely in a new tab");
 
   // deep link

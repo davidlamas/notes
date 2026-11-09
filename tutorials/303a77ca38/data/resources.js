@@ -355,5 +355,45 @@ TUT.resources = [
     "url": "https://www.airbnb.pt/",
     "note": "Accommodation search, filters and comparison. Pushes logins, so keep tasks on searching and comparing. Address from general knowledge: open it and check it before you rely on it.",
     "status": "to-verify"
+  },
+  {
+    "id": "nng-personas",
+    "group": "Articles",
+    "title": "NN/g: Personas make users memorable for product team members",
+    "url": "https://www.nngroup.com/articles/persona/",
+    "note": "What a persona is and how to write one from your research.",
+    "status": "listed"
+  },
+  {
+    "id": "nng-5-users",
+    "group": "Articles",
+    "title": "NN/g: Why you only need to test with 5 users",
+    "url": "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/",
+    "note": "Why small tests find most problems, and when you need more. Read it when you choose your sample size.",
+    "status": "listed"
+  },
+  {
+    "id": "nng-heuristics",
+    "group": "Articles",
+    "title": "NN/g: 10 usability heuristics for user interface design",
+    "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+    "note": "A short list of rules of thumb for your expert review. Use it to name what a problem breaks.",
+    "status": "listed"
+  },
+  {
+    "id": "webaim-contrast",
+    "group": "Tools",
+    "title": "WebAIM: Contrast checker",
+    "url": "https://webaim.org/resources/contrastchecker/",
+    "note": "Check the contrast between text and background by hand, when a tool flags it.",
+    "status": "listed"
+  },
+  {
+    "id": "wcag-quickref",
+    "group": "Standards and law",
+    "title": "How to Meet WCAG 2.2 (quick reference)",
+    "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+    "note": "A filterable list of every WCAG criterion with techniques. Handy to find which criterion a problem breaks.",
+    "status": "to-verify"
   }
 ];
