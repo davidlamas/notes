@@ -1,5 +1,7 @@
 # Evaluation project page: notes for the next person or agent
 
+> Taking over? Read `../HANDOVER.md` first.
+
 ## What this page is
 An unlisted, buildless page (HTML, CSS, vanilla JS) for the evaluation project of the HCI lab course (Lusófona, Porto). It is a sibling of `../7ba3806ee6/` (the two practice labs with Loop11). It uses the same engine. All text is English and lives in `data/`.
 

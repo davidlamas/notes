@@ -1,5 +1,7 @@
 # Evaluation sprints: design and handover notes
 
+> Taking over? Read `../HANDOVER.md` first.
+
 Version 0.1.0, 9 November 2026. Written by Claude for David Lamas. Read this file first if you take over.
 
 ## What this page is
