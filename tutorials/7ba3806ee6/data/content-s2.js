@@ -302,7 +302,7 @@ Object.assign(TUT.content, {
     ],
     "teacher": [
       "Keep the time strictly. Eight talks fill forty minutes.",
-      "A shared deck with one section per team is the fastest way to change speakers.",
+      "A shared deck with one slide per team is the fastest way to change speakers. A template (title, instructions, Team 1 to Team 8) is in David's Drive. Share it with edit access before the lab. Its link is not in this public repo.",
       "Use the close for what the class learned, and give feedback on the method."
     ]
   }
