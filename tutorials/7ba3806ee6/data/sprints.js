@@ -243,7 +243,9 @@ TUT.stations = {
     "minutes": 25,
     "status": "draft",
     "aim": "Tell the digital team what to fix first, with evidence. Use any support you can present in five minutes.",
-    "resources": []
+    "resources": [
+      "deck-talks"
+    ]
   },
   "s2-present": {
     "title": "Present to the digital team",
@@ -251,7 +253,9 @@ TUT.stations = {
     "minutes": 45,
     "status": "draft",
     "aim": "Eight talks of five minutes, with changeovers.",
-    "resources": []
+    "resources": [
+      "deck-talks"
+    ]
   },
   "s1-plan": {
     "title": "Plan how to read the evidence",

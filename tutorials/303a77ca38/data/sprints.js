@@ -201,7 +201,8 @@ TUT.stations = {
     "aim": "Propose fixes with low-fidelity sketches, write the report in the session and prepare the talk.",
     "resources": [
       "nng-articles",
-      "ixdf-articles"
+      "ixdf-articles",
+      "deck-talks"
     ]
   },
   "pres1": {
@@ -210,7 +211,9 @@ TUT.stations = {
     "minutes": 135,
     "status": "draft",
     "aim": "Four groups present: 20 minutes each, then 10 minutes of discussion.",
-    "resources": []
+    "resources": [
+      "deck-talks"
+    ]
   },
   "pres2": {
     "title": "Presentation session 2",
@@ -218,6 +221,8 @@ TUT.stations = {
     "minutes": 135,
     "status": "draft",
     "aim": "Four groups present: 20 minutes each, then 10 minutes of discussion.",
-    "resources": []
+    "resources": [
+      "deck-talks"
+    ]
   }
 };

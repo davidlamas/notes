@@ -48,7 +48,7 @@ Edited through the browser, signed in as David. Activity edit URL: `course/moded
 7. Two shared Google Slides decks, one per case, so each presentation session runs from a single deck (Team 1 to Team 8 slides, instructions, order of talks):
    - Practice lab (5-minute talks): https://docs.google.com/presentation/d/1icr2c8OgjRTND1p1kuXgeUesFMaQgVp4hXUCmEhk2ak/edit
    - Project (20 + 10 minute talks; Teams 1 to 4 in session 1, Teams 5 to 8 in session 2): https://docs.google.com/presentation/d/1Hx93SZfuzjTXkn35M3uZlw8NUcFX8MMfccEvNb-wVxE/edit
-   Both are owned by David's Google account and were private when created: students cannot open them until David turns on sharing (edit access for the group that needs it). The links are in this public repo at David's request; check the sharing setting before assuming anyone can open or edit them.
+   Both are owned by David's Google account and were private when created: students cannot open them until David turns on sharing (edit access for the group that needs it). The links are in this public repo and on both pages (Resources view, and on the talk steps) at David's request; check the sharing setting before assuming anyone can open or edit them.
 
 ## Rules
 - Only touch `tutorials/7ba3806ee6/`, `tutorials/303a77ca38/` and this file. Do not modify anything else under `notes/`.

@@ -6,6 +6,14 @@
 window.TUT = window.TUT || {};
 TUT.resources = [
   {
+    "id": "deck-talks",
+    "group": "Shared talk deck",
+    "title": "Shared slide deck for the talks",
+    "url": "https://docs.google.com/presentation/d/1icr2c8OgjRTND1p1kuXgeUesFMaQgVp4hXUCmEhk2ak/edit",
+    "note": "One slide per team, Team 1 to Team 8. Your teacher opens it for editing when the time comes. Edit only your own slide.",
+    "status": "listed"
+  },
+  {
     "id": "iso-9241-11",
     "group": "Standards and law",
     "title": "ISO 9241-11:2018, Usability: definitions and concepts",
