@@ -37,3 +37,9 @@ All eight stations have draft content. No links on this page were opened and che
 
 ## How to publish
 It is a static folder. Pushing to the `notes` repo publishes it with the rest. Do not link it from the notes landing page.
+
+## Changes made in Moodle on 9 November 2026 (by Claude, on David's instruction)
+- "Projeto" description: the step "seleccionar um dos websites indicados, ou sugerir outro adequado" now reads "escolher um website a avaliar. Cada grupo avalia um website diferente, sujeito a aprovação do docente." Two blocks were added before "Os resultados esperados são": "Escolha do website" (rules and example sites) and "Entrega e apresentação" (hand-in the day before, 20 + 10 minutes).
+- Options A (SIGA) and B (SNS24) were hidden from students, not deleted. To restore, set them to "Mostrar na página da disciplina".
+- Option C was renamed from "Website a avaliar (opção C)" to "Exemplo de website a avaliar: transportes públicos do Porto (STCP)".
+- Not changed: the lab list and numbering, the week headings with dates, and the assignment dates (opens 17 Nov 2026, due 4 Jan 2027 23:59).
