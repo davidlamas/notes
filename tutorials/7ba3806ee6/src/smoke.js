@@ -27,7 +27,7 @@ const { chromium } = require("playwright");
   ok((await page.locator('[data-sel="s1-build"]').getAttribute("aria-pressed")) === "true", "aria-pressed not set");
 
   await page.click('[data-view="resources"]');
-  ok((await page.locator(".ritem").count()) === 12, "expected 12 resources");
+  ok((await page.locator(".ritem").count()) === 19, "expected 19 resources");
   ok((await page.locator('#view-resources a[target="_blank"][rel*="noopener"]').count()) >= 8, "links should open safely in a new tab");
 
   // deep link

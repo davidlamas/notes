@@ -64,7 +64,7 @@ TUT.stations = {
     "title": "Go deeper with the Chrome plugin",
     "stream": "B", "minutes": 40, "status": "outline",
     "aim": "Use the plugin on the planner and on the PDF-linked pages. Add manual checks: keyboard, zoom, and a look at the PDFs.",
-    "resources": ["a11y-plugin-docs", "wcag22", "metro-schedules"]
+    "resources": ["a11y-insights-overview", "a11y-insights-assessment", "wcag22", "metro-schedules"]
   },
   "s1-check": {
     "title": "Checkpoint: swap findings, check before launch",
@@ -100,7 +100,7 @@ TUT.stations = {
     "title": "Write up the accessibility findings",
     "stream": "B", "minutes": 35, "status": "outline",
     "aim": "Combine AccessMonitor, plugin and manual findings. Say which criterion each problem breaks and who it hurts.",
-    "resources": ["accessmonitor", "a11y-plugin-docs", "wcag22", "law-dl83", "law-dl82"]
+    "resources": ["accessmonitor", "a11y-insights-overview", "a11y-insights-assessment", "wcag22", "law-dl83", "law-dl82"]
   },
   "s2-rank": {
     "title": "Merge, rank and sketch fixes",

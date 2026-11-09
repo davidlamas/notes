@@ -57,7 +57,7 @@ Rules the checker enforces: block minutes equal station minutes; sprint minutes 
 
 Foundation only. Every station is `outline`: title, time, stream and aim. Next steps, in order:
 
-1. Sources: read the Loop11, AccessMonitor and plugin documentation, find the ISO text in the course Drive folder, choose the Chrome plugin, and fill `resources.js` with specific pages. Replace the two general NN/g and IxDF entries with chosen articles.
+1. Sources: done (v0.1.1). Plugin chosen: Accessibility Insights for Web (free, guided WCAG 2.2 AA Assessment, FastPass). axe DevTools free tier is automated only. Resource ids `a11y-insights-*` replace the old `a11y-plugin-docs`. Loop11 help pages and AccessMonitor docs were only partly reachable; see open points.
 2. Sprint 1 station content and interactions.
 3. Sprint 2 station content and interactions.
 4. Accessibility check of this page itself (use the same tools the students use), link check, handover notes.
@@ -66,8 +66,10 @@ Foundation only. Every station is `outline`: title, time, stream and aim. Next s
 
 - Which Portuguese law covers Metro do Porto's website (DL 83/2018 or DL 82/2022) is not confirmed.
 - A quick scan found no accessibility tags or document language in the three schedule PDFs. That was a rough byte check, not an audit. Students should test it.
-- How Loop11 judges success for the PDF task is not yet checked in its documentation.
-- Whether participants need a Loop11 licence is not yet checked.
+- How Loop11 judges success for the PDF task is not confirmed in its documentation; the plan is an answer question after the task. Check in the Loop11 account before the lab.
+- Whether participants need a Loop11 licence is not confirmed. Verify in a Loop11 trial.
+- The ISO link goes to the official paywalled page. David's Drive copy is not linked.
+- AccessMonitor has a Chrome extension from AMA; not verified for this lab.
 - The Metro do Porto site changes over time. The schedule PDFs seen on 9 November 2026 are valid from 7 September 2026.
 - Sprint block timings are a first proposal. Sprint 2 is tight.
 
