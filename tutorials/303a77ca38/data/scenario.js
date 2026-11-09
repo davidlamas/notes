@@ -8,26 +8,85 @@ TUT.scenario = {
     "You finish with a report and a talk. Both must include proposals, with sketches, to fix the problems you found.",
     "The first two labs of the course, with Loop11, are practice for this project. Your questions can be inspired by that test."
   ],
-  "fictionNote": "Everything on this page comes from the course page on Moodle, written in Portuguese there. The English wording is a plain summary. If the two differ, Moodle wins. The lab lengths and the minutes inside each lab are suggestions, not rules.",
+  "fictionNote": "Everything on this page comes from the course page on Moodle (in Portuguese there), plus decisions from the lecturers. The English wording is a plain summary. If the two differ, Moodle or the lecturer wins. Dates and deadlines are not shown here.",
   "brief": [
     {
       "label": "You are",
-      "text": "a group of at most five students. Form the group in Moodle, under \"Constituição dos grupos\"."
+      "text": "a group of at most five students. Form the group in Moodle, under the group page."
     },
     {
       "label": "You evaluate",
-      "text": "one website that you choose. Each group has its own website, and your teacher approves it."
+      "text": "one website that you choose. Each group has its own, and the lecturer approves it before Lab #3."
     },
     {
       "label": "You hand in",
-      "text": "a written report and a presentation. Plagiarism means failing the course at once."
+      "text": "a written report and a presentation, the day before the presentation sessions. Plagiarism means failing the course at once."
     },
     {
-      "label": "Your method",
-      "text": "a usability study with Loop11 and other tools, and, in parallel, an accessibility evaluation with heuristics, standards checks, operating-system features and other instruments."
+      "label": "Your time",
+      "text": "four labs of three academic hours, plus independent work between them. Then a 20 minute talk and 10 minutes of discussion."
     }
   ],
   "sections": [
+    {
+      "title": "Choosing your website (draft guidelines for approval)",
+      "kind": "cards",
+      "intro": "The lecturer approves every website. These are the draft rules the lecturer may use.",
+      "items": [
+        {
+          "tag": "Rule",
+          "title": "No login for the main tasks",
+          "text": "Participants can do the main tasks without an account and without typing personal data."
+        },
+        {
+          "tag": "Rule",
+          "title": "Enough complexity",
+          "text": "At least four distinct user stories. At least three of: search with several inputs, a multi-step flow, filters or comparison, documents or PDFs, content for more than one kind of user."
+        },
+        {
+          "tag": "Rule",
+          "title": "Real and safe",
+          "text": "A real service that people use. Tasks that need no real personal data. Sensitive subjects such as health or money need the lecturer's agreement."
+        },
+        {
+          "tag": "Rule",
+          "title": "Usable in the study",
+          "text": "In Portuguese or English, works in a laptop browser, loads in Loop11 (test it early) and is not about to be redesigned."
+        },
+        {
+          "tag": "Rule",
+          "title": "No duplicates",
+          "text": "No two groups evaluate the same website."
+        }
+      ]
+    },
+    {
+      "title": "How the time works",
+      "kind": "cards",
+      "intro": "Decided by the lecturers.",
+      "items": [
+        {
+          "tag": "Labs",
+          "title": "Four labs",
+          "text": "Labs #3 to #6, three academic hours each. Moodle's labs #7 and #8 are folded into Lab #6 and independent work."
+        },
+        {
+          "tag": "Between labs",
+          "title": "Independent work",
+          "text": "Each lab ends with a short list of what to do before the next one. The study runs between Lab #5 and Lab #6."
+        },
+        {
+          "tag": "Hand-in",
+          "title": "The day before the presentations",
+          "text": "The report and the presentation are due the day before the presentation sessions."
+        },
+        {
+          "tag": "Talks",
+          "title": "20 minutes plus 10",
+          "text": "Each group presents for 20 minutes, then 10 minutes of discussion. Four groups fit in one session."
+        }
+      ]
+    },
     {
       "title": "What the project asks for",
       "kind": "cards",
@@ -100,19 +159,6 @@ TUT.scenario = {
           "title": "The presentation",
           "text": "The work done in every stage of the study, and the main results."
         }
-      ]
-    },
-    {
-      "title": "One thing to settle with your teacher",
-      "kind": "cards",
-      "intro": "The Moodle page leaves this open. Ask before you plan around it.",
-      "items": [
-        {
-          "tag": "Check",
-          "title": "The report date and the last labs",
-          "text": "Moodle shows the project report due on Monday 4 January 2027 at 23:59. The labs where you compile the report (Lab #8) and present (Labs #9 and #10) are listed for the week of 4 to 8 January. Ask which is right."
-        }
-
       ]
     }
   ],

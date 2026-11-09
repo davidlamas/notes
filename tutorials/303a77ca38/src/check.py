@@ -59,8 +59,8 @@ for sp in sprints:
     total += s
 if total != meta["totalMinutes"]:
     errors.append(f"sprints add to {total}, meta says {meta['totalMinutes']}")
-if total != meta["labMinutes"] * 8:
-    errors.append("expected eight labs of labMinutes each")
+if total != meta["labMinutes"] * 6:
+    errors.append("expected six sessions of labMinutes each")
 for sid in stations:
     if sid not in used:
         errors.append(f"station {sid} is in no block")

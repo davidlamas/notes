@@ -87,6 +87,7 @@
       <p class="lede">${esc(c.intro)}</p>
       <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Station timer"></div>
       <div class="layout"><div class="parts">${parts}
+        ${c.after ? `<section class="card"><h2>Between now and the next session</h2>${list(c.after)}</section>` : ""}
         <section class="card"><h2>${esc(c.checks.title)}</h2><ul class="checklist">${checks}</ul><p class="sub" role="status" id="check-count"></p></section>
       </div>
       <aside class="card side" tabindex="0" aria-label="At a glance">

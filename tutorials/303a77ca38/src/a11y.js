@@ -7,7 +7,7 @@ const { chromium } = require("playwright");
   const axeSrc = fs.readFileSync(process.env.AXE, "utf8");
   const url = "file://" + path.resolve(__dirname, "..", "index.html");
   const b = await chromium.launch(), out = [];
-  const stations = fs.readFileSync(path.resolve(__dirname, "..", "data", "sprints.js"), "utf8").match(/"(lab[0-9]+[ab]?)": \{/g).map(x => x.match(/"(.+)"/)[1]);
+  const stations = fs.readFileSync(path.resolve(__dirname, "..", "data", "sprints.js"), "utf8").match(/"((?:lab|pres)[0-9]+[ab]?)": \{/g).map(x => x.match(/"(.+)"/)[1]);
   const targets = ["?view=brief", "?view=route", "?view=resources"].concat(stations.map(s => "?view=station&sel=" + s));
   for (const size of [{ width: 1280, height: 900 }, { width: 390, height: 800 }]) {
     const p = await b.newPage({ viewport: size });
