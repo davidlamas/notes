@@ -128,7 +128,7 @@ Why this list exists: I could not open Loop11, the plugin or most websites from 
 4. Example tasks: check the station names Trindade, Aeroporto, Senhor de Matosinhos and Estádio do Dragão, and the line names, on the current map. Find the correct answer for your PDF question.
 5. Check the timetable PDFs: loading time, and whether they changed after 7 September 2026.
 6. Decide how teams pass test links, and give every student a temporary Loop11 licence.
-7. Shared slide deck: a template (title, instructions, Team 1 to Team 8) exists in David's Drive, titled "Eight talks: shared deck (Metro do Porto lab)". Share it with edit access before the lab. Its link is not in this public repo.
+7. Shared slide deck: a template (title, instructions, Team 1 to Team 8) exists in David's Drive, titled "Eight talks: shared deck (Metro do Porto lab)". Share it with edit access before the lab. Link: https://docs.google.com/presentation/d/1icr2c8OgjRTND1p1kuXgeUesFMaQgVp4hXUCmEhk2ak/edit Its link is not in this public repo.
 8. Run Accessibility Insights FastPass on this page.
 
 ## How to publish

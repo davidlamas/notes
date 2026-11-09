@@ -50,3 +50,7 @@ It is a static folder. Pushing to the `notes` repo publishes it with the rest. D
 
 ## Moodle lab lists updated (9 Nov 2026)
 Only the bullet lists under Labs #3 to #8 and #9 and #10 were edited, in modules 154415, 154432 and 154439. Headings, week titles and the Projeto dates (due 4 Jan 2027 23:59) were not changed. Lab #3: confirm the website, mind-map, personas. Lab #4: user stories, preliminary review, goals and questions, participants and sample. Lab #5: plan, materials, instruments, configure, try them. Lab #7: adds "analyse the causes". Lab #8: report written in class, presentation prepared. Labs #9 and #10: 20 + 10 minutes, four groups each. Originals were saved in /tmp/moodle-orig (not in the repo).
+
+## Shared deck for the presentation sessions
+One Google Slides deck for all eight talks (title, how to use, order of talks, Team 1 to Team 8 slides): https://docs.google.com/presentation/d/1Hx93SZfuzjTXkn35M3uZlw8NUcFX8MMfccEvNb-wVxE/edit
+Created 9 Nov 2026 in David's Drive, private until David shares it. Teams 1 to 4 present in session 1, Teams 5 to 8 in session 2. Hand-in is the day before the sessions, so the deck is frozen then.
