@@ -1,57 +1,65 @@
 /* Stretches, labs and stations. Edit by hand.
    A block is one session of 135 minutes (three academic hours). Stations in one block run in parallel.
    stream: "A" (the study), "B" (the accessibility evaluation) or "AB" (the whole group).
-   Sessions #3 to #7 are labs, #8 and #9 are presentations (David, 9 Nov). No dates are shown on purpose. */
+   Steps 1 to 6 are Moodle Labs #3 to #8. Presentation sessions 1 and 2 are Moodle Labs #9 and #10. Moodle is correct (David, 9 Nov). No dates are shown on purpose. */
 window.TUT = window.TUT || {};
 TUT.sprints = [
   {
     "id": "p1",
     "number": 1,
-    "eyebrow": "Working labs",
-    "title": "Five labs of project work",
-    "subtitle": "Map and plan, build and pilot, launch and check accessibility, compile and start the fixes. A little independent work fills the time between labs.",
-    "minutes": 675,
-    "when": "5 labs",
+    "eyebrow": "Steps 1 to 6",
+    "title": "Six working steps",
+    "subtitle": "Choose and map, understand and plan, run and check accessibility, compile and rank, fix and report. Moodle calls them Labs #3 to #8. The last two are in January.",
+    "minutes": 810,
+    "when": "6 steps",
     "blocks": [
       {
         "id": "p1-b1",
-        "title": "Lab #3",
+        "title": "Step 1",
         "minutes": 135,
         "stations": [
-          "lab3"
+          "step1"
         ]
       },
       {
         "id": "p1-b2",
-        "title": "Lab #4",
+        "title": "Step 2",
         "minutes": 135,
         "stations": [
-          "lab4"
+          "step2"
         ]
       },
       {
         "id": "p1-b3",
-        "title": "Lab #5",
+        "title": "Step 3",
         "minutes": 135,
         "stations": [
-          "lab5"
+          "step3"
         ]
       },
       {
         "id": "p1-b4",
-        "title": "Lab #6",
+        "title": "Step 4",
         "minutes": 135,
         "stations": [
-          "lab6a",
-          "lab6b"
+          "step4a",
+          "step4b"
         ]
       },
       {
         "id": "p1-b5",
-        "title": "Lab #7",
+        "title": "Step 5",
         "minutes": 135,
         "stations": [
-          "lab7"
+          "step5"
+        ]
+      },
+      {
+        "id": "p1-b6",
+        "title": "Step 6",
+        "minutes": 135,
+        "stations": [
+          "step6"
         ]
       }
     ]
@@ -59,15 +67,15 @@ TUT.sprints = [
   {
     "id": "p2",
     "number": 2,
-    "eyebrow": "Presentations",
-    "title": "Two presentation sessions",
-    "subtitle": "Hand in the report and the presentation the day before. Then present.",
+    "eyebrow": "Presentation sessions",
+    "title": "Presentation sessions 1 and 2",
+    "subtitle": "Hand in the report and the presentation the day before. Moodle calls these Labs #9 and #10, also in January.",
     "minutes": 270,
     "when": "2 sessions",
     "blocks": [
       {
         "id": "p2-b1",
-        "title": "Session #8",
+        "title": "Presentation session 1",
         "minutes": 135,
         "stations": [
           "pres1"
@@ -75,7 +83,7 @@ TUT.sprints = [
       },
       {
         "id": "p2-b2",
-        "title": "Session #9",
+        "title": "Presentation session 2",
         "minutes": 135,
         "stations": [
           "pres2"
@@ -86,12 +94,12 @@ TUT.sprints = [
 ];
 
 TUT.stations = {
-  "lab3": {
-    "title": "Map the website, personas and stories",
+  "step1": {
+    "title": "Approve the website and map it",
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Describe the approved website with a mind-map, build personas and write the main user stories.",
+    "aim": "Settle the website with the lecturer, test that it loads in Loop11, and describe it with a mind-map.",
     "resources": [
       "svc-stcp",
       "svc-cp",
@@ -109,52 +117,52 @@ TUT.stations = {
       "svc-nos",
       "svc-booking",
       "svc-airbnb",
-      "ixdf-articles",
-      "nng-articles"
-    ]
-  },
-  "lab4": {
-    "title": "Review, goals, participants and tasks",
-    "stream": "AB",
-    "minutes": 135,
-    "status": "draft",
-    "aim": "Do a first expert review, set goals and research questions, decide participants and size, and draft the tasks.",
-    "resources": [
-      "tpl-figma",
-      "tpl-miro",
-      "tpl-nng",
-      "nng-study-guide",
-      "loop11-questions",
-      "iso-9241-11"
-    ]
-  },
-  "lab5": {
-    "title": "Finish the plan, build and pilot",
-    "stream": "AB",
-    "minutes": 135,
-    "status": "draft",
-    "aim": "Finish tasks, questions and questionnaires, build the test in Loop11, pilot it and refine.",
-    "resources": [
-      "loop11-docs",
-      "loop11-questions",
-      "loop11-recording",
-      "loop11-unmoderated",
-      "nng-study-guide"
-    ]
-  },
-  "lab6a": {
-    "title": "Launch and follow the study",
-    "stream": "A",
-    "minutes": 135,
-    "status": "draft",
-    "aim": "Launch the test, follow the sessions and write down the study problems.",
-    "resources": [
-      "loop11-recruit",
-      "loop11-recording",
       "loop11-docs"
     ]
   },
-  "lab6b": {
+  "step2": {
+    "title": "People, stories, first review, goals",
+    "stream": "AB",
+    "minutes": 135,
+    "status": "draft",
+    "aim": "Build personas and user stories, do a first expert review, then set goals and research questions.",
+    "resources": [
+      "ixdf-articles",
+      "nng-articles",
+      "tpl-figma",
+      "tpl-miro",
+      "tpl-nng",
+      "iso-9241-11"
+    ]
+  },
+  "step3": {
+    "title": "Plan the study and set up the tools",
+    "stream": "AB",
+    "minutes": 135,
+    "status": "draft",
+    "aim": "Decide participants and size, prepare tasks, questions and questionnaires, choose and configure the instruments.",
+    "resources": [
+      "loop11-docs",
+      "loop11-unmoderated",
+      "loop11-questions",
+      "nng-study-guide",
+      "iso-9241-11"
+    ]
+  },
+  "step4a": {
+    "title": "Pilot, recruit, launch and follow the study",
+    "stream": "A",
+    "minutes": 135,
+    "status": "draft",
+    "aim": "Run a pilot, refine the plan, recruit, launch the study and follow it.",
+    "resources": [
+      "loop11-docs",
+      "loop11-recruit",
+      "loop11-recording",
+      "nng-study-guide"
+    ]
+  },
+  "step4b": {
     "title": "Evaluate accessibility",
     "stream": "B",
     "minutes": 135,
@@ -172,17 +180,26 @@ TUT.stations = {
       "law-dl82"
     ]
   },
-  "lab7": {
-    "title": "Compile, rank, choose and start the fixes",
+  "step5": {
+    "title": "Compile, describe, rank and choose",
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Bring the review, the study and the accessibility results together, rank the problems, choose two or three and start the fixes.",
+    "aim": "Bring the review, the study and the accessibility results together, rank the problems and choose two or three.",
     "resources": [
       "nng-usability-metrics",
       "nng-success-rate",
       "iso-9241-11",
-      "wcag22",
+      "wcag22"
+    ]
+  },
+  "step6": {
+    "title": "Fixes, report and presentation",
+    "stream": "AB",
+    "minutes": 135,
+    "status": "draft",
+    "aim": "Study the chosen problems in depth, propose fixes with low-fidelity sketches, write the report and prepare the talk.",
+    "resources": [
       "nng-articles",
       "ixdf-articles"
     ]

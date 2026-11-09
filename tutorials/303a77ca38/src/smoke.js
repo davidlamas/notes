@@ -21,35 +21,35 @@ const { chromium } = require("playwright");
   ok((await page.locator(".wordmark-mark").innerText()) === "P", "mark should be P");
 
   await page.click('[data-view="route"]');
-  ok((await page.locator(".station").count()) === 8, "expected 8 stations");
+  ok((await page.locator(".station").count()) === 9, "expected 9 stations");
   ok((await page.locator(".sprint").count()) === 2, "expected 2 stretches");
-  await page.click('[data-sel="lab4"]');
-  ok((await page.locator("#panel h2").innerText()).includes("Review"), "panel did not show lab 4");
-  ok(page.url().includes("sel=lab4"), "selection not in URL");
+  await page.click('[data-sel="step3"]');
+  ok((await page.locator("#panel h2").innerText()).includes("Plan the study"), "panel did not show step 3");
+  ok(page.url().includes("sel=step3"), "selection not in URL");
 
-  await page.click('[data-open="lab4"]');
-  ok((await page.locator("#view-station .part").count()) === 4, "expected 4 steps in lab 4");
-  ok((await page.locator(".widget").count()) === 1, "expected the goal tool in lab 4");
+  await page.click('[data-open="step3"]');
+  ok((await page.locator("#view-station .part").count()) === 4, "expected 4 steps in step 3");
+  ok((await page.locator(".widget").count()) === 1, "expected the profile tool in step 3");
   await page.locator("#view-station [data-done]").first().check();
   ok((await page.locator("#check-count").innerText()).startsWith("1 of"), "check count not updated");
   await page.click("#view-station .timer button >> text=Start timer");
-  await page.goto(url + "?view=station&sel=lab6a");
+  await page.goto(url + "?view=station&sel=step4a");
   await page.fill("input[id$='-what']", "Participants missed the search box");
   await page.click("text=Add to list");
   ok((await page.locator(".loglist li").count()) === 1, "study log did not add an entry");
 
-  await page.goto(url + "?view=station&sel=lab7");
+  await page.goto(url + "?view=station&sel=step5");
   await page.fill("input[id$='-n']", "5"); await page.fill("input[id$='-ok']", "3"); await page.fill("input[id$='-times']", "90, 120, 200");
   const rt = await page.locator(".out").first().innerText();
   ok(rt.includes("3 of 5") && rt.includes("%") && rt.includes("120 seconds"), "rate widget wrong: " + rt);
   await page.goto(url + "?view=route");
-  ok((await page.locator(".station").filter({ hasText: "ready" }).count()) === 8, "all stations should show ready");
+  ok((await page.locator(".station").filter({ hasText: "ready" }).count()) === 9, "all stations should show ready");
   await page.click('[data-view="resources"]');
   ok((await page.locator(".ritem").count()) === 43, "expected 43 resources");
   ok((await page.locator('#view-resources a[target="_blank"][rel*="noopener"]').count()) >= 8, "links should open safely in a new tab");
 
   // deep link
-  await page.goto(url + "?view=route&sel=lab6b");
+  await page.goto(url + "?view=route&sel=step4b");
   ok((await page.locator("#panel h2").innerText()).includes("accessibility"), "deep link did not restore the station");
 
   // keyboard: header buttons reachable and dialog works

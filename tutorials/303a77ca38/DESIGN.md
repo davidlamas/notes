@@ -9,10 +9,12 @@ Title: "Evaluation project: Loop11 · AccessMonitor". Header mark: "P". Nothing 
 Everything about the project is mined from the Moodle course page (course id 22490, read on 9 November 2026): the project description, the fifteen steps, the expected results, the options A/B/C, the templates, and the timeline. The English text is a plain summary. Moodle wins if they differ.
 
 ## Decisions from David (9 November 2026)
-- Five working labs (sessions #3 to #7) and two presentation sessions (#8 and #9), each 3 academic hours (135 min). Moodle numbers them differently (its compile and fix activities are #7 and #8, presentations #9 and #10), so Moodle needs updating. Do more in the labs and less as independent work. Each lab ends with a short "after" list. The report is written on your own after Lab #7.
+- Moodle is correct about the sessions. Six working labs, shown here as Step 1 to Step 6 (Moodle Labs #3 to #8), then two presentation sessions, shown as Presentation session 1 and 2 (Moodle Labs #9 and #10). The last four sessions (Steps 5 and 6, and the two presentation sessions) are in January. Each session is 3 academic hours (135 min).
+- Naming: the practice page uses "Sprint 1 and 2". This page uses "Step 1 to 6" and "Presentation sessions 1 and 2".
+- Do more in the labs and less as independent work. Each step ends with a short "after" list.
 - No dates and no deadline on the page. Report and presentation are handed in the day before the presentation sessions.
 - Talks: 20 minutes plus 10 minutes of discussion, so four groups per session and at most eight groups. Moodle has ten team spaces: check the real number of groups.
-- Formative evaluation. Each group picks its own website, no duplicates, the lecturer approves it. SIGA and SNS24 dropped. No Metro do Porto material on this page. The eligibility rules on the brief view are a draft for the lecturer. Candidate services (CP, others) are not on the page yet.
+- Formative evaluation. Each group picks its own website, no duplicates, the lecturer approves it. SIGA and SNS24 dropped. No Metro do Porto material on this page. The eligibility rules on the project view are a draft for the lecturer. Example sites are on the Resources view.
 - Header mark: "P" for project. (The Metro sprint page uses "S" for sprint.)
 
 ## Facts from Moodle used here
@@ -32,8 +34,8 @@ Everything about the project is mined from the Moodle course page (course id 224
 - "Sprint" in the code means a stretch of the timeline. Block means one lab. Stream A is the study, B is the accessibility evaluation, AB is the whole group.
 - Checks: `python3 src/check.py`, `NODE_PATH=/opt/npm-tools/node_modules node src/smoke.js`, and `AXE=<axe.min.js> NODE_PATH=... node src/a11y.js`.
 
-## Status at version 0.3.0
-All eight stations have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
+## Status at version 0.4.0
+All nine stations have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
 
 ## How to publish
 It is a static folder. Pushing to the `notes` repo publishes it with the rest. Do not link it from the notes landing page.
@@ -42,4 +44,4 @@ It is a static folder. Pushing to the `notes` repo publishes it with the rest. D
 - "Projeto" description: the step "seleccionar um dos websites indicados, ou sugerir outro adequado" now reads "escolher um website a avaliar. Cada grupo avalia um website diferente, sujeito a aprovação do docente." Two blocks were added before "Os resultados esperados são": "Escolha do website" (rules and example sites) and "Entrega e apresentação" (hand-in the day before, 20 + 10 minutes).
 - Options A (SIGA) and B (SNS24) were hidden from students, not deleted. To restore, set them to "Mostrar na página da disciplina".
 - Option C was renamed from "Website a avaliar (opção C)" to "Exemplo de website a avaliar: transportes públicos do Porto (STCP)".
-- Not changed: the lab list and numbering, the week headings with dates, and the assignment dates (opens 17 Nov 2026, due 4 Jan 2027 23:59).
+- Not changed: the lab list and numbering (which are correct), the week headings with dates, and the assignment dates (opens 17 Nov 2026, due 4 Jan 2027 23:59). The due date may need to move to the day before the presentation sessions.
