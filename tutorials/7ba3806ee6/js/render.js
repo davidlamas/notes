@@ -43,7 +43,7 @@
       <p class="eyebrow">The route</p>
       <h1>Two sprints. Two sub-teams working side by side.</h1>
       <p class="lede">Pick any station to see its aim and the outside resources that go with it. Stations marked "ready" open as a full page with steps, checks and tools. Stations marked "outline" show the aim only.</p>
-      <div class="layout"><div>${sprints}</div><aside class="card detail-panel" id="panel" aria-live="polite" aria-label="Station details"></aside></div>`;
+      <div class="layout"><div>${sprints}</div><aside class="card detail-panel" id="panel" tabindex="0" aria-live="polite" aria-label="Station details"></aside></div>`;
     panel();
   }
 
@@ -83,7 +83,7 @@
     const checks = c.checks.items.map((t, i) => { const k = id + ":c:" + i;
       return `<li><label><input type="checkbox" data-done="${k}"${App.mem.done[k] ? " checked" : ""}> <span>${esc(t)}</span></label></li>`; }).join("");
     const parts = c.parts.map((p, i) => `<section class="part card" aria-labelledby="${id}-p${i}">
-        <p class="eyebrow">Step ${i + 1} · ${p.min} min</p><h3 id="${id}-p${i}">${esc(p.title)}</h3><p>${esc(p.text)}</p>
+        <p class="eyebrow">Step ${i + 1} · ${p.min} min</p><h2 id="${id}-p${i}">${esc(p.title)}</h2><p>${esc(p.text)}</p>
         ${p.widget ? `<div class="widget" data-widget="${p.widget}" data-wkey="${id}:${i}"></div>` : ""}</section>`).join("");
     const pos = ORDER.indexOf(id), prev = ORDER[pos - 1], next = ORDER[pos + 1];
     const nav = sid => sid ? `<button class="secondary-button" type="button" data-nav="${sid}">${esc(T.stations[sid].title)}</button>` : "";
@@ -94,9 +94,9 @@
       <p class="lede">${esc(c.intro)}</p>
       <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Station timer"></div>
       <div class="layout"><div class="parts">${parts}
-        <section class="card"><h3>${esc(c.checks.title)}</h3><ul class="checklist">${checks}</ul><p class="sub" role="status" id="check-count"></p></section>
+        <section class="card"><h2>${esc(c.checks.title)}</h2><ul class="checklist">${checks}</ul><p class="sub" role="status" id="check-count"></p></section>
       </div>
-      <aside class="card side" aria-label="At a glance">
+      <aside class="card side" tabindex="0" aria-label="At a glance">
         <div class="f"><b>Aim</b>${esc(st.aim)}</div>
         <div class="f"><b>You leave with</b>${list(c.output)}</div>
         <div class="f"><b>${esc(c.good.title)}</b>${list(c.good.items)}</div>

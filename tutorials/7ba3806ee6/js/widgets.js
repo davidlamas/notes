@@ -27,7 +27,7 @@
 
   function goal(root, key) {
     const d = W.goal, st = state(key);
-    root.appendChild(h("h4", { text: d.title }));
+    root.appendChild(h("h3", { text: d.title }));
     root.appendChild(h("p", { class: "sub", text: d.lead }));
     const out = h("p", { class: "out", "aria-live": "polite" });
     const status = h("span", { class: "sub", role: "status" });
@@ -54,7 +54,7 @@
 
   function taskcheck(root, key) {
     const d = W.taskcheck, st = state(key);
-    root.appendChild(h("h4", { text: d.title }));
+    root.appendChild(h("h3", { text: d.title }));
     root.appendChild(h("p", { class: "sub", text: d.lead }));
     d.items.forEach((it, i) => {
       const fb = h("p", { class: "fb", role: "status" });
@@ -70,7 +70,7 @@
 
   function success(root, key) {
     const d = W.success, st = state(key);
-    root.appendChild(h("h4", { text: d.title }));
+    root.appendChild(h("h3", { text: d.title }));
     root.appendChild(h("p", { class: "sub", text: d.lead }));
     const fb = h("p", { class: "fb", role: "status" });
     const show = () => { if (st.i === undefined) return; const o = d.options[st.i]; fb.textContent = o.verdict + ". " + o.why; };
@@ -86,7 +86,7 @@
 
   function makeLog(name) { return function (root, key) {
     const d = W[name], st = state(key); st.rows = st.rows || [];
-    root.appendChild(h("h4", { text: d.title }));
+    root.appendChild(h("h3", { text: d.title }));
     root.appendChild(h("p", { class: "sub", text: d.lead }));
     root.appendChild(h("p", { class: "note", text: d.warn }));
     const form = h("form", { class: "logform" }), inputs = {};
@@ -146,14 +146,14 @@
       if (times.length) t += ` Median time of those who succeeded (${times.length} people): ${Math.round(median(times))} seconds.`;
       out.textContent = t;
     };
-    root.appendChild(h("h4", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
+    root.appendChild(h("h3", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
     d.fields.forEach(f => numField(root, key, st, f, calc));
     root.appendChild(out); root.appendChild(h("p", { class: "sub", text: d.note })); calc();
   }
 
   function sus(root, key) {
     const d = W.sus, st = state(key); st.scores = st.scores || [];
-    root.appendChild(h("h4", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
+    root.appendChild(h("h3", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
     const grid = h("div", { class: "susgrid" }), ins = [];
     for (let i = 1; i <= 10; i++) {
       const id = `${key}-i${i}`.replace(/[^\w-]/g, "_");
@@ -188,14 +188,14 @@
       const L = Math.sqrt(Math.pow(N / S - 1, 2) + Math.pow(R / N - 1, 2));
       out.textContent = `Lostness: ${L.toFixed(2)}. ${L > 0.5 ? "Often read as clearly lost." : L < 0.4 ? "Often read as not lost." : "In between. Look at the recording."}`;
     };
-    root.appendChild(h("h4", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
+    root.appendChild(h("h3", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
     d.fields.forEach(f => numField(root, key, st, f, calc));
     root.appendChild(out); root.appendChild(h("p", { class: "sub", text: d.note })); calc();
   }
 
   function rank(root, key) {
     const d = W.rank, st = state(key); st.rows = st.rows || [];
-    root.appendChild(h("h4", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead })); root.appendChild(h("p", { class: "note", text: d.warn }));
+    root.appendChild(h("h3", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead })); root.appendChild(h("p", { class: "note", text: d.warn }));
     const form = h("form", { class: "logform" });
     const mk = (id, label, hint, el) => form.appendChild(h("div", { class: "field" }, [h("label", { for: el.id, text: label }), h("span", { class: "sub", text: hint }), el]));
     const idp = key.replace(/[^\w-]/g, "_");
@@ -233,7 +233,7 @@
 
   function talkplan(root, key) {
     const d = W.talkplan, st = state(key), total = d.parts.reduce((a, p) => a + p.min, 0);
-    root.appendChild(h("h4", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
+    root.appendChild(h("h3", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
     const status = h("span", { class: "sub", role: "status" });
     d.parts.forEach(p => {
       const id = `${key}-${p.id}`.replace(/[^\w-]/g, "_"), inp = h("input", { type: "text", id }); inp.value = st[p.id] || "";
@@ -249,7 +249,7 @@
   function talkclock(root, key) {
     const d = W.talkclock, st = state(key);
     if (st.n == null) { st.n = 1; st.left = d.seconds; }
-    root.appendChild(h("h4", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
+    root.appendChild(h("h3", { text: d.title })); root.appendChild(h("p", { class: "sub", text: d.lead }));
     const label = h("span", { class: "talkno" }), out = h("span", { class: "clock", "aria-hidden": "true" }), say = h("span", { class: "sr-only", role: "status" });
     const fmt = s => String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
     const go = h("button", { type: "button", class: "secondary-button" }), next = h("button", { type: "button", class: "secondary-button", text: "Next talk" }), reset = h("button", { type: "button", class: "secondary-button", text: "Reset this talk" });

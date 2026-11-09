@@ -26,16 +26,16 @@ TUT.resources = [
     "group": "Standards and law",
     "title": "Decreto-Lei n.º 83/2018: accessibility of public-sector websites and apps",
     "url": "https://dre.pt/dre/detalhe/decreto-lei/83-2018-116734769",
-    "note": "Public-sector bodies. Whether Metro do Porto falls under this or under the next item is still to be confirmed; the page does not claim either.",
-    "status": "listed"
+    "note": "Public-sector bodies. Whether Metro do Porto falls under this or under the next item is still to be confirmed; the page does not claim either. Address not opened in the final link check. Open it before the lab.",
+    "status": "to-verify"
   },
   {
     "id": "law-dl82",
     "group": "Standards and law",
     "title": "Decreto-Lei n.º 82/2022: accessibility of products and services",
     "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/82-2022-204379872",
-    "note": "Transposes the European Accessibility Act.",
-    "status": "listed"
+    "note": "Transposes the European Accessibility Act. Address not opened in the final link check. Open it before the lab.",
+    "status": "to-verify"
   },
   {
     "id": "ixdf-articles",
@@ -66,8 +66,8 @@ TUT.resources = [
     "group": "Articles",
     "title": "NN/g: Success rate, the simplest usability metric",
     "url": "https://www.nngroup.com/articles/success-rate-the-simplest-usability-metric/",
-    "note": "Why success rate is the bottom line, and how partial success can be reported.",
-    "status": "listed"
+    "note": "Why success rate is the bottom line, and how partial success can be reported. Address not opened in the final link check. Open it before the lab.",
+    "status": "to-verify"
   },
   {
     "id": "nng-usability-metrics",
@@ -88,9 +88,9 @@ TUT.resources = [
   {
     "id": "loop11-recruit",
     "group": "Tools",
-    "title": "Loop11: Recruiting participants",
-    "url": "https://www.loop11.com/?p=22564",
-    "note": "Sources of participants and screeners. In class, teammates are the participants.",
+    "title": "Loop11: Recruiting participants and sharing the test link",
+    "url": "https://www.loop11.com/?p=22568",
+    "note": "Three ways to reach participants: a link, a pop-up invitation, or a panel. In class you use the link and teammates as participants.",
     "status": "listed"
   },
   {

@@ -70,7 +70,7 @@ dialog::backdrop{background:rgba(32,38,36,.4)}.dialog-body{padding:28px;max-heig
 /* station page and tools */
 .crumbs{margin:0 0 10px;color:var(--muted);font-size:.85rem}
 .link-button{border:0;background:transparent;color:var(--accent);text-decoration:underline;padding:0;font-weight:650}
-.parts{display:grid;gap:16px;min-width:0}.part h3{font-size:1.2rem}.part p{max-width:70ch}
+.parts{display:grid;gap:16px;min-width:0}.part h2,.parts>.card>h2{font-size:1.2rem}.part p{max-width:70ch}
 .side{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto;padding:22px}
 .side ul{margin:0;padding-left:18px}.side li{margin-bottom:4px}
 .checklist{list-style:none;margin:8px 0;padding:0}.checklist li{margin:6px 0}
@@ -80,7 +80,7 @@ input[type=checkbox]{width:22px;height:22px;flex:none;accent-color:var(--accent)
 .clock{font-variant-numeric:tabular-nums;font-size:1.5rem;font-weight:760;letter-spacing:-.02em;padding:2px 12px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}
 .clock.up{background:var(--peach);border-color:var(--focus)}
 .widget{margin-top:14px;padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}
-.widget h4{margin:0 0 4px;font-size:1rem}.widget p{margin:4px 0}
+.widget h3{margin:0 0 4px;font-size:1rem}.widget p{margin:4px 0}
 .field{display:grid;gap:2px;margin:10px 0}.field label{font-weight:700;font-size:.9rem}
 input[type=text]{font:inherit;width:100%;padding:9px 12px;border:1px solid #9a9a90;border-radius:12px;background:#fff;color:var(--ink)}
 .out{background:var(--sage);border-radius:14px;padding:12px 14px;font-weight:600;margin:4px 0 10px}
@@ -98,3 +98,5 @@ select{font:inherit;padding:8px 10px;border:1px solid #9a9a90;border-radius:12px
 .talkno{font-weight:760}
 button:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:700px){.susgrid{grid-template-columns:1fr}}
+
+.lane-A .sub,.lane-B .sub,.lane-AB .sub{color:#3d4743}

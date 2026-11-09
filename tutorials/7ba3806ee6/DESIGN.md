@@ -55,12 +55,13 @@ Rules the checker enforces: block minutes equal station minutes; sprint minutes 
 
 ## Status
 
-All 14 stations are `draft` (full content, v0.3.0). Next steps, in order:
+All 14 stations are `draft` (full content). Version 0.4.0 is the checked version, ready for David's review. Remaining steps:
 
 1. Sources: done (v0.1.1). Plugin chosen: Accessibility Insights for Web (free, guided WCAG 2.2 AA Assessment, FastPass). axe DevTools free tier is automated only. Resource ids `a11y-insights-*` replace the old `a11y-plugin-docs`. Loop11 help pages and AccessMonitor docs were only partly reachable; see open points.
 2. Sprint 1 station content and interactions: done (v0.2.0).
 3. Sprint 2 station content and interactions: done (v0.3.0).
-4. Accessibility check of this page itself (use the same tools the students use), link check, handover notes.
+4. Accessibility check, link check and handover notes: done (v0.4.0, see below).
+5. David reviews, then says when to push. Nothing is pushed yet.
 
 ## Open points and claims that need qualification
 
@@ -94,3 +95,30 @@ The page is not linked from anywhere and marked `noindex`, but the host is publi
 - Success rate range: Wilson interval, z = 1.96.
 - Sprint 2 text says earlier editions had success-check errors. That comes from David's 2025 deck.
 - The talks block is 2 + 20 + 20 + 3 minutes. Eight talks of five minutes fill 40 minutes, so changeovers must be near zero. The teacher notes say so.
+
+## Checks run on 9 November 2026 (v0.4.0)
+
+- `src/check.py`: data, minutes, ids, links rules, noindex, no external assets.
+- `src/smoke.js`: Playwright. Views, deep links, dialog, every tool, narrow screen.
+- `src/a11y.js`: axe-core (WCAG 2.0 to 2.2 A and AA, plus best practice) on 17 pages at 1280 and 390 pixels. First run found a contrast failure (muted text on the lilac lane), a link whose accessible name did not match its visible text, heading levels that skipped, and two scrollable panels not reachable by keyboard. All fixed. Result now: no violations. Needs `npm i axe-core` outside the folder and `AXE=<path to axe.min.js>`.
+- By hand (scripted): 320 pixel width (a stand-in for 400 percent zoom) has no sideways scroll on all views and three stations. Tab order reaches every control, each with a visible focus ring and a name. After a view change by keyboard, focus moves to the new heading. Page has `lang`, a title, one `main` and one `h1`.
+- Not done: a screen reader pass, and the Accessibility Insights Assessment on this page. axe finds only part of the problems. Run FastPass on this page before the lab, as an example for the students.
+- Known gap: Portuguese words inside English text (Percursos, station names) have no `lang="pt"`. WCAG 3.1.2 asks for it.
+
+## Link check (19 links)
+
+Opened and title confirmed: Accessibility Insights (3), IxDF topic page, Loop11 (3), ISO page, NN/g study guide, unmoderated article, usability metrics, Metro planner, Metro schedules. The English Metro site is linked from the Metro site itself, but the address was not opened. One Loop11 address was wrong (it opened Task setup, not recruiting) and was replaced.
+Not opened, so status `to-verify` on the page: DL 83/2018, DL 82/2022 and the NN/g success-rate article. WCAG 2.2 and AccessMonitor were not opened either, but they are canonical addresses. The workspace blocks most sites, so a person should click through all links once.
+
+## Before the lab (teacher checklist)
+
+1. Click through every link on the Resources view.
+2. Make a Loop11 test with a wrong and a right answer. Confirm the PDF answer question, the SUS template, recording, the participant link and the trial limits.
+3. Confirm the station and line names in the example tasks, and the correct answers for the PDF question.
+4. Decide how teams pass test links, and tell them in Station 1.
+5. Check the timetable PDFs: sizes, loading time, and whether they changed after 7 September 2026.
+6. Run Accessibility Insights FastPass on this page.
+
+## How to publish
+
+The repository is public. Pushing to `main` publishes the page at davidlamas.github.io/notes/tutorials/7ba3806ee6/. Only the folder `tutorials/` has changed compared with the remote. Do not touch anything else. Nobody has pushed yet.
