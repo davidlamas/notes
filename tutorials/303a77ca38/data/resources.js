@@ -181,14 +181,6 @@ TUT.resources = [
     "status": "listed"
   },
   {
-    "id": "moodle-course",
-    "group": "The course",
-    "title": "Course page on Moodle (sign-in needed)",
-    "url": "https://moodle.ensinolusofona.pt/course/view.php?id=22490",
-    "note": "Project description, timeline, team sign-up and templates. This page summarises it. If they differ, Moodle wins.",
-    "status": "listed"
-  },
-  {
     "id": "svc-stcp",
     "group": "Websites that may qualify (examples, for approval)",
     "title": "STCP, Porto public transport",

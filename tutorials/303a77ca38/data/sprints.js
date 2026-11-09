@@ -118,8 +118,7 @@ TUT.stations = {
       "svc-booking",
       "svc-airbnb",
       "loop11-docs",
-      "nng-personas",
-      "moodle-course"
+      "nng-personas"
     ]
   },
   "step2": {
@@ -214,8 +213,7 @@ TUT.stations = {
     "resources": [
       "nng-articles",
       "ixdf-articles",
-      "deck-talks",
-      "moodle-course"
+      "deck-talks"
     ]
   },
   "pres1": {
