@@ -24,7 +24,7 @@ const { chromium } = require("playwright");
   ok((await page.locator(".station").count()) === 9, "expected 9 stations");
   ok((await page.locator(".sprint").count()) === 2, "expected 2 stretches");
   await page.click('[data-sel="step3"]');
-  ok((await page.locator("#panel h2").innerText()).includes("Plan the study"), "panel did not show step 3");
+  ok((await page.locator("#panel h2").innerText()).includes("build the test"), "panel did not show step 3");
   ok(page.url().includes("sel=step3"), "selection not in URL");
 
   await page.click('[data-open="step3"]');

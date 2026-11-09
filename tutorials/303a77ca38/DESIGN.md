@@ -11,7 +11,7 @@ Everything about the project is mined from the Moodle course page (course id 224
 ## Decisions from David (9 November 2026)
 - Moodle is correct about the sessions. Six working labs, shown here as Step 1 to Step 6 (Moodle Labs #3 to #8), then two presentation sessions, shown as Presentation session 1 and 2 (Moodle Labs #9 and #10). The last four sessions (Steps 5 and 6, and the two presentation sessions) are in January. Each session is 3 academic hours (135 min).
 - Naming: the practice page uses "Sprint 1 and 2". This page uses "Step 1 to 6" and "Presentation sessions 1 and 2".
-- Do more in the labs and less as independent work. Each step ends with a short "after" list.
+- Do more in the labs and less as independent work. Load was rebalanced across the six steps: Step 1 holds the website approval, mind-map and personas; Step 2 the stories, review, goals and participants; Step 3 the tasks and the build; Step 5 ends with the causes of the chosen problems; Step 6 writes the report in the session. Only Step 4 (study runs on) and Step 6 (polish and hand-in) have independent work.
 - No dates and no deadline on the page. Report and presentation are handed in the day before the presentation sessions.
 - Talks: 20 minutes plus 10 minutes of discussion, so four groups per session and at most eight groups. Moodle has ten team spaces: check the real number of groups.
 - Formative evaluation. Each group picks its own website, no duplicates, the lecturer approves it. SIGA and SNS24 dropped. No Metro do Porto material on this page. The eligibility rules on the project view are a draft for the lecturer. Example sites are on the Resources view.
@@ -34,7 +34,7 @@ Everything about the project is mined from the Moodle course page (course id 224
 - "Sprint" in the code means a stretch of the timeline. Block means one lab. Stream A is the study, B is the accessibility evaluation, AB is the whole group.
 - Checks: `python3 src/check.py`, `NODE_PATH=/opt/npm-tools/node_modules node src/smoke.js`, and `AXE=<axe.min.js> NODE_PATH=... node src/a11y.js`.
 
-## Status at version 0.4.0
+## Status at version 0.5.0
 All nine stations have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
 
 ## How to publish

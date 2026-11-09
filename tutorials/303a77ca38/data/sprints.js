@@ -95,11 +95,11 @@ TUT.sprints = [
 
 TUT.stations = {
   "step1": {
-    "title": "Approve the website and map it",
+    "title": "Approve the website, map it, build personas",
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Settle the website with the lecturer, test that it loads in Loop11, and describe it with a mind-map.",
+    "aim": "Settle the website with the lecturer, test that it loads in Loop11, describe it with a mind-map and build the personas.",
     "resources": [
       "svc-stcp",
       "svc-cp",
@@ -121,11 +121,11 @@ TUT.stations = {
     ]
   },
   "step2": {
-    "title": "People, stories, first review, goals",
+    "title": "Stories, first review, goals, participants",
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Build personas and user stories, do a first expert review, then set goals and research questions.",
+    "aim": "Write user stories, do a first expert review, set goals and research questions, and decide who will take part.",
     "resources": [
       "ixdf-articles",
       "nng-articles",
@@ -136,11 +136,11 @@ TUT.stations = {
     ]
   },
   "step3": {
-    "title": "Plan the study and set up the tools",
+    "title": "Prepare tasks and build the test",
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Decide participants and size, prepare tasks, questions and questionnaires, choose and configure the instruments.",
+    "aim": "Prepare tasks, questions and questionnaires, choose the instruments and build the test.",
     "resources": [
       "loop11-docs",
       "loop11-unmoderated",
@@ -185,7 +185,7 @@ TUT.stations = {
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Bring the review, the study and the accessibility results together, rank the problems and choose two or three.",
+    "aim": "Bring the review, the study and the accessibility results together, rank the problems, choose two or three and study their causes.",
     "resources": [
       "nng-usability-metrics",
       "nng-success-rate",
@@ -198,7 +198,7 @@ TUT.stations = {
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Study the chosen problems in depth, propose fixes with low-fidelity sketches, write the report and prepare the talk.",
+    "aim": "Propose fixes with low-fidelity sketches, write the report in the session and prepare the talk.",
     "resources": [
       "nng-articles",
       "ixdf-articles"

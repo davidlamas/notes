@@ -3,7 +3,7 @@ window.TUT = window.TUT || {};
 TUT.content = window.TUT.content || {};
 Object.assign(TUT.content, {
   "step1": {
-    "intro": "You start the project. By the end you have an approved website that you tested early, and a map of what it offers and for whom.",
+    "intro": "You start the project. By the end you have an approved website that you tested early, a map of what it offers and for whom, and your personas.",
     "parts": [
       {
         "title": "Read the project and the plan",
@@ -22,18 +22,21 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Draw the mind-map",
-        "min": 60,
+        "min": 45,
         "text": "Put the website in the middle and branch out: what is it about, which services does it offer, who is the target audience? Explore the real site while you draw. Add what surprises you."
       },
       {
         "title": "Compare with another group",
-        "min": 15,
+        "min": 10,
         "text": "Show your map to another group for two minutes each. Ask what they would not have guessed from the map. Add it."
       },
       {
-        "title": "Start the audience",
-        "min": 20,
-        "text": "Write a first list of kinds of people who use the site and what each wants to do. You turn it into personas in Step 2."
+        "title": "Build the personas",
+        "min": 40,
+        "text": "A persona is a made-up person built from what you know about the real audience. Write two or three. Each has a goal on this website, a situation, how comfortable they are with technology, and anything that makes the site harder for them. Use your mind-map and a look at the real site. Do not use names of people you know.",
+        "help": [
+          "ixdf-articles"
+        ]
       }
     ],
     "checks": {
@@ -42,7 +45,7 @@ Object.assign(TUT.content, {
         "The website is approved by the lecturer, and not used by another group.",
         "You loaded the website in Loop11 once.",
         "The mind-map shows the purpose, the services and the audience.",
-        "A first list of kinds of users exists."
+        "Two or three personas, each with a goal and a situation."
       ]
     },
     "good": {
@@ -60,28 +63,17 @@ Object.assign(TUT.content, {
     ],
     "output": [
       "An approved website.",
-      "A mind-map of the website.",
-      "A first list of users."
+      "A mind-map.",
+      "Personas."
     ],
     "teacher": [
-      "Moodle calls this Lab #3. Moodle's own text says the group selects a website and describes it with a mind-map.",
+      "Moodle calls this Lab #3. Moodle puts personas in Lab #4. They are moved here to balance the load.",
       "Approve each website. The eligibility rules are on the project view and in the Moodle project description."
-    ],
-    "after": [
-      "Finish the mind-map if anything is missing."
     ]
   },
   "step2": {
-    "intro": "You know the website. Now you look at the people who use it, what they try to do, and where the first problems seem to be. You end with clear goals and questions.",
+    "intro": "You write the main stories, look at the website with them in hand, set the goals and questions of the study, and decide who will take part.",
     "parts": [
-      {
-        "title": "Build the personas",
-        "min": 40,
-        "text": "A persona is a made-up person built from what you know about the real audience. Write two or three. Each has a goal on this website, a situation, how comfortable they are with technology, and anything that makes the site harder for them. Use your mind-map and a look at the real site. Do not use names of people you know.",
-        "help": [
-          "ixdf-articles"
-        ]
-      },
       {
         "title": "Write the main user stories",
         "min": 25,
@@ -89,7 +81,7 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Do a first expert review",
-        "min": 35,
+        "min": 45,
         "text": "Walk through each story on the real site. Note what looks confusing, slow, hidden or broken. Use the Nielsen heuristics. The course page gives templates for this: a Figma file, a Miro board and an NN/g workbook. Duplicate one and use it. Do not try to be complete. You are looking for the areas that deserve more attention.",
         "help": [
           "tpl-figma",
@@ -100,19 +92,28 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Set the goals and the questions",
-        "min": 35,
+        "min": 40,
         "text": "Look at what the review found. Write two or three usability goals. A goal says who, what they want, in what situation, how you will measure, and what is good enough. Then write the research questions that the test must answer.",
         "widget": "goal"
+      },
+      {
+        "title": "Decide the participants and the size",
+        "min": 25,
+        "text": "Who should take part and how many? Think about the audience from your personas. With a small group the numbers are a signal, not a statistic. Say how you will recruit, and say how you will cope if some sessions fail. Decide what you will ask about each participant, and ask nothing that identifies them.",
+        "help": [
+          "nng-study-guide",
+          "loop11-recruit"
+        ]
       }
     ],
     "checks": {
       "title": "Before you move on",
       "items": [
-        "Two or three personas, each with a goal and a situation.",
-        "The main user stories written down.",
+        "The main user stories are written down.",
         "A short list of areas that deserve attention, from the expert review.",
         "Two or three usability goals, each with a measure and a good-enough rule.",
-        "The research questions written out."
+        "The research questions written out.",
+        "Participants and size decided, with how you will recruit."
       ]
     },
     "good": {
@@ -129,33 +130,20 @@ Object.assign(TUT.content, {
       "A review that lists style opinions. Tie each note to a story."
     ],
     "output": [
-      "Personas.",
       "User stories.",
-      "A list of areas to look at more closely.",
-      "Goals and research questions."
+      "Review notes, goals and research questions.",
+      "A participant plan."
     ],
     "teacher": [
-      "Moodle calls this Lab #4: personas, user stories, preliminary expert review, goals and questions."
-    ],
-    "after": [
-      "Tidy the goals and questions if needed."
+      "Moodle calls this Lab #4: personas, stories, review, goals and questions. Personas moved to Step 1 and the participant plan moved here from Lab #5."
     ]
   },
   "step3": {
-    "intro": "You plan the whole study on paper and set up the tools. Nothing is run yet.",
+    "intro": "You prepare the tasks and questions, choose the instruments and build the test. By the end it is ready to be piloted.",
     "parts": [
       {
-        "title": "Decide the participants and the size",
-        "min": 25,
-        "text": "Who should take part and how many? Think about the audience from your personas. With a small group the numbers are a signal, not a statistic. Say how you will recruit, and say how you will cope if some sessions fail. Decide what you will ask about each participant, and ask nothing that identifies them.",
-        "help": [
-          "nng-study-guide",
-          "loop11-recruit"
-        ]
-      },
-      {
         "title": "Prepare tasks, questions and questionnaires",
-        "min": 50,
+        "min": 45,
         "text": "Write the tasks from the user stories. A task is a goal in a situation, not a list of clicks. Decide how success is judged before the test: by the address a participant reaches or by an answer to a question after the task. Write the questions after each task, the questions at the start about the participants, and a satisfaction questionnaire. Warn participants that questions follow each task.",
         "widget": "profile",
         "help": [
@@ -165,30 +153,34 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Choose the instruments",
-        "min": 20,
+        "min": 15,
         "text": "Loop11 is the main tool for the remote test. Decide what else you need to collect data: a questionnaire, notes, a recording of the screen. Write down why you chose each one and what it cannot see.",
         "help": [
           "loop11-docs"
         ]
       },
       {
-        "title": "Configure the instruments",
-        "min": 40,
+        "title": "Build the test in Loop11",
+        "min": 50,
         "text": "Build the test in Loop11: tasks, success rules, questions, the opening and thank-you text. Try to run through it yourself once. Fix what is unclear. Do not launch it yet: the pilot comes first in the next lab.",
         "help": [
           "loop11-docs",
           "loop11-recording"
         ]
+      },
+      {
+        "title": "Try it yourselves",
+        "min": 25,
+        "text": "Run through the whole test as if you were a participant. Time it. Fix what is unclear. Do not launch yet: the pilot is next."
       }
     ],
     "checks": {
       "title": "Before you move on",
       "items": [
-        "Who takes part and how many, with how you will recruit.",
         "Tasks written as goals, each with a success rule.",
         "Start questions, after-task questions and a satisfaction questionnaire.",
         "The instruments chosen, each with a reason.",
-        "The test built and tried once in Loop11."
+        "The test built in Loop11 and run through once by the group."
       ]
     },
     "good": {
@@ -205,15 +197,11 @@ Object.assign(TUT.content, {
       "Asking for names, emails or anything that identifies a person."
     ],
     "output": [
-      "A study plan: participants, tasks, questions and instruments.",
       "A test built in Loop11, not yet launched."
     ],
     "teacher": [
-      "Moodle calls this Lab #5: plan the study and configure the instruments.",
+      "Moodle calls this Lab #5: plan the study and configure the instruments. The participant plan moved to Step 2.",
       "Moodle says participants get Loop11 licences. Check that every group has one before this session."
-    ],
-    "after": [
-      "Finish the test configuration and the invitation list."
     ]
   },
   "step4a": {
@@ -363,17 +351,14 @@ Object.assign(TUT.content, {
     "teacher": [
       "Which Portuguese rules cover a given website depends on the site. Nobody has confirmed it for the options. The page lists both decrees, Decreto-Lei 83/2018 and 82/2022, and says so.",
       "Accessibility Insights and AccessMonitor are suggestions. Moodle says 'standards checks' and 'other instruments'."
-    ],
-    "after": [
-      "Finish any checks you did not reach and make the log complete for Step 5."
     ]
   },
   "step5": {
-    "intro": "You now have three sources of evidence: the first review, the study and the accessibility checks. You merge them, write the problems down and rank them.",
+    "intro": "You merge the three sources of evidence: the first review, the study and the accessibility checks. You rank the problems, choose the ones to fix and start to understand them.",
     "parts": [
       {
         "title": "Read the numbers",
-        "min": 30,
+        "min": 25,
         "text": "For each task, enter how many tried and how many succeeded, and the times of those who succeeded. Read the range, not only the rate. Add a short sentence on who took part.",
         "widget": "rate",
         "help": [
@@ -383,7 +368,7 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Satisfaction",
-        "min": 15,
+        "min": 10,
         "text": "If you used a satisfaction questionnaire like the System Usability Scale, work out the score for each participant and then for the group.",
         "widget": "sus"
       },
@@ -395,14 +380,19 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Rank them",
-        "min": 40,
+        "min": 35,
         "text": "Give each item a score for how bad it is for the user and how often it happens. Sort them. Ask: does this hurt the service the site is meant to provide?",
         "widget": "rank"
       },
       {
         "title": "Choose the two or three that matter most",
-        "min": 25,
+        "min": 20,
         "text": "Pick the two or three problems or chances with the highest severity or the best chance to improve the service. Write down why you chose them and what you leave out."
+      },
+      {
+        "title": "Study the chosen items",
+        "min": 20,
+        "text": "For each chosen item write what happens, who is hurt, the evidence and the likely cause. Say what is a guess. You propose fixes in Step 6."
       }
     ],
     "checks": {
@@ -412,7 +402,7 @@ Object.assign(TUT.content, {
         "The three sources are merged into one list.",
         "Each item has evidence, a severity and an impact.",
         "Two or three items are chosen, with the reason.",
-        "What you leave out is named."
+        "Each chosen item has a cause, marked as a guess where needed."
       ]
     },
     "good": {
@@ -430,14 +420,11 @@ Object.assign(TUT.content, {
     ],
     "output": [
       "A ranked list of problems and chances.",
-      "The two or three items chosen for the next lab."
+      "Two or three chosen items, each with a likely cause."
     ],
     "teacher": [
       "Moodle calls this Step 5: compile, describe, classify and select the problems.",
       "The rate and satisfaction tools are the same ones as in the practice labs."
-    ],
-    "after": [
-      "Finish ranking if needed."
     ]
   },
   "step6": {
@@ -445,12 +432,12 @@ Object.assign(TUT.content, {
     "parts": [
       {
         "title": "Study the chosen items in depth",
-        "min": 25,
-        "text": "For each of the two or three items, write down what happens, who is hurt, what the evidence is, and what the likely cause is. Say clearly what is a guess."
+        "min": 15,
+        "text": "Check each chosen item once more: what happens, who is hurt, the evidence, the likely cause. Say clearly what is a guess."
       },
       {
         "title": "Propose fixes and sketch them",
-        "min": 50,
+        "min": 45,
         "text": "For each item write a short description of the fix and sketch it as a low-fidelity drawing of the screen or the page. Pencil and paper is fine. The report must include proposed and illustrated measures. Say how you would know if each fix worked.",
         "help": [
           "nng-articles",
@@ -459,12 +446,12 @@ Object.assign(TUT.content, {
       },
       {
         "title": "Put the report together",
-        "min": 35,
-        "text": "Assemble the report: goals, questions, method, results, analysis and discussion, a critical reflection on the limits of the study, and conclusions that include the illustrated fixes. Check that you changed nothing important without explaining it. Cite what you used."
+        "min": 55,
+        "text": "Write the report together in the session: goals, questions, method, results, analysis and discussion, a critical reflection on the limits of the study, and conclusions that include the illustrated fixes. Assign sections, write and read each other's parts. Check that you changed nothing important without explaining it. Cite what you used."
       },
       {
         "title": "Plan the presentation",
-        "min": 25,
+        "min": 20,
         "text": "Plan one talk that tells the whole story, from the question to the fixes. Write one sentence for each part. Ask your teacher for the time you will have.",
         "widget": "talkplan"
       }
@@ -501,7 +488,7 @@ Object.assign(TUT.content, {
       "The report must include proposed and illustrated measures. Plagiarism means failing the course at once."
     ],
     "after": [
-      "Finish the report and the slides.",
+      "Polish the report and the slides.",
       "Hand in the report and the presentation the day before the presentation sessions."
     ]
   },
