@@ -92,3 +92,9 @@ input[type=text]{font:inherit;width:100%;padding:9px 12px;border:1px solid #9a9a
 .loglist ol{padding-left:20px}.loglist li{margin-bottom:6px}
 .pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px}
 @media(max-width:1000px){.side{position:static;max-height:none}}
+
+.susgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px}.susgrid input{max-width:90px}
+select{font:inherit;padding:8px 10px;border:1px solid #9a9a90;border-radius:12px;background:#fff;color:var(--ink);max-width:100%}
+.talkno{font-weight:760}
+button:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:700px){.susgrid{grid-template-columns:1fr}}

@@ -1,7 +1,7 @@
 /* Meta. Edit by hand. */
 window.TUT = window.TUT || {};
 TUT.meta = {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "date": "9 November 2026",
   "title": "Metro do Porto: formative evaluation sprints",
   "short": "Loop11 · AccessMonitor · Metro do Porto",

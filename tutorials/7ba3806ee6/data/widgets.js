@@ -48,5 +48,68 @@ TUT.widgets = {
       { "id": "rule", "label": "Rule it may break", "hint": "WCAG number, if you know it. Look it up in WCAG 2.2." },
       { "id": "who", "label": "Who it hurts", "hint": "For example: keyboard users, low vision, screen reader users, everyone." }
     ]
+  },
+  "studylog": {
+    "title": "Study problems",
+    "lead": "Add each problem the study shows. Write it as who, what, where, with evidence.",
+    "warn": "This page does not save anything. Copy the list into your team notes before you close the page.",
+    "fields": [
+      { "id": "task", "label": "Task", "hint": "Planner, PDF, or an extra task." },
+      { "id": "what", "label": "What happened", "hint": "One plain sentence." },
+      { "id": "evidence", "label": "Evidence", "hint": "Recording and time, a number, or an answer." },
+      { "id": "count", "label": "How many people", "hint": "For example: 3 of 5." },
+      { "id": "why", "label": "Likely cause", "hint": "Your best guess. Say it is a guess." }
+    ]
+  },
+  "rate": {
+    "title": "Success rate with a range",
+    "lead": "Enter the numbers for one task. The range shows how far a small group can mislead you.",
+    "fields": [
+      { "id": "n", "label": "People who tried the task", "hint": "Sessions that count under your rule." },
+      { "id": "ok", "label": "People who succeeded", "hint": "Under your success rule." },
+      { "id": "times", "label": "Times of those who succeeded, in seconds", "hint": "Separated by commas, for example: 95, 140, 210." }
+    ],
+    "note": "The range is a 95 percent Wilson interval. With five people it is very wide. That is why you read recordings, not only numbers."
+  },
+  "sus": {
+    "title": "System Usability Scale score",
+    "lead": "Enter the ten answers of one participant, each from 1 to 5, in the order of the questionnaire. Odd items are the positive statements, even items the negative ones. Add the participant to see the group result.",
+    "note": "The SUS score is from 0 to 100. A score near 68 is often quoted as an average. With a few people, treat the score as a hint and not as a verdict."
+  },
+  "lost": {
+    "title": "Lostness",
+    "lead": "Lostness compares the path a person took with the shortest possible path. Count from a recording or from the path view.",
+    "fields": [
+      { "id": "N", "label": "Different pages visited", "hint": "Each page once." },
+      { "id": "S", "label": "All page visits", "hint": "Count a page again each time it is visited." },
+      { "id": "R", "label": "Fewest pages needed", "hint": "The shortest correct path." }
+    ],
+    "note": "0 is a perfect path. Values above about 0.5 are often read as clearly lost, and below about 0.4 as fine (Smith, 1996). Use this as a guide only."
+  },
+  "rank": {
+    "title": "Merge and rank",
+    "lead": "Put every problem from both sub-teams in one list. Give each an impact and a frequency, from 1 (low) to 3 (high). The score is impact times frequency.",
+    "warn": "This page does not save anything. Copy the ranking into your team notes before you close the page.",
+    "scale": [
+      { "id": "impact", "label": "Impact", "hint": "1 slows people, 2 makes them fail or give up on a task, 3 blocks some people completely." },
+      { "id": "freq", "label": "Frequency", "hint": "1 a few people, 2 about half, 3 almost everyone, or everyone who relies on this feature." }
+    ]
+  },
+  "talkplan": {
+    "title": "Five-minute plan",
+    "lead": "Write one sentence for each part. The minutes add up to five.",
+    "parts": [
+      { "id": "hook", "label": "The question", "min": 0.5, "hint": "Why the digital team asked you." },
+      { "id": "how", "label": "What you did", "min": 1, "hint": "Study and expert check, in one breath." },
+      { "id": "top", "label": "The top problems", "min": 2, "hint": "Two or three, each with its evidence." },
+      { "id": "fix", "label": "Fixes to try", "min": 1, "hint": "One change for each top problem." },
+      { "id": "ask", "label": "What to do first", "min": 0.5, "hint": "One clear request." }
+    ]
+  },
+  "talkclock": {
+    "title": "Talk clock",
+    "lead": "Five minutes for each talk. The clock says when one minute is left and when time is up.",
+    "talks": 8,
+    "seconds": 300
   }
 };

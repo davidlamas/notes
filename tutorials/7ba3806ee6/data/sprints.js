@@ -86,37 +86,37 @@ TUT.stations = {
   },
   "s2-plan": {
     "title": "Plan how to read the evidence",
-    "stream": "AB", "minutes": 10, "status": "outline",
+    "stream": "AB", "minutes": 10, "status": "draft",
     "aim": "Agree what counts as a problem and how you will rate it, before you open the results.",
     "resources": ["nng-articles"]
   },
   "s2-results": {
     "title": "Read the Loop11 results",
-    "stream": "A", "minutes": 35, "status": "outline",
+    "stream": "A", "minutes": 35, "status": "draft",
     "aim": "Look at success, time, paths, recordings and SUS. Read a small sample with care.",
     "resources": ["loop11-docs", "ixdf-articles"]
   },
   "s2-audit": {
     "title": "Write up the accessibility findings",
-    "stream": "B", "minutes": 35, "status": "outline",
+    "stream": "B", "minutes": 35, "status": "draft",
     "aim": "Combine AccessMonitor, plugin and manual findings. Say which criterion each problem breaks and who it hurts.",
     "resources": ["accessmonitor", "a11y-insights-overview", "a11y-insights-assessment", "wcag22", "law-dl83", "law-dl82"]
   },
   "s2-rank": {
     "title": "Merge, rank and sketch fixes",
-    "stream": "AB", "minutes": 25, "status": "outline",
+    "stream": "AB", "minutes": 25, "status": "draft",
     "aim": "Put both sets of problems in one list. Rank them. Pick two or three and sketch a fix for each.",
     "resources": ["nng-articles"]
   },
   "s2-talk": {
     "title": "Build your five-minute talk",
-    "stream": "AB", "minutes": 20, "status": "outline",
+    "stream": "AB", "minutes": 20, "status": "draft",
     "aim": "Tell the digital team what to fix first, with evidence. Use any support you can present in five minutes.",
     "resources": []
   },
   "s2-present": {
     "title": "Present to the digital team",
-    "stream": "AB", "minutes": 45, "status": "outline",
+    "stream": "AB", "minutes": 45, "status": "draft",
     "aim": "Eight talks of five minutes, with changeovers.",
     "resources": []
   }

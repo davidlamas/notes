@@ -74,11 +74,13 @@ if meta["teams"] * 5 > 45:
 
 # widgets and station content
 widgets = load("widgets.js", "TUT.widgets") or {}
-ctext = (root / "data" / "content-s1.js").read_text(encoding="utf-8")
-cm = re.search(r"Object\.assign\(TUT\.content,\s*(\{.*\})\s*\);", ctext, re.S)
-content = json.loads(cm.group(1)) if cm else {}
-if not cm:
-    errors.append("content-s1.js: cannot parse content")
+content = {}
+for cf in sorted((root / "data").glob("content-s*.js")):
+    cm = re.search(r"Object\.assign\(TUT\.content,\s*(\{.*\})\s*\);", cf.read_text(encoding="utf-8"), re.S)
+    if not cm:
+        errors.append(f"{cf.name}: cannot parse content")
+        continue
+    content.update(json.loads(cm.group(1)))
 for sid, st in stations.items():
     if st["status"] == "draft" and sid not in content:
         errors.append(f"{sid}: status draft but no content")
