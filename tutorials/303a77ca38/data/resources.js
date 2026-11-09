@@ -182,8 +182,8 @@ TUT.resources = [
   },
   {
     "id": "svc-stcp",
-    "group": "Websites you can choose",
-    "title": "Example: Porto public transport (STCP pages)",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "STCP, Porto public transport",
     "url": "https://www.stcp.pt/pt/viajar/",
     "note": "Address as given on Moodle. An example of a website that may qualify. Your teacher approves every choice.",
     "status": "listed"
@@ -227,5 +227,125 @@ TUT.resources = [
     "url": "https://accessible.org/wcag/",
     "note": "Linked on Moodle as a checklist for WCAG 2.2.",
     "status": "listed"
+  },
+  {
+    "id": "svc-cp",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "CP, Comboios de Portugal",
+    "url": "https://www.cp.pt/",
+    "note": "Train search, fares and discounts, changes and refunds. Guest purchase exists, so tasks can stop before payment. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-tap",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "TAP Air Portugal",
+    "url": "https://www.flytap.com/",
+    "note": "Flight search and fares. Stop before payment. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-flixbus",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "FlixBus Portugal",
+    "url": "https://www.flixbus.pt/",
+    "note": "Bus search and fares. Stop before payment. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-ikea",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "IKEA Portugal",
+    "url": "https://www.ikea.com/pt/pt/",
+    "note": "Browsing, filters, comparison, planners, store and delivery information. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-worten",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Worten",
+    "url": "https://www.worten.pt/",
+    "note": "Electronics shop: search, filters, comparison, basket. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-decathlon",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Decathlon Portugal",
+    "url": "https://www.decathlon.pt/",
+    "note": "Sports shop: search, filters, sizes, stores. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-fnac",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "FNAC Portugal",
+    "url": "https://www.fnac.pt/",
+    "note": "Books, music and electronics: search, filters, basket. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-continente",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Continente online",
+    "url": "https://www.continente.pt/",
+    "note": "Grocery shop: search, basket, delivery options. Check what works without an account. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-pingodoce",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Pingo Doce online",
+    "url": "https://www.pingodoce.pt/",
+    "note": "Grocery and recipes. Check what works without an account. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-glovo",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Glovo",
+    "url": "https://glovoapp.com/pt/pt/",
+    "note": "Food and goods delivery. Check what works without an account. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-casamusica",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Casa da Música",
+    "url": "https://www.casadamusica.com/",
+    "note": "Events, programme, tickets and visiting information. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-serralves",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Serralves",
+    "url": "https://www.serralves.pt/",
+    "note": "Exhibitions, events, tickets and visiting information. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-nos",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "NOS Cinemas",
+    "url": "https://cinemas.nos.pt/",
+    "note": "Showtimes, cinemas and seat choice. Stop before payment. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-booking",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Booking.com",
+    "url": "https://www.booking.com/",
+    "note": "Accommodation search, filters and comparison. Pushes logins, so keep tasks on searching and comparing. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
+  },
+  {
+    "id": "svc-airbnb",
+    "group": "Websites that may qualify (examples, for approval)",
+    "title": "Airbnb",
+    "url": "https://www.airbnb.pt/",
+    "note": "Accommodation search, filters and comparison. Pushes logins, so keep tasks on searching and comparing. Address from general knowledge: open it and check it before you rely on it.",
+    "status": "to-verify"
   }
 ];

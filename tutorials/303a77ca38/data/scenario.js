@@ -54,6 +54,11 @@ TUT.scenario = {
           "text": "In Portuguese or English, works in a laptop browser, loads in Loop11 (test it early) and is not about to be redesigned."
         },
         {
+          "tag": "Ideas",
+          "title": "Websites that may qualify",
+          "text": "Transport, shops, culture and events, and travel stays. See the Resources view for a list of examples. They are ideas, not a menu, and the lecturer approves each one."
+        },
+        {
           "tag": "Rule",
           "title": "No duplicates",
           "text": "No two groups evaluate the same website."

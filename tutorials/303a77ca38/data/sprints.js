@@ -85,6 +85,22 @@ TUT.stations = {
     "status": "draft",
     "aim": "Describe the approved website with a mind-map, build personas and write the main user stories.",
     "resources": [
+      "svc-stcp",
+      "svc-cp",
+      "svc-tap",
+      "svc-flixbus",
+      "svc-ikea",
+      "svc-worten",
+      "svc-decathlon",
+      "svc-fnac",
+      "svc-continente",
+      "svc-pingodoce",
+      "svc-glovo",
+      "svc-casamusica",
+      "svc-serralves",
+      "svc-nos",
+      "svc-booking",
+      "svc-airbnb",
       "ixdf-articles",
       "nng-articles"
     ]
