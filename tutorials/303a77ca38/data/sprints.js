@@ -1,7 +1,7 @@
 /* Stretches, labs and stations. Edit by hand.
    A block is one session of 135 minutes (three academic hours). Stations in one block run in parallel.
    stream: "A" (the study), "B" (the accessibility evaluation) or "AB" (the whole group).
-   Steps 1 to 6 are Moodle Labs #3 to #8. Presentation sessions 1 and 2 are Moodle Labs #9 and #10. Moodle is correct (David, 9 Nov). No dates are shown on purpose. */
+   Steps 1 to 6 are the working sessions. Presentation sessions 1 and 2 follow. No dates are shown on purpose. */
 window.TUT = window.TUT || {};
 TUT.sprints = [
   {
@@ -9,7 +9,7 @@ TUT.sprints = [
     "number": 1,
     "eyebrow": "Steps 1 to 6",
     "title": "Six working steps",
-    "subtitle": "Choose and map, understand and plan, run and check accessibility, compile and rank, fix and report. Moodle calls them Labs #3 to #8. The last two are in January.",
+    "subtitle": "Choose and map, understand and plan, run and check accessibility, compile and rank, fix and report.",
     "minutes": 810,
     "when": "6 steps",
     "blocks": [
@@ -69,7 +69,7 @@ TUT.sprints = [
     "number": 2,
     "eyebrow": "Presentation sessions",
     "title": "Presentation sessions 1 and 2",
-    "subtitle": "Hand in the report and the presentation the day before. Moodle calls these Labs #9 and #10, also in January.",
+    "subtitle": "Hand in the report and the presentation the day before.",
     "minutes": 270,
     "when": "2 sessions",
     "blocks": [
@@ -99,7 +99,7 @@ TUT.stations = {
     "stream": "AB",
     "minutes": 135,
     "status": "draft",
-    "aim": "Settle the website with the lecturer, test that it loads in Loop11, describe it with a mind-map and build the personas.",
+    "aim": "Settle the website with the teacher, test that it loads in Loop11, describe it with a mind-map and build the personas.",
     "resources": [
       "svc-stcp",
       "svc-cp",

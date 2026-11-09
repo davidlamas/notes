@@ -1,5 +1,5 @@
 /* Outside resources. Edit by hand.
-   status: "listed" means David named it or it was found on the official site.
+   status: "listed" means the source was named by the author or found on the official site.
            "to-verify" means the address or the exact page still has to be checked.
            "pending" means the item has no address yet.
    Only ISO, IxDF, NN/g, Loop11, AccessMonitor, the plugin documentation and the Metro do Porto site belong here. */

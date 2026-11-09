@@ -1,0 +1,56 @@
+# Evaluation project page: notes for the next person or agent (course-specific working notes, kept outside the tutorial folder)
+
+> Taking over? Read `../HANDOVER.md` first.
+
+## What this page is
+An unlisted, buildless page (HTML, CSS, vanilla JS) for the evaluation project of the HCI lab course (Lusófona, Porto). It is a sibling of `../7ba3806ee6/` (the two practice labs with Loop11). It uses the same engine. All text is English and lives in `data/`.
+
+Title: "Evaluation project: Loop11 · AccessMonitor". Header mark: "P". Nothing links to it. It is marked `noindex`.
+
+## Where the content comes from
+Everything about the project is mined from the Moodle course page (course id 22490, read on 9 November 2026): the project description, the fifteen steps, the expected results, the options A/B/C, the templates, and the timeline. The English text is a plain summary. Moodle wins if they differ.
+
+## Decisions from David (9 November 2026)
+- Moodle is correct about the sessions. Six working labs, shown here as Step 1 to Step 6 (Moodle Labs #3 to #8), then two presentation sessions, shown as Presentation session 1 and 2 (Moodle Labs #9 and #10). The last four sessions (Steps 5 and 6, and the two presentation sessions) are in January. Each session is 3 academic hours (135 min).
+- Naming: the practice page uses "Sprint 1 and 2". This page uses "Step 1 to 6" and "Presentation sessions 1 and 2".
+- Do more in the labs and less as independent work. Load was rebalanced across the six steps: Step 1 holds the website approval, mind-map and personas; Step 2 the stories, review, goals and participants; Step 3 the tasks and the build; Step 5 ends with the causes of the chosen problems; Step 6 writes the report in the session. Only Step 4 (study runs on) and Step 6 (polish and hand-in) have independent work.
+- No dates and no deadline on the page. Report and presentation are handed in the day before the presentation sessions.
+- Talks: 20 minutes plus 10 minutes of discussion, so four groups per session and at most eight groups. Moodle has ten team spaces: check the real number of groups.
+- Formative evaluation. Each group picks its own website, no duplicates, the lecturer approves it. SIGA and SNS24 dropped. No Metro do Porto material on this page. The eligibility rules on the project view are a draft for the lecturer. Example sites are on the Resources view.
+- Header mark: "P" for project. (The Metro sprint page uses "S" for sprint.)
+
+## Facts from Moodle used here
+- The fifteen project steps, the expected report and presentation, the templates for expert review, the accessibility links, and the lab activity lists.
+- Plagiarism means failing the course at once.
+- The order of presentations is a hidden Moodle page.
+
+## Open points
+1. The minutes inside each lab are suggestions.
+2. Which Portuguese accessibility law applies depends on the website. Both decrees are listed as "to verify".
+3. Eligibility guidelines need the lecturer's approval. The list of candidate sites is still to come.
+4. No link on this page was opened and checked, apart from the Moodle ones. No screen reader pass was done.
+
+## Files
+- `data/meta.js`, `scenario.js` (project brief, in `sections`), `sprints.js` (stretches, labs, stations), `content-p.js` (the content of each lab), `resources.js`, `widgets.js` (tools).
+- `js/` and `styles.css`: the engine, copied from the practice page. Brief view renders `scenario.sections`. Route view texts come from `meta.ui`.
+- "Sprint" in the code means a stretch of the timeline. Block means one lab. Stream A is the study, B is the accessibility evaluation, AB is the whole group.
+- Checks: `python3 src/check.py`, `NODE_PATH=/opt/npm-tools/node_modules node src/smoke.js`, and `AXE=<axe.min.js> NODE_PATH=... node src/a11y.js`.
+
+## Status at version 0.5.0
+All nine steps and sessions have draft content. No links on this page were opened and checked, except the Moodle ones that were read from the course page. Resources copied from the practice page keep their status. No screen reader pass was done.
+
+## How to publish
+It is a static folder. Pushing to the `notes` repo publishes it with the rest. Do not link it from the notes landing page.
+
+## Changes made in Moodle on 9 November 2026 (by Claude, on David's instruction)
+- "Projeto" description: the step "seleccionar um dos websites indicados, ou sugerir outro adequado" now reads "escolher um website a avaliar. Cada grupo avalia um website diferente, sujeito a aprovação do docente." Two blocks were added before "Os resultados esperados são": "Escolha do website" (rules and example sites) and "Entrega e apresentação" (hand-in the day before, 20 + 10 minutes).
+- Options A (SIGA) and B (SNS24) were hidden from students, not deleted. To restore, set them to "Mostrar na página da disciplina".
+- Option C was renamed from "Website a avaliar (opção C)" to "Exemplo de website a avaliar: transportes públicos do Porto (STCP)".
+- Not changed: the lab list and numbering (which are correct), the week headings with dates, and the assignment dates (opens 17 Nov 2026, due 4 Jan 2027 23:59). The due date may need to move to the day before the presentation sessions.
+
+## Moodle lab lists updated (9 Nov 2026)
+Only the bullet lists under Labs #3 to #8 and #9 and #10 were edited, in modules 154415, 154432 and 154439. Headings, week titles and the Projeto dates (due 4 Jan 2027 23:59) were not changed. Lab #3: confirm the website, mind-map, personas. Lab #4: user stories, preliminary review, goals and questions, participants and sample. Lab #5: plan, materials, instruments, configure, try them. Lab #7: adds "analyse the causes". Lab #8: report written in class, presentation prepared. Labs #9 and #10: 20 + 10 minutes, four groups each. Originals were saved in /tmp/moodle-orig (not in the repo).
+
+## Shared deck for the presentation sessions
+One Google Slides deck for all eight talks (title, how to use, order of talks, Team 1 to Team 8 slides): https://docs.google.com/presentation/d/1Hx93SZfuzjTXkn35M3uZlw8NUcFX8MMfccEvNb-wVxE/edit
+Created 9 Nov 2026 in David's Drive, private until David shares it. Teams 1 to 4 present in session 1, Teams 5 to 8 in session 2. Hand-in is the day before the sessions, so the deck is frozen then.

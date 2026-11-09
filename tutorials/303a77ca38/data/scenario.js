@@ -4,23 +4,23 @@ TUT.scenario = {
   "eyebrow": "The project",
   "headline": "Design, run and report a usability study. Then propose fixes.",
   "paragraphs": [
-    "This is the project of the lab part of the Human-Computer Interaction course. In groups of up to five you evaluate a real digital service. You study how well people can use it, and you check how accessible it is.",
+    "This is a project about usability and accessibility. In groups of up to five you evaluate a real digital service. You study how well people can use it, and you check how accessible it is.",
     "You finish with a report and a talk. Both must include proposals, with sketches, to fix the problems you found.",
-    "The first two labs of the course, with Loop11, are practice for this project. Your questions can be inspired by that test."
+    "If you have not used Loop11 before, a short practice test first is a good idea."
   ],
-  "fictionNote": "Everything on this page comes from the course page on Moodle (in Portuguese there), plus decisions from the lecturers. The English wording is a plain summary. If the two differ, Moodle or the lecturer wins. Dates and deadlines are not shown here.",
+  "fictionNote": "This page is a plain summary of the project brief. If it differs from what your teacher says, your teacher wins. Dates and deadlines are not shown here.",
   "brief": [
     {
       "label": "You are",
-      "text": "a group of at most five students. Form the group in Moodle, under the group page."
+      "text": "a group of at most five students. Register your group with your teacher."
     },
     {
       "label": "You evaluate",
-      "text": "one website that you choose. Each group has its own, and the lecturer approves it before Step 1."
+      "text": "one website that you choose. Each group has its own, and the teacher approves it before Step 1."
     },
     {
       "label": "You hand in",
-      "text": "a written report and a presentation, the day before the presentation sessions. Plagiarism means failing the course at once."
+      "text": "a written report and a presentation, the day before the presentation sessions. Plagiarism is not accepted."
     },
     {
       "label": "Your time",
@@ -31,7 +31,7 @@ TUT.scenario = {
     {
       "title": "Choosing your website (draft guidelines for approval)",
       "kind": "cards",
-      "intro": "The lecturer approves every website. These are the draft rules the lecturer may use.",
+      "intro": "The teacher approves every website. These are draft rules the teacher may use.",
       "items": [
         {
           "tag": "Rule",
@@ -46,7 +46,7 @@ TUT.scenario = {
         {
           "tag": "Rule",
           "title": "Real and safe",
-          "text": "A real service that people use. Tasks that need no real personal data. Sensitive subjects such as health or money need the lecturer's agreement."
+          "text": "A real service that people use. Tasks that need no real personal data. Sensitive subjects such as health or money need the teacher's agreement."
         },
         {
           "tag": "Rule",
@@ -56,7 +56,7 @@ TUT.scenario = {
         {
           "tag": "Ideas",
           "title": "Websites that may qualify",
-          "text": "Transport, shops, culture and events, and travel stays. See the Resources view for a list of examples. They are ideas, not a menu, and the lecturer approves each one."
+          "text": "Transport, shops, culture and events, and travel stays. See the Resources view for a list of examples. They are ideas, not a menu, and the teacher approves each one."
         },
         {
           "tag": "Rule",
@@ -68,12 +68,12 @@ TUT.scenario = {
     {
       "title": "How the time works",
       "kind": "cards",
-      "intro": "Decided by the lecturers.",
+      "intro": "Decided by the teachers.",
       "items": [
         {
           "tag": "Labs",
           "title": "Six steps and two presentation sessions",
-          "text": "Steps 1 to 6 are six lab sessions, and Presentation sessions 1 and 2 follow. Each lasts three academic hours. The last four sessions, Steps 5 and 6 and the two presentation sessions, are in January. Moodle numbers them Labs #3 to #8 and #9 and #10."
+          "text": "Steps 1 to 6 are six lab sessions, and Presentation sessions 1 and 2 follow. Each lasts three academic hours."
         },
         {
           "tag": "Between labs",
@@ -95,7 +95,7 @@ TUT.scenario = {
     {
       "title": "What the project asks for",
       "kind": "cards",
-      "intro": "The course page gives fifteen steps. Each lab on the timeline covers some of them.",
+      "intro": "There are fifteen steps. Each step on the timeline covers some of them.",
       "items": [
         {
           "tag": "Step 1",
@@ -152,7 +152,7 @@ TUT.scenario = {
     {
       "title": "What the report and the talk must hold",
       "kind": "cards",
-      "intro": "These are the expected results on Moodle.",
+      "intro": "These are the expected results.",
       "items": [
         {
           "tag": "Hand in",

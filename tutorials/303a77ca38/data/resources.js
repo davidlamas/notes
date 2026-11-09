@@ -1,5 +1,5 @@
 /* Outside resources. Edit by hand.
-   status: "listed" means the course page names it or it was found on the official site.
+   status: "listed" means the source names it or it was found on the official site.
            "to-verify" means the address or the exact page still has to be checked.
            "pending" means the item has no address yet. */
 window.TUT = window.TUT || {};
@@ -97,7 +97,7 @@ TUT.resources = [
     "group": "Tools",
     "title": "Loop11: Recruiting participants and sharing the test link",
     "url": "https://www.loop11.com/?p=22568",
-    "note": "Three ways to reach participants: a link, a pop-up invitation, or a panel. In class you use the link and teammates as participants.",
+    "note": "Three ways to reach participants: a link, a pop-up invitation, or a panel. In practice you use the link and teammates as participants.",
     "status": "listed"
   },
   {
@@ -185,7 +185,7 @@ TUT.resources = [
     "group": "Websites that may qualify (examples, for approval)",
     "title": "STCP, Porto public transport",
     "url": "https://www.stcp.pt/pt/viajar/",
-    "note": "Address as given on Moodle. An example of a website that may qualify. Your teacher approves every choice.",
+    "note": "An example of a website that may qualify. Your teacher approves every choice.",
     "status": "listed"
   },
   {
@@ -193,7 +193,7 @@ TUT.resources = [
     "group": "Templates for the expert review",
     "title": "Heuristic evaluation template (Figma)",
     "url": "https://www.figma.com/community/file/1295378761228559977",
-    "note": "Linked on Moodle. Duplicate it and use it.",
+    "note": "Duplicate it and use it.",
     "status": "listed"
   },
   {
@@ -201,7 +201,7 @@ TUT.resources = [
     "group": "Templates for the expert review",
     "title": "Heuristic evaluation template (Miro)",
     "url": "https://miro.com/templates/heuristic-evaluation-1/",
-    "note": "Linked on Moodle. Duplicate it and use it.",
+    "note": "Duplicate it and use it.",
     "status": "listed"
   },
   {
@@ -209,7 +209,7 @@ TUT.resources = [
     "group": "Templates for the expert review",
     "title": "Heuristic evaluation workbook (NN/g, PDF)",
     "url": "https://media.nngroup.com/media/articles/attachments/Heuristic_Evaluation_Workbook_1_Fillable.pdf",
-    "note": "Linked on Moodle. A fillable workbook.",
+    "note": "A fillable workbook.",
     "status": "listed"
   },
   {
@@ -217,7 +217,7 @@ TUT.resources = [
     "group": "Standards and law",
     "title": "Acessibilidade.gov.pt: the Portuguese legal frame and good practice",
     "url": "https://www.acessibilidade.gov.pt/",
-    "note": "Linked on Moodle as the place for accessibility good practice for web content and mobile apps.",
+    "note": "The place for accessibility good practice for web content and mobile apps.",
     "status": "listed"
   },
   {
@@ -225,7 +225,7 @@ TUT.resources = [
     "group": "Standards and law",
     "title": "WCAG 2.2 checklist",
     "url": "https://accessible.org/wcag/",
-    "note": "Linked on Moodle as a checklist for WCAG 2.2.",
+    "note": "A checklist for WCAG 2.2.",
     "status": "listed"
   },
   {

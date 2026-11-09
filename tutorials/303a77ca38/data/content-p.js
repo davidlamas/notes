@@ -8,12 +8,12 @@ Object.assign(TUT.content, {
       {
         "title": "Read the project and the plan",
         "min": 10,
-        "text": "Read the project view together. Agree who does what and how you will work between sessions. Sign up your group in Moodle."
+        "text": "Read the project view together. Agree who does what and how you will work between sessions. Register your group with your teacher."
       },
       {
-        "title": "Settle the website with the lecturer",
+        "title": "Settle the website with the teacher",
         "min": 30,
-        "text": "Your website must be approved by the lecturer, and no two groups use the same one. Check it against the rules on the project view: no login for the main tasks, enough complexity, real and safe, usable in Loop11. Try loading it in Loop11 now, so you find problems early. Have a second choice ready.",
+        "text": "Your website must be approved by the teacher, and no two groups use the same one. Check it against the rules on the project view: no login for the main tasks, enough complexity, real and safe, usable in Loop11. Try loading it in Loop11 now, so you find problems early. Have a second choice ready.",
         "help": [
           "svc-cp",
           "svc-ikea",
@@ -42,7 +42,7 @@ Object.assign(TUT.content, {
     "checks": {
       "title": "Before you move on",
       "items": [
-        "The website is approved by the lecturer, and not used by another group.",
+        "The website is approved by the teacher, and not used by another group.",
         "You loaded the website in Loop11 once.",
         "The mind-map shows the purpose, the services and the audience.",
         "Two or three personas, each with a goal and a situation."
@@ -67,8 +67,7 @@ Object.assign(TUT.content, {
       "Personas."
     ],
     "teacher": [
-      "Moodle calls this Lab #3. Moodle puts personas in Lab #4. They are moved here to balance the load.",
-      "Approve each website. The eligibility rules are on the project view and in the Moodle project description."
+      "Approve each website. The eligibility rules are on the project view"
     ]
   },
   "step2": {
@@ -82,7 +81,7 @@ Object.assign(TUT.content, {
       {
         "title": "Do a first expert review",
         "min": 45,
-        "text": "Walk through each story on the real site. Note what looks confusing, slow, hidden or broken. Use the Nielsen heuristics. The course page gives templates for this: a Figma file, a Miro board and an NN/g workbook. Duplicate one and use it. Do not try to be complete. You are looking for the areas that deserve more attention.",
+        "text": "Walk through each story on the real site. Note what looks confusing, slow, hidden or broken. Use the Nielsen heuristics. Templates are in the Resources view: a Figma file, a Miro board and an NN/g workbook. Duplicate one and use it. Do not try to be complete. You are looking for the areas that deserve more attention.",
         "help": [
           "tpl-figma",
           "tpl-miro",
@@ -135,7 +134,7 @@ Object.assign(TUT.content, {
       "A participant plan."
     ],
     "teacher": [
-      "Moodle calls this Lab #4: personas, stories, review, goals and questions. Personas moved to Step 1 and the participant plan moved here from Lab #5."
+      "Check that each group's participant plan is realistic for its website."
     ]
   },
   "step3": {
@@ -200,8 +199,7 @@ Object.assign(TUT.content, {
       "A test built in Loop11, not yet launched."
     ],
     "teacher": [
-      "Moodle calls this Lab #5: plan the study and configure the instruments. The participant plan moved to Step 2.",
-      "Moodle says participants get Loop11 licences. Check that every group has one before this session."
+      "Check that every group has a Loop11 licence before this session."
     ]
   },
   "step4a": {
@@ -268,7 +266,6 @@ Object.assign(TUT.content, {
       "A first list of problems from the study."
     ],
     "teacher": [
-      "Moodle calls this Lab #6: pilot, refine, recruit, run and follow the study. The accessibility side is Step 4b.",
       "The study may run beyond the session. Some groups may end with few participants: ask them to say so in the report."
     ],
     "after": [
@@ -282,7 +279,7 @@ Object.assign(TUT.content, {
       {
         "title": "Plan the evaluation",
         "min": 20,
-        "text": "Moodle names four kinds of checks: heuristics, standards checks, operating-system features and other instruments. Pick the pages or screens that matter most for your user stories. Decide which check you will run on which page.",
+        "text": "There are four kinds of checks: heuristics, standards checks, operating-system features and other instruments. Pick the pages or screens that matter most for your user stories. Decide which check you will run on which page.",
         "help": [
           "wcag22",
           "wcag-checklist"
@@ -350,7 +347,7 @@ Object.assign(TUT.content, {
     ],
     "teacher": [
       "Which Portuguese rules cover a given website depends on the site. Nobody has confirmed it for the options. The page lists both decrees, Decreto-Lei 83/2018 and 82/2022, and says so.",
-      "Accessibility Insights and AccessMonitor are suggestions. Moodle says 'standards checks' and 'other instruments'."
+      "Accessibility Insights and AccessMonitor are suggestions. Groups may use other instruments."
     ]
   },
   "step5": {
@@ -423,8 +420,7 @@ Object.assign(TUT.content, {
       "Two or three chosen items, each with a likely cause."
     ],
     "teacher": [
-      "Moodle calls this Step 5: compile, describe, classify and select the problems.",
-      "The rate and satisfaction tools are the same ones as in the practice labs."
+      "The rate and satisfaction tools keep nothing after a reload."
     ]
   },
   "step6": {
@@ -477,15 +473,14 @@ Object.assign(TUT.content, {
     "watch": [
       "Sketches so polished that they hide the idea. Low fidelity is the point.",
       "A report that hides what went wrong. Say it instead.",
-      "Copying text from the web or from other groups: plagiarism means failing the course at once."
+      "Copying text from the web or from other groups: plagiarism is not accepted."
     ],
     "output": [
       "The report, ready to hand in.",
       "A plan for the talk."
     ],
     "teacher": [
-      "Moodle calls this Step 6: analyse the chosen problems, propose fixes with low-fidelity sketches, write the report and prepare the presentation.",
-      "The report must include proposed and illustrated measures. Plagiarism means failing the course at once."
+      "The report must include proposed and illustrated measures. Plagiarism is not accepted."
     ],
     "after": [
       "Polish the report and the slides.",
@@ -538,8 +533,7 @@ Object.assign(TUT.content, {
       "Notes from the other groups."
     ],
     "teacher": [
-      "Moodle calls these Labs #9 and #10. The order is on a Moodle page hidden from students.",
-      "Four groups of 30 minutes take 120 of 135 minutes. Two sessions hold at most eight groups. Moodle has ten team spaces. Check how many groups you have."
+      "Four groups of 30 minutes take 120 of 135 minutes. Two sessions hold at most eight groups. Check how many groups you have."
     ]
   },
   "pres2": {
@@ -588,8 +582,7 @@ Object.assign(TUT.content, {
       "Notes from the other groups."
     ],
     "teacher": [
-      "Moodle calls these Labs #9 and #10. The order is on a Moodle page hidden from students.",
-      "Four groups of 30 minutes take 120 of 135 minutes. Two sessions hold at most eight groups. Moodle has ten team spaces. Check how many groups you have."
+      "Four groups of 30 minutes take 120 of 135 minutes. Two sessions hold at most eight groups. Check how many groups you have."
     ]
   }
 });
