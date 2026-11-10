@@ -93,60 +93,24 @@ TUT.scenario = {
       ]
     },
     {
-      "title": "What the project asks for",
-      "kind": "cards",
-      "intro": "There are fifteen steps. Each step on the timeline covers some of them.",
+      "title": "The project's activities",
+      "kind": "activities",
+      "intro": "These are the activities the project asks for. Each one is done in one or more steps on the timeline. Use the links to jump to the step.",
       "items": [
-        {
-          "tag": "Step 1",
-          "title": "Group and website",
-          "text": "Form a group of at most five. Choose a website, or suggest another one."
-        },
-        {
-          "tag": "Step 2",
-          "title": "Describe the website",
-          "text": "Draw a mind-map: what is it about, what services does it offer, who is it for?"
-        },
-        {
-          "tag": "Steps 3 and 4",
-          "title": "People and stories",
-          "text": "Describe the audience with personas. Describe the main user stories the website allows."
-        },
-        {
-          "tag": "Step 5",
-          "title": "Preliminary expert review",
-          "text": "A first check of the website, using the user stories, to find the areas that deserve most attention."
-        },
-        {
-          "tag": "Step 6",
-          "title": "Goals and questions",
-          "text": "Analyse what you found. Set the goals and the research questions of the usability study."
-        },
-        {
-          "tag": "Step 7",
-          "title": "Plan the study",
-          "text": "Participants and sample size, the set-up, and the materials and instruments you need."
-        },
-        {
-          "tag": "Steps 8 and 9",
-          "title": "Run the test, check accessibility",
-          "text": "Run the test and collect data. At the same time, evaluate accessibility with heuristics, standards checks, operating-system features and other instruments."
-        },
-        {
-          "tag": "Steps 10 and 11",
-          "title": "Analyse and list problems",
-          "text": "Analyse the test and the accessibility results. Identify problems and chances for improvement."
-        },
-        {
-          "tag": "Step 12",
-          "title": "Propose fixes",
-          "text": "Propose and illustrate measures to reduce the problems or use the chances."
-        },
-        {
-          "tag": "Steps 13 and 14",
-          "title": "Report and present",
-          "text": "Write and hand in the report. Present the work you did."
-        }
+        {"n": 1, "title": "Group and website", "text": "Form a group of at most five. Choose a website to evaluate. Each group has its own, and the teacher approves it.", "steps": ["step1"]},
+        {"n": 2, "title": "Describe the website", "text": "Draw a mind-map: what is it about, what services does it offer, who is it for?", "steps": ["step1"]},
+        {"n": 3, "title": "Personas", "text": "Describe the audience of the website with personas.", "steps": ["step1"]},
+        {"n": 4, "title": "User stories", "text": "Describe the main user stories the website allows.", "steps": ["step2"]},
+        {"n": 5, "title": "Preliminary expert review", "text": "A first check of the website, using the user stories, to find the areas that deserve most attention.", "steps": ["step2"]},
+        {"n": 6, "title": "Goals and questions", "text": "Analyse what you found. Set the goals and the research questions of the usability study.", "steps": ["step2"]},
+        {"n": 7, "title": "Plan the study", "text": "Participants and sample size, the set-up, and the materials and instruments you need.", "steps": ["step2", "step3"]},
+        {"n": 8, "title": "Run the usability study", "text": "Run a pilot, refine the plan, recruit, run the study and follow the results.", "steps": ["step4a"]},
+        {"n": 9, "title": "Evaluate accessibility", "text": "At the same time, evaluate accessibility with heuristics, standards checks, operating-system features and other instruments.", "steps": ["step4b"]},
+        {"n": 10, "title": "Analyse the results", "text": "Compile and analyse the review, the study and the accessibility results.", "steps": ["step5"]},
+        {"n": 11, "title": "List the problems", "text": "Describe the problems and chances for improvement, rank them, and choose two or three to work on.", "steps": ["step5"]},
+        {"n": 12, "title": "Propose fixes", "text": "Study the causes of the chosen problems. Propose and illustrate measures to reduce them or use the chances.", "steps": ["step5", "step6"]},
+        {"n": 13, "title": "Write the report", "text": "Write and hand in the report, with the proposed and illustrated measures.", "steps": ["step6"]},
+        {"n": 14, "title": "Present the work", "text": "Prepare and give the presentation of what you did and found.", "steps": ["step6", "pres1", "pres2"]}
       ]
     },
     {

@@ -4,10 +4,19 @@
   const $ = id => document.getElementById(id);
   const resById = {}; T.resources.forEach(r => (resById[r.id] = r));
 
+  // Label of a timeline step, for links: "Step 4: the study", "Presentation session 1".
+  function stepLabel(id) {
+    const b = T.sprints.flatMap(sp => sp.blocks).find(x => x.stations.includes(id));
+    const st = T.stations[id];
+    return b.title + (b.stations.length > 1 ? ": " + (st.stream === "A" ? "the study" : "accessibility") : "");
+  }
+  const activitiesIn = id => ((T.scenario.sections.find(x => x.kind === "activities") || { items: [] }).items).filter(a => a.steps.includes(id));
+
   function brief() {
     const sc = T.scenario;
     const cards = it => `<article class="card"><span class="tag">${esc(it.tag)}</span><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p></article>`;
-    const secs = sc.sections.map(x => `<h2 style="margin-top:34px">${esc(x.title)}</h2><p class="sub">${esc(x.intro)}</p><div class="grid2">${x.items.map(cards).join("")}</div>`).join("");
+    const actCards = it => `<article class="card"><span class="tag">Activity ${it.n}</span><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p><p class="help"><b>Done in:</b> ${it.steps.map(id => `<button class="text-button" type="button" data-nav="${id}">${esc(stepLabel(id))}</button>`).join(" · ")}</p></article>`;
+    const secs = sc.sections.map(x => `<h2 style="margin-top:34px">${esc(x.title)}</h2><p class="sub">${esc(x.intro)}</p><div class="grid2">${x.items.map(x.kind === "activities" ? actCards : cards).join("")}</div>`).join("");
     $("view-brief").innerHTML = `
       <p class="eyebrow">${esc(sc.eyebrow)}</p>
       <h1>${esc(sc.headline)}</h1>
@@ -47,6 +56,7 @@
     el.innerHTML = `<p class="eyebrow">${esc(App.LANES[s.stream])} · ${s.minutes} min</p><h2>${esc(s.title)}</h2>
       <span class="tag">${esc(s.status)}</span>
       <div class="f"><b>Aim</b>${esc(s.aim)}</div>
+      ${activitiesIn(S.sel).length ? `<div class="f"><b>Project activities</b><ul>${activitiesIn(S.sel).map(a => `<li>${a.n}. ${esc(a.title)}</li>`).join("")}</ul></div>` : ""}
       <div class="f"><b>Resources</b>${res ? `<ul>${res}</ul>` : `<span class="hint">None yet.</span>`}</div>
       ${T.content && T.content[S.sel] ? `<p><button class="secondary-button" type="button" data-open="${S.sel}">Open the full step</button></p>` : ""}`;
   }
@@ -75,8 +85,8 @@
     const checks = c.checks.items.map((t, i) => { const k = id + ":c:" + i;
       return `<li><label><input type="checkbox" data-done="${k}"${App.mem.done[k] ? " checked" : ""}> <span>${esc(t)}</span></label></li>`; }).join("");
     const parts = c.parts.map((p, i) => `<section class="part card" aria-labelledby="${id}-p${i}">
-        <p class="eyebrow">Step ${i + 1} · ${p.min} min</p><h2 id="${id}-p${i}">${esc(p.title)}</h2><p>${esc(p.text)}</p>
-        ${p.help ? `<p class="help"><b>Help for this step:</b> ${p.help.map(x => resById[x]).filter(Boolean).map(x => x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)}<span class="sr-only"> (opens in a new tab)</span></a>` : esc(x.title)).join(" · ")}</p>` : ""}
+        <p class="eyebrow">Part ${i + 1} · ${p.min} min</p><h2 id="${id}-p${i}">${esc(p.title)}</h2><p>${esc(p.text)}</p>
+        ${p.help ? `<p class="help"><b>Help for this part:</b> ${p.help.map(x => resById[x]).filter(Boolean).map(x => x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)}<span class="sr-only"> (opens in a new tab)</span></a>` : esc(x.title)).join(" · ")}</p>` : ""}
         ${p.widget ? `<div class="widget" data-widget="${p.widget}" data-wkey="${id}:${i}"></div>` : ""}</section>`).join("");
     const pos = ORDER.indexOf(id), prev = ORDER[pos - 1], next = ORDER[pos + 1];
     const nav = sid => sid ? `<button class="secondary-button" type="button" data-nav="${sid}">${esc(T.stations[sid].title)}</button>` : "";
@@ -85,6 +95,7 @@
       <p class="eyebrow">${esc(App.LANES[st.stream])} · ${st.minutes} min</p>
       <h1 tabindex="-1">${esc(st.title)}</h1>
       <p class="lede">${esc(c.intro)}</p>
+      ${activitiesIn(id).length ? `<p class="note"><b>Project activities in this step:</b> ${activitiesIn(id).map(a => `${a.n}. ${esc(a.title)}`).join(" · ")}. <button class="text-button" type="button" data-view="brief">See all activities</button></p>` : ""}
       <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Step timer"></div>
       <div class="layout"><div class="parts">${parts}
         ${c.after ? `<section class="card"><h2>Between now and the next session</h2>${list(c.after)}</section>` : ""}
