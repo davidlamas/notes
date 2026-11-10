@@ -203,7 +203,7 @@ Object.assign(TUT.content, {
     ]
   },
   "step4a": {
-    "intro": "You test the test, fix it, find participants and start the study. While it runs you keep an eye on the data. This is the study side of the lab. The accessibility side runs at the same time.",
+    "intro": "You test the test, fix it, find participants and start the study. While it runs you keep an eye on the data. This is the study side of the session. The accessibility side runs at the same time.",
     "parts": [
       {
         "title": "Run a pilot",

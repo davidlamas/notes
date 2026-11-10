@@ -41,7 +41,7 @@ TUT.resources = [
     "group": "Standards and law",
     "title": "Decreto-Lei n.º 82/2022: accessibility of products and services",
     "url": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/82-2022-204379872",
-    "note": "Transposes the European Accessibility Act. See the note on the other law. Address not opened in the final link check. Open it before the lab.",
+    "note": "Transposes the European Accessibility Act. See the note on the other law. Address not opened in the final link check. Open it before the session.",
     "status": "to-verify"
   },
   {
@@ -73,7 +73,7 @@ TUT.resources = [
     "group": "Articles",
     "title": "NN/g: Success rate, the simplest usability metric",
     "url": "https://www.nngroup.com/articles/success-rate-the-simplest-usability-metric/",
-    "note": "Why success rate is the bottom line, and how partial success can be reported. Address not opened in the final link check. Open it before the lab.",
+    "note": "Why success rate is the bottom line, and how partial success can be reported. Address not opened in the final link check. Open it before the session.",
     "status": "to-verify"
   },
   {
@@ -137,7 +137,7 @@ TUT.resources = [
     "group": "Tools",
     "title": "AccessMonitor Extension (Chrome Web Store)",
     "url": "https://chromewebstore.google.com/detail/accessmonitor-extension/knjdoonhhnjfmigigfgoehhihodndaii",
-    "note": "Chrome and Edge version of AccessMonitor, from the Portuguese agency behind it. Found in the store listing and the agency's slides, not tried for this lab. Other free options if it fails: Accessibility Insights FastPass, WAVE from WebAIM, axe DevTools.",
+    "note": "Chrome and Edge version of AccessMonitor, from the Portuguese agency behind it. Found in the store listing and the agency's slides, not tried for this project. Other free options if it fails: Accessibility Insights FastPass, WAVE from WebAIM, axe DevTools.",
     "status": "listed"
   },
   {
