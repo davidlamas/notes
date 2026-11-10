@@ -8,7 +8,7 @@ TUT.scenario = {
     "You finish with a report and a talk. Both must include proposals, with sketches, to fix the problems you found.",
     "If you have not used Loop11 before, a short practice test first is a good idea."
   ],
-  "fictionNote": "The path in short: choose a website, learn who uses it, study how people use it, check its accessibility, rank the problems, propose fixes, then report and present. Dates and deadlines are not shown here.",
+  "fictionNote": "The path is clear: choose a website, learn who uses it, study how people use it, check its accessibility, rank the problems, propose fixes, then report and present. Dates and deadlines are not shown here.",
   "brief": [
     {
       "label": "You are",
