@@ -270,7 +270,7 @@ Object.assign(TUT.content, {
     ],
     "after": [
       "Keep the test open and invite people if numbers are low.",
-      "Close the study a day or two before Step 5."
+      "Close the study a day or two before Work session 5."
     ]
   },
   "step4b": {
@@ -389,7 +389,7 @@ Object.assign(TUT.content, {
       {
         "title": "Study the chosen items",
         "min": 20,
-        "text": "For each chosen item write what happens, who is hurt, the evidence and the likely cause. Say what is a guess. You propose fixes in Step 6."
+        "text": "For each chosen item write what happens, who is hurt, the evidence and the likely cause. Say what is a guess. You propose fixes in Work session 6."
       }
     ],
     "checks": {

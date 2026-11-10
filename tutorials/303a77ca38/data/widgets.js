@@ -42,7 +42,7 @@ TUT.widgets = {
   },
   "issuelog": {
     "title": "Issue log",
-    "lead": "Add each accessibility problem you find. You will merge this log with the study results in Step 5.",
+    "lead": "Add each accessibility problem you find. You will merge this log with the study results in Work session 5.",
     "warn": "This page does not save anything. Copy the log into your team notes before you close the page.",
     "fields": [
       {

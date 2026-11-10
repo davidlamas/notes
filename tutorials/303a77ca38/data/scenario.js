@@ -16,7 +16,7 @@ TUT.scenario = {
     },
     {
       "label": "You evaluate",
-      "text": "one website that you choose. Each group has its own, and the teacher approves it before Step 1."
+      "text": "one website that you choose. Each group has its own, and the teacher approves it before Work session 1."
     },
     {
       "label": "You hand in",
@@ -24,7 +24,7 @@ TUT.scenario = {
     },
     {
       "label": "Your time",
-      "text": "six steps of three academic hours each, with a little independent work between them. Then a 20 minute talk and 10 minutes of discussion."
+      "text": "six work sessions of three academic hours each, with a little independent work between them. Then a 20 minute talk and 10 minutes of discussion."
     }
   ],
   "sections": [
@@ -72,13 +72,13 @@ TUT.scenario = {
       "items": [
         {
           "tag": "Labs",
-          "title": "Six steps and two presentation sessions",
-          "text": "Steps 1 to 6 are six lab sessions, and Presentation sessions 1 and 2 follow. Each lasts three academic hours."
+          "title": "Six work sessions and two presentation sessions",
+          "text": "Work sessions 1 to 6 are the working sessions, and Presentation sessions 1 and 2 follow. Each lasts three academic hours."
         },
         {
           "tag": "Between labs",
           "title": "Independent work",
-          "text": "Each lab ends with a short list of what to do before the next one. The study may run on between Step 4 and Step 5. Finish the report and slides before the hand-in."
+          "text": "Each work session ends with a short list of what to do before the next one. The study may run on between Work session 4 and Work session 5. Finish the report and slides before the hand-in."
         },
         {
           "tag": "Hand-in",
@@ -93,24 +93,24 @@ TUT.scenario = {
       ]
     },
     {
-      "title": "The project's activities",
-      "kind": "activities",
-      "intro": "These are the activities the project asks for. Each one is done in one or more steps on the timeline. Use the links to jump to the step.",
+      "title": "What the project asks for",
+      "kind": "steps",
+      "intro": "The project asks for these steps. Each one is done in one or more work sessions on the timeline. Use the links to jump to the session.",
       "items": [
-        {"n": 1, "title": "Group and website", "text": "Form a group of at most five. Choose a website to evaluate. Each group has its own, and the teacher approves it.", "steps": ["step1"]},
-        {"n": 2, "title": "Describe the website", "text": "Draw a mind-map: what is it about, what services does it offer, who is it for?", "steps": ["step1"]},
-        {"n": 3, "title": "Personas", "text": "Describe the audience of the website with personas.", "steps": ["step1"]},
-        {"n": 4, "title": "User stories", "text": "Describe the main user stories the website allows.", "steps": ["step2"]},
-        {"n": 5, "title": "Preliminary expert review", "text": "A first check of the website, using the user stories, to find the areas that deserve most attention.", "steps": ["step2"]},
-        {"n": 6, "title": "Goals and questions", "text": "Analyse what you found. Set the goals and the research questions of the usability study.", "steps": ["step2"]},
-        {"n": 7, "title": "Plan the study", "text": "Participants and sample size, the set-up, and the materials and instruments you need.", "steps": ["step2", "step3"]},
-        {"n": 8, "title": "Run the usability study", "text": "Run a pilot, refine the plan, recruit, run the study and follow the results.", "steps": ["step4a"]},
-        {"n": 9, "title": "Evaluate accessibility", "text": "At the same time, evaluate accessibility with heuristics, standards checks, operating-system features and other instruments.", "steps": ["step4b"]},
-        {"n": 10, "title": "Analyse the results", "text": "Compile and analyse the review, the study and the accessibility results.", "steps": ["step5"]},
-        {"n": 11, "title": "List the problems", "text": "Describe the problems and chances for improvement, rank them, and choose two or three to work on.", "steps": ["step5"]},
-        {"n": 12, "title": "Propose fixes", "text": "Study the causes of the chosen problems. Propose and illustrate measures to reduce them or use the chances.", "steps": ["step5", "step6"]},
-        {"n": 13, "title": "Write the report", "text": "Write and hand in the report, with the proposed and illustrated measures.", "steps": ["step6"]},
-        {"n": 14, "title": "Present the work", "text": "Prepare and give the presentation of what you did and found.", "steps": ["step6", "pres1", "pres2"]}
+        {"n": 1, "title": "Group and website", "text": "Form a group of at most five. Choose a website to evaluate. Each group has its own, and the teacher approves it.", "sessions": ["step1"]},
+        {"n": 2, "title": "Describe the website", "text": "Draw a mind-map: what is it about, what services does it offer, who is it for?", "sessions": ["step1"]},
+        {"n": 3, "title": "Personas", "text": "Describe the audience of the website with personas.", "sessions": ["step1"]},
+        {"n": 4, "title": "User stories", "text": "Describe the main user stories the website allows.", "sessions": ["step2"]},
+        {"n": 5, "title": "Preliminary expert review", "text": "A first check of the website, using the user stories, to find the areas that deserve most attention.", "sessions": ["step2"]},
+        {"n": 6, "title": "Goals and questions", "text": "Analyse what you found. Set the goals and the research questions of the usability study.", "sessions": ["step2"]},
+        {"n": 7, "title": "Plan the study", "text": "Participants and sample size, the set-up, and the materials and instruments you need.", "sessions": ["step2", "step3"]},
+        {"n": 8, "title": "Run the usability study", "text": "Run a pilot, refine the plan, recruit, run the study and follow the results.", "sessions": ["step4a"]},
+        {"n": 9, "title": "Evaluate accessibility", "text": "At the same time, evaluate accessibility with heuristics, standards checks, operating-system features and other instruments.", "sessions": ["step4b"]},
+        {"n": 10, "title": "Analyse the results", "text": "Compile and analyse the review, the study and the accessibility results.", "sessions": ["step5"]},
+        {"n": 11, "title": "List the problems", "text": "Describe the problems and chances for improvement, rank them, and choose two or three to work on.", "sessions": ["step5"]},
+        {"n": 12, "title": "Propose fixes", "text": "Study the causes of the chosen problems. Propose and illustrate measures to reduce them or use the chances.", "sessions": ["step5", "step6"]},
+        {"n": 13, "title": "Write the report", "text": "Write and hand in the report, with the proposed and illustrated measures.", "sessions": ["step6"]},
+        {"n": 14, "title": "Present the work", "text": "Prepare and give the presentation of what you did and found.", "sessions": ["step6", "pres1", "pres2"]}
       ]
     },
     {

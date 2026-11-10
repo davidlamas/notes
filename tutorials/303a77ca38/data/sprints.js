@@ -1,21 +1,21 @@
 /* Stretches, labs and stations. Edit by hand.
    A block is one session of 135 minutes (three academic hours). Stations in one block run in parallel.
    stream: "A" (the study), "B" (the accessibility evaluation) or "AB" (the whole group).
-   Steps 1 to 6 are the working sessions. Presentation sessions 1 and 2 follow. No dates are shown on purpose. */
+   Work sessions 1 to 6 are the working sessions. Presentation sessions 1 and 2 follow. No dates are shown on purpose. */
 window.TUT = window.TUT || {};
 TUT.sprints = [
   {
     "id": "p1",
     "number": 1,
-    "eyebrow": "Steps 1 to 6",
-    "title": "Six working steps",
+    "eyebrow": "Work sessions 1 to 6",
+    "title": "Six work sessions",
     "subtitle": "Choose and map, understand and plan, run and check accessibility, compile and rank, fix and report.",
     "minutes": 810,
-    "when": "6 steps",
+    "when": "6 sessions",
     "blocks": [
       {
         "id": "p1-b1",
-        "title": "Step 1",
+        "title": "Work session 1",
         "minutes": 135,
         "stations": [
           "step1"
@@ -23,7 +23,7 @@ TUT.sprints = [
       },
       {
         "id": "p1-b2",
-        "title": "Step 2",
+        "title": "Work session 2",
         "minutes": 135,
         "stations": [
           "step2"
@@ -31,7 +31,7 @@ TUT.sprints = [
       },
       {
         "id": "p1-b3",
-        "title": "Step 3",
+        "title": "Work session 3",
         "minutes": 135,
         "stations": [
           "step3"
@@ -39,7 +39,7 @@ TUT.sprints = [
       },
       {
         "id": "p1-b4",
-        "title": "Step 4",
+        "title": "Work session 4",
         "minutes": 135,
         "stations": [
           "step4a",
@@ -48,7 +48,7 @@ TUT.sprints = [
       },
       {
         "id": "p1-b5",
-        "title": "Step 5",
+        "title": "Work session 5",
         "minutes": 135,
         "stations": [
           "step5"
@@ -56,7 +56,7 @@ TUT.sprints = [
       },
       {
         "id": "p1-b6",
-        "title": "Step 6",
+        "title": "Work session 6",
         "minutes": 135,
         "stations": [
           "step6"

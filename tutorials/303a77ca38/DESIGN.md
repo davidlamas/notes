@@ -13,7 +13,7 @@ A plain-English working script for a group project: choose a website, run a form
 - `data/resources.js`: outside links. Status `listed`, `to-verify` or `pending`. Every resource should be attached to at least one step in `sprints.js`.
 - `data/widgets.js`: small tools (goal, issue log, study log, rate, SUS, lost, rank, talk plan, profile). State lives in memory only (`App.mem`) and is lost on reload.
 - `js/`, `styles.css`: the engine. State is in the query string: `?view=brief|route|station|resources&sel=<id>`.
-- Words: a **step** is one session on the timeline (Step 1 to 6) and the presentation sessions follow. A **part** is a block of minutes inside a step. An **activity** is one of the things the project asks for (numbered 1 to 14 in `scenario.js`, section kind `activities`). Each activity lists the steps where it is done (`steps`), and the Project view links to them; each step page and panel lists its activities back. Keep the two lists coherent when you change either.
+- Words: a **work session** is one session on the timeline (Work session 1 to 6), followed by Presentation sessions 1 and 2. A **step** is one of the things the project asks for (numbered 1 to 14 in `scenario.js`, section kind `steps`, each with the `sessions` where it is done). A **part** is a timed block inside a session. The Project view links each step to its sessions, and each session page and panel lists its project steps back: keep the two lists coherent when you change either. Internal ids (`step1`, `step4a`, `pres1`) are session ids kept for stable addresses; the interface never shows them.
 - Streams: A (the usability study), B (the accessibility evaluation), AB (the whole group).
 
 ## Checks (run from this folder)

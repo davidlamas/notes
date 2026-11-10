@@ -4,19 +4,19 @@
   const $ = id => document.getElementById(id);
   const resById = {}; T.resources.forEach(r => (resById[r.id] = r));
 
-  // Label of a timeline step, for links: "Step 4: the study", "Presentation session 1".
-  function stepLabel(id) {
+  // Label of a timeline session, for links: "Work session 4: the study", "Presentation session 1".
+  function sessionLabel(id) {
     const b = T.sprints.flatMap(sp => sp.blocks).find(x => x.stations.includes(id));
     const st = T.stations[id];
     return b.title + (b.stations.length > 1 ? ": " + (st.stream === "A" ? "the study" : "accessibility") : "");
   }
-  const activitiesIn = id => ((T.scenario.sections.find(x => x.kind === "activities") || { items: [] }).items).filter(a => a.steps.includes(id));
+  const stepsIn = id => ((T.scenario.sections.find(x => x.kind === "steps") || { items: [] }).items).filter(a => a.sessions.includes(id));
 
   function brief() {
     const sc = T.scenario;
     const cards = it => `<article class="card"><span class="tag">${esc(it.tag)}</span><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p></article>`;
-    const actCards = it => `<article class="card"><span class="tag">Activity ${it.n}</span><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p><p class="help"><b>Done in:</b> ${it.steps.map(id => `<button class="text-button" type="button" data-nav="${id}">${esc(stepLabel(id))}</button>`).join(" · ")}</p></article>`;
-    const secs = sc.sections.map(x => `<h2 style="margin-top:34px">${esc(x.title)}</h2><p class="sub">${esc(x.intro)}</p><div class="grid2">${x.items.map(x.kind === "activities" ? actCards : cards).join("")}</div>`).join("");
+    const actCards = it => `<article class="card"><span class="tag">Step ${it.n}</span><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p><p class="help"><b>Done in:</b> ${it.sessions.map(id => `<button class="text-button" type="button" data-nav="${id}">${esc(sessionLabel(id))}</button>`).join(" · ")}</p></article>`;
+    const secs = sc.sections.map(x => `<h2 style="margin-top:34px">${esc(x.title)}</h2><p class="sub">${esc(x.intro)}</p><div class="grid2">${x.items.map(x.kind === "steps" ? actCards : cards).join("")}</div>`).join("");
     $("view-brief").innerHTML = `
       <p class="eyebrow">${esc(sc.eyebrow)}</p>
       <h1>${esc(sc.headline)}</h1>
@@ -44,21 +44,21 @@
       <p class="eyebrow">${esc(T.meta.ui.routeEyebrow)}</p>
       <h1>${esc(T.meta.ui.routeHeadline)}</h1>
       <p class="lede">${esc(T.meta.ui.routeLede)}</p>
-      <div class="layout"><div>${sprints}</div><aside class="card detail-panel" id="panel" tabindex="0" aria-live="polite" aria-label="Step details"></aside></div>`;
+      <div class="layout"><div>${sprints}</div><aside class="card detail-panel" id="panel" tabindex="0" aria-live="polite" aria-label="Session details"></aside></div>`;
     panel();
   }
 
   function panel() {
     const el = $("panel"); if (!el) return;
-    if (!S.sel) { el.innerHTML = `<p class="eyebrow">Step</p><h2>Pick a step</h2><p class="hint">Its aim, time and resources show here.</p>`; return; }
+    if (!S.sel) { el.innerHTML = `<p class="eyebrow">Session</p><h2>Pick a session</h2><p class="hint">Its aim, time and resources show here.</p>`; return; }
     const s = T.stations[S.sel];
     const res = s.resources.map(id => resById[id]).filter(Boolean).map(r => resourceLine(r)).join("");
     el.innerHTML = `<p class="eyebrow">${esc(App.LANES[s.stream])} · ${s.minutes} min</p><h2>${esc(s.title)}</h2>
       <span class="tag">${esc(s.status)}</span>
       <div class="f"><b>Aim</b>${esc(s.aim)}</div>
-      ${activitiesIn(S.sel).length ? `<div class="f"><b>Project activities</b><ul>${activitiesIn(S.sel).map(a => `<li>${a.n}. ${esc(a.title)}</li>`).join("")}</ul></div>` : ""}
+      ${stepsIn(S.sel).length ? `<div class="f"><b>Project steps</b><ul>${stepsIn(S.sel).map(a => `<li>${a.n}. ${esc(a.title)}</li>`).join("")}</ul></div>` : ""}
       <div class="f"><b>Resources</b>${res ? `<ul>${res}</ul>` : `<span class="hint">None yet.</span>`}</div>
-      ${T.content && T.content[S.sel] ? `<p><button class="secondary-button" type="button" data-open="${S.sel}">Open the full step</button></p>` : ""}`;
+      ${T.content && T.content[S.sel] ? `<p><button class="secondary-button" type="button" data-open="${S.sel}">Open the full session</button></p>` : ""}`;
   }
 
   function resourceLine(r) {
@@ -95,8 +95,8 @@
       <p class="eyebrow">${esc(App.LANES[st.stream])} · ${st.minutes} min</p>
       <h1 tabindex="-1">${esc(st.title)}</h1>
       <p class="lede">${esc(c.intro)}</p>
-      ${activitiesIn(id).length ? `<p class="note"><b>Project activities in this step:</b> ${activitiesIn(id).map(a => `${a.n}. ${esc(a.title)}`).join(" · ")}. <button class="text-button" type="button" data-view="brief">See all activities</button></p>` : ""}
-      <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Step timer"></div>
+      ${stepsIn(id).length ? `<p class="note"><b>Project steps in this session:</b> ${stepsIn(id).map(a => `${a.n}. ${esc(a.title)}`).join(" · ")}. <button class="text-button" type="button" data-view="brief">See all project steps</button></p>` : ""}
+      <div class="timer" data-timer="${st.minutes}" role="group" aria-label="Session timer"></div>
       <div class="layout"><div class="parts">${parts}
         ${c.after ? `<section class="card"><h2>Between now and the next session</h2>${list(c.after)}</section>` : ""}
         <section class="card"><h2>${esc(c.checks.title)}</h2><ul class="checklist">${checks}</ul><p class="sub" role="status" id="check-count"></p></section>
